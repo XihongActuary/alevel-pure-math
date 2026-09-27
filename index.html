@@ -22,6 +22,16 @@
     --orange:#e08a2e;
   }
   *{box-sizing:border-box;}
+  .tab.gtab{border-color:var(--warm-line);background:var(--warm);color:#8a5a00;}
+  .tab.gtab:hover{border-color:var(--orange);color:var(--orange);}
+  .tab.gtab.on{background:var(--orange);border-color:var(--orange);color:#fff;}
+  .tab.gtab .tn{background:#f7e3b8;color:#8a5a00;}
+  .tab.gtab.on .tn{background:rgba(255,255,255,.25);color:#fff;}
+  .gl-h{font-size:18px;color:var(--main);margin:30px 0 6px;padding:0 0 8px;
+    border-bottom:2px solid var(--main-light);line-height:1.4;}
+  .gl-sub{font-size:13.5px;color:var(--gray);margin:0 0 12px;}
+  details.card .body .tw{margin-top:4px;}
+
   body{
     margin:0;
     background:var(--bg);
@@ -303,7 +313,7 @@
 <header>
   <div class="kicker">A-LEVEL 纯数学预习 &nbsp;|&nbsp; PURE MATHEMATICS</div>
   <h1><span class="zh-only">纯数学 · 10 个单元</span><span class="en-only">Pure Mathematics · 10 Units</span></h1>
-  <p class="sub"><span class="zh-only">中文讲解为主，可切换英文 · 每节配图 + 1 道例题 + 1 道练习（答案点击展开）· 10 个单元全部完成（共 70 站）</span><span class="en-only">Chinese-first with an English toggle · diagram + worked example + practice per section · all 10 units complete (70 stops)</span></p>
+  <p class="sub"><span class="zh-only">中文讲解为主，可切换英文 · 每节配图 + 1 道例题 + 1 道练习（答案点击展开）· 10 个单元全部完成（共 70 站）· 最后一个 tab 是术语与公式速查表</span><span class="en-only">Chinese-first with an English toggle · diagram + worked example + practice per section · all 10 units complete (70 stops) · the last tab is the glossary &amp; formula cheat sheet</span></p>
 </header>
 
 <div class="langbar">
@@ -324,6 +334,7 @@
   <button class="tab" data-tab="u8"><span class="tn">8</span><span class="zh-only">积分</span><span class="en-only">Integration</span></button>
   <button class="tab" data-tab="u9"><span class="tn">9</span><span class="zh-only">向量</span><span class="en-only">Vectors</span></button>
   <button class="tab" data-tab="u10"><span class="tn">10</span><span class="zh-only">微分方程与数值方法</span><span class="en-only">Diff. eq &amp; numerics</span></button>
+  <button class="tab gtab" data-tab="gl"><span class="tn">★</span><span class="zh-only">术语与公式</span><span class="en-only">Glossary &amp; Formulas</span></button>
 </nav>
 
 <div class="howto">
@@ -1162,33 +1173,6 @@
     <div class="done"><span class="zh-only">— 第 7 站完成 —</span><span class="en-only">— Stop 7 done —</span></div>
   </div>
 </details>
-
-  <!-- ③ 单元 1 公式卡 -->
-  <div class="uf">
-    <h3><span class="zh-only">单元 1 · 核心公式卡</span><span class="en-only">Unit 1 · Key formulas</span><span class="tag">中英对照 EN–CN</span></h3>
-    <p class="sub"><span class="zh-only">这一单元用到的公式都在这，考前扫一眼就够。</span><span class="en-only">Every formula used in this unit — a quick scan before the exam is enough.</span></p>
-    <div class="tw">
-    <table>
-      <thead>
-        <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th>中文</th><th>English</th></tr>
-      </thead>
-      <tbody>
-        <tr><td class="f">a² − b² = (a − b)(a + b)</td><td>平方差</td><td>difference of squares</td></tr>
-        <tr><td class="f">a² ± 2ab + b² = (a ± b)²</td><td>完全平方</td><td>perfect square</td></tr>
-        <tr><td class="f">a³ ± b³ = (a ± b)(a² ∓ ab + b²)</td><td>立方和 / 立方差</td><td>sum / difference of cubes</td></tr>
-        <tr><td class="f">f(a) = 0 ⟺ (x − a) 是因式</td><td>因式定理</td><td>factor theorem</td></tr>
-        <tr><td class="f">f(x) ÷ (x − a) 的余数 = f(a)</td><td>余数定理</td><td>remainder theorem</td></tr>
-        <tr><td class="f">y = a(x − h)² + k</td><td>顶点式，顶点 (h, k)</td><td>vertex form, vertex (h, k)</td></tr>
-        <tr><td class="f">x = −b / (2a)</td><td>对称轴</td><td>axis of symmetry</td></tr>
-        <tr><td class="f">|x| = x (x ≥ 0)；|x| = −x (x &lt; 0)</td><td>绝对值定义</td><td>definition of modulus</td></tr>
-        <tr><td class="f">y = k / x（k ≠ 0）</td><td>反比例，渐近线 x = 0、y = 0</td><td>reciprocal graph; asymptotes x = 0, y = 0</td></tr>
-        <tr><td class="f">y = f(x) + a</td><td>上移 a（−a 下移）</td><td>up by a (−a: down)</td></tr>
-        <tr><td class="f">y = f(x + a)</td><td>左移 a（括号里是反的）</td><td>LEFT by a (inside is backwards)</td></tr>
-        <tr><td class="f">y = −f(x)；y = f(−x)</td><td>关于 x 轴翻；关于 y 轴翻</td><td>reflect in x-axis; in y-axis</td></tr>
-      </tbody>
-    </table>
-    </div>
-  </div>
 
   <div class="unit-end">
     <p class="big"><span class="zh-only">单元 1 · 7 站走完了 🎉</span><span class="en-only">Unit 1 · 7 stops done 🎉</span></p>
@@ -2077,30 +2061,6 @@
     <div class="done"><span class="zh-only">— 第 7 站完成 —</span><span class="en-only">— Stop 7 done —</span></div>
   </div>
 </details>
-
-  <!-- ③ 单元 2 公式卡 -->
-  <div class="uf">
-    <h3><span class="zh-only">单元 2 · 核心公式卡</span><span class="en-only">Unit 2 · Key formulas</span><span class="tag">中英对照 EN–CN</span></h3>
-    <p class="sub"><span class="zh-only">这一单元用到的公式都在这。</span><span class="en-only">Every formula used in this unit.</span></p>
-    <div class="tw">
-    <table>
-      <thead>
-        <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th>中文</th><th>English</th></tr>
-      </thead>
-      <tbody>
-        <tr><td class="f">x = [−b ± √(b² − 4ac)] / (2a)</td><td>求根公式（万能）</td><td>quadratic formula (always works)</td></tr>
-        <tr><td class="f">Δ = b² − 4ac</td><td>判别式</td><td>discriminant</td></tr>
-        <tr><td class="f">Δ &gt; 0 / = 0 / &lt; 0</td><td>两实根 / 一重根 / 无实根</td><td>two / one repeated / no real roots</td></tr>
-        <tr><td class="f">a &gt; 0：&gt;0 取两边，&lt;0 取中间</td><td>二次不等式的解集</td><td>solution of a quadratic inequality</td></tr>
-        <tr><td class="f">乘除负数 → 不等号掉头</td><td>不等式唯一的坑</td><td>flip the sign when ×/÷ by a negative</td></tr>
-        <tr><td class="f">f(a) = 0 ⟺ (x − a) 是因式</td><td>因式定理（解三次方程用）</td><td>factor theorem (for cubics)</td></tr>
-        <tr><td class="f">试根 → 拆括号 → 解二次</td><td>三次方程通法</td><td>cubic: find a root → bracket → quadratic</td></tr>
-        <tr><td class="f">y = a(x − h)² + k</td><td>配方法求最值，顶点 (h, k)</td><td>complete the square; vertex (h, k)</td></tr>
-        <tr><td class="f">[a, b] 含端点；(a, b) 不含</td><td>区间写法</td><td>interval notation</td></tr>
-      </tbody>
-    </table>
-    </div>
-  </div>
 
   <div class="unit-end">
     <p class="big"><span class="zh-only">单元 2 · 7 站走完了 🎉</span><span class="en-only">Unit 2 · 7 stops done 🎉</span></p>
@@ -3045,34 +3005,6 @@
   </div>
 </details>
 
-  <!-- ③ 单元 3 公式卡 -->
-  <div class="uf">
-    <h3><span class="zh-only">单元 3 · 核心公式卡</span><span class="en-only">Unit 3 · Key formulas</span><span class="tag">中英对照 EN–CN</span></h3>
-    <p class="sub"><span class="zh-only">这一单元用到的公式都在这。</span><span class="en-only">Every formula used in this unit.</span></p>
-    <div class="tw">
-    <table>
-      <thead>
-        <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th>中文</th><th>English</th></tr>
-      </thead>
-      <tbody>
-        <tr><td class="f">u<sub>n</sub> = a + (n − 1)d</td><td>等差数列第 n 项</td><td>nth term (arithmetic)</td></tr>
-        <tr><td class="f">S<sub>n</sub> = ½n[2a + (n − 1)d]</td><td>等差前 n 项和</td><td>sum of n terms (arithmetic)</td></tr>
-        <tr><td class="f">S<sub>n</sub> = ½n(首项 + 末项)</td><td>等差求和口诀版</td><td>sum = ½n(first + last)</td></tr>
-        <tr><td class="f">u<sub>n</sub> = ar<sup>n−1</sup></td><td>等比数列第 n 项</td><td>nth term (geometric)</td></tr>
-        <tr><td class="f">S<sub>n</sub> = a(r<sup>n</sup> − 1)/(r − 1)</td><td>等比前 n 项和（r &gt; 1）</td><td>sum of n terms, r &gt; 1</td></tr>
-        <tr><td class="f">S<sub>∞</sub> = a/(1 − r)，|r| &lt; 1</td><td>无穷等比和</td><td>sum to infinity, |r| &lt; 1</td></tr>
-        <tr><td class="f">Σ1 = n；Σr = ½n(n+1)</td><td>两个最常用求和公式</td><td>two standard sums</td></tr>
-        <tr><td class="f">Σr² = (1/6)n(n+1)(2n+1)</td><td>平方和公式</td><td>sum of squares</td></tr>
-        <tr><td class="f">u<sub>n+1</sub> = f(u<sub>n</sub>)（配 u₁）</td><td>递推关系</td><td>recurrence relation</td></tr>
-        <tr><td class="f">C(n, r) = n!/[r!(n − r)!]</td><td>组合数（nCr 键）</td><td>combinations (nCr)</td></tr>
-        <tr><td class="f">(a + b)ⁿ = Σ C(n, r)a<sup>n−r</sup>b<sup>r</sup></td><td>二项式展开</td><td>binomial expansion</td></tr>
-        <tr><td class="f">通项 = C(n, r)a<sup>n−r</sup>b<sup>r</sup></td><td>直接找某一项</td><td>general term</td></tr>
-        <tr><td class="f">复利 P(1 + r)ⁿ；折旧 P(1 − d)ⁿ</td><td>钱的增长与贬值</td><td>compound interest; depreciation</td></tr>
-      </tbody>
-    </table>
-    </div>
-  </div>
-
   <div class="unit-end">
     <p class="big"><span class="zh-only">单元 3 · 7 站走完了 🎉</span><span class="en-only">Unit 3 · 7 stops done 🎉</span></p>
     <p><span class="zh-only">记住两句就够：<b>等差是加，等比是乘</b>；<b>|r| &lt; 1 才有无穷和，钱的增长也是等比</b>。</span>
@@ -3975,34 +3907,6 @@
     <div class="done"><span class="zh-only">— 第 7 站完成 —</span><span class="en-only">— Stop 7 done —</span></div>
   </div>
 </details>
-
-  <!-- ③ 单元 4 公式卡 -->
-  <div class="uf">
-    <h3><span class="zh-only">单元 4 · 核心公式卡</span><span class="en-only">Unit 4 · Key formulas</span><span class="tag">中英对照 EN–CN</span></h3>
-    <p class="sub"><span class="zh-only">这一单元用到的公式都在这。</span><span class="en-only">Every formula used in this unit.</span></p>
-    <div class="tw">
-    <table>
-      <thead>
-        <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th>中文</th><th>English</th></tr>
-      </thead>
-      <tbody>
-        <tr><td class="f">m = (y₂ − y₁)/(x₂ − x₁)</td><td>斜率 = 上升 ÷ 前进</td><td>gradient = rise ÷ run</td></tr>
-        <tr><td class="f">y = mx + c；y − y₁ = m(x − x₁)</td><td>直线方程的两种写法</td><td>two forms of a straight line</td></tr>
-        <tr><td class="f">d = √[(x₂ − x₁)² + (y₂ − y₁)²]</td><td>两点间距离</td><td>distance between two points</td></tr>
-        <tr><td class="f">M = ((x₁+x₂)/2, (y₁+y₂)/2)</td><td>中点坐标（各取平均）</td><td>midpoint (average each coordinate)</td></tr>
-        <tr><td class="f">m₁ = m₂（平行）</td><td>平行：斜率相等</td><td>parallel lines have equal gradients</td></tr>
-        <tr><td class="f">m₁m₂ = −1（垂直）</td><td>垂直：斜率乘积为 −1（负倒数）</td><td>perpendicular: product is −1</td></tr>
-        <tr><td class="f">(x − a)² + (y − b)² = r²</td><td>圆的标准式：圆心 (a, b)、半径 r</td><td>circle: centre (a, b), radius r</td></tr>
-        <tr><td class="f">x² + y² + 2gx + 2fy + c = 0</td><td>圆的展开式 → 圆心 (−g, −f)</td><td>expanded circle → centre (−g, −f)</td></tr>
-        <tr><td class="f">r = √(g² + f² − c)</td><td>展开式下的半径</td><td>radius from the expanded form</td></tr>
-        <tr><td class="f">m<sub>半径</sub> = (y₁ − a)/(x₁ − b)</td><td>圆心到切点的半径斜率</td><td>gradient of the radius to the point</td></tr>
-        <tr><td class="f">m<sub>切线</sub> = −1/m<sub>半径</sub></td><td>切线 ⟂ 半径</td><td>tangent ⟂ radius</td></tr>
-        <tr><td class="f">x₁x + y₁y = r²</td><td>圆心在原点时切线的快捷式</td><td>tangent shortcut when centre is origin</td></tr>
-        <tr><td class="f">Δ &gt; 0 / = 0 / &lt; 0</td><td>相交 2 点 / 相切 1 点 / 相离 0 点</td><td>2 points / tangent / no intersection</td></tr>
-      </tbody>
-    </table>
-    </div>
-  </div>
 
   <div class="unit-end">
     <p class="big"><span class="zh-only">单元 4 · 7 站走完了 🎉</span><span class="en-only">Unit 4 · 7 stops done 🎉</span></p>
@@ -4915,38 +4819,6 @@
   </div>
 </details>
 
-  <div class="uf">
-    <h3><span class="zh-only">单元 5 · 核心公式卡</span><span class="en-only">Unit 5 · Key formulas</span><span class="tag">中英对照 EN–CN</span></h3>
-    <p class="sub"><span class="zh-only">这一单元用到的公式都在这。</span><span class="en-only">Every formula used in this unit.</span></p>
-    <div class="tw">
-    <table>
-      <thead>
-        <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th>中文</th><th>English</th></tr>
-      </thead>
-      <tbody>
-        <tr><td class="f">π rad = 180°</td><td>弧度与角度的换算桥梁</td><td>radians ↔ degrees</td></tr>
-        <tr><td class="f">度 × π/180 = 弧度</td><td>度换成弧度</td><td>degrees → radians</td></tr>
-        <tr><td class="f">弧度 × 180/π = 度</td><td>弧度换成度</td><td>radians → degrees</td></tr>
-        <tr><td class="f">l = rθ</td><td>弧长（θ 用弧度）</td><td>arc length (θ in radians)</td></tr>
-        <tr><td class="f">A = ½r²θ</td><td>扇形面积</td><td>sector area</td></tr>
-        <tr><td class="f">扇形周长 = 2r + l</td><td>两条半径 + 弧长</td><td>perimeter of a sector</td></tr>
-        <tr><td class="f">sin 30° = ½；cos 30° = √3/2</td><td>30° 的精确值</td><td>exact values at 30°</td></tr>
-        <tr><td class="f">sin 45° = cos 45° = 1/√2</td><td>45° 的精确值</td><td>exact values at 45°</td></tr>
-        <tr><td class="f">sin 60° = √3/2；cos 60° = ½</td><td>60° 的精确值</td><td>exact values at 60°</td></tr>
-        <tr><td class="f">sin²θ + cos²θ = 1</td><td>核心恒等式</td><td>the fundamental identity</td></tr>
-        <tr><td class="f">tan θ = sin θ / cos θ</td><td>正切的定义</td><td>definition of tan</td></tr>
-        <tr><td class="f">y = A sin(Bx)：最大 A，周期 2π/B</td><td>图像的振幅与周期</td><td>amplitude and period</td></tr>
-        <tr><td class="f">sin 第二解 = π − 第一解</td><td>sin 方程的解法规律</td><td>sin equation pattern</td></tr>
-        <tr><td class="f">cos 第二解 = 2π − 第一解</td><td>cos 方程的解法规律</td><td>cos equation pattern</td></tr>
-        <tr><td class="f">a/sin A = b/sin B = c/sin C</td><td>正弦定理</td><td>the sine rule</td></tr>
-        <tr><td class="f">a² = b² + c² − 2bc·cos A</td><td>余弦定理</td><td>the cosine rule</td></tr>
-        <tr><td class="f">cos A = (b² + c² − a²)/(2bc)</td><td>余弦定理求角版</td><td>cosine rule for an angle</td></tr>
-        <tr><td class="f">Area = ½ab·sin C</td><td>三角形面积（两边夹角）</td><td>area of a triangle</td></tr>
-      </tbody>
-    </table>
-    </div>
-  </div>
-
   <div class="unit-end">
     <p class="big"><span class="zh-only">单元 5 · 7 站走完了 🎉</span><span class="en-only">Unit 5 · 7 stops done 🎉</span></p>
     <p><span class="zh-only">记住三句：<b>π = 180°</b>（弧度的桥）；<b>sin² + cos² = 1</b>（就是勾股定理）；<b>两角一边用正弦、两边夹角用余弦</b>。</span>
@@ -5756,28 +5628,7 @@
      <span class="en-only">Three sentences are enough: <b>index laws multiply-add, divide-subtract</b>; <b>a log asks "what is the index?"</b>; <b>if x is in the power, take logs of both sides</b>.</span></p>
 </div>
 
-  <div class="uf">
-    <h3><span class="zh-only">单元 6 · 核心公式卡</span><span class="en-only">Unit 6 · Key formulas</span><span class="tag">中英对照 EN–CN</span></h3>
-    <p class="sub"><span class="zh-only">这 7 站用到的全部公式，一张表收齐。</span><span class="en-only">Every formula from these 7 stops, in one table.</span></p>
-    <div class="tw">
-    <table>
-      <thead>
-        <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th><span class="zh-only">中文意思</span><span class="en-only">Meaning</span></th></tr>
-      </thead>
-      <tbody>
-        <tr><td class="f">aᵐ × aⁿ = aᵐ⁺ⁿ</td><td><span class="zh-only">同底相乘，指数相加</span><span class="en-only">multiply: add the powers</span></td></tr>
-        <tr><td class="f">aᵐ ÷ aⁿ = aᵐ⁻ⁿ</td><td><span class="zh-only">同底相除，指数相减</span><span class="en-only">divide: subtract the powers</span></td></tr>
-        <tr><td class="f">(aᵐ)ⁿ = aᵐⁿ</td><td><span class="zh-only">幂的幂，指数相乘</span><span class="en-only">power of a power: multiply</span></td></tr>
-        <tr><td class="f">a⁰ = 1；a⁻ⁿ = 1/aⁿ</td><td><span class="zh-only">零指数与负指数</span><span class="en-only">zero and negative indices</span></td></tr>
-        <tr><td class="f">logₐ x = y ⟺ aʸ = x</td><td><span class="zh-only">对数的定义（反问句）</span><span class="en-only">definition of a logarithm</span></td></tr>
-        <tr><td class="f">log(xy) = log x + log y</td><td><span class="zh-only">乘法变加法</span><span class="en-only">multiplication becomes addition</span></td></tr>
-        <tr><td class="f">log(x/y) = log x − log y</td><td><span class="zh-only">除法变减法</span><span class="en-only">division becomes subtraction</span></td></tr>
-        <tr><td class="f">log(xⁿ) = n·log x</td><td><span class="zh-only">指数可以提到前面</span><span class="en-only">a power comes to the front</span></td></tr>
-        <tr><td class="f">y = aeᵏᵗ</td><td><span class="zh-only">指数增长 / 衰减模型</span><span class="en-only">exponential growth / decay model</span></td></tr>
-      </tbody>
-    </table>
-    </div>
-  </div>
+
 </section>
 
 <section class="panel" id="u7">
@@ -6597,27 +6448,7 @@
      <span class="en-only">Three sentences: <b>the derivative is the tangent's gradient</b>; <b>xⁿ → nxⁿ⁻¹ (chain for nesting, product for ×, quotient for ÷)</b>; <b>set the derivative to 0 for stationary points, then use the second derivative to classify</b>.</span></p>
 </div>
 
-  <div class="uf">
-    <h3><span class="zh-only">单元 7 · 核心公式卡</span><span class="en-only">Unit 7 · Key formulas</span><span class="tag">中英对照 EN–CN</span></h3>
-    <p class="sub"><span class="zh-only">先把公式混个眼熟，学的时候会轻松很多。</span><span class="en-only">Get familiar with the formulas now — it makes learning much easier.</span></p>
-    <div class="tw">
-    <table>
-      <thead>
-        <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th><span class="zh-only">中文意思</span><span class="en-only">Meaning</span></th></tr>
-      </thead>
-      <tbody>
-        <tr><td class="f">d/dx (xⁿ) = nxⁿ⁻¹</td><td><span class="zh-only">幂函数求导</span><span class="en-only">power rule</span></td></tr>
-        <tr><td class="f">d/dx (axⁿ) = anxⁿ⁻¹</td><td><span class="zh-only">带系数也一样</span><span class="en-only">with a coefficient</span></td></tr>
-        <tr><td class="f">f′(a) = 切线的斜率</td><td><span class="zh-only">导数 = 切线斜率</span><span class="en-only">derivative = gradient of tangent</span></td></tr>
-        <tr><td class="f">法线斜率 = −1/m</td><td><span class="zh-only">法线与切线垂直</span><span class="en-only">normal ⟂ tangent</span></td></tr>
-        <tr><td class="f">dy/dx = dy/du × du/dx</td><td><span class="zh-only">链式法则</span><span class="en-only">chain rule</span></td></tr>
-        <tr><td class="f">d/dx (uv) = u′v + uv′</td><td><span class="zh-only">乘积法则</span><span class="en-only">product rule</span></td></tr>
-        <tr><td class="f">d/dx (u/v) = (u′v − uv′)/v²</td><td><span class="zh-only">商法则</span><span class="en-only">quotient rule</span></td></tr>
-        <tr><td class="f">f″(x)：f″ > 0 极小，f″ < 0 极大</td><td><span class="zh-only">二阶导数判极值</span><span class="en-only">second derivative test</span></td></tr>
-      </tbody>
-    </table>
-    </div>
-  </div>
+
 </section>
 
 <section class="panel" id="u8">
@@ -7430,26 +7261,7 @@
      <span class="en-only">Three sentences: <b>integration is differentiation backwards, hence + c</b>; <b>area under a curve is a definite integral</b>; <b>split at the x-axis and take absolute values for area</b>.</span></p>
 </div>
 
-  <div class="uf">
-    <h3><span class="zh-only">单元 8 · 核心公式卡</span><span class="en-only">Unit 8 · Key formulas</span><span class="tag">中英对照 EN–CN</span></h3>
-    <p class="sub"><span class="zh-only">先把公式混个眼熟，学的时候会轻松很多。</span><span class="en-only">Get familiar with the formulas now — it makes learning much easier.</span></p>
-    <div class="tw">
-    <table>
-      <thead>
-        <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th><span class="zh-only">中文意思</span><span class="en-only">Meaning</span></th></tr>
-      </thead>
-      <tbody>
-        <tr><td class="f">∫ xⁿ dx = xⁿ⁺¹/(n+1) + c</td><td><span class="zh-only">幂函数积分（n ≠ −1）</span><span class="en-only">power rule (n ≠ −1)</span></td></tr>
-        <tr><td class="f">∫ (axⁿ) dx = a·xⁿ⁺¹/(n+1) + c</td><td><span class="zh-only">带系数也一样</span><span class="en-only">with a coefficient</span></td></tr>
-        <tr><td class="f">∫ₐᵇ f(x) dx = F(b) − F(a)</td><td><span class="zh-only">定积分（牛顿–莱布尼茨）</span><span class="en-only">definite integral</span></td></tr>
-        <tr><td class="f">面积 = ∫ₐᵇ y dx</td><td><span class="zh-only">曲线下的面积</span><span class="en-only">area under a curve</span></td></tr>
-        <tr><td class="f">∫ₐᵇ (上 − 下) dx</td><td><span class="zh-only">两曲线之间的面积</span><span class="en-only">area between curves</span></td></tr>
-        <tr><td class="f">x 轴下方 → 面积为负</td><td><span class="zh-only">注意符号</span><span class="en-only">below the axis gives a negative value</span></td></tr>
-        <tr><td class="f">½h[y₀ + yₙ + 2(中间各项)]</td><td><span class="zh-only">梯形法则</span><span class="en-only">trapezium rule</span></td></tr>
-      </tbody>
-    </table>
-    </div>
-  </div>
+
 </section>
 
 <section class="panel" id="u9">
@@ -8247,27 +8059,7 @@
      <span class="en-only">Three sentences: <b>magnitude is Pythagoras (one more square in 3D)</b>; <b>the scalar product multiplies matching components, and 0 means perpendicular</b>; <b>AB = end − start</b>.</span></p>
 </div>
 
-  <div class="uf">
-    <h3><span class="zh-only">单元 9 · 核心公式卡</span><span class="en-only">Unit 9 · Key formulas</span><span class="tag">中英对照 EN–CN</span></h3>
-    <p class="sub"><span class="zh-only">先把公式混个眼熟，学的时候会轻松很多。</span><span class="en-only">Get familiar with the formulas now — it makes learning much easier.</span></p>
-    <div class="tw">
-    <table>
-      <thead>
-        <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th><span class="zh-only">中文意思</span><span class="en-only">Meaning</span></th></tr>
-      </thead>
-      <tbody>
-        <tr><td class="f">|a| = √(x² + y²)</td><td><span class="zh-only">向量的模长（长度）</span><span class="en-only">magnitude of a vector</span></td></tr>
-        <tr><td class="f">a + b；ka</td><td><span class="zh-only">向量加法与数乘</span><span class="en-only">vector addition; scalar multiplication</span></td></tr>
-        <tr><td class="f">单位向量 = a / |a|</td><td><span class="zh-only">长度为 1 的向量</span><span class="en-only">a vector of length 1</span></td></tr>
-        <tr><td class="f">a·b = |a||b|cos θ</td><td><span class="zh-only">点积的两种算法之一</span><span class="en-only">scalar product (one form)</span></td></tr>
-        <tr><td class="f">a·b = x₁x₂ + y₁y₂</td><td><span class="zh-only">点积的分量算法</span><span class="en-only">scalar product (components)</span></td></tr>
-        <tr><td class="f">a·b = 0 ⟺ 垂直</td><td><span class="zh-only">点积为 0 就是垂直</span><span class="en-only">zero scalar product means perpendicular</span></td></tr>
-        <tr><td class="f">cos θ = (a·b)/(|a||b|)</td><td><span class="zh-only">求两向量夹角</span><span class="en-only">angle between two vectors</span></td></tr>
-        <tr><td class="f">|a| = √(x² + y² + z²)</td><td><span class="zh-only">三维向量的模长</span><span class="en-only">magnitude in 3D</span></td></tr>
-      </tbody>
-    </table>
-    </div>
-  </div>
+
 </section>
 
 <section class="panel" id="u10">
@@ -9078,32 +8870,38 @@
      <span class="en-only">Three sentences: <b>a differential equation solves for a function — separate the variables, then integrate both sides</b>; <b>if you cannot solve exactly, iterate with xₙ₊₁ = f(xₙ)</b>; <b>Newton-Raphson uses the tangent and converges fast</b>.</span></p>
 </div>
 
-  <div class="uf">
-    <h3><span class="zh-only">单元 10 · 核心公式卡</span><span class="en-only">Unit 10 · Key formulas</span><span class="tag">中英对照 EN–CN</span></h3>
-    <p class="sub"><span class="zh-only">先把公式混个眼熟，学的时候会轻松很多。</span><span class="en-only">Get familiar with the formulas now — it makes learning much easier.</span></p>
-    <div class="tw">
-    <table>
-      <thead>
-        <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th><span class="zh-only">中文意思</span><span class="en-only">Meaning</span></th></tr>
-      </thead>
-      <tbody>
-        <tr><td class="f">dy/dx = f(x)g(y)</td><td><span class="zh-only">可分离变量的形状</span><span class="en-only">separable form</span></td></tr>
-        <tr><td class="f">∫ (1/g(y)) dy = ∫ f(x) dx</td><td><span class="zh-only">分离后两边各自积分</span><span class="en-only">integrate each side</span></td></tr>
-        <tr><td class="f">dy/dx = ky ⟹ y = Aeᵏᵗ</td><td><span class="zh-only">增长 / 衰减的通解</span><span class="en-only">growth / decay solution</span></td></tr>
-        <tr><td class="f">通解 + 初值 = 特解</td><td><span class="zh-only">代入已知点求常数 C</span><span class="en-only">use the given point to find C</span></td></tr>
-        <tr><td class="f">f(a) 与 f(b) 异号 ⟹ 中间有根</td><td><span class="zh-only">符号变化定位根</span><span class="en-only">change of sign locates a root</span></td></tr>
-        <tr><td class="f">xₙ₊₁ = f(xₙ)</td><td><span class="zh-only">迭代公式</span><span class="en-only">iterative formula</span></td></tr>
-        <tr><td class="f">梯形法则 ≈ ½h(首尾 + 2×中间)</td><td><span class="zh-only">数值求面积</span><span class="en-only">numerical area</span></td></tr>
-      </tbody>
-    </table>
-    </div>
-  </div>
+
 </section>
 
 <!-- ============ 术语表 ============ -->
-<section class="ref" id="glossary">
-  <h2><span class="zh-only">核心术语表（中英对照）</span><span class="en-only">Core Glossary (EN–CN)</span></h2>
-  <p class="sub"><span class="zh-only">不用背，混个眼熟就行。考试看到英文能反应过来就够了。</span><span class="en-only">No need to memorise — just get familiar. Recognising the English word in the exam is enough.</span></p>
+<!-- ============ 附录 tab：术语与公式 ============ -->
+<section class="panel" id="gl">
+  <h2 class="unit-title"><span class="zh-only">附录 · 核心术语与公式（中英对照）</span><span class="en-only">Appendix · Glossary &amp; Formulas (EN–CN)</span></h2>
+  <p class="unit-sub"><span class="zh-only">全站速查表 · 10 个单元的术语和公式都收在这一页，做题卡住或考前复习，来这里查就够</span><span class="en-only">The whole-site cheat sheet: every term and formula from all 10 units, in one place</span></p>
+
+  <div class="roadmap">
+    <p class="rm-title">
+      <span class="zh-only">本页包括内容</span><span class="en-only">What this page covers</span>
+      <span class="rm-badge"><span class="zh-only">2 张表</span><span class="en-only">2 tables</span></span>
+    </p>
+    <ol>
+      <li><a href="#glossary"><span class="zh-only">核心术语表（中英对照，按单元顺序）</span><span class="en-only">Core glossary (EN–CN, in unit order)</span></a></li>
+      <li><a href="#formulas"><span class="zh-only">核心公式卡（按单元分组，点开看）</span><span class="en-only">Key formula cards (grouped by unit, click to open)</span></a></li>
+    </ol>
+    <p class="rm-note"><span class="zh-only">两张表都随语言切换：中文 / English 一键换。</span><span class="en-only">Both tables follow the language switch: Chinese / English.</span></p>
+  </div>
+
+  <div class="key">
+    <b><span class="zh-only">怎么用这一页：</span><span class="en-only">How to use this page:</span></b>
+    <ul>
+      <li><span class="zh-only">做题卡住了 → 来查公式，不用翻回单元。</span><span class="en-only">Stuck on a question? Look up the formula here instead of going back to the unit.</span></li>
+      <li><span class="zh-only">考前复习 → 只看这一页就够，不用重看 70 站。</span><span class="en-only">Before an exam, this page alone is enough, no need to redo all 70 stops.</span></li>
+      <li><span class="zh-only">看不懂英文 → 每一条都配了中文，对照着看。</span><span class="en-only">English unclear? Every entry has a Chinese translation beside it.</span></li>
+    </ul>
+  </div>
+
+  <h3 class="gl-h" id="glossary"><span class="zh-only">① 核心术语表（中英对照）</span><span class="en-only">① Core Glossary (EN–CN)</span></h3>
+  <p class="gl-sub"><span class="zh-only">不用背，混个眼熟就行。考试看到英文能反应过来就够了。</span><span class="en-only">No need to memorise, just get familiar. Recognising the English word in the exam is enough.</span></p>
   <div class="tw">
   <table>
     <thead>
@@ -9216,94 +9014,306 @@
     </tbody>
   </table>
   </div>
-</section>
 
-<!-- ============ 公式表 ============ -->
-<section class="ref" id="formulas">
-  <h2><span class="zh-only">核心公式卡（中英对照）</span><span class="en-only">Key Formula Cards (EN–CN)</span></h2>
-  <p class="sub"><span class="zh-only">今天用到的公式都在这里，考前扫一眼就够了。</span><span class="en-only">Every formula used today — a quick scan before the exam is enough.</span></p>
-  <div class="tw">
-  <table>
-    <thead>
-      <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th>中文</th><th>English</th></tr>
-    </thead>
-    <tbody>
-      <tr><td class="f">a² − b² = (a − b)(a + b)</td><td>平方差公式</td><td>difference of squares</td></tr>
-      <tr><td class="f">a² + 2ab + b² = (a + b)²</td><td>完全平方公式</td><td>perfect square</td></tr>
-      <tr><td class="f">x² + bx + c = (x + p)(x + q)</td><td>p×q = c，p+q = b</td><td>p×q = c and p + q = b</td></tr>
-      <tr><td class="f">f(a) = 0 ⟺ (x − a) 是因式</td><td>因式定理</td><td>factor theorem</td></tr>
-      <tr><td class="f">x = −b / (2a)</td><td>对称轴</td><td>axis of symmetry</td></tr>
-      <tr><td class="f">Δ = b² − 4ac</td><td>判别式（&gt;0 两根，=0 一根，&lt;0 无实根）</td><td>discriminant (&gt;0 two, =0 one, &lt;0 no real roots)</td></tr>
-      <tr><td class="f">x = [−b ± √(b² − 4ac)] / (2a)</td><td>求根公式</td><td>quadratic formula</td></tr>
-      <tr><td class="f">y = a(x − h)² + k</td><td>顶点式，顶点 (h, k)</td><td>vertex form, vertex (h, k)</td></tr>
-      <tr><td class="f">|x| = x (x ≥ 0)；|x| = −x (x &lt; 0)</td><td>绝对值定义</td><td>definition of modulus</td></tr>
-      <tr><td class="f">|A| = k ⟹ A = k 或 A = −k</td><td>绝对值方程拆两种</td><td>splitting a modulus equation</td></tr>
-      <tr><td class="f">y = k/x（k ≠ 0）</td><td>反比例函数，渐近线 x = 0、y = 0</td><td>reciprocal function; asymptotes x = 0, y = 0</td></tr>
-      <tr><td class="f">y = f(x) + a</td><td>上移 a（−a 则下移）</td><td>moves up by a (−a: down)</td></tr>
-      <tr><td class="f">y = f(x + a)</td><td>左移 a（括号里是反的）</td><td>moves LEFT by a (inside is backwards)</td></tr>
-      <tr><td class="f">y = −f(x)；y = f(−x)</td><td>关于 x 轴翻；关于 y 轴翻</td><td>reflect in x-axis; reflect in y-axis</td></tr>
-      <tr><td class="f">Δ &gt; 0 / = 0 / &lt; 0</td><td>两个实根 / 一个重根 / 无实根</td><td>two roots / one repeated root / no real roots</td></tr>
-      <tr><td class="f">a &gt; 0：&gt;0 取两边，&lt;0 取中间</td><td>二次不等式的解集</td><td>solution set of a quadratic inequality</td></tr>
-      <tr><td class="f">联立 → 代入消元 → 解二次方程</td><td>求直线与曲线交点的通法</td><td>substitution method for intersections</td></tr>
-      <tr><td class="f">u<sub>n</sub> = a + (n − 1)d</td><td>等差数列第 n 项</td><td>nth term of an arithmetic sequence</td></tr>
-      <tr><td class="f">S<sub>n</sub> = ½n[2a + (n − 1)d]</td><td>等差数列前 n 项和</td><td>sum of n terms (arithmetic)</td></tr>
-      <tr><td class="f">S<sub>n</sub> = ½n(首项 + 末项)</td><td>等差求和口诀版</td><td>sum = ½n(first + last)</td></tr>
-      <tr><td class="f">u<sub>n</sub> = ar<sup>n−1</sup></td><td>等比数列第 n 项</td><td>nth term of a geometric sequence</td></tr>
-      <tr><td class="f">S<sub>n</sub> = a(r<sup>n</sup> − 1)/(r − 1)</td><td>等比数列前 n 项和（r &gt; 1）</td><td>sum of n terms (geometric), r &gt; 1</td></tr>
-      <tr><td class="f">S<sub>∞</sub> = a/(1 − r)，|r| &lt; 1</td><td>无穷项和（越加越接近一个值）</td><td>sum to infinity, |r| &lt; 1</td></tr>
-      <tr><td class="f">Σ1 = n</td><td>n 个 1 相加</td><td>n copies of 1</td></tr>
-      <tr><td class="f">Σr = ½n(n + 1)</td><td>1 + 2 + … + n</td><td>sum of the first n whole numbers</td></tr>
-      <tr><td class="f">Σr² = (1/6)n(n + 1)(2n + 1)</td><td>1² + 2² + … + n²</td><td>sum of the first n squares</td></tr>
-      <tr><td class="f">C(n, r) = n!/[r!(n − r)!]</td><td>组合数（nCr 键）</td><td>combinations (nCr button)</td></tr>
-      <tr><td class="f">(a + b)ⁿ = Σ C(n, r)a<sup>n−r</sup>b<sup>r</sup></td><td>二项式展开通式</td><td>binomial expansion, general form</td></tr>
-      <tr><td class="f">通项 = C(n, r)a<sup>n−r</sup>b<sup>r</sup></td><td>直接找某一项（如 x² 项）</td><td>general term — pick out one term</td></tr>
-      <tr><td class="f">m = (y₂ − y₁)/(x₂ − x₁)</td><td>斜率</td><td>gradient</td></tr>
-      <tr><td class="f">y = mx + c</td><td>直线方程</td><td>equation of a line</td></tr>
-      <tr><td class="f">d = √[(x₂ − x₁)² + (y₂ − y₁)²]</td><td>两点间距离</td><td>distance formula</td></tr>
-      <tr><td class="f">M = ((x₁+x₂)/2, (y₁+y₂)/2)</td><td>中点坐标</td><td>midpoint formula</td></tr>
-      <tr><td class="f">m₁ = m₂；m₁m₂ = −1</td><td>平行 / 垂直</td><td>parallel / perpendicular</td></tr>
-      <tr><td class="f">(x − a)² + (y − b)² = r²</td><td>圆的标准式</td><td>equation of a circle</td></tr>
-      <tr><td class="f">切线 ⟂ 半径</td><td>切线的关键性质</td><td>tangent ⟂ radius</td></tr>
-      <tr><td class="f">Δ &gt; 0 / = 0 / &lt; 0</td><td>相交 / 相切 / 相离</td><td>2 points / tangent / none</td></tr>
-      <tr><td class="f">π rad = 180°</td><td>弧度换算桥梁</td><td>radians ↔ degrees</td></tr>
-      <tr><td class="f">l = rθ；A = ½r²θ</td><td>弧长与扇形面积</td><td>arc length; sector area</td></tr>
-      <tr><td class="f">sin²θ + cos²θ = 1</td><td>核心恒等式</td><td>the fundamental identity</td></tr>
-      <tr><td class="f">tan θ = sin θ / cos θ</td><td>正切定义</td><td>definition of tan</td></tr>
-      <tr><td class="f">sin 30° = ½；sin 60° = √3/2</td><td>特殊角精确值</td><td>exact values</td></tr>
-      <tr><td class="f">a/sin A = b/sin B = c/sin C</td><td>正弦定理</td><td>the sine rule</td></tr>
-      <tr><td class="f">a² = b² + c² − 2bc·cos A</td><td>余弦定理</td><td>the cosine rule</td></tr>
-      <tr><td class="f">Area = ½ab·sin C</td><td>三角形面积</td><td>area of a triangle</td></tr>
-      <tr><td class="f">aᵐ × aⁿ = aᵐ⁺ⁿ；aᵐ ÷ aⁿ = aᵐ⁻ⁿ</td><td><span class="zh-only">同底相乘指数相加、相除相减</span><span class="en-only">multiply: add powers; divide: subtract</span></td></tr>
-      <tr><td class="f">a⁰ = 1；a⁻ⁿ = 1/aⁿ</td><td><span class="zh-only">零指数与负指数</span><span class="en-only">zero and negative indices</span></td></tr>
-      <tr><td class="f">logₐ x = y ⟺ aʸ = x</td><td><span class="zh-only">对数的定义（反问句）</span><span class="en-only">definition of a logarithm</span></td></tr>
-      <tr><td class="f">log(xy) = log x + log y</td><td><span class="zh-only">乘法变加法</span><span class="en-only">multiplication becomes addition</span></td></tr>
-      <tr><td class="f">log(xⁿ) = n·log x</td><td><span class="zh-only">指数可以提到前面</span><span class="en-only">a power comes to the front</span></td></tr>
-      <tr><td class="f">x = log b / log a</td><td><span class="zh-only">解 aˣ = b（换底公式）</span><span class="en-only">solve aˣ = b (change of base)</span></td></tr>
-      <tr><td class="f">y = A eᵏᵗ</td><td><span class="zh-only">指数增长 / 衰减模型</span><span class="en-only">exponential growth / decay model</span></td></tr>
-      <tr><td class="f">y = xⁿ → dy/dx = n xⁿ⁻¹</td><td><span class="zh-only">幂函数求导</span><span class="en-only">differentiating xⁿ</span></td></tr>
-      <tr><td class="f">dy/dx = f′(g(x))·g′(x)</td><td><span class="zh-only">链式法则（套娃函数）</span><span class="en-only">the chain rule</span></td></tr>
-      <tr><td class="f">y = uv → u′v + uv′</td><td><span class="zh-only">乘积法则</span><span class="en-only">the product rule</span></td></tr>
-      <tr><td class="f">y = u/v → (u′v − uv′)/v²</td><td><span class="zh-only">商法则</span><span class="en-only">the quotient rule</span></td></tr>
-      <tr><td class="f">y − y₁ = m(x − x₁)</td><td><span class="zh-only">切线方程；法线用 −1/m</span><span class="en-only">tangent; normal uses −1/m</span></td></tr>
-      <tr><td class="f">∫ xⁿ dx = xⁿ⁺¹/(n+1) + c</td><td><span class="zh-only">幂函数积分</span><span class="en-only">integrating xⁿ</span></td></tr>
-      <tr><td class="f">∫ₐᵇ f(x) dx = F(b) − F(a)</td><td><span class="zh-only">定积分：上减下</span><span class="en-only">definite integral: top minus bottom</span></td></tr>
-      <tr><td class="f">½h[y₀ + yₙ + 2(y₁+…+yₙ₋₁)]</td><td><span class="zh-only">梯形法则估算面积</span><span class="en-only">the trapezium rule</span></td></tr>
-      <tr><td class="f">|a| = √(x² + y²)</td><td><span class="zh-only">向量模长（三维再加 z²）</span><span class="en-only">magnitude of a vector</span></td></tr>
-      <tr><td class="f">a · b = x₁x₂ + y₁y₂</td><td><span class="zh-only">点积；等于 0 则垂直</span><span class="en-only">scalar product; 0 means perpendicular</span></td></tr>
-      <tr><td class="f">cos θ = (a·b)/(|a||b|)</td><td><span class="zh-only">两向量夹角</span><span class="en-only">angle between two vectors</span></td></tr>
-      <tr><td class="f">AB = b − a</td><td><span class="zh-only">由位置向量求两点间向量</span><span class="en-only">vector from position vectors</span></td></tr>
-      <tr><td class="f">dy/dx = f(x)·g(y) → 分离后积分</td><td><span class="zh-only">可分离变量微分方程</span><span class="en-only">separable differential equation</span></td></tr>
-      <tr><td class="f">xₙ₊₁ = f(xₙ)</td><td><span class="zh-only">迭代法</span><span class="en-only">iteration</span></td></tr>
-      <tr><td class="f">xₙ₊₁ = xₙ − f(xₙ)/f′(xₙ)</td><td><span class="zh-only">牛顿迭代法</span><span class="en-only">Newton-Raphson</span></td></tr>
-    </tbody>
-  </table>
+  <h3 class="gl-h" id="formulas"><span class="zh-only">② 核心公式卡（按单元，中英对照）</span><span class="en-only">② Key Formula Cards (by unit, EN–CN)</span></h3>
+  <p class="gl-sub"><span class="zh-only">点开哪个单元，那一单元的公式就出来了。默认展开单元 1。</span><span class="en-only">Click a unit to open its formulas. Unit 1 is open by default.</span></p>
+  <details class="card" id="glf1" open>
+    <summary>
+      <span class="num">1</span>
+      <span class="zh-only">代数与函数</span><span class="en-only">Algebra &amp; Functions</span>
+      <span class="en-tag zh-only">12 条公式</span><span class="en-tag en-only">12 formulas</span>
+    </summary>
+    <div class="body">
+    <div class="tw">
+    <table>
+      <thead>
+        <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th>中文</th><th>English</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="f">a² − b² = (a − b)(a + b)</td><td>平方差</td><td>difference of squares</td></tr>
+        <tr><td class="f">a² ± 2ab + b² = (a ± b)²</td><td>完全平方</td><td>perfect square</td></tr>
+        <tr><td class="f">a³ ± b³ = (a ± b)(a² ∓ ab + b²)</td><td>立方和 / 立方差</td><td>sum / difference of cubes</td></tr>
+        <tr><td class="f">f(a) = 0 ⟺ (x − a) 是因式</td><td>因式定理</td><td>factor theorem</td></tr>
+        <tr><td class="f">f(x) ÷ (x − a) 的余数 = f(a)</td><td>余数定理</td><td>remainder theorem</td></tr>
+        <tr><td class="f">y = a(x − h)² + k</td><td>顶点式，顶点 (h, k)</td><td>vertex form, vertex (h, k)</td></tr>
+        <tr><td class="f">x = −b / (2a)</td><td>对称轴</td><td>axis of symmetry</td></tr>
+        <tr><td class="f">|x| = x (x ≥ 0)；|x| = −x (x &lt; 0)</td><td>绝对值定义</td><td>definition of modulus</td></tr>
+        <tr><td class="f">y = k / x（k ≠ 0）</td><td>反比例，渐近线 x = 0、y = 0</td><td>reciprocal graph; asymptotes x = 0, y = 0</td></tr>
+        <tr><td class="f">y = f(x) + a</td><td>上移 a（−a 下移）</td><td>up by a (−a: down)</td></tr>
+        <tr><td class="f">y = f(x + a)</td><td>左移 a（括号里是反的）</td><td>LEFT by a (inside is backwards)</td></tr>
+        <tr><td class="f">y = −f(x)；y = f(−x)</td><td>关于 x 轴翻；关于 y 轴翻</td><td>reflect in x-axis; in y-axis</td></tr>
+      </tbody>
+    </table>
+    </div>
+    </div>
+  </details>
+  <details class="card" id="glf2">
+    <summary>
+      <span class="num">2</span>
+      <span class="zh-only">方程与不等式</span><span class="en-only">Equations &amp; Inequalities</span>
+      <span class="en-tag zh-only">9 条公式</span><span class="en-tag en-only">9 formulas</span>
+    </summary>
+    <div class="body">
+    <div class="tw">
+    <table>
+      <thead>
+        <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th>中文</th><th>English</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="f">x = [−b ± √(b² − 4ac)] / (2a)</td><td>求根公式（万能）</td><td>quadratic formula (always works)</td></tr>
+        <tr><td class="f">Δ = b² − 4ac</td><td>判别式</td><td>discriminant</td></tr>
+        <tr><td class="f">Δ &gt; 0 / = 0 / &lt; 0</td><td>两实根 / 一重根 / 无实根</td><td>two / one repeated / no real roots</td></tr>
+        <tr><td class="f">a &gt; 0：&gt;0 取两边，&lt;0 取中间</td><td>二次不等式的解集</td><td>solution of a quadratic inequality</td></tr>
+        <tr><td class="f">乘除负数 → 不等号掉头</td><td>不等式唯一的坑</td><td>flip the sign when ×/÷ by a negative</td></tr>
+        <tr><td class="f">f(a) = 0 ⟺ (x − a) 是因式</td><td>因式定理（解三次方程用）</td><td>factor theorem (for cubics)</td></tr>
+        <tr><td class="f">试根 → 拆括号 → 解二次</td><td>三次方程通法</td><td>cubic: find a root → bracket → quadratic</td></tr>
+        <tr><td class="f">y = a(x − h)² + k</td><td>配方法求最值，顶点 (h, k)</td><td>complete the square; vertex (h, k)</td></tr>
+        <tr><td class="f">[a, b] 含端点；(a, b) 不含</td><td>区间写法</td><td>interval notation</td></tr>
+      </tbody>
+    </table>
+    </div>
+    </div>
+  </details>
+  <details class="card" id="glf3">
+    <summary>
+      <span class="num">3</span>
+      <span class="zh-only">数列与二项式</span><span class="en-only">Sequences, Series &amp; Binomial</span>
+      <span class="en-tag zh-only">13 条公式</span><span class="en-tag en-only">13 formulas</span>
+    </summary>
+    <div class="body">
+    <div class="tw">
+    <table>
+      <thead>
+        <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th>中文</th><th>English</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="f">u<sub>n</sub> = a + (n − 1)d</td><td>等差数列第 n 项</td><td>nth term (arithmetic)</td></tr>
+        <tr><td class="f">S<sub>n</sub> = ½n[2a + (n − 1)d]</td><td>等差前 n 项和</td><td>sum of n terms (arithmetic)</td></tr>
+        <tr><td class="f">S<sub>n</sub> = ½n(首项 + 末项)</td><td>等差求和口诀版</td><td>sum = ½n(first + last)</td></tr>
+        <tr><td class="f">u<sub>n</sub> = ar<sup>n−1</sup></td><td>等比数列第 n 项</td><td>nth term (geometric)</td></tr>
+        <tr><td class="f">S<sub>n</sub> = a(r<sup>n</sup> − 1)/(r − 1)</td><td>等比前 n 项和（r &gt; 1）</td><td>sum of n terms, r &gt; 1</td></tr>
+        <tr><td class="f">S<sub>∞</sub> = a/(1 − r)，|r| &lt; 1</td><td>无穷等比和</td><td>sum to infinity, |r| &lt; 1</td></tr>
+        <tr><td class="f">Σ1 = n；Σr = ½n(n+1)</td><td>两个最常用求和公式</td><td>two standard sums</td></tr>
+        <tr><td class="f">Σr² = (1/6)n(n+1)(2n+1)</td><td>平方和公式</td><td>sum of squares</td></tr>
+        <tr><td class="f">u<sub>n+1</sub> = f(u<sub>n</sub>)（配 u₁）</td><td>递推关系</td><td>recurrence relation</td></tr>
+        <tr><td class="f">C(n, r) = n!/[r!(n − r)!]</td><td>组合数（nCr 键）</td><td>combinations (nCr)</td></tr>
+        <tr><td class="f">(a + b)ⁿ = Σ C(n, r)a<sup>n−r</sup>b<sup>r</sup></td><td>二项式展开</td><td>binomial expansion</td></tr>
+        <tr><td class="f">通项 = C(n, r)a<sup>n−r</sup>b<sup>r</sup></td><td>直接找某一项</td><td>general term</td></tr>
+        <tr><td class="f">复利 P(1 + r)ⁿ；折旧 P(1 − d)ⁿ</td><td>钱的增长与贬值</td><td>compound interest; depreciation</td></tr>
+      </tbody>
+    </table>
+    </div>
+    </div>
+  </details>
+  <details class="card" id="glf4">
+    <summary>
+      <span class="num">4</span>
+      <span class="zh-only">坐标几何</span><span class="en-only">Coordinate Geometry</span>
+      <span class="en-tag zh-only">13 条公式</span><span class="en-tag en-only">13 formulas</span>
+    </summary>
+    <div class="body">
+    <div class="tw">
+    <table>
+      <thead>
+        <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th>中文</th><th>English</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="f">m = (y₂ − y₁)/(x₂ − x₁)</td><td>斜率 = 上升 ÷ 前进</td><td>gradient = rise ÷ run</td></tr>
+        <tr><td class="f">y = mx + c；y − y₁ = m(x − x₁)</td><td>直线方程的两种写法</td><td>two forms of a straight line</td></tr>
+        <tr><td class="f">d = √[(x₂ − x₁)² + (y₂ − y₁)²]</td><td>两点间距离</td><td>distance between two points</td></tr>
+        <tr><td class="f">M = ((x₁+x₂)/2, (y₁+y₂)/2)</td><td>中点坐标（各取平均）</td><td>midpoint (average each coordinate)</td></tr>
+        <tr><td class="f">m₁ = m₂（平行）</td><td>平行：斜率相等</td><td>parallel lines have equal gradients</td></tr>
+        <tr><td class="f">m₁m₂ = −1（垂直）</td><td>垂直：斜率乘积为 −1（负倒数）</td><td>perpendicular: product is −1</td></tr>
+        <tr><td class="f">(x − a)² + (y − b)² = r²</td><td>圆的标准式：圆心 (a, b)、半径 r</td><td>circle: centre (a, b), radius r</td></tr>
+        <tr><td class="f">x² + y² + 2gx + 2fy + c = 0</td><td>圆的展开式 → 圆心 (−g, −f)</td><td>expanded circle → centre (−g, −f)</td></tr>
+        <tr><td class="f">r = √(g² + f² − c)</td><td>展开式下的半径</td><td>radius from the expanded form</td></tr>
+        <tr><td class="f">m<sub>半径</sub> = (y₁ − a)/(x₁ − b)</td><td>圆心到切点的半径斜率</td><td>gradient of the radius to the point</td></tr>
+        <tr><td class="f">m<sub>切线</sub> = −1/m<sub>半径</sub></td><td>切线 ⟂ 半径</td><td>tangent ⟂ radius</td></tr>
+        <tr><td class="f">x₁x + y₁y = r²</td><td>圆心在原点时切线的快捷式</td><td>tangent shortcut when centre is origin</td></tr>
+        <tr><td class="f">Δ &gt; 0 / = 0 / &lt; 0</td><td>相交 2 点 / 相切 1 点 / 相离 0 点</td><td>2 points / tangent / no intersection</td></tr>
+      </tbody>
+    </table>
+    </div>
+    </div>
+  </details>
+  <details class="card" id="glf5">
+    <summary>
+      <span class="num">5</span>
+      <span class="zh-only">三角学</span><span class="en-only">Trigonometry</span>
+      <span class="en-tag zh-only">18 条公式</span><span class="en-tag en-only">18 formulas</span>
+    </summary>
+    <div class="body">
+    <div class="tw">
+    <table>
+      <thead>
+        <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th>中文</th><th>English</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="f">π rad = 180°</td><td>弧度与角度的换算桥梁</td><td>radians ↔ degrees</td></tr>
+        <tr><td class="f">度 × π/180 = 弧度</td><td>度换成弧度</td><td>degrees → radians</td></tr>
+        <tr><td class="f">弧度 × 180/π = 度</td><td>弧度换成度</td><td>radians → degrees</td></tr>
+        <tr><td class="f">l = rθ</td><td>弧长（θ 用弧度）</td><td>arc length (θ in radians)</td></tr>
+        <tr><td class="f">A = ½r²θ</td><td>扇形面积</td><td>sector area</td></tr>
+        <tr><td class="f">扇形周长 = 2r + l</td><td>两条半径 + 弧长</td><td>perimeter of a sector</td></tr>
+        <tr><td class="f">sin 30° = ½；cos 30° = √3/2</td><td>30° 的精确值</td><td>exact values at 30°</td></tr>
+        <tr><td class="f">sin 45° = cos 45° = 1/√2</td><td>45° 的精确值</td><td>exact values at 45°</td></tr>
+        <tr><td class="f">sin 60° = √3/2；cos 60° = ½</td><td>60° 的精确值</td><td>exact values at 60°</td></tr>
+        <tr><td class="f">sin²θ + cos²θ = 1</td><td>核心恒等式</td><td>the fundamental identity</td></tr>
+        <tr><td class="f">tan θ = sin θ / cos θ</td><td>正切的定义</td><td>definition of tan</td></tr>
+        <tr><td class="f">y = A sin(Bx)：最大 A，周期 2π/B</td><td>图像的振幅与周期</td><td>amplitude and period</td></tr>
+        <tr><td class="f">sin 第二解 = π − 第一解</td><td>sin 方程的解法规律</td><td>sin equation pattern</td></tr>
+        <tr><td class="f">cos 第二解 = 2π − 第一解</td><td>cos 方程的解法规律</td><td>cos equation pattern</td></tr>
+        <tr><td class="f">a/sin A = b/sin B = c/sin C</td><td>正弦定理</td><td>the sine rule</td></tr>
+        <tr><td class="f">a² = b² + c² − 2bc·cos A</td><td>余弦定理</td><td>the cosine rule</td></tr>
+        <tr><td class="f">cos A = (b² + c² − a²)/(2bc)</td><td>余弦定理求角版</td><td>cosine rule for an angle</td></tr>
+        <tr><td class="f">Area = ½ab·sin C</td><td>三角形面积（两边夹角）</td><td>area of a triangle</td></tr>
+      </tbody>
+    </table>
+    </div>
+    </div>
+  </details>
+  <details class="card" id="glf6">
+    <summary>
+      <span class="num">6</span>
+      <span class="zh-only">指数与对数</span><span class="en-only">Exponentials &amp; Logarithms</span>
+      <span class="en-tag zh-only">9 条公式</span><span class="en-tag en-only">9 formulas</span>
+    </summary>
+    <div class="body">
+    <div class="tw">
+    <table>
+      <thead>
+        <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th><span class="zh-only">中文意思</span><span class="en-only">Meaning</span></th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="f">aᵐ × aⁿ = aᵐ⁺ⁿ</td><td><span class="zh-only">同底相乘，指数相加</span><span class="en-only">multiply: add the powers</span></td></tr>
+        <tr><td class="f">aᵐ ÷ aⁿ = aᵐ⁻ⁿ</td><td><span class="zh-only">同底相除，指数相减</span><span class="en-only">divide: subtract the powers</span></td></tr>
+        <tr><td class="f">(aᵐ)ⁿ = aᵐⁿ</td><td><span class="zh-only">幂的幂，指数相乘</span><span class="en-only">power of a power: multiply</span></td></tr>
+        <tr><td class="f">a⁰ = 1；a⁻ⁿ = 1/aⁿ</td><td><span class="zh-only">零指数与负指数</span><span class="en-only">zero and negative indices</span></td></tr>
+        <tr><td class="f">logₐ x = y ⟺ aʸ = x</td><td><span class="zh-only">对数的定义（反问句）</span><span class="en-only">definition of a logarithm</span></td></tr>
+        <tr><td class="f">log(xy) = log x + log y</td><td><span class="zh-only">乘法变加法</span><span class="en-only">multiplication becomes addition</span></td></tr>
+        <tr><td class="f">log(x/y) = log x − log y</td><td><span class="zh-only">除法变减法</span><span class="en-only">division becomes subtraction</span></td></tr>
+        <tr><td class="f">log(xⁿ) = n·log x</td><td><span class="zh-only">指数可以提到前面</span><span class="en-only">a power comes to the front</span></td></tr>
+        <tr><td class="f">y = aeᵏᵗ</td><td><span class="zh-only">指数增长 / 衰减模型</span><span class="en-only">exponential growth / decay model</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    </div>
+  </details>
+  <details class="card" id="glf7">
+    <summary>
+      <span class="num">7</span>
+      <span class="zh-only">微分</span><span class="en-only">Differentiation</span>
+      <span class="en-tag zh-only">8 条公式</span><span class="en-tag en-only">8 formulas</span>
+    </summary>
+    <div class="body">
+    <div class="tw">
+    <table>
+      <thead>
+        <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th><span class="zh-only">中文意思</span><span class="en-only">Meaning</span></th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="f">d/dx (xⁿ) = nxⁿ⁻¹</td><td><span class="zh-only">幂函数求导</span><span class="en-only">power rule</span></td></tr>
+        <tr><td class="f">d/dx (axⁿ) = anxⁿ⁻¹</td><td><span class="zh-only">带系数也一样</span><span class="en-only">with a coefficient</span></td></tr>
+        <tr><td class="f">f′(a) = 切线的斜率</td><td><span class="zh-only">导数 = 切线斜率</span><span class="en-only">derivative = gradient of tangent</span></td></tr>
+        <tr><td class="f">法线斜率 = −1/m</td><td><span class="zh-only">法线与切线垂直</span><span class="en-only">normal ⟂ tangent</span></td></tr>
+        <tr><td class="f">dy/dx = dy/du × du/dx</td><td><span class="zh-only">链式法则</span><span class="en-only">chain rule</span></td></tr>
+        <tr><td class="f">d/dx (uv) = u′v + uv′</td><td><span class="zh-only">乘积法则</span><span class="en-only">product rule</span></td></tr>
+        <tr><td class="f">d/dx (u/v) = (u′v − uv′)/v²</td><td><span class="zh-only">商法则</span><span class="en-only">quotient rule</span></td></tr>
+        <tr><td class="f">f″(x)：f″ > 0 极小，f″ < 0 极大</td><td><span class="zh-only">二阶导数判极值</span><span class="en-only">second derivative test</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    </div>
+  </details>
+  <details class="card" id="glf8">
+    <summary>
+      <span class="num">8</span>
+      <span class="zh-only">积分</span><span class="en-only">Integration</span>
+      <span class="en-tag zh-only">7 条公式</span><span class="en-tag en-only">7 formulas</span>
+    </summary>
+    <div class="body">
+    <div class="tw">
+    <table>
+      <thead>
+        <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th><span class="zh-only">中文意思</span><span class="en-only">Meaning</span></th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="f">∫ xⁿ dx = xⁿ⁺¹/(n+1) + c</td><td><span class="zh-only">幂函数积分（n ≠ −1）</span><span class="en-only">power rule (n ≠ −1)</span></td></tr>
+        <tr><td class="f">∫ (axⁿ) dx = a·xⁿ⁺¹/(n+1) + c</td><td><span class="zh-only">带系数也一样</span><span class="en-only">with a coefficient</span></td></tr>
+        <tr><td class="f">∫ₐᵇ f(x) dx = F(b) − F(a)</td><td><span class="zh-only">定积分（牛顿–莱布尼茨）</span><span class="en-only">definite integral</span></td></tr>
+        <tr><td class="f">面积 = ∫ₐᵇ y dx</td><td><span class="zh-only">曲线下的面积</span><span class="en-only">area under a curve</span></td></tr>
+        <tr><td class="f">∫ₐᵇ (上 − 下) dx</td><td><span class="zh-only">两曲线之间的面积</span><span class="en-only">area between curves</span></td></tr>
+        <tr><td class="f">x 轴下方 → 面积为负</td><td><span class="zh-only">注意符号</span><span class="en-only">below the axis gives a negative value</span></td></tr>
+        <tr><td class="f">½h[y₀ + yₙ + 2(中间各项)]</td><td><span class="zh-only">梯形法则</span><span class="en-only">trapezium rule</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    </div>
+  </details>
+  <details class="card" id="glf9">
+    <summary>
+      <span class="num">9</span>
+      <span class="zh-only">向量</span><span class="en-only">Vectors</span>
+      <span class="en-tag zh-only">8 条公式</span><span class="en-tag en-only">8 formulas</span>
+    </summary>
+    <div class="body">
+    <div class="tw">
+    <table>
+      <thead>
+        <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th><span class="zh-only">中文意思</span><span class="en-only">Meaning</span></th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="f">|a| = √(x² + y²)</td><td><span class="zh-only">向量的模长（长度）</span><span class="en-only">magnitude of a vector</span></td></tr>
+        <tr><td class="f">a + b；ka</td><td><span class="zh-only">向量加法与数乘</span><span class="en-only">vector addition; scalar multiplication</span></td></tr>
+        <tr><td class="f">单位向量 = a / |a|</td><td><span class="zh-only">长度为 1 的向量</span><span class="en-only">a vector of length 1</span></td></tr>
+        <tr><td class="f">a·b = |a||b|cos θ</td><td><span class="zh-only">点积的两种算法之一</span><span class="en-only">scalar product (one form)</span></td></tr>
+        <tr><td class="f">a·b = x₁x₂ + y₁y₂</td><td><span class="zh-only">点积的分量算法</span><span class="en-only">scalar product (components)</span></td></tr>
+        <tr><td class="f">a·b = 0 ⟺ 垂直</td><td><span class="zh-only">点积为 0 就是垂直</span><span class="en-only">zero scalar product means perpendicular</span></td></tr>
+        <tr><td class="f">cos θ = (a·b)/(|a||b|)</td><td><span class="zh-only">求两向量夹角</span><span class="en-only">angle between two vectors</span></td></tr>
+        <tr><td class="f">|a| = √(x² + y² + z²)</td><td><span class="zh-only">三维向量的模长</span><span class="en-only">magnitude in 3D</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    </div>
+  </details>
+  <details class="card" id="glf10">
+    <summary>
+      <span class="num">10</span>
+      <span class="zh-only">微分方程与数值方法</span><span class="en-only">Differential Equations &amp; Numerical Methods</span>
+      <span class="en-tag zh-only">7 条公式</span><span class="en-tag en-only">7 formulas</span>
+    </summary>
+    <div class="body">
+    <div class="tw">
+    <table>
+      <thead>
+        <tr><th><span class="zh-only">公式</span><span class="en-only">Formula</span></th><th><span class="zh-only">中文意思</span><span class="en-only">Meaning</span></th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="f">dy/dx = f(x)g(y)</td><td><span class="zh-only">可分离变量的形状</span><span class="en-only">separable form</span></td></tr>
+        <tr><td class="f">∫ (1/g(y)) dy = ∫ f(x) dx</td><td><span class="zh-only">分离后两边各自积分</span><span class="en-only">integrate each side</span></td></tr>
+        <tr><td class="f">dy/dx = ky ⟹ y = Aeᵏᵗ</td><td><span class="zh-only">增长 / 衰减的通解</span><span class="en-only">growth / decay solution</span></td></tr>
+        <tr><td class="f">通解 + 初值 = 特解</td><td><span class="zh-only">代入已知点求常数 C</span><span class="en-only">use the given point to find C</span></td></tr>
+        <tr><td class="f">f(a) 与 f(b) 异号 ⟹ 中间有根</td><td><span class="zh-only">符号变化定位根</span><span class="en-only">change of sign locates a root</span></td></tr>
+        <tr><td class="f">xₙ₊₁ = f(xₙ)</td><td><span class="zh-only">迭代公式</span><span class="en-only">iterative formula</span></td></tr>
+        <tr><td class="f">梯形法则 ≈ ½h(首尾 + 2×中间)</td><td><span class="zh-only">数值求面积</span><span class="en-only">numerical area</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    </div>
+  </details>
+
+  <div class="unit-end">
+    <p class="big"><span class="zh-only">速查表就这些 🎉</span><span class="en-only">That is the whole cheat sheet 🎉</span></p>
+    <p><span class="zh-only">公式不用背，用多了自然就记住。真记不住的时候，回到这一页查一下就好。</span>
+       <span class="en-only">Do not memorise formulas, you will remember them by using them. When you forget, just come back to this page.</span></p>
   </div>
+
 </section>
 
 <footer>
   <p class="big"><span class="zh-only">10 个单元、70 站，全部走完了 🎉</span><span class="en-only">All 10 units and 70 stops — done 🎉</span></p>
   <p><span class="zh-only">有没有哪道练习题，是你自己算出来的？哪怕只想出一道，也是真进步。</span><span class="en-only">Did you work out any practice question by yourself? Even one is real progress.</span></p>
-  <p style="color:#6b7280;font-size:14px;"><span class="zh-only">每个单元末尾都有一张公式卡，复习时直接看那张表就够。慢慢来，A-Level 数学没那么可怕。</span><span class="en-only">Every unit ends with a formula card — that table is all you need when revising. Take your time; A-Level maths is not that scary.</span></p>
+  <p style="color:#6b7280;font-size:14px;"><span class="zh-only">最后一个 tab「术语与公式」是全站速查表：术语 100+ 条、公式按单元分组，做题卡住或考前复习，只看那一页就够。慢慢来，A-Level 数学没那么可怕。</span><span class="en-only">The last tab, Glossary & Formulas, is the whole-site cheat sheet: 100+ terms and all formulas grouped by unit. Take your time; A-Level maths is not that scary.</span></p>
 </footer>
 
 </div>
