@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A-Level 计算机科学 考试大纲与真题 · Computer Science 0478（中英双语）</title>
+<style>
+  :root{
+    --bg:#f4f7fb;
+    --card:#ffffff;
+    --main:#1f4e79;
+    --main-light:#eef4fb;
+    --accent:#2563eb;
+    --warm:#fff8e6;
+    --warm-line:#e8c46a;
+    --green:#e9f6ec;
+    --green-line:#2e7d52;
+    --red:#fdf1ef;
+    --red-line:#c0392b;
+    --gray:#6b7280;
+    --line:#dfe6ee;
+    --orange:#e08a2e;
+  }
+  *{box-sizing:border-box;}
+  .tlink{
+    flex:none;text-decoration:none;white-space:nowrap;
+    border:1px solid var(--warm-line);background:var(--warm);color:#8a5a00;
+    border-radius:20px;padding:6px 14px;font-size:14px;font-weight:600;
+    display:inline-flex;align-items:center;gap:5px;
+  }
+  .tlink:hover{border-color:var(--orange);color:var(--orange);background:#fff7e6;}
+  .tlink .ar{font-size:13px;}
+  .topicbar{
+    display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:10px 14px;margin-bottom:18px;font-size:14px;
+  }
+  .topicbar .tl{color:var(--gray);font-size:13px;}
+  .topicbar a.topic{
+    text-decoration:none;color:#0f766e;background:#ecfdf5;border:1px solid #a7f3d0;
+    border-radius:20px;padding:5px 13px;font-weight:600;
+  }
+  .topicbar a.topic:hover{background:#0f766e;color:#fff;border-color:#0f766e;}
+  .topicbar a.topic.m{
+    color:#1d4ed8;background:#eff6ff;border-color:#bfdbfe;
+  }
+  .topicbar a.topic.m:hover{background:#1d4ed8;color:#fff;border-color:#1d4ed8;}
+
+  .tab.gtab{border-color:var(--warm-line);background:var(--warm);color:#8a5a00;}
+  .tab.gtab:hover{border-color:var(--orange);color:var(--orange);}
+  .tab.gtab.on{background:var(--orange);border-color:var(--orange);color:#fff;}
+  .tab.gtab .tn{background:#f7e3b8;color:#8a5a00;}
+  .tab.gtab.on .tn{background:rgba(255,255,255,.25);color:#fff;}
+  .gl-h{font-size:18px;color:var(--main);margin:30px 0 6px;padding:0 0 8px;
+    border-bottom:2px solid var(--main-light);line-height:1.4;}
+  .gl-sub{font-size:13.5px;color:var(--gray);margin:0 0 12px;}
+  details.card .body .tw{margin-top:4px;}
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:#1f2937;
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+    font-size:16.5px;
+    line-height:1.75;
+  }
+  .wrap{max-width:840px;margin:0 auto;padding:24px 16px 60px;}
+
+  header{
+    background:linear-gradient(180deg,#1f4e79,#2c6ba8);
+    color:#fff;border-radius:16px;padding:26px 22px;margin-bottom:16px;
+  }
+  header .kicker{font-size:13px;letter-spacing:1px;opacity:.85;}
+  header h1{margin:6px 0 4px;font-size:25px;line-height:1.35;}
+  header .sub{margin:12px 0 0;font-size:14.5px;opacity:.92;}
+
+  .langbar{
+    display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:10px 16px;margin-bottom:18px;font-size:14.5px;
+  }
+  .langbar .lb-t{color:var(--gray);}
+  .lbtn{
+    cursor:pointer;border:1px solid var(--line);background:#fff;color:#334155;
+    border-radius:20px;padding:5px 18px;font-size:14px;font-family:inherit;
+  }
+  .lbtn:hover{border-color:var(--accent);color:var(--accent);}
+  .lbtn.on{background:var(--main);border-color:var(--main);color:#fff;font-weight:600;}
+  .langbar .note{margin-left:auto;font-size:13px;color:var(--gray);}
+
+  body.lang-zh .en-only,body.lang-zh .en-block{display:none !important;}
+  body.lang-en .zh-only,body.lang-en .zh-block{display:none !important;}
+
+  .howto{
+    background:var(--warm);border:1px solid var(--warm-line);
+    border-radius:12px;padding:14px 16px;margin-bottom:20px;font-size:15px;
+  }
+  .howto b{color:#8a5a00;}
+
+  details.card{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    margin-bottom:16px;overflow:hidden;
+  }
+  details.card > summary{
+    cursor:pointer;list-style:none;padding:16px 18px;
+    font-size:18px;font-weight:600;color:var(--main);
+    display:flex;align-items:center;gap:10px;
+  }
+  details.card > summary::-webkit-details-marker{display:none;}
+  details.card > summary:hover{background:var(--main-light);}
+  details.card[open] > summary{border-bottom:1px solid var(--line);background:var(--main-light);}
+  .num{
+    flex:none;width:28px;height:28px;border-radius:50%;
+    background:var(--main);color:#fff;font-size:15px;
+    display:inline-flex;align-items:center;justify-content:center;
+  }
+  .en-tag{
+    margin-left:auto;font-size:13px;font-weight:normal;color:var(--gray);
+    background:#f1f5f9;padding:2px 9px;border-radius:20px;
+  }
+  .body{padding:6px 18px 18px;}
+
+  figure{margin:14px 0 4px;}
+  figure svg{
+    width:100%;height:auto;display:block;background:#fff;
+    border:1px solid var(--line);border-radius:10px;
+  }
+  figcaption{
+    font-size:13.5px;color:var(--gray);text-align:center;margin-top:6px;line-height:1.6;
+  }
+  .ax{stroke:#94a3b8;stroke-width:1.4;}
+  .curve{fill:none;stroke:var(--accent);stroke-width:2.6;stroke-linecap:round;}
+  .curve2{fill:none;stroke:var(--orange);stroke-width:2.6;stroke-linecap:round;}
+  .dash{fill:none;stroke:#94a3b8;stroke-width:1.5;stroke-dasharray:5,4;}
+  .pt{fill:var(--main);}
+  .lbl{font-size:12.5px;fill:#475569;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;}
+  .lbl-b{font-size:13px;fill:var(--main);font-weight:600;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;}
+  .lbl-o{font-size:12.5px;fill:var(--orange);font-weight:600;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;}
+  .mon{font-size:12.5px;fill:#334155;font-family:"SFMono-Regular",Consolas,Menlo,monospace;}
+  .mon-b{font-size:13px;fill:var(--main);font-weight:600;font-family:"SFMono-Regular",Consolas,Menlo,monospace;}
+
+  /* 计算机科学专用图形类 */
+  .bit{fill:#fff;stroke:#1f4e79;stroke-width:1.5;}
+  .bit0{fill:#fff;stroke:#94a3b8;stroke-width:1.5;}
+  .bit1{fill:#1f4e79;stroke:#1f4e79;stroke-width:1.5;}
+  .onbit{fill:#1d4ed8;}
+  .gate{fill:#fff8e6;stroke:#e8c46a;stroke-width:1.8;}
+  .chip{fill:#e9f6ec;stroke:#2e7d52;stroke-width:1.8;}
+  .dev{fill:#f1f5f9;stroke:#94a3b8;stroke-width:1.6;}
+  .bus{fill:none;stroke:#475569;stroke-width:1.8;}
+  .bus-a{fill:none;stroke:#1d4ed8;stroke-width:2;}
+  .farrow{fill:#1f4e79;}
+  .flowbox{fill:#eef4fb;stroke:#1f4e79;stroke-width:1.6;}
+  .flowdia{fill:#fff8e6;stroke:#e8c46a;stroke-width:1.6;}
+  .flowterm{fill:#e9f6ec;stroke:#2e7d52;stroke-width:1.6;}
+  .conn{fill:none;stroke:#475569;stroke-width:1.6;}
+  .on{fill:none;stroke:#2563eb;stroke-width:2.6;}
+  .off{fill:none;stroke:#cbd5e1;stroke-width:2.6;}
+  .tbl{fill:#fff;stroke:#94a3b8;stroke-width:1.2;}
+  .thd{fill:#eef4fb;stroke:#1f4e79;stroke-width:1.2;}
+  .pkt{fill:#fff8e6;stroke:#e8c46a;stroke-width:1.6;}
+  .pkth{fill:#eef4fb;stroke:#1f4e79;stroke-width:1.6;}
+  .cell{fill:#fff;stroke:#cbd5e1;stroke-width:1;}
+  .cell-on{fill:#1f4e79;stroke:#1f4e79;stroke-width:1;}
+
+  /* 代码块（伪代码 / 程序 / SQL） */
+  .pcode{
+    background:#f8fafc;border:1px solid var(--line);border-left:4px solid #334155;
+    border-radius:8px;padding:12px 14px;margin:12px 0;
+    font-family:"SFMono-Regular",Consolas,Menlo,monospace;font-size:14px;line-height:1.7;
+    white-space:pre;overflow-x:auto;color:#1e293b;
+  }
+  .pcode b{color:#1d4ed8;}
+  .pcode i{color:#64748b;font-style:normal;}
+
+  .goal{
+    background:var(--green);border-left:4px solid var(--green-line);
+    padding:10px 14px;border-radius:8px;font-size:15px;margin:14px 0;
+  }
+  .say{
+    background:var(--warm);border-left:4px solid var(--warm-line);
+    padding:12px 14px;border-radius:8px;margin:14px 0;font-size:15.5px;
+  }
+  .say b{color:#8a5a00;}
+  .key{
+    background:var(--main-light);border-radius:10px;padding:12px 16px;margin:14px 0;font-size:15.5px;
+  }
+  .key b{color:var(--main);}
+  .key ul{margin:8px 0 0;padding-left:20px;}
+  .key li{margin:5px 0;}
+
+  .example{
+    border:1px solid var(--line);border-left:4px solid var(--accent);
+    border-radius:8px;padding:12px 16px;margin:14px 0;background:#fcfdff;
+  }
+  .example .t{font-weight:600;color:var(--accent);font-size:15px;margin:0 0 8px;}
+  .q{background:#f8fafc;border-radius:6px;padding:10px 12px;margin:8px 0;font-size:15.5px;}
+  .sol{margin:10px 0 0;font-size:15.5px;}
+  .sol b{color:var(--main);}
+  .sol .step{display:block;margin:4px 0;}
+
+  .practice{
+    background:#f8fafc;border:1px dashed #b6c2d1;border-radius:10px;
+    padding:12px 16px;margin:16px 0 0;
+  }
+  .practice .t{font-weight:600;color:#334155;font-size:15px;margin:0 0 6px;}
+  .practice .hint{font-size:13.5px;color:var(--gray);margin:0 0 8px;}
+
+  details.ans{margin-top:10px;}
+  details.ans > summary{
+    cursor:pointer;list-style:none;display:inline-block;
+    background:#fff;border:1px solid var(--green-line);color:var(--green-line);
+    border-radius:20px;padding:5px 16px;font-size:14px;font-weight:600;
+  }
+  details.ans > summary::-webkit-details-marker{display:none;}
+  details.ans > summary:hover{background:var(--green);}
+  details.ans .acontent{
+    background:var(--green);border-radius:8px;padding:12px 14px;margin-top:10px;font-size:15.5px;
+  }
+  details.ans .acontent b{color:var(--green-line);}
+
+  .tip{
+    background:var(--red);border-left:4px solid var(--red-line);
+    padding:10px 14px;border-radius:8px;font-size:14.5px;margin:12px 0;
+  }
+  .tip b{color:var(--red-line);}
+
+  .speak{
+    background:#eff6ff;border-left:4px solid #1d4ed8;
+    padding:11px 14px;border-radius:8px;font-size:15px;margin:12px 0;
+  }
+  .speak b{color:#1d4ed8;}
+  .speak .enx{
+    display:block;margin-top:6px;font-family:"SFMono-Regular",Consolas,Menlo,monospace;
+    font-size:14px;color:#1e3a8a;background:#dbeafe;padding:5px 9px;border-radius:5px;
+  }
+
+  .done{
+    text-align:center;color:var(--gray);font-size:14px;
+    border-top:1px dashed var(--line);margin-top:16px;padding-top:10px;
+  }
+
+  nav.tabs{
+    display:flex;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:8px;margin-bottom:18px;
+  }
+  nav.tabs::-webkit-scrollbar{height:6px;}
+  nav.tabs::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:6px;}
+  .tab{
+    flex:none;cursor:pointer;white-space:nowrap;
+    border:1px solid var(--line);background:#fff;color:#475569;
+    border-radius:20px;padding:6px 14px;font-size:14px;font-family:inherit;
+  }
+  .tab:hover{border-color:var(--accent);color:var(--accent);}
+  .tab.on{background:var(--main);border-color:var(--main);color:#fff;font-weight:600;}
+  .tab .tn{
+    display:inline-block;background:#eef2f7;color:var(--main);
+    border-radius:10px;font-size:12px;padding:0 6px;margin-right:5px;font-weight:600;
+  }
+  .tab.on .tn{background:rgba(255,255,255,.22);color:#fff;}
+  .tab.p2tab .tn{background:#2f6b5a;}
+  .tab.p2tab.on .tn{background:var(--accent);}
+  .p2badge{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.4px;color:#fff;background:#2f6b5a;border-radius:999px;padding:2px 9px;margin-left:8px;vertical-align:2px;}
+  .p1badge{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.4px;color:#fff;background:#5b7fa8;border-radius:999px;padding:2px 9px;margin-left:8px;vertical-align:2px;}
+  .panel{display:none;}
+  .panel.active{display:block;}
+  .unit-title{font-size:20px;color:var(--main);margin:0 0 4px;line-height:1.4;}
+  .unit-sub{font-size:13.5px;color:var(--gray);margin:0 0 14px;}
+
+  .roadmap{
+    background:var(--main-light);border:1px solid #c5d9f1;border-radius:12px;
+    padding:14px 16px;margin-bottom:16px;
+  }
+  .roadmap .rm-title{
+    font-size:15px;font-weight:600;color:var(--main);margin:0 0 8px;
+    display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+  }
+  .roadmap .rm-badge{
+    background:var(--main);color:#fff;border-radius:14px;
+    padding:2px 12px;font-size:13px;font-weight:600;
+  }
+  .roadmap ol{margin:0;padding-left:22px;font-size:15px;}
+  .roadmap ol li{margin:3px 0;}
+  .roadmap ol li a{color:#1f2937;text-decoration:none;border-bottom:1px dotted #9dc0f0;}
+  .roadmap ol li a:hover{color:var(--accent);border-bottom-color:var(--accent);}
+  .roadmap .rm-note{margin:8px 0 0;font-size:13.5px;color:var(--gray);}
+
+  .tw{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  table{border-collapse:collapse;width:100%;min-width:480px;font-size:14.5px;}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;}
+  th{background:var(--main-light);color:var(--main);font-weight:600;font-size:14px;}
+  td.f{font-family:"SFMono-Regular",Consolas,Menlo,monospace;font-size:14px;white-space:nowrap;}
+  tr:nth-child(even) td{background:#fafcfe;}
+
+  .unit-end{
+    margin-top:22px;background:var(--warm);border:1px solid var(--warm-line);
+    border-radius:12px;padding:16px 18px;
+  }
+  .unit-end p{margin:6px 0;font-size:15.5px;}
+  .unit-end .big{font-size:17px;font-weight:600;color:var(--main);margin:0 0 8px;}
+
+  footer{
+    margin-top:28px;background:var(--card);border:1px solid var(--line);
+    border-radius:14px;padding:20px;text-align:center;
+  }
+  footer p{margin:6px 0;font-size:15px;}
+  footer .big{font-size:17px;font-weight:600;color:var(--main);}
+
+  code{
+    background:#f1f5f9;padding:1px 6px;border-radius:4px;
+    font-family:"SFMono-Regular",Consolas,Menlo,monospace;font-size:14.5px;
+  }
+
+  @media (max-width:600px){
+    body{font-size:16px;}
+    header h1{font-size:21px;}
+    .wrap{padding:16px 12px 40px;}
+    details.card > summary{font-size:16.5px;padding:14px;flex-wrap:wrap;}
+    .en-tag{margin-left:38px;}
+    .langbar .note{margin-left:0;width:100%;}
+    table{font-size:13.5px;}
+    .pcode{font-size:13px;}
+  }
+  @media print{
+    body{background:#fff;}
+    details.card,details.ans,figure{page-break-inside:avoid;}
+    details:not([open]) > *:not(summary){display:block !important;}
+    details.ans > summary{display:none;}
+    .langbar,nav.tabs{display:none;}
+  }
+
+  /* ===== 外部资源 tab ===== */
+  .resintro{background:var(--main-light);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:0 0 18px;font-size:14px;line-height:1.9;color:#334155;}
+  .resintro b{color:var(--main);}
+  .reswarn{background:var(--warm);border:1px solid var(--warm-line);border-radius:12px;padding:12px 15px;margin:0 0 22px;font-size:13.5px;line-height:1.85;color:#7a4e05;}
+  .reswarn b{color:#8a5a00;}
+  .resgroup{margin:0 0 26px;}
+  .resgroup h3{font-size:16px;margin:0 0 4px;padding:0 0 8px;border-bottom:2px solid var(--line);color:var(--main);}
+  .resgroup .rgsub{font-size:13px;color:var(--gray);margin:0 0 10px;}
+  .rcard{display:block;text-decoration:none;border:1px solid var(--line);background:#fff;border-radius:12px;padding:11px 15px;margin:9px 0;}
+  .rcard:hover{border-color:var(--accent);background:var(--main-light);}
+  .rcard .rt{font-weight:700;color:var(--main);font-size:14.5px;line-height:1.6;}
+  .rcard .rt .ar{font-weight:400;color:var(--gray);font-size:12px;}
+  .rcard .rd{color:#475569;font-size:13.5px;margin-top:5px;line-height:1.85;}
+  .rcard .ru{color:#94a3b8;font-size:11.5px;margin-top:6px;word-break:break-all;}
+  @media print{ .rcard{page-break-inside:avoid;} }
+
+/* ===== applied maths: formulas & equations ===== */
+  .fm{font-family:"SFMono-Regular",Consolas,Menlo,monospace;white-space:nowrap;}
+  sub,sup{font-size:.72em;}
+  .eqbox{
+    background:#f8fafc;border:1px solid var(--line);border-left:4px solid #1f4e79;
+    border-radius:8px;padding:11px 14px;margin:12px 0;
+    font-family:"SFMono-Regular",Consolas,Menlo,monospace;font-size:15px;line-height:1.95;
+    white-space:pre;overflow-x:auto;color:#1e293b;
+  }
+  .eqbox i{color:#64748b;font-style:normal;}
+  .arrow{fill:#1f4e79;} .arrow2{fill:#c0392b;} .arrow3{fill:#2563eb;} .arrow-g{fill:#2e7d52;}
+
+  /* ===== mechanics: drawing classes ===== */
+  .obj{fill:#e8f4f1;stroke:#1f4e79;stroke-width:1.6;}
+  .obj2{fill:#fdecea;stroke:#c0392b;stroke-width:1.6;}
+  .slope{fill:#f1f5f9;stroke:#475569;stroke-width:1.6;}
+  .ground{fill:none;stroke:#94a3b8;stroke-width:1.5;stroke-dasharray:6,4;}
+  .vec{fill:none;stroke:#2563eb;stroke-width:2.2;stroke-linecap:round;}
+  .vec-r{fill:none;stroke:#c0392b;stroke-width:2.2;stroke-linecap:round;}
+  .vec-g{fill:none;stroke:#2e7d52;stroke-width:2.2;stroke-linecap:round;}
+  .vec-o{fill:none;stroke:#b45309;stroke-width:2.2;stroke-linecap:round;}
+  .rope{fill:none;stroke:#475569;stroke-width:2;}
+
+  /* ===== statistics: drawing classes ===== */
+  .bar{fill:#1f4e79;}
+  .bar2{fill:#2563eb;}
+  .bar3{fill:#94a3b8;}
+  .box-fill{fill:#e8f4f1;stroke:#1f4e79;stroke-width:1.4;}
+  .box-line{fill:none;stroke:#1f4e79;stroke-width:1.8;}
+  .whisker{fill:none;stroke:#475569;stroke-width:1.6;}
+  .venn{fill:#2563eb;opacity:.22;stroke:#1f4e79;stroke-width:1.4;}
+  .venn2{fill:#c0392b;opacity:.22;stroke:#c0392b;stroke-width:1.4;}
+  .dot{fill:#1f4e79;}
+  .dot2{fill:#c0392b;}
+  .bell{fill:none;stroke:#1f4e79;stroke-width:2.4;}
+  .area{fill:#2563eb;opacity:.16;}
+  .lbl-c{font-size:12.5px;fill:#1f4e79;font-weight:600;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;}
+  .mono-c{font-size:12.5px;fill:#1f4e79;font-family:"SFMono-Regular",Consolas,Menlo,monospace;}
+
+  /* ===== further maths: extra drawing classes ===== */
+  .mat{fill:#fff;stroke:#475569;stroke-width:1.6;}
+  .mat-h{fill:#eef4fb;stroke:#1f4e79;stroke-width:1.6;}
+  .argand-line{fill:none;stroke:#cbd5e1;stroke-width:1.2;}
+  .argand-axis{fill:none;stroke:#475569;stroke-width:1.6;}
+  .cplx-dot{fill:#1f4e79;}
+  .polar-grid{fill:none;stroke:#cbd5e1;stroke-width:1;}
+  .polar-curve{fill:none;stroke:#2563eb;stroke-width:2.4;}
+  .domino{fill:#e8f4f1;stroke:#1f4e79;stroke-width:1.5;}
+  .domino-fall{fill:#fdecea;stroke:#c0392b;stroke-width:1.5;}
+
+  /* ===== FP2 紫色角标 ===== */
+  .tab.otab .tn{background:#6d28d9;color:#fff;}
+  .tab.otab.on .tn{background:rgba(255,255,255,.25);}
+  .rm-badge.o{background:#6d28d9;}
+
+  /* ===== 考试包：大纲 + 试卷 ===== */
+  .paper{border:1px solid var(--line);border-radius:14px;margin:16px 0;overflow:hidden;background:#fff;}
+  .paper-head{background:var(--main-light);padding:14px 18px;border-bottom:1px solid var(--line);}
+  .paper-head .pt{font-size:17px;font-weight:700;color:var(--main);margin:0 0 4px;}
+  .paper-head .pm{font-size:13.5px;color:var(--gray);margin:0;}
+  .qitem{padding:14px 18px;border-bottom:1px dashed var(--line);}
+  .qitem:last-child{border-bottom:none;}
+  .qitem .qline{display:flex;gap:10px;align-items:baseline;margin-bottom:6px;flex-wrap:wrap;}
+  .qitem .qn{font-weight:700;color:var(--main);font-size:16px;}
+  .qitem .qm{margin-left:auto;font-size:13px;color:var(--gray);white-space:nowrap;}
+  .qitem p{margin:5px 0;font-size:15.5px;}
+  details.qans{margin-top:10px;}
+  details.qans>summary{cursor:pointer;list-style:none;display:inline-block;background:var(--green);border:1px solid var(--green-line);color:var(--green-line);border-radius:20px;padding:4px 14px;font-size:13.5px;font-weight:600;}
+  details.qans>summary::-webkit-details-marker{display:none;}
+  details.qans .ansbody{background:#f0f7f3;border-radius:8px;padding:12px 14px;margin-top:8px;font-size:15px;}
+  details.qans .ansbody b{color:var(--green-line);}
+  .syl-h{font-size:18px;color:var(--main);margin:26px 0 8px;padding:0 0 8px;border-bottom:2px solid var(--main-light);line-height:1.4;}
+  .syl-sub{font-size:13.5px;color:var(--gray);margin:0 0 12px;}
+</style>
+</head>
+<body class="lang-zh">
+<div class="wrap">
+
+<header>
+  <div class="kicker">IGCSE 计算机科学 0478 · 考试大纲与真题 &nbsp;|&nbsp; COMPUTER SCIENCE</div>
+  <h1><span class="zh-only">IGCSE 计算机科学 · 考试大纲 + 2 套模拟真题</span><span class="en-only">IGCSE Computer Science · Syllabus + 2 Practice Papers</span></h1>
+  <p class="sub"><span class="zh-only">中文讲解 · 可切英文 · 完整大纲（2 张试卷）+ 2 套自编模拟真题（含详细答案）· 题型分值对齐真卷</span><span class="en-only">Chinese-first · English toggle · full syllabus (2 papers) + 2 practice papers with answers · matched to the real papers</span></p>
+</header>
+
+<div class="langbar">
+  <span class="lb-t"><span class="zh-only">语言切换：</span><span class="en-only">Language: </span></span>
+  <button class="lbtn" data-lang="zh">中文</button>
+  <button class="lbtn" data-lang="en">English</button>
+  <span class="note"><span class="zh-only">英文版用词更简单；每站都给了考场上要写的英文术语。</span><span class="en-only">English version uses simpler wording; each stop lists the English terms to write in the exam.</span></span>
+</div>
+
+<nav class="tabs" aria-label="exam">
+  <button class="tab" data-tab="sy"><span class="tn">1</span><span class="zh-only">考试大纲</span><span class="en-only">Syllabus</span></button>
+  <button class="tab" data-tab="pa"><span class="tn">2</span><span class="zh-only">模拟卷 A</span><span class="en-only">Paper A</span></button>
+  <button class="tab" data-tab="pb"><span class="tn">3</span><span class="zh-only">模拟卷 B</span><span class="en-only">Paper B</span></button>
+  <button class="tab gtab" data-tab="res"><span class="tn">★</span><span class="zh-only">真题资源</span><span class="en-only">Past papers</span></button>
+  <a class="tlink" href="igcse-computer-science.html"><span class="zh-only">计算机站</span><span class="en-only">CS</span><span class="ar">&#8599;</span></a>
+</nav>
+
+<div class="topicbar"><span class="tl"><span class="zh-only">配套预习站：</span><span class="en-only">Study site: </span></span><a class="topic m" href="igcse-computer-science.html"><span class="zh-only">计算机站</span><span class="en-only">CS</span></a><a class="topic" href="maths-exam-pack.html"><span class="zh-only">数学真题</span><span class="en-only">Maths</span></a><a class="topic" href="chemistry-exam-pack.html"><span class="zh-only">化学真题</span><span class="en-only">Chemistry</span></a><a class="topic" href="physics-exam-pack.html"><span class="zh-only">物理真题</span><span class="en-only">Physics</span></a></div>
+
+<div class="howto"><span class="zh-only"><b>怎么用这一页：</b>先看「考试大纲」搞清考什么、每卷占多少分 → 再<b>限时做</b>模拟卷 A、B（对着真实时长）→ <b>做完对答案</b>，错题回配套预习站补对应的单元。模拟卷是按最新大纲自编的练习卷，题型、分值、考点分布对齐真卷；更权威的历年真题在「真题资源」tab 里给了官方与免费下载链接。</span><span class="en-only"><b>How to use this page:</b> read the Syllabus to see what is examined → do Papers A and B <b>under timed conditions</b> → <b>check the answers</b> and revise the matching unit on the study site. The papers here are practice papers written to the latest syllabus; for official past papers, the Past-papers tab lists free download links.</span></div>
+
+
+<!-- ============ 大纲 ============ -->
+<section class="panel active" id="sy">
+  <h2 class="unit-title"><span class="zh-only">考试大纲 · IGCSE 计算机科学（0478）</span><span class="en-only">Syllabus · IGCSE Computer Science (0478)</span></h2>
+  <p class="unit-sub"><span class="zh-only">2026–2028 大纲 · 两张卷 · 各 1 小时 45 分 / 75 分 · 各占 50%</span><span class="en-only">2026–2028 syllabus · two papers · 1 h 45 min / 75 marks each · 50% each</span></p>
+
+  <h3 class="syl-h"><span class="zh-only">一、试卷结构</span><span class="en-only">1 · Paper structure</span></h3>
+  <div class="tw">
+    <table>
+      <tr><th><span class="zh-only">试卷</span><span class="en-only">Paper</span></th><th><span class="zh-only">内容</span><span class="en-only">Content</span></th><th><span class="zh-only">时长</span><span class="en-only">Duration</span></th><th><span class="zh-only">分数</span><span class="en-only">Marks</span></th><th><span class="zh-only">权重</span><span class="en-only">Weight</span></th></tr>
+      <tr><td><b>Paper 1</b><br><span class="zh-only">计算机系统</span><span class="en-only">Computer Systems</span></td><td><span class="zh-only">数据表示、数据传输、硬件、软件、互联网、新兴技术</span><span class="en-only">Data representation, transmission, hardware, software, the internet, emerging technologies</span></td><td class="f">1 h 45 min</td><td class="f">75</td><td class="f">50%</td></tr>
+      <tr><td><b>Paper 2</b><br><span class="zh-only">算法、编程与逻辑</span><span class="en-only">Algorithms, Programming &amp; Logic</span></td><td><span class="zh-only">算法设计、编程、数据库、布尔逻辑</span><span class="en-only">Algorithm design, programming, databases, Boolean logic</span></td><td class="f">1 h 45 min</td><td class="f">75</td><td class="f">50%</td></tr>
+    </table>
+  </div>
+
+  <h3 class="syl-h"><span class="zh-only">二、评分目标</span><span class="en-only">2 · Assessment objectives</span></h3>
+  <div class="tw">
+    <table>
+      <tr><th><span class="zh-only">目标</span><span class="en-only">Objective</span></th><th><span class="zh-only">含义</span><span class="en-only">Meaning</span></th><th><span class="zh-only">权重</span><span class="en-only">Weight</span></th></tr>
+      <tr><td><b>AO1</b> <span class="zh-only">知识与理解</span><span class="en-only">Knowledge &amp; understanding</span></td><td><span class="zh-only">记住术语、概念、原理</span><span class="en-only">recall terms, concepts, principles</span></td><td class="f">40%</td></tr>
+      <tr><td><b>AO2</b> <span class="zh-only">应用</span><span class="en-only">Application</span></td><td><span class="zh-only">把知识用于具体情境（换算、写伪代码、列真值表）</span><span class="en-only">apply knowledge to situations (convert, write pseudocode, truth tables)</span></td><td class="f">40%</td></tr>
+      <tr><td><b>AO3</b> <span class="zh-only">分析与评价</span><span class="en-only">Analysis &amp; evaluation</span></td><td><span class="zh-only">分析问题、判断优劣、评估方案</span><span class="en-only">analyse problems, judge merits, evaluate solutions</span></td><td class="f">20%</td></tr>
+    </table>
+  </div>
+
+  <h3 class="syl-h"><span class="zh-only">三、考点清单（10 个主题）</span><span class="en-only">3 · Topic checklist (10 topics)</span></h3>
+  <div class="tw">
+    <table>
+      <tr><th style="width:22px;">#</th><th><span class="zh-only">主题</span><span class="en-only">Topic</span></th><th><span class="zh-only">核心考点</span><span class="en-only">Key points</span></th></tr>
+      <tr><td class="f">1</td><td><span class="zh-only">数据表示</span><span class="en-only">Data representation</span></td><td><span class="zh-only">二进制/十六进制互转、补码、逻辑移位、字符（ASCII/Unicode）、图像（分辨率×色深）、声音（采样率×位深）、文件大小、压缩（RLE）</span><span class="en-only">binary/hex, two's complement, logical shifts, characters, images, sound, file size, RLE</span></td></tr>
+      <tr><td class="f">2</td><td><span class="zh-only">数据传输</span><span class="en-only">Data transmission</span></td><td><span class="zh-only">数据包、分组交换、串行/并行、同步/异步、单工/半双工/全双工、USB、检错（奇偶/校验和/回送/检查数字）、ARQ、加密</span><span class="en-only">packets, packet switching, serial/parallel, simplex/duplex, USB, error detection, ARQ, encryption</span></td></tr>
+      <tr><td class="f">3</td><td><span class="zh-only">硬件</span><span class="en-only">Hardware</span></td><td><span class="zh-only">冯诺依曼结构、CPU（ALU/CU/寄存器）、取指-译码-执行、缓存、RAM/ROM/虚拟内存、二级存储、输入输出、执行器、嵌入式系统</span><span class="en-only">von Neumann, CPU registers, fetch-decode-execute, cache, RAM/ROM/virtual memory, secondary storage, I/O, embedded systems</span></td></tr>
+      <tr><td class="f">4</td><td><span class="zh-only">软件</span><span class="en-only">Software</span></td><td><span class="zh-only">系统/应用软件、操作系统、中断、高低级语言、编译器/解释器/汇编器、IDE、语法/逻辑/运行错误</span><span class="en-only">system/application software, OS, interrupts, language levels, compiler/interpreter/assembler, IDE, error types</span></td></tr>
+      <tr><td class="f">5</td><td><span class="zh-only">互联网</span><span class="en-only">The internet</span></td><td><span class="zh-only">互联网 vs WWW、URL、DNS、HTTP(S)、cookie、HTML、六种威胁与防护</span><span class="en-only">internet vs WWW, URL, DNS, HTTP(S), cookies, HTML, threats and defences</span></td></tr>
+      <tr><td class="f">6</td><td><span class="zh-only">新兴技术</span><span class="en-only">Emerging tech</span></td><td><span class="zh-only">自动系统、传感器与 ADC、机器人、AI、专家系统、机器学习、IoT、云、VR/AR、量子计算</span><span class="en-only">automated systems, sensors, ADC, robotics, AI, expert systems, machine learning, IoT, cloud, VR/AR, quantum</span></td></tr>
+      <tr><td class="f">7</td><td><span class="zh-only">算法设计</span><span class="en-only">Algorithm design</span></td><td><span class="zh-only">开发生命周期、分解抽象、结构图、流程图、伪代码、选择、循环、线性查找、冒泡排序、验证检验、测试数据、追踪表</span><span class="en-only">life cycle, decomposition, structure diagrams, flowcharts, pseudocode, linear search, bubble sort, validation/verification, trace tables</span></td></tr>
+      <tr><td class="f">8</td><td><span class="zh-only">编程</span><span class="en-only">Programming</span></td><td><span class="zh-only">数据类型、常量、运算符、选择、循环、字符串、过程与函数、一维/二维数组、文件、库函数</span><span class="en-only">data types, constants, operators, selection, loops, strings, procedures/functions, arrays, files, libraries</span></td></tr>
+      <tr><td class="f">9</td><td><span class="zh-only">数据库</span><span class="en-only">Databases</span></td><td><span class="zh-only">文件 vs 数据库、表/记录/字段、主键、SELECT-FROM-WHERE、ORDER BY、SUM/COUNT</span><span class="en-only">file vs database, tables/records/fields, primary key, SELECT-FROM-WHERE, ORDER BY, SUM/COUNT</span></td></tr>
+      <tr><td class="f">10</td><td><span class="zh-only">布尔逻辑</span><span class="en-only">Boolean logic</span></td><td><span class="zh-only">NOT/AND/OR/XOR/NAND/NOR、真值表、逻辑电路、逻辑表达式</span><span class="en-only">NOT/AND/OR/XOR/NAND/NOR, truth tables, logic circuits, expressions</span></td></tr>
+    </table>
+  </div>
+
+  <h3 class="syl-h"><span class="zh-only">四、考试提示</span><span class="en-only">4 · Exam tips</span></h3>
+  <ul>
+    <li><span class="zh-only"><b>Paper 1 靠背术语</b>：选择题和简答大量考「术语定义」和「作用」，速查表里中英对照的术语要熟。</span><span class="en-only"><b>Paper 1 rewards terminology</b>: definitions and "state the purpose" dominate; know the Chinese–English terms cold.</span></li>
+    <li><span class="zh-only"><b>Paper 2 靠动手</b>：伪代码、真值表、SQL、追踪表占大头，必须亲手写，不能只看。</span><span class="en-only"><b>Paper 2 rewards doing</b>: pseudocode, truth tables, SQL and trace tables carry the marks — write them out, don't just read.</span></li>
+    <li><span class="zh-only"><b>伪代码用官方写法</b>：<code>←</code> 赋值、<code>IF … THEN … ENDIF</code>、<code>FOR … NEXT</code>、<code>OUTPUT</code>。</span><span class="en-only"><b>Use official pseudocode style</b>: <code>←</code>, <code>IF … THEN … ENDIF</code>, <code>FOR … NEXT</code>, <code>OUTPUT</code>.</span></li>
+  </ul>
+</section>
+
+<!-- ============ 模拟卷 A ============ -->
+<section class="panel" id="pa">
+  <h2 class="unit-title"><span class="zh-only">模拟卷 A · 混合练习（含答案）</span><span class="en-only">Practice Paper A · mixed (with answers)</span></h2>
+  <p class="unit-sub"><span class="zh-only">按 0478 大纲自编 · 8 题 50 分 · 建议 45 分钟限时完成 · 覆盖 Paper 1 与 Paper 2 的典型题型</span><span class="en-only">Written to the 0478 syllabus · 8 questions / 50 marks · 45 minutes · typical Paper 1 &amp; Paper 2 question types</span></p>
+
+  <div class="paper">
+    <div class="paper-head"><p class="pt"><span class="zh-only">IGCSE 计算机科学（0478）· 模拟卷 A</span><span class="en-only">IGCSE Computer Science (0478) · Practice Paper A</span></p><p class="pm"><span class="zh-only">时间 45 分钟 · 满分 50 分 · 每题的「点开看答案」在题下方</span><span class="en-only">Time 45 min · 50 marks · each answer opens below the question</span></p></div>
+
+    <div class="qitem"><div class="qline"><span class="qn">1</span><span class="qm">[6]</span></div>
+      <p><span class="zh-only">(a) 把十进制数 <b>201</b> 转成 8 位二进制。</span><span class="en-only">(a) Convert the denary number <b>201</b> to 8-bit binary.</span></p>
+      <p><span class="zh-only">(b) 把 (a) 的结果转成十六进制。</span><span class="en-only">(b) Convert your answer to (a) into hexadecimal.</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">(a) 201 = 128 + 64 + 8 + 1 → 位权 128 64 32 16 8 4 2 1 → <b>11001001</b></span><span class="en-only">(a) 201 = 128 + 64 + 8 + 1 → <b>11001001</b></span></p>
+        <p><span class="zh-only">(b) 1100 1001 → 每 4 位一组：1100 = 12 = C，1001 = 9 → <b>C9</b></span><span class="en-only">(b) 1100 1001 → 1100 = C, 1001 = 9 → <b>C9</b></span></p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">2</span><span class="qm">[4]</span></div>
+      <p><span class="zh-only">说出<b>分组交换</b>（packet switching）比电路交换的两个优点。</span><span class="en-only">Give two advantages of <b>packet switching</b> over circuit switching.</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">任答两条：① 多条线路可同时共享同一条物理连接，带宽利用率高；② 数据包可走不同路径绕开故障节点，网络更健壮；③ 不需要为一次通信独占整条线路，成本更低。</span><span class="en-only">Any two of: ① many transmissions share the same physical link, so bandwidth is used efficiently; ② packets can reroute around failed nodes, making the network more robust; ③ no need to reserve a whole line for one call, so it is cheaper.</span></p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">3</span><span class="qm">[6]</span></div>
+      <p><span class="zh-only">写出 CPU 中以下寄存器的<b>作用</b>：MAR、MDR、PC、ACC。</span><span class="en-only">State the <b>purpose</b> of each CPU register: MAR, MDR, PC, ACC.</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only"><b>MAR</b>（内存地址寄存器）：存放正要读写的内存地址；<b>MDR</b>（内存数据寄存器）：存放刚从内存读出或要写入内存的数据；<b>PC</b>（程序计数器）：存放下一条要执行指令的地址；<b>ACC</b>（累加器）：存放 ALU 运算的中间结果。</span><span class="en-only"><b>MAR</b> holds the memory address being read/written; <b>MDR</b> holds the data read from or to be written to memory; <b>PC</b> holds the address of the next instruction; <b>ACC</b> holds intermediate results of the ALU.</span></p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">4</span><span class="qm">[4]</span></div>
+      <p><span class="zh-only">说出<b>编译器</b>和<b>解释器</b>的两个区别。</span><span class="en-only">State two differences between a <b>compiler</b> and an <b>interpreter</b>.</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">① 编译器一次性把整个程序翻译成机器码再执行，解释器逐行翻译逐行执行；② 编译器生成可独立运行的机器码文件，解释器不生成独立文件；③ 编译后运行更快，但改代码要重新编译；解释器改完即可重跑，但运行较慢。</span><span class="en-only">① a compiler translates the whole program at once before running, an interpreter translates and runs line by line; ② a compiler produces a standalone machine-code file, an interpreter does not; ③ compiled code runs faster but needs recompiling after changes; an interpreter reruns instantly but runs slower.</span></p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">5</span><span class="qm">[6]</span></div>
+      <p><span class="zh-only">解释 <b>HTTPS</b> 如何比 HTTP 更安全地传输数据。</span><span class="en-only">Explain how <b>HTTPS</b> transmits data more securely than HTTP.</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">HTTPS 在 HTTP 上加了 <b>SSL/TLS 加密</b>：① 数据在发送前被加密，即使被截获也无法读懂（窃听者看到的是密文）；② 用数字证书验证服务器身份，防止冒充；③ 这样就能安全传输密码、银行卡号等敏感信息。</span><span class="en-only">HTTPS adds <b>SSL/TLS encryption</b> on top of HTTP: ① data is encrypted before sending, so an eavesdropper only sees ciphertext; ② digital certificates verify the server's identity, preventing impersonation; ③ this makes it safe to send passwords, card numbers and other sensitive data.</span></p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">6</span><span class="qm">[8]</span></div>
+      <p><span class="zh-only">用伪代码写一个程序：<b>输入 10 个数，输出它们的平均值</b>。</span><span class="en-only">Write pseudocode that <b>inputs 10 numbers and outputs their average</b>.</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody"><div class="eqbox">Total ← 0
+FOR i ← 1 TO 10
+    INPUT Num
+    Total ← Total + Num
+NEXT i
+Average ← Total / 10
+OUTPUT Average</div>
+        <p><span class="zh-only">要点：先初始化 Total 为 0，用 FOR 循环读 10 个数累加，最后除以 10 输出。别忘了给变量赋值用 ←。</span><span class="en-only">Key: initialise Total to 0, loop 10 times accumulating, then divide by 10. Use ← for assignment.</span></p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">7</span><span class="qm">[6]</span></div>
+      <p><span class="zh-only">学生表 Student 有字段 Name、Mark。写一条 SQL 查出<b>分数不低于 80</b> 的学生名字，并<b>按名字升序</b>排列。</span><span class="en-only">A table Student has fields Name and Mark. Write SQL to list the names of students with <b>Mark at least 80</b>, ordered <b>by name ascending</b>.</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody"><div class="eqbox">SELECT Name
+FROM Student
+WHERE Mark &gt;= 80
+ORDER BY Name ASC;</div>
+        <p><span class="zh-only">关键字顺序：SELECT → FROM → WHERE → ORDER BY。ASC 可省略（默认升序），但写上更规范。</span><span class="en-only">Order: SELECT → FROM → WHERE → ORDER BY. ASC is the default, but writing it is good form.</span></p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">8</span><span class="qm">[10]</span></div>
+      <p><span class="zh-only">(a) 写出 <b>AND、OR、NOT</b> 三个门的真值表（A、B 为输入）。</span><span class="en-only">(a) Write the truth tables for the <b>AND, OR and NOT</b> gates (inputs A, B).</span></p>
+      <p><span class="zh-only">(b) <b>XOR</b>（异或）什么时候输出 1？</span><span class="en-only">(b) When does <b>XOR</b> output 1?</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <div class="tw"><table>
+          <tr><th>A</th><th>B</th><th>AND</th><th>OR</th><th>XOR</th></tr>
+          <tr><td class="f">0</td><td class="f">0</td><td class="f">0</td><td class="f">0</td><td class="f">0</td></tr>
+          <tr><td class="f">0</td><td class="f">1</td><td class="f">0</td><td class="f">1</td><td class="f">1</td></tr>
+          <tr><td class="f">1</td><td class="f">0</td><td class="f">0</td><td class="f">1</td><td class="f">1</td></tr>
+          <tr><td class="f">1</td><td class="f">1</td><td class="f">1</td><td class="f">1</td><td class="f">0</td></tr>
+        </table></div>
+        <p><span class="zh-only">(b) XOR 当<b>两个输入不同</b>时输出 1（相同则输出 0）。NOT 门只有一个输入，输出取反：NOT 0 = 1，NOT 1 = 0。</span><span class="en-only">(b) XOR outputs 1 when the <b>two inputs differ</b> (0 when equal). NOT has one input and inverts it: NOT 0 = 1, NOT 1 = 0.</span></p>
+      </div></details>
+    </div>
+  </div>
+
+  <div class="unit-end">
+    <p class="big"><span class="zh-only">卷 A 结束</span><span class="en-only">End of Paper A</span></p>
+    <p><span class="zh-only">做完对答案，把错题对应的单元在「计算机站」里重新过一遍。基础题（1、3、8）失分的话，先去补单元 1、3、10。</span><span class="en-only">Mark your answers, then revisit the matching units on the Computer Science site. Losing marks on Q1, Q3 or Q8 means units 1, 3 and 10 need a review.</span></p>
+  </div>
+</section>
+
+<!-- ============ 模拟卷 B ============ -->
+<section class="panel" id="pb">
+  <h2 class="unit-title"><span class="zh-only">模拟卷 B · 混合练习（含答案）</span><span class="en-only">Practice Paper B · mixed (with answers)</span></h2>
+  <p class="unit-sub"><span class="zh-only">按 0478 大纲自编 · 8 题 50 分 · 建议 45 分钟限时完成 · 与卷 A 互补，覆盖不同的考点</span><span class="en-only">Written to the 0478 syllabus · 8 questions / 50 marks · 45 minutes · complements Paper A with different topics</span></p>
+
+  <div class="paper">
+    <div class="paper-head"><p class="pt"><span class="zh-only">IGCSE 计算机科学（0478）· 模拟卷 B</span><span class="en-only">IGCSE Computer Science (0478) · Practice Paper B</span></p><p class="pm"><span class="zh-only">时间 45 分钟 · 满分 50 分 · 每题的「点开看答案」在题下方</span><span class="en-only">Time 45 min · 50 marks · each answer opens below the question</span></p></div>
+
+    <div class="qitem"><div class="qline"><span class="qn">1</span><span class="qm">[4]</span></div>
+      <p><span class="zh-only">一段立体声音频长 <b>30 秒</b>，采样率 <b>44 100 Hz</b>，位深 <b>16 bit</b>，双声道。计算它占用的存储大小（以 MB 为单位，保留 2 位小数）。</span><span class="en-only">A 30-second stereo recording has sample rate 44 100 Hz and bit depth 16 bits, two channels. Calculate its file size in MB (2 d.p.).</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <div class="eqbox">大小 = 采样率 × 位深 × 声道数 × 秒
+     = 44 100 × 16 × 2 × 30
+     = 42 336 000 bit
+     = 42 336 000 ÷ 8 ÷ 1024 ÷ 1024
+     ≈ <b>5.05 MB</b></div>
+        <p><span class="zh-only">先算 bit 总数，再依次 ÷8（字节）、÷1024（KB）、÷1024（MB）。别漏了立体声要乘 2。</span><span class="en-only">Find total bits, then divide by 8 (bytes), 1024 (KB), 1024 (MB). Don't forget the ×2 for stereo.</span></p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">2</span><span class="qm">[6]</span></div>
+      <p><span class="zh-only">(a) 解释<b>奇偶校验</b>（parity check）如何检测传输错误。</span><span class="en-only">(a) Explain how a <b>parity check</b> detects errors in transmission.</span></p>
+      <p><span class="zh-only">(b) 采用<b>偶校验</b>时，字节 <code>1011011?</code> 最后一位应为 0 还是 1？</span><span class="en-only">(b) Using <b>even parity</b>, should the last bit of <code>1011011?</code> be 0 or 1?</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">(a) 发送前统计 1 的个数，加一个校验位使 1 的总数为偶数（偶校验）；接收方重新统计，若 1 的个数变成奇数，说明有奇数个位出错。</span><span class="en-only">(a) A parity bit is added so the total number of 1s is even (even parity); the receiver recounts — if the count is now odd, an odd number of bits has been corrupted.</span></p>
+        <p><span class="zh-only">(b) 1011011 有 5 个 1（奇数），要使总数为偶数，校验位应为 <b>1</b>（总数变 6）。</span><span class="en-only">(b) 1011011 has five 1s (odd), so the parity bit must be <b>1</b> to make six (even).</span></p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">3</span><span class="qm">[4]</span></div>
+      <p><span class="zh-only">解释<b>虚拟内存</b>（virtual memory）是什么，以及它在什么情况下被使用。</span><span class="en-only">Explain what <b>virtual memory</b> is and when it is used.</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">虚拟内存是把硬盘的一部分当作额外 RAM 使用。当 RAM 被占满、又有新程序要运行时，操作系统把暂时不用的数据从 RAM 挪到硬盘，腾出空间；需要时再换回来。缺点是硬盘比 RAM 慢得多，频繁换页会让电脑变卡。</span><span class="en-only">Virtual memory uses part of the hard disk as extra RAM. When RAM is full, the OS moves currently unused data to disk to free space, swapping it back when needed. Downside: disk is far slower than RAM, so heavy swapping makes the computer sluggish.</span></p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">4</span><span class="qm">[4]</span></div>
+      <p><span class="zh-only">说出自动系统中「传感器 → 处理器 → 执行器」这条链里，<b>传感器</b>和<b>执行器</b>各做什么。</span><span class="en-only">In an automated system's chain "sensor → processor → actuator", state what the <b>sensor</b> and the <b>actuator</b> each do.</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only"><b>传感器</b>：测量物理量（温度、光、压力、运动等），把物理信号转成电信号；模拟信号通常还要经 <b>ADC</b> 转成数字信号给处理器。<b>执行器</b>：接收处理器的指令，把电信号转成物理动作（如开灯、启动电机、开阀门）。</span><span class="en-only"><b>Sensor</b>: measures a physical quantity (temperature, light, pressure, motion) and converts it to an electrical signal; an <b>ADC</b> often turns the analogue signal digital for the processor. <b>Actuator</b>: takes the processor's command and turns it into physical action (lighting a lamp, starting a motor, opening a valve).</span></p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">5</span><span class="qm">[8]</span></div>
+      <p><span class="zh-only">对比<b>线性查找</b>和<b>冒泡排序</b>：各是干什么的？各在大数据下表现如何？</span><span class="en-only">Compare <b>linear search</b> and <b>bubble sort</b>: what does each do, and how does each behave with large data?</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only"><b>线性查找</b>：从头到尾逐个比较找目标，可用于<b>无序</b>数据；最坏要查 n 次，数据越大越慢。<b>冒泡排序</b>：相邻元素两两比较、把较大的「冒」到末尾，重复多轮直到有序；约需 n²/2 次比较，数据翻倍、时间翻四倍，大数据下很慢。二者都是简单但低效的算法，适合小数据或教学。</span><span class="en-only"><b>Linear search</b> checks items one by one, works on <b>unsorted</b> data, and takes up to n comparisons — slower as data grows. <b>Bubble sort</b> repeatedly swaps adjacent pairs so the larger values "bubble" to the end; it needs roughly n²/2 comparisons, so doubling the data roughly quadruples the time. Both are simple but inefficient, best for small data or learning.</span></p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">6</span><span class="qm">[8]</span></div>
+      <p><span class="zh-only">用伪代码写一个程序：在数组 <code>List[1..n]</code> 里<b>找出最大值并输出</b>。</span><span class="en-only">Write pseudocode to <b>find and output the maximum value</b> in an array <code>List[1..n]</code>.</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody"><div class="eqbox">Max ← List[1]
+FOR i ← 2 TO n
+    IF List[i] &gt; Max THEN
+        Max ← List[i]
+    ENDIF
+NEXT i
+OUTPUT Max</div>
+        <p><span class="zh-only">先假设第一个是最大值，从第二个开始逐个比较，遇到更大的就更新 Max。循环结束 Max 就是最大值。</span><span class="en-only">Assume the first element is the max, then compare each remaining element and update Max whenever a larger one appears.</span></p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">7</span><span class="qm">[4]</span></div>
+      <p><span class="zh-only">解释数据库中的<b>主键</b>（primary key）是什么，并说明为什么每张表都需要它。</span><span class="en-only">Explain what a <b>primary key</b> is in a database and why every table needs one.</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">主键是<b>唯一标识一条记录</b>的字段（如学号、身份证号），它的值不能重复、也不能为空。需要它的原因：没有主键就无法可靠地区分两条记录，也无法在表之间建立关联（外键引用主键）。</span><span class="en-only">A primary key is a field that <b>uniquely identifies each record</b> (e.g. student ID); its values are unique and never null. Without it you cannot reliably tell records apart, nor link tables together (foreign keys reference primary keys).</span></p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">8</span><span class="qm">[12]</span></div>
+      <p><span class="zh-only">一个报警系统：当<b>门传感器 D 和窗传感器 W 同时触发</b>，<b>或</b>手动按钮 B 按下时，报警器 A 响起。</span><span class="en-only">An alarm sounds (A) when <b>door sensor D and window sensor W are both triggered</b>, <b>or</b> the manual button B is pressed.</span></p>
+      <p><span class="zh-only">(a) 写出 A 的逻辑表达式（用 AND、OR、NOT）。</span><span class="en-only">(a) Write the logic expression for A (using AND, OR, NOT).</span></p>
+      <p><span class="zh-only">(b) 写出 A 的真值表。</span><span class="en-only">(b) Write the truth table for A.</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <div class="eqbox">(a) A = (D AND W) OR B</div>
+        <div class="tw"><table>
+          <tr><th>D</th><th>W</th><th>B</th><th>D AND W</th><th>A</th></tr>
+          <tr><td class="f">0</td><td class="f">0</td><td class="f">0</td><td class="f">0</td><td class="f">0</td></tr>
+          <tr><td class="f">0</td><td class="f">0</td><td class="f">1</td><td class="f">0</td><td class="f">1</td></tr>
+          <tr><td class="f">0</td><td class="f">1</td><td class="f">0</td><td class="f">0</td><td class="f">0</td></tr>
+          <tr><td class="f">0</td><td class="f">1</td><td class="f">1</td><td class="f">0</td><td class="f">1</td></tr>
+          <tr><td class="f">1</td><td class="f">0</td><td class="f">0</td><td class="f">0</td><td class="f">0</td></tr>
+          <tr><td class="f">1</td><td class="f">0</td><td class="f">1</td><td class="f">0</td><td class="f">1</td></tr>
+          <tr><td class="f">1</td><td class="f">1</td><td class="f">0</td><td class="f">1</td><td class="f">1</td></tr>
+          <tr><td class="f">1</td><td class="f">1</td><td class="f">1</td><td class="f">1</td><td class="f">1</td></tr>
+        </table></div>
+        <p><span class="zh-only">先算括号里的 D AND W，再与 B 做 OR。三个输入共 2³ = 8 行。</span><span class="en-only">Work out D AND W first, then OR with B. Three inputs give 2³ = 8 rows.</span></p>
+      </div></details>
+    </div>
+  </div>
+
+  <div class="unit-end">
+    <p class="big"><span class="zh-only">卷 B 结束</span><span class="en-only">End of Paper B</span></p>
+    <p><span class="zh-only">卷 B 侧重「应用」（文件大小计算、伪代码、逻辑电路）。若第 6、8 题丢分，回「计算机站」单元 7、8、10 补。</span><span class="en-only">Paper B stresses application (file sizes, pseudocode, logic circuits). Losing marks on Q6 and Q8 means reviewing units 7, 8 and 10.</span></p>
+  </div>
+</section>
+
+<!-- ============ 真题资源 ============ -->
+<section class="panel" id="res">
+  <h2 class="unit-title"><span class="zh-only">真题资源 · 官方与免费下载</span><span class="en-only">Past papers · official and free</span></h2>
+  <p class="unit-sub"><span class="zh-only">上面的 A、B 卷是自编练习卷；下面这些是历年<b>官方真题</b>的获取渠道，刷完自编卷后再练真卷</span><span class="en-only">Papers A and B above are practice papers; these links lead to <b>official past papers</b> — do them after the practice papers</span></p>
+
+  <div class="resintro"><span class="zh-only"><b>建议顺序：</b>① 先做本页 A、B 卷自测 → ② 用下面的真题按 topic 或按年份刷 → ③ 每次限时、对答案、把错题回「计算机站」补对应单元。<b>真题最接近真实考试，考前至少刷近 3 年。</b></span><span class="en-only"><b>Suggested order:</b> ① do Papers A and B here → ② work through the past papers below by topic or by year → ③ time yourself, mark, and revise the matching unit. <b>Past papers mirror the real exam — cover at least the last 3 years.</b></span></div>
+
+  <div class="reswarn"><span class="zh-only"><b>关于访问：</b>官方 Cambridge 网站有时访问不稳，可换下面的镜像站。链接不定期维护，打不开就搜「0478 past papers」。</span><span class="en-only"><b>About access:</b> the official Cambridge site can be slow; use the mirrors below. If a link breaks, search "0478 past papers".</span></div>
+
+  <div class="resgroup">
+    <h3><span class="zh-only">官方与镜像</span><span class="en-only">Official and mirrors</span></h3>
+    <a class="rcard" href="https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-computer-science-0478/past-papers/" target="_blank" rel="noopener">
+      <div class="rt">Cambridge 官方真题 <span class="ar">0478 Past Papers</span></div>
+      <div class="rd"><span class="zh-only">官方历年真题 + 评分标准（mark scheme），最权威。官网偶尔慢，多刷新。</span><span class="en-only">Official past papers and mark schemes. The site can be slow — refresh if needed.</span></div>
+      <div class="ru">cambridgeinternational.org</div>
+    </a>
+    <a class="rcard" href="https://papacambridge.com/cambridge-igcse/computer-science-0478/" target="_blank" rel="noopener">
+      <div class="rt">PapaCambridge <span class="ar">0478 真题镜像</span></div>
+      <div class="rd"><span class="zh-only">按年份整理好的真题、评分标准、答案，下载方便。</span><span class="en-only">Past papers, mark schemes and answers organised by year.</span></div>
+      <div class="ru">papacambridge.com</div>
+    </a>
+  </div>
+
+  <div class="resgroup">
+    <h3><span class="zh-only">分主题练习</span><span class="en-only">Topic-based practice</span></h3>
+    <a class="rcard" href="https://www.physicsandmathstutor.com/computer-science-revision/" target="_blank" rel="noopener">
+      <div class="rt">Physics &amp; Maths Tutor · CS <span class="ar">PMT 计算机</span></div>
+      <div class="rd"><span class="zh-only">按 topic 分好的真题 + 笔记 + 答案，适合专项补漏。站点可能反爬，刷新几次。</span><span class="en-only">Past questions and notes sorted by topic, good for targeted revision.</span></div>
+      <div class="ru">physicsandmathstutor.com</div>
+    </a>
+    <a class="rcard" href="https://www.savemyexams.com/igcse/computer-science/cie/23/revision-notes/" target="_blank" rel="noopener">
+      <div class="rt">Save My Exams <span class="ar">CIE 计算机笔记</span></div>
+      <div class="rd"><span class="zh-only">按 topic 的简洁笔记 + 真题分主题练习，和本页考点一一对应。</span><span class="en-only">Concise topic notes and topic-based questions, mapped to the same checklist.</span></div>
+      <div class="ru">savemyexams.com</div>
+    </a>
+  </div>
+
+  <div class="unit-end">
+    <p class="big"><span class="zh-only">刷题就这三样够用</span><span class="en-only">These three cover everything</span></p>
+    <p><span class="zh-only"><b>自编卷热身 → 分主题补漏 → 近 3 年整卷限时</b>，这就是计算机科学拿高分的最短路径。别囤资料，动手刷才是关键。</span><span class="en-only"><b>Warm up on practice papers → patch gaps by topic → do the last 3 years under timed conditions.</b> That is the shortest route to a high grade — stop hoarding resources and start solving.</span></p>
+  </div>
+</section>
+
+
+<footer>
+  <p class="big"><span class="zh-only">先看大纲，再限时做题，最后对答案补漏</span><span class="en-only">Syllabus first, then timed practice, then check and revise</span></p>
+  <p><span class="zh-only">考试三件事：<b>考什么</b>（大纲）、<b>怎么考</b>（题型与分值）、<b>练没练</b>（真题）。这页把三样都给你了。做模拟卷时<b>一定掐表</b>——考试一半拼的是时间分配。</span><span class="en-only">Three exam essentials: <b>what</b> is examined (the syllabus), <b>how</b> (question types and marks), and <b>practice</b> (past papers). This page gives you all three. When you do a paper, <b>time it</b> — half the exam is time management.</span></p>
+  <p style="margin-top:14px;font-size:13.5px;color:#6b7280;"><span class="zh-only">提示：本页会记住你选的语言和当前 tab；打印时所有答案会自动展开。</span><span class="en-only">Tip: the page remembers your language and current tab; all answers open automatically when you print.</span></p>
+</footer>
+
+</div><!-- /wrap -->
+
+<script>
+(function(){
+  var tabs   = document.querySelectorAll('button.tab');
+  var panels = document.querySelectorAll('.panel');
+  var langBtns = document.querySelectorAll('.lbtn');
+  function show(id){
+    if(!document.getElementById(id)) { id = 'sy'; }
+    panels.forEach(function(p){ p.classList.toggle('active', p.id === id); });
+    tabs.forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-tab') === id); });
+    try{ localStorage.setItem('csexam_tab', id); }catch(e){}
+  }
+  function setLang(lang){
+    document.body.classList.remove('lang-zh','lang-en');
+    document.body.classList.add('lang-' + lang);
+    langBtns.forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-lang') === lang); });
+    try{ localStorage.setItem('csexam_lang', lang); }catch(e){}
+  }
+  tabs.forEach(function(b){ b.addEventListener('click', function(){ show(b.getAttribute('data-tab')); }); });
+  langBtns.forEach(function(b){ b.addEventListener('click', function(){ setLang(b.getAttribute('data-lang')); }); });
+  var savedLang = 'zh', savedTab = 'sy';
+  try{ savedLang = localStorage.getItem('csexam_lang') || 'zh'; savedTab = localStorage.getItem('csexam_tab') || 'sy'; }catch(e){}
+  setLang(savedLang);
+  var h = (location.hash || '').replace('#','');
+  if(/^(sy|pa|pb|res)$/.test(h)){ savedTab = h; }
+  show(savedTab);
+})();
+</script>
+</body>
+</html>
