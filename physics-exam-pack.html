@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A-Level 物理 考试大纲与真题 · Physics 9702（中英双语）</title>
+<style>
+  :root{
+    --bg:#f4f7fb;
+    --card:#ffffff;
+    --main:#1f4e79;
+    --main-light:#eef4fb;
+    --accent:#2563eb;
+    --warm:#fff8e6;
+    --warm-line:#e8c46a;
+    --green:#e9f6ec;
+    --green-line:#2e7d52;
+    --red:#fdf1ef;
+    --red-line:#c0392b;
+    --gray:#6b7280;
+    --line:#dfe6ee;
+    --orange:#e08a2e;
+  }
+  *{box-sizing:border-box;}
+  .tlink{
+    flex:none;text-decoration:none;white-space:nowrap;
+    border:1px solid var(--warm-line);background:var(--warm);color:#8a5a00;
+    border-radius:20px;padding:6px 14px;font-size:14px;font-weight:600;
+    display:inline-flex;align-items:center;gap:5px;
+  }
+  .tlink:hover{border-color:var(--orange);color:var(--orange);background:#fff7e6;}
+  .tlink .ar{font-size:13px;}
+  .topicbar{
+    display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:10px 14px;margin-bottom:18px;font-size:14px;
+  }
+  .topicbar .tl{color:var(--gray);font-size:13px;}
+  .topicbar a.topic{
+    text-decoration:none;color:#0f766e;background:#ecfdf5;border:1px solid #a7f3d0;
+    border-radius:20px;padding:5px 13px;font-weight:600;
+  }
+  .topicbar a.topic:hover{background:#0f766e;color:#fff;border-color:#0f766e;}
+  .topicbar a.topic.m{
+    color:#1d4ed8;background:#eff6ff;border-color:#bfdbfe;
+  }
+  .topicbar a.topic.m:hover{background:#1d4ed8;color:#fff;border-color:#1d4ed8;}
+
+  .tab.gtab{border-color:var(--warm-line);background:var(--warm);color:#8a5a00;}
+  .tab.gtab:hover{border-color:var(--orange);color:var(--orange);}
+  .tab.gtab.on{background:var(--orange);border-color:var(--orange);color:#fff;}
+  .tab.gtab .tn{background:#f7e3b8;color:#8a5a00;}
+  .tab.gtab.on .tn{background:rgba(255,255,255,.25);color:#fff;}
+  .gl-h{font-size:18px;color:var(--main);margin:30px 0 6px;padding:0 0 8px;
+    border-bottom:2px solid var(--main-light);line-height:1.4;}
+  .gl-sub{font-size:13.5px;color:var(--gray);margin:0 0 12px;}
+  details.card .body .tw{margin-top:4px;}
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:#1f2937;
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+    font-size:16.5px;
+    line-height:1.75;
+  }
+  .wrap{max-width:840px;margin:0 auto;padding:24px 16px 60px;}
+
+  header{
+    background:linear-gradient(180deg,#1f4e79,#2c6ba8);
+    color:#fff;border-radius:16px;padding:26px 22px;margin-bottom:16px;
+  }
+  header .kicker{font-size:13px;letter-spacing:1px;opacity:.85;}
+  header h1{margin:6px 0 4px;font-size:25px;line-height:1.35;}
+  header .sub{margin:12px 0 0;font-size:14.5px;opacity:.92;}
+
+  .langbar{
+    display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:10px 16px;margin-bottom:18px;font-size:14.5px;
+  }
+  .langbar .lb-t{color:var(--gray);}
+  .lbtn{
+    cursor:pointer;border:1px solid var(--line);background:#fff;color:#334155;
+    border-radius:20px;padding:5px 18px;font-size:14px;font-family:inherit;
+  }
+  .lbtn:hover{border-color:var(--accent);color:var(--accent);}
+  .lbtn.on{background:var(--main);border-color:var(--main);color:#fff;font-weight:600;}
+  .langbar .note{margin-left:auto;font-size:13px;color:var(--gray);}
+
+  body.lang-zh .en-only,body.lang-zh .en-block{display:none !important;}
+  body.lang-en .zh-only,body.lang-en .zh-block{display:none !important;}
+
+  .howto{
+    background:var(--warm);border:1px solid var(--warm-line);
+    border-radius:12px;padding:14px 16px;margin-bottom:20px;font-size:15px;
+  }
+  .howto b{color:#8a5a00;}
+
+  details.card{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    margin-bottom:16px;overflow:hidden;
+  }
+  details.card > summary{
+    cursor:pointer;list-style:none;padding:16px 18px;
+    font-size:18px;font-weight:600;color:var(--main);
+    display:flex;align-items:center;gap:10px;
+  }
+  details.card > summary::-webkit-details-marker{display:none;}
+  details.card > summary:hover{background:var(--main-light);}
+  details.card[open] > summary{border-bottom:1px solid var(--line);background:var(--main-light);}
+  .num{
+    flex:none;width:28px;height:28px;border-radius:50%;
+    background:var(--main);color:#fff;font-size:15px;
+    display:inline-flex;align-items:center;justify-content:center;
+  }
+  .en-tag{
+    margin-left:auto;font-size:13px;font-weight:normal;color:var(--gray);
+    background:#f1f5f9;padding:2px 9px;border-radius:20px;
+  }
+  .body{padding:6px 18px 18px;}
+
+  figure{margin:14px 0 4px;}
+  figure svg{
+    width:100%;height:auto;display:block;background:#fff;
+    border:1px solid var(--line);border-radius:10px;
+  }
+  figcaption{
+    font-size:13.5px;color:var(--gray);text-align:center;margin-top:6px;line-height:1.6;
+  }
+  .ax{stroke:#94a3b8;stroke-width:1.4;}
+  .curve{fill:none;stroke:var(--accent);stroke-width:2.6;stroke-linecap:round;}
+  .curve2{fill:none;stroke:var(--orange);stroke-width:2.6;stroke-linecap:round;}
+  .dash{fill:none;stroke:#94a3b8;stroke-width:1.5;stroke-dasharray:5,4;}
+  .pt{fill:var(--main);}
+  .lbl{font-size:12.5px;fill:#475569;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;}
+  .lbl-b{font-size:13px;fill:var(--main);font-weight:600;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;}
+  .lbl-o{font-size:12.5px;fill:var(--orange);font-weight:600;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;}
+  .mon{font-size:12.5px;fill:#334155;font-family:"SFMono-Regular",Consolas,Menlo,monospace;}
+  .mon-b{font-size:13px;fill:var(--main);font-weight:600;font-family:"SFMono-Regular",Consolas,Menlo,monospace;}
+
+  /* 计算机科学专用图形类 */
+  .bit{fill:#fff;stroke:#1f4e79;stroke-width:1.5;}
+  .bit0{fill:#fff;stroke:#94a3b8;stroke-width:1.5;}
+  .bit1{fill:#1f4e79;stroke:#1f4e79;stroke-width:1.5;}
+  .onbit{fill:#1d4ed8;}
+  .gate{fill:#fff8e6;stroke:#e8c46a;stroke-width:1.8;}
+  .chip{fill:#e9f6ec;stroke:#2e7d52;stroke-width:1.8;}
+  .dev{fill:#f1f5f9;stroke:#94a3b8;stroke-width:1.6;}
+  .bus{fill:none;stroke:#475569;stroke-width:1.8;}
+  .bus-a{fill:none;stroke:#1d4ed8;stroke-width:2;}
+  .farrow{fill:#1f4e79;}
+  .flowbox{fill:#eef4fb;stroke:#1f4e79;stroke-width:1.6;}
+  .flowdia{fill:#fff8e6;stroke:#e8c46a;stroke-width:1.6;}
+  .flowterm{fill:#e9f6ec;stroke:#2e7d52;stroke-width:1.6;}
+  .conn{fill:none;stroke:#475569;stroke-width:1.6;}
+  .on{fill:none;stroke:#2563eb;stroke-width:2.6;}
+  .off{fill:none;stroke:#cbd5e1;stroke-width:2.6;}
+  .tbl{fill:#fff;stroke:#94a3b8;stroke-width:1.2;}
+  .thd{fill:#eef4fb;stroke:#1f4e79;stroke-width:1.2;}
+  .pkt{fill:#fff8e6;stroke:#e8c46a;stroke-width:1.6;}
+  .pkth{fill:#eef4fb;stroke:#1f4e79;stroke-width:1.6;}
+  .cell{fill:#fff;stroke:#cbd5e1;stroke-width:1;}
+  .cell-on{fill:#1f4e79;stroke:#1f4e79;stroke-width:1;}
+
+  /* 代码块（伪代码 / 程序 / SQL） */
+  .pcode{
+    background:#f8fafc;border:1px solid var(--line);border-left:4px solid #334155;
+    border-radius:8px;padding:12px 14px;margin:12px 0;
+    font-family:"SFMono-Regular",Consolas,Menlo,monospace;font-size:14px;line-height:1.7;
+    white-space:pre;overflow-x:auto;color:#1e293b;
+  }
+  .pcode b{color:#1d4ed8;}
+  .pcode i{color:#64748b;font-style:normal;}
+
+  .goal{
+    background:var(--green);border-left:4px solid var(--green-line);
+    padding:10px 14px;border-radius:8px;font-size:15px;margin:14px 0;
+  }
+  .say{
+    background:var(--warm);border-left:4px solid var(--warm-line);
+    padding:12px 14px;border-radius:8px;margin:14px 0;font-size:15.5px;
+  }
+  .say b{color:#8a5a00;}
+  .key{
+    background:var(--main-light);border-radius:10px;padding:12px 16px;margin:14px 0;font-size:15.5px;
+  }
+  .key b{color:var(--main);}
+  .key ul{margin:8px 0 0;padding-left:20px;}
+  .key li{margin:5px 0;}
+
+  .example{
+    border:1px solid var(--line);border-left:4px solid var(--accent);
+    border-radius:8px;padding:12px 16px;margin:14px 0;background:#fcfdff;
+  }
+  .example .t{font-weight:600;color:var(--accent);font-size:15px;margin:0 0 8px;}
+  .q{background:#f8fafc;border-radius:6px;padding:10px 12px;margin:8px 0;font-size:15.5px;}
+  .sol{margin:10px 0 0;font-size:15.5px;}
+  .sol b{color:var(--main);}
+  .sol .step{display:block;margin:4px 0;}
+
+  .practice{
+    background:#f8fafc;border:1px dashed #b6c2d1;border-radius:10px;
+    padding:12px 16px;margin:16px 0 0;
+  }
+  .practice .t{font-weight:600;color:#334155;font-size:15px;margin:0 0 6px;}
+  .practice .hint{font-size:13.5px;color:var(--gray);margin:0 0 8px;}
+
+  details.ans{margin-top:10px;}
+  details.ans > summary{
+    cursor:pointer;list-style:none;display:inline-block;
+    background:#fff;border:1px solid var(--green-line);color:var(--green-line);
+    border-radius:20px;padding:5px 16px;font-size:14px;font-weight:600;
+  }
+  details.ans > summary::-webkit-details-marker{display:none;}
+  details.ans > summary:hover{background:var(--green);}
+  details.ans .acontent{
+    background:var(--green);border-radius:8px;padding:12px 14px;margin-top:10px;font-size:15.5px;
+  }
+  details.ans .acontent b{color:var(--green-line);}
+
+  .tip{
+    background:var(--red);border-left:4px solid var(--red-line);
+    padding:10px 14px;border-radius:8px;font-size:14.5px;margin:12px 0;
+  }
+  .tip b{color:var(--red-line);}
+
+  .speak{
+    background:#eff6ff;border-left:4px solid #1d4ed8;
+    padding:11px 14px;border-radius:8px;font-size:15px;margin:12px 0;
+  }
+  .speak b{color:#1d4ed8;}
+  .speak .enx{
+    display:block;margin-top:6px;font-family:"SFMono-Regular",Consolas,Menlo,monospace;
+    font-size:14px;color:#1e3a8a;background:#dbeafe;padding:5px 9px;border-radius:5px;
+  }
+
+  .done{
+    text-align:center;color:var(--gray);font-size:14px;
+    border-top:1px dashed var(--line);margin-top:16px;padding-top:10px;
+  }
+
+  nav.tabs{
+    display:flex;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:8px;margin-bottom:18px;
+  }
+  nav.tabs::-webkit-scrollbar{height:6px;}
+  nav.tabs::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:6px;}
+  .tab{
+    flex:none;cursor:pointer;white-space:nowrap;
+    border:1px solid var(--line);background:#fff;color:#475569;
+    border-radius:20px;padding:6px 14px;font-size:14px;font-family:inherit;
+  }
+  .tab:hover{border-color:var(--accent);color:var(--accent);}
+  .tab.on{background:var(--main);border-color:var(--main);color:#fff;font-weight:600;}
+  .tab .tn{
+    display:inline-block;background:#eef2f7;color:var(--main);
+    border-radius:10px;font-size:12px;padding:0 6px;margin-right:5px;font-weight:600;
+  }
+  .tab.on .tn{background:rgba(255,255,255,.22);color:#fff;}
+  .tab.p2tab .tn{background:#2f6b5a;}
+  .tab.p2tab.on .tn{background:var(--accent);}
+  .p2badge{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.4px;color:#fff;background:#2f6b5a;border-radius:999px;padding:2px 9px;margin-left:8px;vertical-align:2px;}
+  .p1badge{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.4px;color:#fff;background:#5b7fa8;border-radius:999px;padding:2px 9px;margin-left:8px;vertical-align:2px;}
+  .panel{display:none;}
+  .panel.active{display:block;}
+  .unit-title{font-size:20px;color:var(--main);margin:0 0 4px;line-height:1.4;}
+  .unit-sub{font-size:13.5px;color:var(--gray);margin:0 0 14px;}
+
+  .roadmap{
+    background:var(--main-light);border:1px solid #c5d9f1;border-radius:12px;
+    padding:14px 16px;margin-bottom:16px;
+  }
+  .roadmap .rm-title{
+    font-size:15px;font-weight:600;color:var(--main);margin:0 0 8px;
+    display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+  }
+  .roadmap .rm-badge{
+    background:var(--main);color:#fff;border-radius:14px;
+    padding:2px 12px;font-size:13px;font-weight:600;
+  }
+  .roadmap ol{margin:0;padding-left:22px;font-size:15px;}
+  .roadmap ol li{margin:3px 0;}
+  .roadmap ol li a{color:#1f2937;text-decoration:none;border-bottom:1px dotted #9dc0f0;}
+  .roadmap ol li a:hover{color:var(--accent);border-bottom-color:var(--accent);}
+  .roadmap .rm-note{margin:8px 0 0;font-size:13.5px;color:var(--gray);}
+
+  .tw{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  table{border-collapse:collapse;width:100%;min-width:480px;font-size:14.5px;}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;}
+  th{background:var(--main-light);color:var(--main);font-weight:600;font-size:14px;}
+  td.f{font-family:"SFMono-Regular",Consolas,Menlo,monospace;font-size:14px;white-space:nowrap;}
+  tr:nth-child(even) td{background:#fafcfe;}
+
+  .unit-end{
+    margin-top:22px;background:var(--warm);border:1px solid var(--warm-line);
+    border-radius:12px;padding:16px 18px;
+  }
+  .unit-end p{margin:6px 0;font-size:15.5px;}
+  .unit-end .big{font-size:17px;font-weight:600;color:var(--main);margin:0 0 8px;}
+
+  footer{
+    margin-top:28px;background:var(--card);border:1px solid var(--line);
+    border-radius:14px;padding:20px;text-align:center;
+  }
+  footer p{margin:6px 0;font-size:15px;}
+  footer .big{font-size:17px;font-weight:600;color:var(--main);}
+
+  code{
+    background:#f1f5f9;padding:1px 6px;border-radius:4px;
+    font-family:"SFMono-Regular",Consolas,Menlo,monospace;font-size:14.5px;
+  }
+
+  @media (max-width:600px){
+    body{font-size:16px;}
+    header h1{font-size:21px;}
+    .wrap{padding:16px 12px 40px;}
+    details.card > summary{font-size:16.5px;padding:14px;flex-wrap:wrap;}
+    .en-tag{margin-left:38px;}
+    .langbar .note{margin-left:0;width:100%;}
+    table{font-size:13.5px;}
+    .pcode{font-size:13px;}
+  }
+  @media print{
+    body{background:#fff;}
+    details.card,details.ans,figure{page-break-inside:avoid;}
+    details:not([open]) > *:not(summary){display:block !important;}
+    details.ans > summary{display:none;}
+    .langbar,nav.tabs{display:none;}
+  }
+
+  /* ===== 外部资源 tab ===== */
+  .resintro{background:var(--main-light);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:0 0 18px;font-size:14px;line-height:1.9;color:#334155;}
+  .resintro b{color:var(--main);}
+  .reswarn{background:var(--warm);border:1px solid var(--warm-line);border-radius:12px;padding:12px 15px;margin:0 0 22px;font-size:13.5px;line-height:1.85;color:#7a4e05;}
+  .reswarn b{color:#8a5a00;}
+  .resgroup{margin:0 0 26px;}
+  .resgroup h3{font-size:16px;margin:0 0 4px;padding:0 0 8px;border-bottom:2px solid var(--line);color:var(--main);}
+  .resgroup .rgsub{font-size:13px;color:var(--gray);margin:0 0 10px;}
+  .rcard{display:block;text-decoration:none;border:1px solid var(--line);background:#fff;border-radius:12px;padding:11px 15px;margin:9px 0;}
+  .rcard:hover{border-color:var(--accent);background:var(--main-light);}
+  .rcard .rt{font-weight:700;color:var(--main);font-size:14.5px;line-height:1.6;}
+  .rcard .rt .ar{font-weight:400;color:var(--gray);font-size:12px;}
+  .rcard .rd{color:#475569;font-size:13.5px;margin-top:5px;line-height:1.85;}
+  .rcard .ru{color:#94a3b8;font-size:11.5px;margin-top:6px;word-break:break-all;}
+  @media print{ .rcard{page-break-inside:avoid;} }
+
+/* ===== applied maths: formulas & equations ===== */
+  .fm{font-family:"SFMono-Regular",Consolas,Menlo,monospace;white-space:nowrap;}
+  sub,sup{font-size:.72em;}
+  .eqbox{
+    background:#f8fafc;border:1px solid var(--line);border-left:4px solid #1f4e79;
+    border-radius:8px;padding:11px 14px;margin:12px 0;
+    font-family:"SFMono-Regular",Consolas,Menlo,monospace;font-size:15px;line-height:1.95;
+    white-space:pre;overflow-x:auto;color:#1e293b;
+  }
+  .eqbox i{color:#64748b;font-style:normal;}
+  .arrow{fill:#1f4e79;} .arrow2{fill:#c0392b;} .arrow3{fill:#2563eb;} .arrow-g{fill:#2e7d52;}
+
+  /* ===== mechanics: drawing classes ===== */
+  .obj{fill:#e8f4f1;stroke:#1f4e79;stroke-width:1.6;}
+  .obj2{fill:#fdecea;stroke:#c0392b;stroke-width:1.6;}
+  .slope{fill:#f1f5f9;stroke:#475569;stroke-width:1.6;}
+  .ground{fill:none;stroke:#94a3b8;stroke-width:1.5;stroke-dasharray:6,4;}
+  .vec{fill:none;stroke:#2563eb;stroke-width:2.2;stroke-linecap:round;}
+  .vec-r{fill:none;stroke:#c0392b;stroke-width:2.2;stroke-linecap:round;}
+  .vec-g{fill:none;stroke:#2e7d52;stroke-width:2.2;stroke-linecap:round;}
+  .vec-o{fill:none;stroke:#b45309;stroke-width:2.2;stroke-linecap:round;}
+  .rope{fill:none;stroke:#475569;stroke-width:2;}
+
+  /* ===== statistics: drawing classes ===== */
+  .bar{fill:#1f4e79;}
+  .bar2{fill:#2563eb;}
+  .bar3{fill:#94a3b8;}
+  .box-fill{fill:#e8f4f1;stroke:#1f4e79;stroke-width:1.4;}
+  .box-line{fill:none;stroke:#1f4e79;stroke-width:1.8;}
+  .whisker{fill:none;stroke:#475569;stroke-width:1.6;}
+  .venn{fill:#2563eb;opacity:.22;stroke:#1f4e79;stroke-width:1.4;}
+  .venn2{fill:#c0392b;opacity:.22;stroke:#c0392b;stroke-width:1.4;}
+  .dot{fill:#1f4e79;}
+  .dot2{fill:#c0392b;}
+  .bell{fill:none;stroke:#1f4e79;stroke-width:2.4;}
+  .area{fill:#2563eb;opacity:.16;}
+  .lbl-c{font-size:12.5px;fill:#1f4e79;font-weight:600;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;}
+  .mono-c{font-size:12.5px;fill:#1f4e79;font-family:"SFMono-Regular",Consolas,Menlo,monospace;}
+
+  /* ===== further maths: extra drawing classes ===== */
+  .mat{fill:#fff;stroke:#475569;stroke-width:1.6;}
+  .mat-h{fill:#eef4fb;stroke:#1f4e79;stroke-width:1.6;}
+  .argand-line{fill:none;stroke:#cbd5e1;stroke-width:1.2;}
+  .argand-axis{fill:none;stroke:#475569;stroke-width:1.6;}
+  .cplx-dot{fill:#1f4e79;}
+  .polar-grid{fill:none;stroke:#cbd5e1;stroke-width:1;}
+  .polar-curve{fill:none;stroke:#2563eb;stroke-width:2.4;}
+  .domino{fill:#e8f4f1;stroke:#1f4e79;stroke-width:1.5;}
+  .domino-fall{fill:#fdecea;stroke:#c0392b;stroke-width:1.5;}
+
+  /* ===== FP2 紫色角标 ===== */
+  .tab.otab .tn{background:#6d28d9;color:#fff;}
+  .tab.otab.on .tn{background:rgba(255,255,255,.25);}
+  .rm-badge.o{background:#6d28d9;}
+
+  /* ===== 考试包：大纲 + 试卷 ===== */
+  .paper{border:1px solid var(--line);border-radius:14px;margin:16px 0;overflow:hidden;background:#fff;}
+  .paper-head{background:var(--main-light);padding:14px 18px;border-bottom:1px solid var(--line);}
+  .paper-head .pt{font-size:17px;font-weight:700;color:var(--main);margin:0 0 4px;}
+  .paper-head .pm{font-size:13.5px;color:var(--gray);margin:0;}
+  .qitem{padding:14px 18px;border-bottom:1px dashed var(--line);}
+  .qitem:last-child{border-bottom:none;}
+  .qitem .qline{display:flex;gap:10px;align-items:baseline;margin-bottom:6px;flex-wrap:wrap;}
+  .qitem .qn{font-weight:700;color:var(--main);font-size:16px;}
+  .qitem .qm{margin-left:auto;font-size:13px;color:var(--gray);white-space:nowrap;}
+  .qitem p{margin:5px 0;font-size:15.5px;}
+  details.qans{margin-top:10px;}
+  details.qans>summary{cursor:pointer;list-style:none;display:inline-block;background:var(--green);border:1px solid var(--green-line);color:var(--green-line);border-radius:20px;padding:4px 14px;font-size:13.5px;font-weight:600;}
+  details.qans>summary::-webkit-details-marker{display:none;}
+  details.qans .ansbody{background:#f0f7f3;border-radius:8px;padding:12px 14px;margin-top:8px;font-size:15px;}
+  details.qans .ansbody b{color:var(--green-line);}
+  .syl-h{font-size:18px;color:var(--main);margin:26px 0 8px;padding:0 0 8px;border-bottom:2px solid var(--main-light);line-height:1.4;}
+  .syl-sub{font-size:13.5px;color:var(--gray);margin:0 0 12px;}
+</style>
+</head>
+<body class="lang-zh">
+<div class="wrap">
+
+<header>
+  <div class="kicker">A-LEVEL 物理 9702 · 考试大纲与真题 &nbsp;|&nbsp; PHYSICS</div>
+  <h1><span class="zh-only">A-Level 物理 · 考试大纲 + 2 套模拟真题</span><span class="en-only">A-Level Physics · Syllabus + 2 Practice Papers</span></h1>
+  <p class="sub"><span class="zh-only">中文讲解 · 可切英文 · 完整大纲（5 张试卷）+ 2 套自编模拟真题（含详细答案）· 题型分值对齐真卷</span><span class="en-only">Chinese-first · English toggle · full syllabus (5 papers) + 2 practice papers with answers · matched to the real papers</span></p>
+</header>
+
+<div class="langbar">
+  <span class="lb-t"><span class="zh-only">语言切换：</span><span class="en-only">Language: </span></span>
+  <button class="lbtn" data-lang="zh">中文</button>
+  <button class="lbtn" data-lang="en">English</button>
+  <span class="note"><span class="zh-only">英文版用词更简单；每站都给了考场上要写的英文术语。</span><span class="en-only">English version uses simpler wording; each stop lists the English terms to write in the exam.</span></span>
+</div>
+
+<nav class="tabs" aria-label="exam">
+  <button class="tab" data-tab="sy"><span class="tn">1</span><span class="zh-only">考试大纲</span><span class="en-only">Syllabus</span></button>
+  <button class="tab" data-tab="pa"><span class="tn">2</span><span class="zh-only">模拟卷 A</span><span class="en-only">Paper A</span></button>
+  <button class="tab" data-tab="pb"><span class="tn">3</span><span class="zh-only">模拟卷 B</span><span class="en-only">Paper B</span></button>
+  <button class="tab gtab" data-tab="res"><span class="tn">★</span><span class="zh-only">真题资源</span><span class="en-only">Past papers</span></button>
+  <a class="tlink" href="alevel-physics.html"><span class="zh-only">物理站</span><span class="en-only">Physics</span><span class="ar">&#8599;</span></a>
+</nav>
+
+<div class="topicbar"><span class="tl"><span class="zh-only">配套预习站：</span><span class="en-only">Study site: </span></span><a class="topic m" href="alevel-physics.html"><span class="zh-only">物理站</span><span class="en-only">Physics</span></a><a class="topic" href="maths-exam-pack.html"><span class="zh-only">数学真题</span><span class="en-only">Maths</span></a><a class="topic" href="chemistry-exam-pack.html"><span class="zh-only">化学真题</span><span class="en-only">Chemistry</span></a><a class="topic" href="computer-science-exam-pack.html"><span class="zh-only">计算机真题</span><span class="en-only">CS</span></a></div>
+
+<div class="howto"><span class="zh-only"><b>怎么用这一页：</b>先看「考试大纲」搞清考什么、每卷占多少分 → 再<b>限时做</b>模拟卷 A、B（对着真实时长）→ <b>做完对答案</b>，错题回配套预习站补对应的单元。模拟卷是按最新大纲自编的练习卷，题型、分值、考点分布对齐真卷；更权威的历年真题在「真题资源」tab 里给了官方与免费下载链接。</span><span class="en-only"><b>How to use this page:</b> read the Syllabus to see what is examined → do Papers A and B <b>under timed conditions</b> → <b>check the answers</b> and revise the matching unit on the study site. The papers here are practice papers written to the latest syllabus; for official past papers, the Past-papers tab lists free download links.</span></div>
+
+
+<!-- ============ 大纲 ============ -->
+<section class="panel active" id="sy">
+  <h2 class="unit-title"><span class="zh-only">考试大纲 · A-Level 物理（9702）</span><span class="en-only">Syllabus · A-Level Physics (9702)</span></h2>
+  <p class="unit-sub"><span class="zh-only">CAIE 9702 · 5 张卷 · 25 个主题（AS 1–11，A2 12–25）</span><span class="en-only">CAIE 9702 · five papers · 25 topics (AS 1–11, A2 12–25)</span></p>
+
+  <h3 class="syl-h"><span class="zh-only">一、试卷结构</span><span class="en-only">1 · Paper structure</span></h3>
+  <div class="tw">
+    <table>
+      <tr><th><span class="zh-only">试卷</span><span class="en-only">Paper</span></th><th><span class="zh-only">内容</span><span class="en-only">Content</span></th><th><span class="zh-only">时长</span><span class="en-only">Duration</span></th><th><span class="zh-only">分数</span><span class="en-only">Marks</span></th><th><span class="zh-only">权重</span><span class="en-only">Weight</span></th></tr>
+      <tr><td><b>Paper 1</b> <span class="zh-only">选择题 MCQ</span><span class="en-only">Multiple choice</span></td><td><span class="zh-only">40 道选择题，覆盖 AS 全部考点</span><span class="en-only">40 multiple-choice questions, all AS topics</span></td><td class="f">1 h 15 min</td><td class="f">40</td><td class="f">31% AS / 15.5% A Level</td></tr>
+      <tr><td><b>Paper 2</b> <span class="zh-only">AS 结构化</span><span class="en-only">AS structured</span></td><td><span class="zh-only">简答与计算题，单元 1–11</span><span class="en-only">short answer and calculations, units 1–11</span></td><td class="f">1 h 15 min</td><td class="f">60</td><td class="f">46% AS / 23% A Level</td></tr>
+      <tr><td><b>Paper 3</b> <span class="zh-only">实验技能</span><span class="en-only">Practical skills</span></td><td><span class="zh-only">实验操作、记录与数据处理</span><span class="en-only">practical work, recording and processing data</span></td><td class="f">2 h</td><td class="f">40</td><td class="f">23% AS / 11.5% A Level</td></tr>
+      <tr><td><b>Paper 4</b> <span class="zh-only">A2 结构化</span><span class="en-only">A2 structured</span></td><td><span class="zh-only">简答与计算题，单元 12–25</span><span class="en-only">short answer and calculations, units 12–25</span></td><td class="f">2 h</td><td class="f">100</td><td class="f">38.5% A Level</td></tr>
+      <tr><td><b>Paper 5</b> <span class="zh-only">规划分析评估</span><span class="en-only">Planning, analysis &amp; evaluation</span></td><td><span class="zh-only">实验规划、数据分析与评估</span><span class="en-only">planning experiments, analysing and evaluating data</span></td><td class="f">1 h 15 min</td><td class="f">30</td><td class="f">11.5% A Level</td></tr>
+    </table>
+  </div>
+  <p><span class="zh-only"><b>组合：</b>AS = P1 + P2 + P3；A Level = 全部 5 卷（P1–P5）。</span><span class="en-only"><b>Combination:</b> AS = P1 + P2 + P3; A Level = all five papers (P1–P5).</span></p>
+
+  <h3 class="syl-h"><span class="zh-only">二、评分目标</span><span class="en-only">2 · Assessment objectives</span></h3>
+  <div class="tw">
+    <table>
+      <tr><th><span class="zh-only">目标</span><span class="en-only">Objective</span></th><th><span class="zh-only">含义</span><span class="en-only">Meaning</span></th><th><span class="zh-only">权重</span><span class="en-only">Weight</span></th></tr>
+      <tr><td><b>AO1</b> <span class="zh-only">知识与理解</span><span class="en-only">Knowledge &amp; understanding</span></td><td><span class="zh-only">记住并理解物理概念、定律、原理、术语</span><span class="en-only">recall and understand concepts, laws, principles, terms</span></td><td class="f">约 1/3</td></tr>
+      <tr><td><b>AO2</b> <span class="zh-only">处理、应用、评估信息</span><span class="en-only">Handle, apply &amp; evaluate information</span></td><td><span class="zh-only">把知识用于熟悉与陌生情境、解方程、分析数据、评估结论</span><span class="en-only">apply knowledge to familiar and unfamiliar situations, solve equations, analyse data, evaluate</span></td><td class="f">约 1/3</td></tr>
+      <tr><td><b>AO3</b> <span class="zh-only">实验技能与调查</span><span class="en-only">Experimental skills &amp; investigation</span></td><td><span class="zh-only">设计实验、操作仪器、记录处理数据、评估误差与结论（主要在 P3 / P5）</span><span class="en-only">design experiments, use apparatus, record and process data, evaluate uncertainty (mainly P3 / P5)</span></td><td class="f">约 1/3</td></tr>
+    </table>
+  </div>
+
+  <h3 class="syl-h"><span class="zh-only">三、考点清单（25 个主题）</span><span class="en-only">3 · Topic checklist (25 topics)</span></h3>
+  <div class="tw">
+    <table>
+      <tr><th style="width:22px;">#</th><th><span class="zh-only">主题</span><span class="en-only">Topic</span></th><th><span class="zh-only">核心考点</span><span class="en-only">Key points</span></th></tr>
+      <tr><td class="f">1</td><td><span class="zh-only">物理量与单位</span><span class="en-only">Physical quantities &amp; units</span></td><td><span class="zh-only">SI 单位与词头（k、M、μ、n、p）、量纲一致性、标量/矢量、不确定度与有效数字</span><span class="en-only">SI units and prefixes, homogeneity, scalars/vectors, uncertainty and significant figures</span></td></tr>
+      <tr><td class="f">2</td><td><span class="zh-only">运动学</span><span class="en-only">Kinematics</span></td><td><span class="zh-only">位移/速度/加速度、匀加速方程（v=u+at 等）、v-t 图斜率与面积、自由落体 g=9.8</span><span class="en-only">displacement/velocity/acceleration, SUVAT equations, v-t graphs, free fall</span></td></tr>
+      <tr><td class="f">3</td><td><span class="zh-only">动力学</span><span class="en-only">Dynamics</span></td><td><span class="zh-only">牛顿三定律、F=ma、动量 p=mv、动量守恒、碰撞与冲量</span><span class="en-only">Newton's laws, F=ma, momentum, conservation, collisions and impulse</span></td></tr>
+      <tr><td class="f">4</td><td><span class="zh-only">力、密度、压强</span><span class="en-only">Forces, density &amp; pressure</span></td><td><span class="zh-only">密度 ρ=m/V、压强 p=F/A、液体压强 p=ρgh、力矩、平衡、重心</span><span class="en-only">density, pressure, p=ρgh, moments, equilibrium, centre of gravity</span></td></tr>
+      <tr><td class="f">5</td><td><span class="zh-only">功、能量、功率</span><span class="en-only">Work, energy &amp; power</span></td><td><span class="zh-only">W=Fs、动能 ½mv²、重力势能 mgh、能量守恒、功率 P=W/t、效率</span><span class="en-only">work, kinetic energy, GPE, conservation of energy, power, efficiency</span></td></tr>
+      <tr><td class="f">6</td><td><span class="zh-only">固体形变</span><span class="en-only">Deformation of solids</span></td><td><span class="zh-only">弹性/塑性、胡克定律 F=kx、应力 σ=F/A、应变 ε=x/L、杨氏模量 E=σ/ε</span><span class="en-only">elastic/plastic, Hooke's law, stress, strain, Young modulus</span></td></tr>
+      <tr><td class="f">7</td><td><span class="zh-only">波</span><span class="en-only">Waves</span></td><td><span class="zh-only">纵波/横波、波长频率波速 v=fλ、相位差、波强 I∝A²、电磁波谱</span><span class="en-only">longitudinal/transverse, v=fλ, phase difference, intensity, EM spectrum</span></td></tr>
+      <tr><td class="f">8</td><td><span class="zh-only">叠加</span><span class="en-only">Superposition</span></td><td><span class="zh-only">叠加原理、杨氏双缝 λ=ax/D、衍射光栅 d sinθ=nλ、驻波</span><span class="en-only">superposition, double slit, diffraction grating, stationary waves</span></td></tr>
+      <tr><td class="f">9</td><td><span class="zh-only">电学</span><span class="en-only">Electricity</span></td><td><span class="zh-only">电荷、电流 I=Q/t、欧姆定律 V=IR、电阻、电阻率、电功率 P=VI</span><span class="en-only">charge, current, Ohm's law, resistance, resistivity, electrical power</span></td></tr>
+      <tr><td class="f">10</td><td><span class="zh-only">直流电路</span><span class="en-only">D.C. circuits</span></td><td><span class="zh-only">串并联电阻、分压器、电动势与内阻、基尔霍夫定律</span><span class="en-only">series/parallel, potential divider, e.m.f. and internal resistance, Kirchhoff</span></td></tr>
+      <tr><td class="f">11</td><td><span class="zh-only">粒子物理</span><span class="en-only">Particle physics</span></td><td><span class="zh-only">原子结构、质子/中子/电子、基本粒子与夸克、β 衰变、反粒子</span><span class="en-only">atomic structure, nucleons, quarks, beta decay, antiparticles</span></td></tr>
+      <tr><td class="f">12</td><td><span class="zh-only">圆周运动</span><span class="en-only">Motion in a circle</span></td><td><span class="zh-only">角速度 ω、线速度 v=rω、向心加速度 a=v²/r、向心力 F=mv²/r</span><span class="en-only">angular velocity, v=rω, centripetal acceleration and force</span></td></tr>
+      <tr><td class="f">13</td><td><span class="zh-only">引力场</span><span class="en-only">Gravitational fields</span></td><td><span class="zh-only">万有引力 F=GMm/r²、场强 g=GM/r²、引力势、卫星轨道、开普勒定律</span><span class="en-only">Newton's law of gravitation, g=GM/r², potential, orbits, Kepler</span></td></tr>
+      <tr><td class="f">14</td><td><span class="zh-only">温度</span><span class="en-only">Temperature</span></td><td><span class="zh-only">热力学温度 K、摄氏与开尔文换算、热平衡、温度计</span><span class="en-only">thermodynamic temperature, Celsius–Kelvin, thermal equilibrium</span></td></tr>
+      <tr><td class="f">15</td><td><span class="zh-only">理想气体</span><span class="en-only">Ideal gases</span></td><td><span class="zh-only">pV=nRT、pV/T=常数、分子运动论、压强与温度的解释</span><span class="en-only">gas laws, pV=nRT, kinetic theory, pressure and temperature</span></td></tr>
+      <tr><td class="f">16</td><td><span class="zh-only">热力学</span><span class="en-only">Thermodynamics</span></td><td><span class="zh-only">内能、热力学第一定律 ΔU=q+W、热容与比热容、熔解/汽化潜热</span><span class="en-only">internal energy, first law, heat capacity, specific heat, latent heat</span></td></tr>
+      <tr><td class="f">17</td><td><span class="zh-only">振动</span><span class="en-only">Oscillations</span></td><td><span class="zh-only">简谐运动 SHM、a=-ω²x、周期 T=2π√(m/k)、能量、阻尼与共振</span><span class="en-only">SHM, a=-ω²x, period, energy, damping and resonance</span></td></tr>
+      <tr><td class="f">18</td><td><span class="zh-only">电场</span><span class="en-only">Electric fields</span></td><td><span class="zh-only">电场线、场强 E=F/Q、点电荷 E=kQ/r²、均匀场 E=V/d、电势</span><span class="en-only">field lines, E=F/Q, E=kQ/r², E=V/d, potential</span></td></tr>
+      <tr><td class="f">19</td><td><span class="zh-only">电容</span><span class="en-only">Capacitance</span></td><td><span class="zh-only">C=Q/V、平行板电容器、储能 W=½CV²、充放电曲线</span><span class="en-only">capacitance, parallel plates, energy, charge/discharge curves</span></td></tr>
+      <tr><td class="f">20</td><td><span class="zh-only">磁场</span><span class="en-only">Magnetic fields</span></td><td><span class="zh-only">磁感线、通电导线磁场、洛伦兹力 F=Bqv、左手定则、霍尔效应</span><span class="en-only">field lines, current fields, F=Bqv, Fleming's left-hand rule, Hall effect</span></td></tr>
+      <tr><td class="f">21</td><td><span class="zh-only">交流电</span><span class="en-only">Alternating currents</span></td><td><span class="zh-only">正弦波形、峰值与有效值 I₀/√2、变压器、整流</span><span class="en-only">sinusoidal, peak and r.m.s. values, transformers, rectification</span></td></tr>
+      <tr><td class="f">22</td><td><span class="zh-only">量子物理</span><span class="en-only">Quantum physics</span></td><td><span class="zh-only">光子 E=hf、光电效应、功函数、能级与发射/吸收谱、波粒二象性</span><span class="en-only">photon, photoelectric effect, work function, energy levels, wave-particle duality</span></td></tr>
+      <tr><td class="f">23</td><td><span class="zh-only">核物理</span><span class="en-only">Nuclear physics</span></td><td><span class="zh-only">核组成、α/β/γ 衰变、半衰期、E=mc²、质量亏损、核裂变与聚变</span><span class="en-only">nucleus, decay types, half-life, E=mc², mass defect, fission and fusion</span></td></tr>
+      <tr><td class="f">24</td><td><span class="zh-only">医学物理</span><span class="en-only">Medical physics</span></td><td><span class="zh-only">超声成像、X 射线、核医学与示踪、PET/CT</span><span class="en-only">ultrasound, X-rays, nuclear medicine, PET/CT</span></td></tr>
+      <tr><td class="f">25</td><td><span class="zh-only">天文与宇宙学</span><span class="en-only">Astronomy &amp; cosmology</span></td><td><span class="zh-only">恒星亮度与视星等、赫罗图、哈勃定律、宇宙膨胀、大爆炸</span><span class="en-only">luminosity and magnitude, HR diagram, Hubble's law, expansion, Big Bang</span></td></tr>
+    </table>
+  </div>
+
+  <h3 class="syl-h"><span class="zh-only">四、考试提示</span><span class="en-only">4 · Exam tips</span></h3>
+  <ul>
+    <li><span class="zh-only"><b>Paper 1 靠熟练</b>：40 题 75 分钟，平均每题不到 2 分钟。单位换算、量纲、公式要一看就会，不能现场推导。</span><span class="en-only"><b>Paper 1 rewards fluency</b>: 40 questions in 75 minutes — under 2 minutes each. Unit conversions, dimensions and formulas must be instant.</span></li>
+    <li><span class="zh-only"><b>Paper 2 / 4 靠步骤</b>：结构化题按「写公式 → 代值 → 答案 + 单位」走，<b>漏单位会扣分</b>。</span><span class="en-only"><b>Papers 2 &amp; 4 reward method</b>: write the formula, substitute, then give the answer <b>with its unit</b> — missing units lose marks.</span></li>
+    <li><span class="zh-only"><b>Paper 3 / 5 靠实验</b>：会读仪器刻度、算不确定度、写误差来源。AO3 的分数几乎都在这两张卷。</span><span class="en-only"><b>Papers 3 &amp; 5 reward practical skills</b>: read instruments, estimate uncertainty, state sources of error — nearly all AO3 marks live here.</span></li>
+    <li><span class="zh-only"><b>g 用 9.8</b>：除非题目另给，重力加速度取 g = 9.8 m s<sup>-2</sup>，并保留合适的有效数字。</span><span class="en-only"><b>Use g = 9.8</b>: unless stated otherwise, take g = 9.8 m s<sup>-2</sup> and keep sensible significant figures.</span></li>
+  </ul>
+</section>
+
+<!-- ============ 模拟卷 A ============ -->
+<section class="panel" id="pa">
+  <h2 class="unit-title"><span class="zh-only">模拟卷 A · 混合练习（含答案）</span><span class="en-only">Practice Paper A · mixed (with answers)</span></h2>
+  <p class="unit-sub"><span class="zh-only">按 9702 大纲自编 · 8 题 50 分 · 建议 45 分钟限时完成 · 偏 AS（单元 1–11）</span><span class="en-only">Written to the 9702 syllabus · 8 questions / 50 marks · 45 minutes · AS focus (units 1–11)</span></p>
+
+  <div class="paper">
+    <div class="paper-head"><p class="pt"><span class="zh-only">A-Level 物理（9702）· 模拟卷 A</span><span class="en-only">A-Level Physics (9702) · Practice Paper A</span></p><p class="pm"><span class="zh-only">时间 45 分钟 · 满分 50 分 · 每题的「点开看答案」在题下方</span><span class="en-only">Time 45 min · 50 marks · each answer opens below the question</span></p></div>
+
+    <div class="qitem"><div class="qline"><span class="qn">1</span><span class="qm">[6]</span></div>
+      <p><span class="zh-only">(a) 把速度 <b>36 km/h</b> 换算成 m/s。</span><span class="en-only">(a) Convert the speed <b>36 km/h</b> into m/s.</span></p>
+      <p><span class="zh-only">(b) 用基本单位（kg、m、s）说明 <b>1 N</b> 等于什么。</span><span class="en-only">(b) Use base units (kg, m, s) to state what <b>1 N</b> is equal to.</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">(a) 1 km = 1000 m，1 h = 3600 s，代入换算：</span><span class="en-only">(a) 1 km = 1000 m and 1 h = 3600 s, so:</span></p>
+        <div class="eqbox">36 km/h = 36 × (1000 m / 3600 s)
+          = 10 m s<sup>-1</sup></div>
+        <p><span class="zh-only">(b) 由牛顿第二定律 F = ma，把单位代入：</span><span class="en-only">(b) From Newton's second law F = ma, substituting units:</span></p>
+        <div class="eqbox">1 N = 1 kg × 1 m s<sup>-2</sup> = 1 kg m s<sup>-2</sup></div>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">2</span><span class="qm">[6]</span></div>
+      <p><span class="zh-only">物体从静止（u = 0）出发，以加速度 a = 2 m s<sup>-2</sup> 运动 t = 5 s。</span><span class="en-only">An object starts from rest (u = 0) and accelerates at a = 2 m s<sup>-2</sup> for t = 5 s.</span></p>
+      <p><span class="zh-only">(a) 求末速度 v。</span><span class="en-only">(a) Find the final velocity v.</span></p>
+      <p><span class="zh-only">(b) 求这段时间内的位移 s。</span><span class="en-only">(b) Find the displacement s in this time.</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">(a) 匀加速第一式 v = u + at；u = 0：</span><span class="en-only">(a) First SUVAT equation v = u + at, with u = 0:</span></p>
+        <div class="eqbox">v = u + at = 0 + 2 × 5 = 10 m s<sup>-1</sup></div>
+        <p><span class="zh-only">(b) 位移 s = ut + ½at²；u = 0：</span><span class="en-only">(b) Displacement s = ut + ½at², with u = 0:</span></p>
+        <div class="eqbox">s = ut + ½at² = 0 + ½ × 2 × 5² = 25 m</div>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">3</span><span class="qm">[8]</span></div>
+      <p><span class="zh-only">(a) 质量 5 kg 的物体受到 20 N 的<b>合力</b>，求它的加速度。</span><span class="en-only">(a) A 5 kg object is acted on by a <b>resultant force</b> of 20 N. Find its acceleration.</span></p>
+      <p><span class="zh-only">(b) 陈述<b>牛顿第三定律</b>，并举一个例子。</span><span class="en-only">(b) State <b>Newton's third law</b> and give an example.</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">(a) 由牛顿第二定律 F = ma：</span><span class="en-only">(a) From Newton's second law F = ma:</span></p>
+        <div class="eqbox">a = F / m = 20 N / 5 kg = 4 m s<sup>-2</sup></div>
+        <p><span class="zh-only">(b) 牛顿第三定律：物体 A 对 B 施力时，B 同时对 A 施加一个<b>大小相等、方向相反、作用在同一直线上</b>的力。例：用手推墙，墙也以同样大小的力反推手。</span><span class="en-only">(b) Newton's third law: when A exerts a force on B, B simultaneously exerts a force on A that is <b>equal in size, opposite in direction and along the same line</b>. Example: when you push a wall, the wall pushes back on you with an equal force.</span></p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">4</span><span class="qm">[6]</span></div>
+      <p><span class="zh-only">把 2 kg 的物体竖直举高 3 m（取 g = 9.8 m s<sup>-2</sup>）。</span><span class="en-only">A 2 kg object is lifted vertically through 3 m (take g = 9.8 m s<sup>-2</sup>).</span></p>
+      <p><span class="zh-only">(a) 求克服重力做的功。</span><span class="en-only">(a) Find the work done against gravity.</span></p>
+      <p><span class="zh-only">(b) 物体获得的重力势能是多少？</span><span class="en-only">(b) What gravitational potential energy does the object gain?</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">(a) 克服重力做功 W = mgh：</span><span class="en-only">(a) Work done against gravity W = mgh:</span></p>
+        <div class="eqbox">W = mgh = 2 × 9.8 × 3 = 58.8 J</div>
+        <p><span class="zh-only">(b) 重力势能增量等于克服重力做的功（不计其他损失），所以 ΔGPE = <b>58.8 J</b>。</span><span class="en-only">(b) The gain in GPE equals the work done against gravity (no other losses), so ΔGPE = <b>58.8 J</b>.</span></p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">5</span><span class="qm">[6]</span></div>
+      <p><span class="zh-only">一列声波的频率为 50 Hz，波速为 340 m/s。求它的波长。</span><span class="en-only">A sound wave has frequency 50 Hz and speed 340 m/s. Find its wavelength.</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">由波速公式 v = fλ，解出 λ = v / f：</span><span class="en-only">From the wave equation v = fλ, so λ = v / f:</span></p>
+        <div class="eqbox">λ = v / f = 340 / 50 = 6.8 m</div>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">6</span><span class="qm">[8]</span></div>
+      <p><span class="zh-only">一个 4 Ω 的电阻两端加上 12 V 的电压。</span><span class="en-only">A potential difference of 12 V is applied across a 4 Ω resistor.</span></p>
+      <p><span class="zh-only">(a) 求通过它的电流。</span><span class="en-only">(a) Find the current through it.</span></p>
+      <p><span class="zh-only">(b) 求电阻消耗的功率。</span><span class="en-only">(b) Find the power dissipated by the resistor.</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">(a) 由欧姆定律 V = IR，I = V / R：</span><span class="en-only">(a) From Ohm's law V = IR, so I = V / R:</span></p>
+        <div class="eqbox">I = V / R = 12 / 4 = 3 A</div>
+        <p><span class="zh-only">(b) 功率 P = VI：</span><span class="en-only">(b) Power P = VI:</span></p>
+        <div class="eqbox">P = VI = 12 × 3 = 36 W</div>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">7</span><span class="qm">[6]</span></div>
+      <p><span class="zh-only">有两个电阻，阻值各为 4 Ω。</span><span class="en-only">Two resistors each have resistance 4 Ω.</span></p>
+      <p><span class="zh-only">(a) 它们<b>串联</b>时的总电阻是多少？</span><span class="en-only">(a) What is their total resistance in <b>series</b>?</span></p>
+      <p><span class="zh-only">(b) 它们<b>并联</b>时的总电阻是多少？</span><span class="en-only">(b) What is their total resistance in <b>parallel</b>?</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">(a) 串联电阻直接相加：</span><span class="en-only">(a) Series resistances add directly:</span></p>
+        <div class="eqbox">R = 4 + 4 = 8 Ω</div>
+        <p><span class="zh-only">(b) 并联取倒数相加再取倒数：</span><span class="en-only">(b) For parallel, add reciprocals then invert:</span></p>
+        <div class="eqbox">1/R = 1/4 + 1/4 = 1/2   →   R = 2 Ω</div>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">8</span><span class="qm">[4]</span></div>
+      <p><span class="zh-only">写出<b>应力</b>（stress）和<b>应变</b>（strain）的定义，并给出各自的公式。</span><span class="en-only">Define <b>stress</b> and <b>strain</b>, and give the formula for each.</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only"><b>应力</b>：物体单位横截面积上受到的力，单位是帕斯卡（Pa）。<b>应变</b>：物体伸长量与原长之比，是比值，没有单位。</span><span class="en-only"><b>Stress</b> is the force per unit cross-sectional area, measured in pascals (Pa). <b>Strain</b> is the extension divided by the original length — a ratio with no unit.</span></p>
+        <div class="eqbox">应力 σ = F / A      （单位 Pa）
+应变 ε = x / L      （无单位）</div>
+      </div></details>
+    </div>
+  </div>
+
+  <div class="unit-end">
+    <p class="big"><span class="zh-only">卷 A 结束</span><span class="en-only">End of Paper A</span></p>
+    <p><span class="zh-only">做完对答案，错题回「物理站」补对应单元。单位换算（1）、运动学（2）、欧姆定律（6）是 AS 高频基础题，失分的话先补单元 1、2、9。</span><span class="en-only">Mark your answers, then revisit the matching units on the Physics site. Q1 (units), Q2 (kinematics) and Q6 (Ohm's law) are high-frequency AS basics — review units 1, 2 and 9 if you lost marks there.</span></p>
+  </div>
+</section>
+
+<!-- ============ 模拟卷 B ============ -->
+<section class="panel" id="pb">
+  <h2 class="unit-title"><span class="zh-only">模拟卷 B · 综合练习（含答案）</span><span class="en-only">Practice Paper B · mixed (with answers)</span></h2>
+  <p class="unit-sub"><span class="zh-only">按 9702 大纲自编 · 8 题 50 分 · 建议 45 分钟限时完成 · 偏 A2（单元 12–25）+ 综合</span><span class="en-only">Written to the 9702 syllabus · 8 questions / 50 marks · 45 minutes · A2 focus (units 12–25) + mixed</span></p>
+
+  <div class="paper">
+    <div class="paper-head"><p class="pt"><span class="zh-only">A-Level 物理（9702）· 模拟卷 B</span><span class="en-only">A-Level Physics (9702) · Practice Paper B</span></p><p class="pm"><span class="zh-only">时间 45 分钟 · 满分 50 分 · 每题的「点开看答案」在题下方</span><span class="en-only">Time 45 min · 50 marks · each answer opens below the question</span></p></div>
+
+    <div class="qitem"><div class="qline"><span class="qn">1</span><span class="qm">[8]</span></div>
+      <p><span class="zh-only">一个 3 kg 的球以 2 m/s 运动，撞上一个静止的 2 kg 球，两球<b>粘在一起</b>继续运动。</span><span class="en-only">A 3 kg ball moving at 2 m/s hits a stationary 2 kg ball, and the two <b>stick together</b>.</span></p>
+      <p><span class="zh-only">用动量守恒求碰撞后它们的共同速度。</span><span class="en-only">Use conservation of momentum to find their common velocity after the collision.</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">碰撞前后总动量守恒：m₁u₁ + m₂u₂ = (m₁ + m₂)v，其中 u₂ = 0：</span><span class="en-only">Total momentum is conserved: m₁u₁ + m₂u₂ = (m₁ + m₂)v, with u₂ = 0:</span></p>
+        <div class="eqbox">3 × 2 + 2 × 0 = (3 + 2) × v
+6 = 5v
+v = 6 / 5 = 1.2 m s<sup>-1</sup></div>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">2</span><span class="qm">[6]</span></div>
+      <p><span class="zh-only">(a) 写出线速度 v 与角速度 ω 的关系式，并说明每个符号的单位。</span><span class="en-only">(a) Write the relationship between linear velocity v and angular velocity ω, giving the unit of each symbol.</span></p>
+      <p><span class="zh-only">(b) 半径 r = 2 m、角速度 ω = 3 rad/s 时，线速度是多少？</span><span class="en-only">(b) When r = 2 m and ω = 3 rad/s, what is the linear velocity?</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">(a) 线速度 = 半径 × 角速度：v = rω。v 单位 m/s，r 单位 m，ω 单位 rad/s。</span><span class="en-only">(a) Linear velocity = radius × angular velocity: v = rω. v is in m/s, r in m, ω in rad/s.</span></p>
+        <div class="eqbox">v = rω</div>
+        <p><span class="zh-only">(b) 代入数值：</span><span class="en-only">(b) Substituting:</span></p>
+        <div class="eqbox">v = rω = 2 × 3 = 6 m s<sup>-1</sup></div>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">3</span><span class="qm">[6]</span></div>
+      <p><span class="zh-only">(a) 写出点电荷 Q 在距离 r 处产生的电场强度公式。</span><span class="en-only">(a) Write the formula for the electric field strength at distance r from a point charge Q.</span></p>
+      <p><span class="zh-only">(b) 定性地说明：距离加倍时，场强变为原来的多少？</span><span class="en-only">(b) Qualitatively: if the distance doubles, what happens to the field strength?</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">(a) 点电荷场强公式，其中 k = 1/(4πε₀)：</span><span class="en-only">(a) Field strength of a point charge, with k = 1/(4πε₀):</span></p>
+        <div class="eqbox">E = kQ / r²      k = 1 / (4πε₀)</div>
+        <p><span class="zh-only">(b) 场强与距离的<b>平方成反比</b>，所以距离加倍 → 场强变为原来的 <b>1/4</b>。</span><span class="en-only">(b) The field strength is <b>inversely proportional to the square of the distance</b>, so doubling the distance reduces it to <b>one quarter</b>.</span></p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">4</span><span class="qm">[6]</span></div>
+      <p><span class="zh-only">(a) 写出电容的定义式 C = Q/V，并说明每个符号的含义。</span><span class="en-only">(a) Write the defining equation C = Q/V and state the meaning of each symbol.</span></p>
+      <p><span class="zh-only">(b) <b>1 F</b>（1 法拉）是什么意思？</span><span class="en-only">(b) What does <b>1 F</b> (one farad) mean?</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">(a) C 是电容（单位 F），Q 是储存的电荷（单位 C），V 是两极板间电压（单位 V）。</span><span class="en-only">(a) C is capacitance (in F), Q is stored charge (in C), V is the voltage across the plates (in V).</span></p>
+        <div class="eqbox">C = Q / V      1 F = 1 C / 1 V</div>
+        <p><span class="zh-only">(b) 1 F 表示：两极板间加 1 V 电压时，能储存 1 C 的电荷。</span><span class="en-only">(b) 1 F means the capacitor stores 1 C of charge when 1 V is applied across its plates.</span></p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">5</span><span class="qm">[8]</span></div>
+      <p><span class="zh-only">(a) 写出电荷量为 q 的粒子以速度 v <b>垂直</b>进入磁感应强度为 B 的磁场时所受的洛伦兹力。</span><span class="en-only">(a) Write the Lorentz force on a particle of charge q moving <b>perpendicular</b> to a magnetic field of flux density B at speed v.</span></p>
+      <p><span class="zh-only">(b) 说明如何用<b>左手定则</b>判断这个力的方向。</span><span class="en-only">(b) Explain how to use <b>Fleming's left-hand rule</b> to find the direction of this force.</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">(a) 洛伦兹力大小 F = Bqv（v 与 B 垂直时）。</span><span class="en-only">(a) The magnitude of the Lorentz force is F = Bqv (when v is perpendicular to B).</span></p>
+        <div class="eqbox">F = Bqv</div>
+        <p><span class="zh-only">(b) 左手定则：让<b>磁感线穿过掌心</b>，<b>四指指向正电荷的速度方向</b>，则<b>拇指指向受力方向</b>。若粒子带负电，力的方向与拇指相反。</span><span class="en-only">(b) Left-hand rule: point the <b>field lines into the palm</b>, point the <b>fingers along the velocity of a positive charge</b>, and the <b>thumb gives the force direction</b>. For a negative charge, the force is opposite to the thumb.</span></p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">6</span><span class="qm">[6]</span></div>
+      <p><span class="zh-only">(a) 写出光子能量公式，并说明每个符号的含义。</span><span class="en-only">(a) Write the photon energy formula and state the meaning of each symbol.</span></p>
+      <p><span class="zh-only">(b) 在<b>光电效应</b>中，电子要从金属表面逸出，光子能量必须满足什么条件？</span><span class="en-only">(b) In the <b>photoelectric effect</b>, what condition must the photon energy satisfy for an electron to escape the metal surface?</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">(a) 光子能量 E = hf，h 是普朗克常量，f 是光的频率。</span><span class="en-only">(a) Photon energy E = hf, where h is Planck's constant and f is the light frequency.</span></p>
+        <div class="eqbox">E = hf        Ek = hf − φ</div>
+        <p><span class="zh-only">(b) 光子能量必须<b>大于金属的功函数 φ</b>（hf &gt; φ），电子才能逸出；多余的能量变成电子的最大动能 Ek = hf − φ。</span><span class="en-only">(b) The photon energy must <b>exceed the metal's work function φ</b> (hf &gt; φ); the surplus becomes the electron's maximum kinetic energy, Ek = hf − φ.</span></p>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">7</span><span class="qm">[6]</span></div>
+      <p><span class="zh-only">(a) 定义<b>半衰期</b>。</span><span class="en-only">(a) Define <b>half-life</b>.</span></p>
+      <p><span class="zh-only">(b) 某同位素的半衰期为 10 天。80 g 这种同位素经过 30 天后还剩多少？</span><span class="en-only">(b) An isotope has a half-life of 10 days. How much of an 80 g sample remains after 30 days?</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">(a) 半衰期：放射性原子核的数量（或质量）衰变到原来<b>一半</b>所需的时间。</span><span class="en-only">(a) Half-life: the time taken for the number (or mass) of radioactive nuclei to fall to <b>half</b> its original value.</span></p>
+        <p><span class="zh-only">(b) 30 天 = 3 个半衰期，质量每次减半：</span><span class="en-only">(b) 30 days = 3 half-lives, so the mass halves each time:</span></p>
+        <div class="eqbox">30 / 10 = 3 个半衰期
+80 → 40 → 20 → 10 g</div>
+      </div></details>
+    </div>
+
+    <div class="qitem"><div class="qline"><span class="qn">8</span><span class="qm">[4]</span></div>
+      <p><span class="zh-only">(a) 交流电的<b>有效值</b>（r.m.s.）与峰值 I₀ 有什么关系？</span><span class="en-only">(a) How is the <b>r.m.s.</b> value of an alternating current related to its peak value I₀?</span></p>
+      <p><span class="zh-only">(b) 这个有效值代表什么物理含义？</span><span class="en-only">(b) What does the r.m.s. value physically represent?</span></p>
+      <details class="qans"><summary><span class="zh-only">点开看答案</span><span class="en-only">Show answer</span></summary><div class="ansbody">
+        <p><span class="zh-only">(a) 正弦交流电的有效值 = 峰值 ÷ √2：</span><span class="en-only">(a) For a sinusoidal current, the r.m.s. value equals the peak divided by √2:</span></p>
+        <div class="eqbox">I<sub>rms</sub> = I₀ / √2</div>
+        <p><span class="zh-only">(b) 有效值表示：与<b>相同热效应</b>的直流电流等效的电流值，常用于计算交流电的平均功率。</span><span class="en-only">(b) The r.m.s. value is the direct current that produces the <b>same heating effect</b>, and is used to calculate the average power of an alternating current.</span></p>
+      </div></details>
+    </div>
+  </div>
+
+  <div class="unit-end">
+    <p class="big"><span class="zh-only">卷 B 结束</span><span class="en-only">End of Paper B</span></p>
+    <p><span class="zh-only">做完对答案，错题回「物理站」补对应单元。动量守恒（1）、洛伦兹力（5）、半衰期（7）是 A2 高频考点，失分的话先补单元 3、20、23。</span><span class="en-only">Mark your answers, then revisit the matching units on the Physics site. Q1 (momentum), Q5 (Lorentz force) and Q7 (half-life) are high-frequency A2 points — review units 3, 20 and 23 if you lost marks there.</span></p>
+  </div>
+</section>
+
+<!-- ============ 真题资源 ============ -->
+<section class="panel" id="res">
+  <h2 class="unit-title"><span class="zh-only">真题资源 · 官方与免费下载</span><span class="en-only">Past papers · official and free</span></h2>
+  <p class="unit-sub"><span class="zh-only">上面的 A、B 卷是自编练习卷；下面这些是历年<b>官方真题</b>的获取渠道，刷完自编卷后再练真卷</span><span class="en-only">Papers A and B above are practice papers; these links lead to <b>official past papers</b> — do them after the practice papers</span></p>
+
+  <div class="resintro"><span class="zh-only"><b>建议顺序：</b>① 先做本页 A、B 卷自测 → ② 用下面的真题按 topic 或按年份刷 → ③ 每次限时、对答案、把错题回「物理站」补对应单元。<b>真题最接近真实考试，考前至少刷近 3 年。</b></span><span class="en-only"><b>Suggested order:</b> ① do Papers A and B here → ② work through the past papers below by topic or by year → ③ time yourself, mark, and revise the matching unit. <b>Past papers mirror the real exam — cover at least the last 3 years.</b></span></div>
+
+  <div class="reswarn"><span class="zh-only"><b>关于访问：</b>官方 Cambridge 网站有时访问不稳，可换下面的镜像站。链接不定期维护，打不开就搜「9702 past papers」。</span><span class="en-only"><b>About access:</b> the official Cambridge site can be slow; use the mirrors below. If a link breaks, search "9702 past papers".</span></div>
+
+  <div class="resgroup">
+    <h3><span class="zh-only">官方与镜像</span><span class="en-only">Official and mirrors</span></h3>
+    <a class="rcard" href="https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-international-as-and-a-level-physics-9702/past-papers/" target="_blank" rel="noopener">
+      <div class="rt">Cambridge 官方真题 <span class="ar">9702 Past Papers</span></div>
+      <div class="rd"><span class="zh-only">官方历年真题 + 评分标准（mark scheme），最权威。官网偶尔慢，多刷新。</span><span class="en-only">Official past papers and mark schemes. The site can be slow — refresh if needed.</span></div>
+      <div class="ru">cambridgeinternational.org</div>
+    </a>
+    <a class="rcard" href="https://papacambridge.com/cambridge-international-as-and-a-level-physics-9702/" target="_blank" rel="noopener">
+      <div class="rt">PapaCambridge <span class="ar">9702 真题镜像</span></div>
+      <div class="rd"><span class="zh-only">按年份整理好的真题、评分标准、答案，下载方便。</span><span class="en-only">Past papers, mark schemes and answers organised by year.</span></div>
+      <div class="ru">papacambridge.com</div>
+    </a>
+  </div>
+
+  <div class="resgroup">
+    <h3><span class="zh-only">分主题练习</span><span class="en-only">Topic-based practice</span></h3>
+    <a class="rcard" href="https://www.physicsandmathstutor.com/physics-revision/" target="_blank" rel="noopener">
+      <div class="rt">Physics &amp; Maths Tutor · Physics <span class="ar">PMT 物理</span></div>
+      <div class="rd"><span class="zh-only">按 topic 分好的真题 + 笔记 + 答案，适合专项补漏。站点可能反爬，刷新几次。</span><span class="en-only">Past questions and notes sorted by topic, good for targeted revision.</span></div>
+      <div class="ru">physicsandmathstutor.com</div>
+    </a>
+    <a class="rcard" href="https://www.savemyexams.com/a-level/physics/cie/22/revision-notes/" target="_blank" rel="noopener">
+      <div class="rt">Save My Exams <span class="ar">CIE 物理笔记</span></div>
+      <div class="rd"><span class="zh-only">按 topic 的简洁笔记 + 真题分主题练习，和本页考点一一对应。</span><span class="en-only">Concise topic notes and topic-based questions, mapped to the same checklist.</span></div>
+      <div class="ru">savemyexams.com</div>
+    </a>
+  </div>
+
+  <div class="unit-end">
+    <p class="big"><span class="zh-only">刷题就这三样够用</span><span class="en-only">These three cover everything</span></p>
+    <p><span class="zh-only"><b>自编卷热身 → 分主题补漏 → 近 3 年整卷限时</b>，这就是物理拿高分的最短路径。别囤资料，动手刷才是关键。</span><span class="en-only"><b>Warm up on practice papers → patch gaps by topic → do the last 3 years under timed conditions.</b> That is the shortest route to a high grade — stop hoarding resources and start solving.</span></p>
+  </div>
+</section>
+
+
+<footer>
+  <p class="big"><span class="zh-only">先看大纲，再限时做题，最后对答案补漏</span><span class="en-only">Syllabus first, then timed practice, then check and revise</span></p>
+  <p><span class="zh-only">考试三件事：<b>考什么</b>（大纲）、<b>怎么考</b>（题型与分值）、<b>练没练</b>（真题）。这页把三样都给你了。做模拟卷时<b>一定掐表</b>——考试一半拼的是时间分配。</span><span class="en-only">Three exam essentials: <b>what</b> is examined (the syllabus), <b>how</b> (question types and marks), and <b>practice</b> (past papers). This page gives you all three. When you do a paper, <b>time it</b> — half the exam is time management.</span></p>
+  <p style="margin-top:14px;font-size:13.5px;color:#6b7280;"><span class="zh-only">提示：本页会记住你选的语言和当前 tab；打印时所有答案会自动展开。</span><span class="en-only">Tip: the page remembers your language and current tab; all answers open automatically when you print.</span></p>
+</footer>
+
+</div><!-- /wrap -->
+
+<script>
+(function(){
+  var tabs   = document.querySelectorAll('button.tab');
+  var panels = document.querySelectorAll('.panel');
+  var langBtns = document.querySelectorAll('.lbtn');
+  function show(id){
+    if(!document.getElementById(id)) { id = 'sy'; }
+    panels.forEach(function(p){ p.classList.toggle('active', p.id === id); });
+    tabs.forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-tab') === id); });
+    try{ localStorage.setItem('phexam_tab', id); }catch(e){}
+  }
+  function setLang(lang){
+    document.body.classList.remove('lang-zh','lang-en');
+    document.body.classList.add('lang-' + lang);
+    langBtns.forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-lang') === lang); });
+    try{ localStorage.setItem('phexam_lang', lang); }catch(e){}
+  }
+  tabs.forEach(function(b){ b.addEventListener('click', function(){ show(b.getAttribute('data-tab')); }); });
+  langBtns.forEach(function(b){ b.addEventListener('click', function(){ setLang(b.getAttribute('data-lang')); }); });
+  var savedLang = 'zh', savedTab = 'sy';
+  try{ savedLang = localStorage.getItem('phexam_lang') || 'zh'; savedTab = localStorage.getItem('phexam_tab') || 'sy'; }catch(e){}
+  setLang(savedLang);
+  var h = (location.hash || '').replace('#','');
+  if(/^(sy|pa|pb|res)$/.test(h)){ savedTab = h; }
+  show(savedTab);
+})();
+</script>
+</body>
+</html>
