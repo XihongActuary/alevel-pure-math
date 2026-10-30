@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>初中英语语法速通手册 · 总览 + 八大支柱详解</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0f1117;--surface:#1a1d27;--surface2:#22262f;--surface3:#2a2e3a;--border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.15);
+  --text:#e8e8e8;--text2:#b4b2a9;--text3:#888780;
+  --purple:#afa9ec;--purple-bg:#26215c;--purple-bg2:#3c3489;
+  --coral:#f0997b;--coral-bg:#4a1b0c;--coral-bg2:#712b13;
+  --teal:#5dcaa5;--teal-bg:#085041;--teal-bg2:#04342c;
+  --blue:#85b7eb;--blue-bg:#042c53;--blue-bg2:#0c447c;
+  --amber:#fac775;--amber-bg:#412402;--amber-bg2:#633806;
+  --green:#97c459;--green-bg:#27500a;--red:#f09595;--red-bg:#501313;
+  --pink:#ed93b1;}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7}
+.hero{background:linear-gradient(135deg,#1a1d27 0%,#26215c 100%);padding:50px 20px 44px;text-align:center;border-bottom:1px solid var(--border)}
+.hero h1{font-size:28px;font-weight:600;color:var(--purple);margin-bottom:8px}
+.hero .sub{font-size:14px;color:var(--text2);margin-bottom:4px}
+.hero .meta{font-size:13px;color:var(--text3)}
+.container{max-width:1000px;margin:0 auto;padding:0 20px}
+section{padding:44px 0;border-bottom:1px solid var(--border)}
+.sec-title{font-size:22px;font-weight:600;color:var(--purple);margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.sec-title .num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--coral-bg);color:var(--coral);border-radius:8px;font-size:15px;font-weight:600}
+.sec-desc{font-size:14px;color:var(--text2);margin-bottom:24px}
+
+/* ===== 顶层 Tab ===== */
+.top-tab-bar{display:flex;gap:0;margin:24px 0 0;border-bottom:2px solid var(--border);position:sticky;top:0;z-index:100;background:var(--bg);padding:0 20px}
+.top-tab{padding:14px 28px;background:transparent;border:none;border-bottom:3px solid transparent;color:var(--text2);font-size:16px;font-weight:600;cursor:pointer;transition:all .2s;font-family:inherit;margin-bottom:-2px}
+.top-tab:hover{color:var(--text);background:var(--surface2)}
+.top-tab.active{color:var(--purple);border-bottom-color:var(--purple)}
+.top-panel{display:none}
+.top-panel.active{display:block;animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* 八大支柱卡片 */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.pillar{border-radius:12px;padding:18px 16px;border:1px solid;min-height:180px;cursor:pointer;transition:transform .2s,box-shadow .2s;text-decoration:none}
+.pillar:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,0.3)}
+.pillar h3{font-size:15px;font-weight:600;margin-bottom:4px}
+.pillar .tag{font-size:11px;font-weight:600;margin-bottom:10px;display:inline-block;padding:2px 8px;border-radius:4px}
+.pillar ul{list-style:none}
+.pillar li{font-size:12px;color:var(--text2);padding:2px 0;line-height:1.5}
+.pillar li.star{color:var(--coral);font-weight:500}
+.pillar .go{font-size:11px;margin-top:8px;opacity:.6}
+.pillar.coral{background:var(--coral-bg);border-color:var(--coral)}
+.pillar.coral h3{color:#f5c4b3}.pillar.coral .tag{background:rgba(240,153,123,0.15);color:var(--coral)}
+.pillar.amber{background:var(--amber-bg);border-color:var(--amber)}
+.pillar.amber h3{color:var(--amber)}
+.pillar.blue{background:var(--blue-bg);border-color:var(--blue)}
+.pillar.blue h3{color:#b5d4f4}
+
+/* 子 Tab 系统 */
+.tab-bar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px;border-bottom:2px solid var(--border);padding-bottom:0}
+.tab-btn{padding:10px 18px;background:transparent;border:none;border-bottom:2px solid transparent;color:var(--text2);font-size:14px;font-weight:500;cursor:pointer;transition:all .2s;border-radius:6px 6px 0 0;font-family:inherit;margin-bottom:-2px}
+.tab-btn:hover{color:var(--text);background:var(--surface2)}
+.tab-btn.active{color:var(--purple);border-bottom-color:var(--purple);background:var(--surface2)}
+.tab-panel{display:none;animation:fadeIn .3s ease}
+.tab-panel.active{display:block}
+
+/* 教学组件 */
+.block{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:16px}
+.block-h{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.block-h .ico{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;flex-shrink:0}
+.block-h h4{font-size:16px;font-weight:600;color:var(--text)}
+.rule{background:var(--blue-bg);border:1px solid var(--blue);border-radius:8px;padding:14px;margin-bottom:14px}
+.rule .label{font-size:12px;font-weight:600;color:var(--blue);margin-bottom:6px}
+.rule .txt{font-size:14px;color:var(--text)}
+.formula{font-family:"SF Mono",Consolas,monospace;font-size:15px;color:var(--teal);background:rgba(93,202,165,0.08);padding:8px 14px;border-radius:6px;margin:8px 0;display:inline-block}
+.mnemonic{background:var(--purple-bg);border:1px solid var(--purple);border-radius:8px;padding:16px;margin-bottom:14px}
+.mnemonic .label{font-size:12px;font-weight:600;color:var(--purple);margin-bottom:8px}
+.mnemonic .verse{font-size:15px;color:#cecbf6;line-height:1.8;font-weight:500}
+.mnemonic .verse .hl{color:var(--amber)}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.cmp-col{border-radius:8px;padding:14px}
+.cmp-col.wrong{background:var(--red-bg);border:1px solid var(--red)}
+.cmp-col.right{background:var(--green-bg);border:1px solid var(--green)}
+.cmp-col .tag-s{font-size:11px;font-weight:600;margin-bottom:6px}
+.cmp-col.wrong .tag-s{color:var(--red)}
+.cmp-col.right .tag-s{color:var(--green)}
+.cmp-col .sent{font-family:"SF Mono",Consolas,monospace;font-size:13px;margin-bottom:4px;word-break:break-word}
+.cmp-col.wrong .sent{text-decoration:line-through;color:#f7c1c1}
+.cmp-col.right .sent{color:#c0dd97}
+.cmp-col .why{font-size:12px;color:var(--text3);margin-top:4px}
+.ask{background:var(--amber-bg);border:1px solid var(--amber);border-radius:8px;padding:16px;margin-bottom:14px}
+.ask .label{font-size:12px;font-weight:600;color:var(--amber);margin-bottom:10px}
+.ask .q{font-size:14px;color:var(--text);margin-bottom:12px;line-height:1.7}
+.ask .q .hl{color:var(--amber)}
+.reveal-btn{background:var(--surface3);border:1px solid var(--border2);color:var(--amber);padding:6px 16px;border-radius:6px;cursor:pointer;font-size:13px;font-family:inherit;transition:background .2s}
+.reveal-btn:hover{background:var(--amber-bg2)}
+.reveal{display:none;margin-top:12px;padding:12px;background:var(--teal-bg);border:1px solid var(--teal);border-radius:6px;font-size:13px;color:#9fe1cb}
+.reveal.show{display:block}
+.reveal .step{margin-bottom:6px}
+.reveal .step b{color:var(--amber)}
+.trap{background:var(--coral-bg);border:1px solid var(--coral);border-radius:8px;padding:14px;margin-bottom:14px;display:flex;gap:12px;align-items:flex-start}
+.trap .icon{font-size:20px;flex-shrink:0;line-height:1}
+.trap .body h5{font-size:13px;font-weight:600;color:#f5c4b3;margin-bottom:4px}
+.trap .body p{font-size:13px;color:var(--text2);line-height:1.6}
+.diff{background:var(--surface2);border-left:3px solid var(--pink);border-radius:0 8px 8px 0;padding:12px 16px;margin-bottom:14px}
+.diff .label{font-size:12px;font-weight:600;color:var(--pink);margin-bottom:6px}
+.diff p{font-size:13px;color:var(--text2);line-height:1.6}
+
+/* 小测 */
+.quiz{background:var(--surface);border:2px solid var(--border2);border-radius:12px;padding:20px;margin-bottom:16px}
+.quiz .q-h{font-size:14px;font-weight:600;color:var(--purple);margin-bottom:14px}
+.quiz .q-text{font-size:15px;color:var(--text);margin-bottom:14px;line-height:1.7}
+.quiz .q-text .blank{display:inline-block;border-bottom:2px solid var(--amber);min-width:60px;text-align:center;color:var(--amber);font-weight:600}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px 16px;cursor:pointer;font-size:14px;color:var(--text);transition:all .15s;font-family:inherit;text-align:left}
+.opt:hover{border-color:var(--border2);background:var(--surface3)}
+.opt.correct{background:var(--green-bg);border-color:var(--green);color:#c0dd97}
+.opt.wrong-pick{background:var(--red-bg);border-color:var(--red);color:#f7c1c1}
+.opt .mark{float:right;font-weight:700}
+.feedback{display:none;margin-top:12px;padding:12px;border-radius:8px;font-size:13px;line-height:1.6}
+.feedback.show{display:block}
+.feedback.ok{background:var(--green-bg);border:1px solid var(--green);color:#c0dd97}
+.feedback.no{background:var(--red-bg);border:1px solid var(--red);color:#f7c1c1}
+
+/* 时间轴 / 决策树 */
+.tl-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:10px}
+.tl-card .head{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.tl-card .badge{font-size:11px;font-weight:600;padding:3px 10px;border-radius:4px}
+.tl-card .name{font-size:15px;font-weight:600}
+.tl-card .struct{font-size:13px;color:var(--teal);font-family:"SF Mono",Consolas,monospace;margin-bottom:4px}
+.tl-card .example{font-size:13px;color:var(--teal);font-family:"SF Mono",Consolas,monospace;background:rgba(93,202,165,0.06);padding:5px 8px;border-radius:4px;margin:4px 0}
+.tl-card .kw{font-size:12px;color:var(--text3)}
+.tl-card.hard{border-color:var(--coral);background:rgba(74,27,12,0.3)}
+.vs-box{background:var(--coral-bg);border:1px solid var(--coral);border-radius:10px;padding:14px;margin-top:12px}
+.vs-box h5{color:#f5c4b3;font-size:13px;margin-bottom:8px}
+.vs-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.vs-col .lab{font-size:12px;color:var(--amber);font-weight:600;margin-bottom:4px}
+.vs-col .sent{font-size:13px;font-family:"SF Mono",Consolas,monospace;color:var(--teal)}
+.vs-col .note{font-size:12px;color:var(--text3);margin-top:2px}
+
+/* 决策树 */
+.decision{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:16px}
+.decision .step-lab{font-size:13px;font-weight:600;color:var(--amber);margin-bottom:14px;text-align:center}
+.decision .root{background:var(--amber-bg);border:1px solid var(--amber);border-radius:8px;padding:10px 20px;text-align:center;font-weight:600;color:var(--amber);max-width:260px;margin:0 auto 18px;font-size:14px}
+.branches{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
+.branch{text-align:center;padding:12px 8px;border-radius:8px;border:1px solid var(--blue);background:var(--blue-bg)}
+.branch .bt{font-size:13px;font-weight:600;color:#b5d4f4;margin-bottom:4px}
+.branch .bw{font-size:13px;font-family:"SF Mono",Consolas,monospace;color:var(--teal);margin-bottom:4px}
+.branch .bn{font-size:11px;color:var(--text3)}
+.role-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.role-card{border-radius:8px;padding:14px;border:1px solid var(--teal);background:var(--teal-bg)}
+.role-card h5{font-size:13px;font-weight:600;color:#9fe1cb;margin-bottom:6px}
+.role-card .ex{font-size:12px;font-family:"SF Mono",Consolas,monospace;color:var(--teal);margin-bottom:4px}
+.role-card .nt{font-size:11px;color:var(--text3)}
+
+/* 路线 / 心法 */
+.route-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+.route-card{border-radius:12px;padding:20px;border:1px solid}
+.route-card.w1{background:var(--purple-bg2);border-color:var(--purple)}
+.route-card.w2{background:var(--teal-bg);border-color:var(--teal)}
+.route-card h3{font-size:16px;font-weight:600;margin-bottom:14px}
+.route-card.w1 h3{color:#cecbf6}.route-card.w2 h3{color:#9fe1cb}
+.route-card .day{font-size:13px;color:var(--text);padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.05)}
+.route-card .day:last-child{border-bottom:none}
+.route-card .day .focus{font-size:12px;color:var(--amber);margin-left:8px}
+.tip-bar{background:rgba(250,199,117,0.1);border:1px solid var(--amber);border-radius:8px;padding:14px;text-align:center;font-size:14px;color:var(--amber);font-weight:500}
+.mindset{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mind-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px}
+.mind-card h4{font-size:15px;font-weight:600;color:var(--purple);margin-bottom:8px}
+.mind-card p{font-size:13px;color:var(--text2);line-height:1.7}
+.mind-card .hi{color:var(--coral);font-weight:500}
+.sub-h{font-size:14px;font-weight:600;color:var(--amber);margin:18px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.example-row{font-family:"SF Mono",Consolas,monospace;font-size:13px;color:var(--teal);background:rgba(93,202,165,0.06);padding:6px 10px;border-radius:5px;margin:4px 0;word-break:break-word}
+.note-sm{font-size:12px;color:var(--text3);margin:4px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
+.mini-card{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px}
+.mini-card h5{font-size:13px;font-weight:600;color:var(--blue);margin-bottom:6px}
+.mini-card .mc-ex{font-size:12px;font-family:"SF Mono",Consolas,monospace;color:var(--teal);margin:3px 0}
+.mini-card .mc-nt{font-size:11px;color:var(--text3)}
+/* 易错大表 */
+.err-table{width:100%;border-collapse:collapse;margin-bottom:16px;font-size:13px}
+.err-table th{background:var(--surface3);color:var(--amber);padding:10px 12px;text-align:left;font-weight:600;border-bottom:2px solid var(--border2)}
+.err-table td{padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+.err-table .wrong-c{color:#f7c1c1;text-decoration:line-through;font-family:"SF Mono",Consolas,monospace}
+.err-table .right-c{color:#c0dd97;font-family:"SF Mono",Consolas,monospace}
+.err-table .reason{color:var(--text3);font-size:12px}
+.err-table tr:hover{background:var(--surface)}
+footer{text-align:center;padding:40px 20px;color:var(--text3);font-size:13px;border-top:1px solid var(--border)}
+@media(max-width:760px){
+  .grid8{grid-template-columns:repeat(2,1fr)}
+  .branches{grid-template-columns:repeat(2,1fr)}
+  .role-grid,.vs-row,.cmp,.grid2{grid-template-columns:1fr}
+  .route-grid,.mindset{grid-template-columns:1fr}
+  .grid3{grid-template-columns:1fr}
+  .top-tab{font-size:14px;padding:12px 16px}
+  .err-table{font-size:12px}
+  .err-table td,.err-table th{padding:8px}
+}
+
+/* ===== 全站统一顶部导航条（浅色，与 alevel-pure-math 站一致）===== */
+.snav{background:#ffffff;border-bottom:1px solid #dfe6ee;padding:9px 20px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13px;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;}
+.snav a{color:#1f4e79;text-decoration:none;padding:4px 11px;border-radius:7px;border:1px solid #dfe6ee;background:#f4f7fb;white-space:nowrap;}
+.snav a:hover{background:#eef4fb;border-color:#2563eb;color:#2563eb;}
+.snav .cur{margin-left:auto;color:#64748b;white-space:nowrap;}
+@media (max-width:640px){.snav .cur{display:none;}}
+</style>
+</head>
+<body>
+
+
+<!-- ===== 全站统一顶部导航条 ===== -->
+<div class="snav">
+  <a href="catalog.html">&#8592; 总目录</a>
+  <a href="index.html">数学</a>
+  <a href="alevel-physics.html">物理</a>
+  <a href="alevel-chemistry.html">化学</a>
+  <a href="igcse-computer-science.html">计算机</a>
+  <a href="alevel-computer-science.html">A-Level 计算机</a>
+  <a href="ielts-guide.html">雅思</a>
+  <span class="cur">当前：初中英语语法速通手册</span>
+</div>
+
+<div class="hero">
+  <h1>初中英语语法 · 速通手册</h1>
+  <div class="sub">总览速览 + 八大支柱详解 / 记忆口诀 / 苏格拉底追问 / 即时小测</div>
+  <div class="meta">顶部切换四大板块，总览卡片可点击跳转详解</div>
+</div>
+
+<!-- ===== 顶层 Tab 导航 ===== -->
+<div class="top-tab-bar">
+  <button class="top-tab active" onclick="switchTopTab(0,event)">📊 总览速览</button>
+  <button class="top-tab" onclick="switchTopTab(1,event)">🔍 八大支柱详解</button>
+  <button class="top-tab" onclick="switchTopTab(2,event)">📚 工具速查</button>
+  <button class="top-tab" onclick="switchTopTab(3,event)">📝 综合自测</button>
+  <button class="top-tab" onclick="switchTopTab(4,event)">📋 补充强化</button>
+  <button class="top-tab" onclick="switchTopTab(5,event)">🚀 攻坚进阶</button>
+  <button class="top-tab" onclick="switchTopTab(6,event)">🧠 单词记忆</button>
+</div>
+
+<div class="container">
+
+<!-- ███████████████████████████████████████████████████████████████ -->
+<!-- ██████████  顶层 Tab 0：总览速览（原版完整内容）  ██████████████ -->
+<!-- ███████████████████████████████████████████████████████████████ -->
+<div class="top-panel active" id="topPanel0">
+
+<!-- ===== 总览-1：八大支柱总览（可点击跳转详解） ===== -->
+<section id="overview">
+  <div class="sec-title"><span class="num">1</span>语法八大支柱 · 点击卡片进入详解</div>
+  <div class="sec-desc">红色 = 高频核心难点，蓝色 = 基础模块，黄色 = 衔接模块。点击任意卡片可跳转到「八大支柱详解」对应模块。</div>
+  <div class="grid8">
+    <div class="pillar coral" onclick="goTab(0)"><h3>① 时态系统</h3><div class="tag">★ 最高频</div><ul><li>一般现在/过去时</li><li>一般将来时</li><li>现在进行时</li><li>过去进行时</li><li class="star">现在完成时 ★</li><li>过去完成时</li></ul><div class="go">点击详解 →</div></div>
+    <div class="pillar coral" onclick="goTab(1)"><h3>② 三大从句</h3><div class="tag">★ 最难</div><ul><li>宾语从句</li><li>(that / if / whether)</li><li>状语从句</li><li>(时间/原因/条件)</li><li class="star">定语从句 ★</li><li>(who / which / that)</li></ul><div class="go">点击详解 →</div></div>
+    <div class="pillar coral" onclick="goTab(2)"><h3>③ 非谓语动词</h3><div class="tag">★ 重点</div><ul><li>不定式 to do</li><li>(目的/结果)</li><li>动名词 doing</li><li>(作主语/宾语)</li><li>分词</li><li>(doing / done)</li></ul><div class="go">点击详解 →</div></div>
+    <div class="pillar amber" onclick="goTab(3)"><h3>④ 语态</h3><ul><li>主动语态</li><li>被动语态</li><li>be + done</li><li>各时态被动</li><li>含情态动词的被动</li></ul><div class="go">点击详解 →</div></div>
+    <div class="pillar blue" onclick="goTab(4)"><h3>⑤ 词法基础</h3><ul><li>名词单复数</li><li>冠词 a/an/the</li><li>代词</li><li>形容词/副词比较级</li><li>介词搭配</li><li>连词</li></ul><div class="go">点击详解 →</div></div>
+    <div class="pillar blue" onclick="goTab(5)"><h3>⑥ 句子种类</h3><ul><li>陈述句</li><li>疑问句</li><li>祈使句</li><li>感叹句</li><li>What / How</li></ul><div class="go">点击详解 →</div></div>
+    <div class="pillar coral" onclick="goTab(6)"><h3>⑦ 主谓一致</h3><div class="tag">★ 易错</div><ul><li>三单现在式</li><li>就近原则</li><li>就远原则</li><li>集合名词</li><li>不定代词</li></ul><div class="go">点击详解 →</div></div>
+    <div class="pillar blue" onclick="goTab(7)"><h3>⑧ 特殊句式</h3><ul><li>There be 句型</li><li>倒装句</li><li>强调句</li><li>感叹句</li><li>直接/间接引语</li></ul><div class="go">点击详解 →</div></div>
+  </div>
+</section>
+
+<!-- ===== 总览-2：六大时态时间轴 ===== -->
+<section>
+  <div class="sec-title"><span class="num">2</span>六大核心时态 · 时间轴对比</div>
+  <div class="sec-desc">时态是英语语法地基。红色标注的「现在完成时」是中国学生最难掌握的——它跟一般过去时最容易混。</div>
+
+  <div class="tl-card"><div class="head"><span class="badge" style="background:rgba(133,183,235,0.15);color:var(--blue)">一般现在</span></div><div class="struct">do / does</div><div class="example">He plays basketball every day.</div><div class="kw">every day, always, usually, often</div></div>
+  <div class="tl-card"><div class="head"><span class="badge" style="background:rgba(133,183,235,0.15);color:var(--blue)">一般过去</span></div><div class="struct">did（动词过去式）</div><div class="example">He played basketball yesterday.</div><div class="kw">yesterday, last..., ...ago, in 2020</div></div>
+  <div class="tl-card"><div class="head"><span class="badge" style="background:rgba(133,183,235,0.15);color:var(--blue)">一般将来</span></div><div class="struct">will do / be going to do</div><div class="example">He will play basketball tomorrow.</div><div class="kw">will = 临时决定 | be going to = 早已计划</div></div>
+  <div class="tl-card"><div class="head"><span class="badge" style="background:rgba(93,202,165,0.15);color:var(--teal)">现在进行</span></div><div class="struct">am/is/are + doing</div><div class="example">He is playing basketball now.</div><div class="kw">now, look!, listen!, at this moment</div></div>
+  <div class="tl-card"><div class="head"><span class="badge" style="background:rgba(93,202,165,0.15);color:var(--teal)">过去进行</span></div><div class="struct">was/were + doing</div><div class="example">He was playing basketball at 8 last night.</div><div class="kw">at + 过去时间, when/while</div></div>
+  <div class="tl-card hard"><div class="head"><span class="badge" style="background:rgba(240,153,123,0.2);color:var(--coral)">现在完成 ★</span></div><div class="struct">have/has + done（过去分词）</div><div class="example">I have finished my homework.（写完了=现在不用写）</div><div class="example">She has lived here for 3 years.（住了3年=现在还住）</div><div class="kw">already, yet, just, ever, never, for+时段, since+时点</div></div>
+
+  <div class="vs-box"><h5>⚠ 现在完成时 vs 一般过去时 —— 最易混</h5><div class="vs-row"><div class="vs-col"><div class="lab">一般过去：强调"何时发生"</div><div class="sent">I lost my key yesterday.</div><div class="note">只说昨天丢了，不管现在</div></div><div class="vs-col"><div class="lab">现在完成：强调"现在状态"</div><div class="sent">I have lost my key.</div><div class="note">= 现在没钥匙，进不了门</div></div></div></div>
+
+  <div class="vs-box"><h5>易错：has gone to vs has been to</h5><div class="vs-row"><div class="vs-col"><div class="lab">has gone to</div><div class="sent">He has gone to Beijing.</div><div class="note">去了还没回（人不在这）</div></div><div class="vs-col"><div class="lab">has been to</div><div class="sent">He has been to Beijing.</div><div class="note">去过已经回来（有经验）</div></div></div></div>
+
+  <div class="mnemonic"><div class="label">判断口诀</div><div class="verse">看到 <span class="hl">yesterday / last / ago / in+年份</span>（具体过去时间）→ 一般过去时<br>看到 <span class="hl">already / yet / just / ever / never / for+时段 / since+时点</span> → 现在完成时</div></div>
+</section>
+
+<!-- ===== 总览-3：三大从句结构对比 + 决策树 ===== -->
+<section>
+  <div class="sec-title"><span class="num">3</span>三大从句 · 结构对比与关系词判断</div>
+  <div class="sec-desc">三大从句是重要语法分水岭。定语从句是最高频出错点。</div>
+
+  <div class="grid3">
+    <div class="mini-card"><h5>宾语从句</h5><div class="mc-ex">I think (that) he is right.</div><div class="mc-nt">当宾语用 · that/if/wh-引导</div></div>
+    <div class="mini-card"><h5>状语从句</h5><div class="mc-ex">If it rains, I will stay.</div><div class="mc-nt">当状语用 · 主将从现</div></div>
+    <div class="mini-card"><h5>定语从句 ★</h5><div class="mc-ex">The girl who won is here.</div><div class="mc-nt">当形容词用 · 修饰名词</div></div>
+  </div>
+
+  <div class="mnemonic"><div class="label">三大从句口诀</div><div class="verse">宾语从句<span class="hl">时态要一致</span>（+陈述语序），状语从句<span class="hl">主将从现</span><br>定语从句<span class="hl">关系词代先行</span>，后面<span class="hl">不能再加代词</span></div></div>
+
+  <div class="sub-h">定语从句 · 关系词判断决策树</div>
+  <div class="decision">
+    <div class="step-lab">第一步：先行词是什么？</div>
+    <div class="root">先行词是什么？</div>
+    <div class="branches">
+      <div class="branch"><div class="bt">人</div><div class="bw">who / that</div><div class="bn">who 作主语<br>whom 作宾语</div></div>
+      <div class="branch"><div class="bt">物 / 事</div><div class="bw">which / that</div><div class="bn">that 可代人物</div></div>
+      <div class="branch"><div class="bt">地点</div><div class="bw">where</div><div class="bn">作地点状语</div></div>
+      <div class="branch"><div class="bt">时间</div><div class="bw">when</div><div class="bn">作时间状语</div></div>
+    </div>
+    <div class="step-lab">第二步：关系词作主语还是宾语？</div>
+    <div class="role-grid">
+      <div class="role-card"><h5>作主语 → 不可省</h5><div class="ex">The girl who won the prize is here.</div><div class="nt">去掉 who："won the prize"缺主语</div></div>
+      <div class="role-card"><h5>作宾语 → 可省</h5><div class="ex">The book (that) I bought is good.</div><div class="nt">去掉 that："I bought"完整</div></div>
+    </div>
+  </div>
+
+  <div class="cmp">
+    <div class="cmp-col wrong"><div class="tag-s">高频错误</div><div class="sent">The girl who she won the prize is here.</div><div class="why">who 已代替 the girl，she 多余</div></div>
+    <div class="cmp-col right"><div class="tag-s">正确</div><div class="sent">The girl who won the prize is here.</div><div class="why">关系词后不加它代替的代词</div></div>
+  </div>
+
+  <div class="rule"><div class="label">宾语从句两大铁律</div><div class="txt">① <b>时态一致</b>：主句过去时 → 从句也变过去时（客观真理除外，如 The earth moves around the sun）<br>② <b>陈述语序</b>：宾语从句永远用主语+谓语，不能写成疑问语序</div></div>
+
+  <div class="rule" style="background:var(--teal-bg);border-color:var(--teal)"><div class="label" style="color:var(--teal)">状语从句核心规则</div><div class="txt"><b>主将从现</b>：主句用将来时(will)，时间/条件状语从句用现在时表将来。<br>例：If it <b>rains</b> tomorrow, I <b>will stay</b> at home.（不能说 will rain）</div></div>
+</section>
+
+<!-- ===== 总览-4：高频易错点对照大表 ===== -->
+<section>
+  <div class="sec-title"><span class="num">4</span>高频易错点 · 正误对照表</div>
+  <div class="sec-desc">中国学生最容易犯的 8 类错误，一表看清。</div>
+
+  <table class="err-table">
+    <thead><tr><th>语法点</th><th>错误写法</th><th>正确写法</th><th>原因</th></tr></thead>
+    <tbody>
+      <tr><td><b>三单漏加 s</b></td><td class="wrong-c">My sister like reading.</td><td class="right-c">My sister likes reading.</td><td class="reason">三单现在时动词必须加 s</td></tr>
+      <tr><td><b>there be 就近</b></td><td class="wrong-c">There are a book and two pens.</td><td class="right-c">There is a book and two pens.</td><td class="reason">be 跟最近的名词 a book 走</td></tr>
+      <tr><td><b>there be 误用 has</b></td><td class="wrong-c">There has a book on the desk.</td><td class="right-c">There is a book on the desk.</td><td class="reason">中文"有"直译，英语表存在用 there be</td></tr>
+      <tr><td><b>定语从句重复代词</b></td><td class="wrong-c">The girl who she won is here.</td><td class="right-c">The girl who won is here.</td><td class="reason">who 已代替 the girl，she 多余</td></tr>
+      <tr><td><b>宾语从句疑问语序</b></td><td class="wrong-c">I don't know where does he live.</td><td class="right-c">I don't know where he lives.</td><td class="reason">宾语从句用陈述语序</td></tr>
+      <tr><td><b>主将从现</b></td><td class="wrong-c">If it will rain, I will stay.</td><td class="right-c">If it rains, I will stay.</td><td class="reason">条件状语从句用现在时表将来</td></tr>
+      <tr><td><b>不及物动词被动</b></td><td class="wrong-c">The accident was happened.</td><td class="right-c">The accident happened.</td><td class="reason">happen 不及物，无被动</td></tr>
+      <tr><td><b>介词搭配错误</b></td><td class="wrong-c">interested at / arrive to / good on</td><td class="right-c">interested in / arrive at / good at</td><td class="reason">固定搭配，需记牢</td></tr>
+      <tr><td><b>不可数名词误用复数</b></td><td class="wrong-c">There are some milk.</td><td class="right-c">There is some milk.</td><td class="reason">milk 不可数 → 用 is</td></tr>
+      <tr><td><b>news 误用复数</b></td><td class="wrong-c">The news are exciting.</td><td class="right-c">The news is exciting.</td><td class="reason">news 看似复数实单数</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub-h">介词搭配 · 场景联想法</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>in = 沉浸/范围内</h5><div class="mc-ex">interested in, in 2020, in the morning</div></div>
+    <div class="mini-card"><h5>at = 指向一个点</h5><div class="mc-ex">good at, arrive at, at 8 o'clock</div></div>
+    <div class="mini-card"><h5>on = 接触表面</h5><div class="mc-ex">depend on, on the table, on Monday</div></div>
+    <div class="mini-card"><h5>for = 为了/持续</h5><div class="mc-ex">for 3 years, wait for, thank you for</div></div>
+  </div>
+</section>
+
+<!-- ===== 总览-5：两周复习路线 ===== -->
+<section>
+  <div class="sec-title"><span class="num">5</span>两周速通复习路线</div>
+  <div class="sec-desc">第一周攻骨架（时态+从句），第二周补砖块+验证。每天学完立刻造 3 个自己的句子。</div>
+  <div class="route-grid">
+    <div class="route-card w1"><h3>第一周 · 攻骨架</h3><div class="day">Day 1-2　六大时态<span class="focus">重点：现在完成时 vs 一般过去时</span></div><div class="day">Day 3-4　三大从句<span class="focus">重点：定语从句关系词判断</span></div><div class="day">Day 5　被动语态</div><div class="day">Day 6-7　主谓一致 + 词法查漏</div></div>
+    <div class="route-card w2"><h3>第二周 · 补砖块 + 验证</h3><div class="day">Day 8　非谓语动词<span class="focus">重点：to do vs doing</span></div><div class="day">Day 9　介词搭配<span class="focus">重点：场景联想法</span></div><div class="day">Day 10　特殊句式</div><div class="day">Day 11-14　造句练习 + 错题复盘</div></div>
+  </div>
+  <div class="tip-bar">★ 每天学完一个点，立刻造 3 个自己的句子 —— 用出来才算真会</div>
+</section>
+
+<!-- ===== 总览-6：复习心法 ===== -->
+<section>
+  <div class="sec-title"><span class="num">6</span>语法复习心法</div>
+  <div class="sec-desc">比背规则更重要的，是掌握正确的思维方式。</div>
+  <div class="mindset">
+    <div class="mind-card"><h4>① 时态：先问"什么时候"</h4><p>中文没有时态标记，所以中国学生最容易忘。<span class="hi">每次写英语前先问自己：这件事发生在过去、现在、还是将来？</span>答案一出，时态就定了。</p></div>
+    <div class="mind-card"><h4>② 从句：先找连接词</h4><p>宾语从句 → 记住<span class="hi">"时态一致 + 陈述语序"</span>；状语从句 → 记住<span class="hi">"主将从现"</span>；定语从句 → 记住<span class="hi">"关系词后不能再有它代替的代词"</span>。</p></div>
+    <div class="mind-card"><h4>③ 主谓一致：三步检查链</h4><p><span class="hi">找主语 → 判断人称单复数 → 确认动词形式。</span>写句子前过一遍，三单漏加 s 的问题基本能消灭。</p></div>
+    <div class="mind-card"><h4>④ 介词搭配：场景联想</h4><p>别死背。<span class="hi">in = 沉浸进去</span>（interested in）；<span class="hi">at = 指向一个点</span>（arrive at, good at）；<span class="hi">on = 接触表面</span>（depend on）。</p></div>
+    <div class="mind-card"><h4>⑤ 主动输出 &gt; 被动输入</h4><p>看懂规则不等于会用。<span class="hi">每学一个点，立刻用造句"逼"自己用出来</span>——卡住的地方，就是没真懂的地方。</p></div>
+    <div class="mind-card"><h4>⑥ 错题是最好的老师</h4><p>错题不是用来"记住正确答案"的，而是用来<span class="hi">找到思维盲区</span>的。每次做错，问自己：我为什么会这么选？是哪一步推理断了？</p></div>
+  </div>
+</section>
+
+</div><!-- /topPanel0 -->
+
+
+<!-- ███████████████████████████████████████████████████████████████ -->
+<!-- ██████████  顶层 Tab 1：八大支柱详解（8个子Tab）  ███████████████ -->
+<!-- ███████████████████████████████████████████████████████████████ -->
+<div class="top-panel" id="topPanel1">
+
+<section id="detail">
+  <div class="sec-title"><span class="num">★</span>八大支柱 · 逐个详解</div>
+  <div class="sec-desc">每个模块包含：核心规则 → 记忆口诀 → 正误对比 → 思考追问 → 易错陷阱 → 即时小测。学完一个点，试着不看答案造 3 个自己的句子。</div>
+
+  <div class="tab-bar" id="tabBar">
+    <button class="tab-btn active" onclick="switchTab(0,event)">① 时态</button>
+    <button class="tab-btn" onclick="switchTab(1,event)">② 从句</button>
+    <button class="tab-btn" onclick="switchTab(2,event)">③ 非谓语</button>
+    <button class="tab-btn" onclick="switchTab(3,event)">④ 语态</button>
+    <button class="tab-btn" onclick="switchTab(4,event)">⑤ 词法</button>
+    <button class="tab-btn" onclick="switchTab(5,event)">⑥ 句种</button>
+    <button class="tab-btn" onclick="switchTab(6,event)">⑦ 主谓一致</button>
+    <button class="tab-btn" onclick="switchTab(7,event)">⑧ 特殊句式</button>
+  </div>
+
+  <!-- ====== 子TAB 0: 时态系统 ====== -->
+  <div class="tab-panel active" id="tab0">
+    <div class="rule"><div class="label">核心公式</div><div class="txt">时态 = <b>时间</b>（过去/现在/将来）× <b>状态</b>（一般/进行/完成）</div></div>
+
+    <div class="mnemonic"><div class="label">记忆口诀</div><div class="verse">一般看<span class="hl">习惯和事实</span>，进行看<span class="hl">正在做</span><br>完成看<span class="hl">对现在的影响</span>，过去看<span class="hl">何时发生</span><br><br>写句前先问自己：<span class="hl">这事什么时候发生？现在啥状态？</span></div></div>
+
+    <div class="diff"><div class="label">为什么中国学生总忘时态？</div><p>中文没有时态标记——"我昨天去""我明天去"动词都一样。英语靠<strong>动词变形</strong>表达时间，所以每次写英语都要主动"激活"时态意识。</p></div>
+
+    <div class="sub-h">六大时态对照</div>
+    <div class="tl-card"><div class="head"><span class="badge" style="background:rgba(133,183,235,0.15);color:var(--blue)">一般现在</span></div><div class="struct">do / does</div><div class="example">He plays basketball every day.</div><div class="kw">every day, always, usually, often</div></div>
+    <div class="tl-card"><div class="head"><span class="badge" style="background:rgba(133,183,235,0.15);color:var(--blue)">一般过去</span></div><div class="struct">did（动词过去式）</div><div class="example">He played basketball yesterday.</div><div class="kw">yesterday, last..., ...ago, in 2020</div></div>
+    <div class="tl-card"><div class="head"><span class="badge" style="background:rgba(133,183,235,0.15);color:var(--blue)">一般将来</span></div><div class="struct">will do / be going to do</div><div class="example">He will play basketball tomorrow.</div><div class="kw">will = 临时决定 | be going to = 早已计划</div></div>
+    <div class="tl-card"><div class="head"><span class="badge" style="background:rgba(93,202,165,0.15);color:var(--teal)">现在进行</span></div><div class="struct">am/is/are + doing</div><div class="example">He is playing basketball now.</div><div class="kw">now, look!, listen!, at this moment</div></div>
+    <div class="tl-card"><div class="head"><span class="badge" style="background:rgba(93,202,165,0.15);color:var(--teal)">过去进行</span></div><div class="struct">was/were + doing</div><div class="example">He was playing basketball at 8 last night.</div><div class="kw">at + 过去时间, when/while</div></div>
+    <div class="tl-card hard"><div class="head"><span class="badge" style="background:rgba(240,153,123,0.2);color:var(--coral)">现在完成 ★</span></div><div class="struct">have/has + done（过去分词）</div><div class="example">I have finished my homework.（写完了=现在不用写）</div><div class="example">She has lived here for 3 years.（住了3年=现在还住）</div><div class="kw">already, yet, just, ever, never, for+时段, since+时点</div></div>
+
+    <div class="tl-card hard" style="border-color:var(--amber);background:rgba(65,36,2,0.3)"><div class="head"><span class="badge" style="background:rgba(250,199,117,0.2);color:var(--amber)">过去完成 ★（重点）</span></div><div class="struct">had + done（过去分词）</div><div class="example">When I arrived, the train had left.（我到时火车已经走了）</div><div class="example">She had finished dinner before 7.（她在7点前已经吃完饭了）</div><div class="kw">by the time, before, after, when（引导的时间状语）</div></div>
+
+    <div class="vs-box" style="background:var(--amber-bg);border-color:var(--amber)"><h5 style="color:var(--amber)">⚠ 过去完成时 vs 一般过去时 —— 重点</h5><div class="vs-row"><div class="vs-col"><div class="lab" style="color:var(--amber)">一般过去：只说过去发生</div><div class="sent">When I arrived, the train left.</div><div class="note">我到了，然后火车走了（两个动作有先后）</div></div><div class="vs-col"><div class="lab" style="color:var(--amber)">过去完成：强调"更早发生"</div><div class="sent">When I arrived, the train had left.</div><div class="note">火车在我到之前就已经走了（我没赶上）</div></div></div></div>
+
+    <div class="mnemonic"><div class="label">过去完成时判断口诀</div><div class="verse"><span class="hl">"过去的过去"</span>用 had done，两个动作比先后<br>先发生的用 <span class="hl">had done</span>，后发生的用 <span class="hl">did</span><br>看到 by the time / before 就要警惕</div></div>
+
+    <div class="vs-box"><h5>⚠ 现在完成时 vs 一般过去时 —— 最易混</h5><div class="vs-row"><div class="vs-col"><div class="lab">一般过去：强调"何时发生"</div><div class="sent">I lost my key yesterday.</div><div class="note">只说昨天丢了，不管现在</div></div><div class="vs-col"><div class="lab">现在完成：强调"现在状态"</div><div class="sent">I have lost my key.</div><div class="note">= 现在没钥匙，进不了门</div></div></div></div>
+
+    <div class="vs-box"><h5>易错：has gone to vs has been to</h5><div class="vs-row"><div class="vs-col"><div class="lab">has gone to</div><div class="sent">He has gone to Beijing.</div><div class="note">去了还没回（人不在这）</div></div><div class="vs-col"><div class="lab">has been to</div><div class="sent">He has been to Beijing.</div><div class="note">去过已经回来（有经验）</div></div></div></div>
+
+    <div class="ask"><div class="label">思考追问 · 先自己想，再点开看思路</div>
+      <div class="q">这句话该用什么时态？"我爸爸<span class="hl">昨天去</span>了上海，他<span class="hl">现在还没回来</span>。" → Dad ____ to Shanghai yesterday. He ____ back yet.</div>
+      <button class="reveal-btn" onclick="toggleReveal(this)">显示思路</button>
+      <div class="reveal"><div class="step"><b>第一空：</b>"昨天去了"——有明确过去时间 yesterday → 用<strong>一般过去时</strong> went</div><div class="step"><b>第二空：</b>"还没回来"——强调现在状态，且有 yet → 用<strong>现在完成时</strong> hasn't come</div><div class="step">答案：Dad <b>went</b> to Shanghai yesterday. He <b>hasn't come</b> back yet.</div></div>
+    </div>
+
+    <div class="trap"><div class="icon">⚠</div><div class="body"><h5>陷阱：for 和 since 别搞反</h5><p><b>for + 时段</b>（for 3 years）｜<b>since + 时点</b>（since 2020）。判断法：能回答"多久"用 for，能回答"什么时候起"用 since。</p></div></div>
+
+    <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">Look! The cat ____ on the bed.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. sleeps</button><button class="opt" onclick="quizPick(this,true)">B. is sleeping</button><button class="opt" onclick="quizPick(this,false)">C. has slept</button></div><div class="feedback" id="fb0"></div></div>
+    <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">I ____ my key. I can't open the door now.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. lost</button><button class="opt" onclick="quizPick(this,true)">B. have lost</button><button class="opt" onclick="quizPick(this,false)">C. will lose</button></div><div class="feedback" id="fb1"></div></div>
+  </div>
+
+  <!-- ====== 子TAB 1: 三大从句 ====== -->
+  <div class="tab-panel" id="tab1">
+    <div class="rule"><div class="label">核心区别</div><div class="txt">宾语从句 = 当<b>宾语</b>用　|　状语从句 = 当<b>状语</b>用　|　定语从句 = 当<b>形容词</b>用（修饰名词）</div></div>
+
+    <div class="mnemonic"><div class="label">记忆口诀</div><div class="verse">宾语从句<span class="hl">时态要一致</span>，状语从句<span class="hl">主将从现</span><br>定语从句<span class="hl">关系词代先行</span>，后面<span class="hl">不能再加代词</span></div></div>
+
+    <div class="sub-h">① 宾语从句</div>
+    <div class="grid3"><div class="mini-card"><h5>that（陈述句）</h5><div class="mc-ex">I think (that) he is right.</div><div class="mc-nt">that 可省略</div></div><div class="mini-card"><h5>if / whether（一般疑问）</h5><div class="mc-ex">I don't know if he will come.</div><div class="mc-nt">是否</div></div><div class="mini-card"><h5>wh-词（特殊疑问）</h5><div class="mc-ex">Tell me where he lives.</div><div class="mc-nt">用疑问词，语序变陈述</div></div></div>
+
+    <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">错误</div><div class="sent">I don't know where does he live.</div><div class="why">多了 does，语序不对</div></div><div class="cmp-col right"><div class="tag-s">正确</div><div class="sent">I don't know where he lives.</div><div class="why">宾语从句用陈述语序</div></div></div>
+
+    <div class="trap"><div class="icon">⚠</div><div class="body"><h5>陷阱：时态一致</h5><p>主句是过去时 → 从句也变过去时（客观真理除外）。<br>He said he <b>was</b> tired.（不是 is）<br>The teacher said the earth <b>moves</b> around the sun.（真理，保持现在时）</p></div></div>
+
+    <div class="sub-h">② 状语从句</div>
+    <div class="grid3"><div class="mini-card"><h5>时间状语</h5><div class="mc-ex">when, while, before, after, until, as soon as</div></div><div class="mini-card"><h5>原因/条件</h5><div class="mc-ex">because, since, if, unless</div></div><div class="mini-card"><h5>结果/让步</h5><div class="mc-ex">so...that, though, although</div></div></div>
+
+    <div class="trap"><div class="icon">⚠</div><div class="body"><h5>陷阱：主将从现</h5><p>时间/条件状语从句中，主句用将来时，从句用<span style="color:var(--coral)">现在时</span>表将来。<br>I <b>will call</b> you when I <b>arrive</b>.（不是 will arrive）</p></div></div>
+
+    <div class="sub-h">③ 定语从句 ★（最难）</div>
+    <div class="decision"><div class="step-lab">定语从句 · 关系词判断决策树</div><div class="root">先行词是什么？</div><div class="branches"><div class="branch"><div class="bt">人</div><div class="bw">who / that</div><div class="bn">who 作主语<br>whom 作宾语</div></div><div class="branch"><div class="bt">物 / 事</div><div class="bw">which / that</div><div class="bn">that 可代人物</div></div><div class="branch"><div class="bt">地点</div><div class="bw">where</div><div class="bn">作地点状语</div></div><div class="branch"><div class="bt">时间</div><div class="bw">when</div><div class="bn">作时间状语</div></div></div><div class="step-lab">第二步：关系词作主语还是宾语？</div><div class="role-grid"><div class="role-card"><h5>作主语 → 不可省</h5><div class="ex">The girl who won the prize is here.</div><div class="nt">去掉 who："won the prize"缺主语</div></div><div class="role-card"><h5>作宾语 → 可省</h5><div class="ex">The book (that) I bought is good.</div><div class="nt">去掉 that："I bought"完整</div></div></div></div>
+
+    <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">高频错误</div><div class="sent">The girl who she won the prize is here.</div><div class="why">who 已代替 the girl，she 多余</div></div><div class="cmp-col right"><div class="tag-s">正确</div><div class="sent">The girl who won the prize is here.</div><div class="why">关系词后不加它代替的代词</div></div></div>
+
+    <div class="ask"><div class="label">思考追问</div><div class="q">合并这两句：I met a man. The man can speak 5 languages. → ____</div><button class="reveal-btn" onclick="toggleReveal(this)">显示思路</button><div class="reveal"><div class="step"><b>Step1 找先行词：</b>a man（人）</div><div class="step"><b>Step2 选关系词：</b>人 → who</div><div class="step"><b>Step3 看成分：</b>从句 "he can speak 5 languages" 缺主语 → who 作主语，不可省</div><div class="step">答案：I met a man <b>who</b> can speak 5 languages.</div></div></div>
+
+    <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">The book ____ I bought yesterday is very interesting.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. that / which</button><button class="opt" onclick="quizPick(this,false)">B. who</button><button class="opt" onclick="quizPick(this,false)">C. when</button></div><div class="feedback" id="fb2"></div></div>
+    <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">I don't know ____ he will come tomorrow.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. that</button><button class="opt" onclick="quizPick(this,true)">B. if / whether</button><button class="opt" onclick="quizPick(this,false)">C. what</button></div><div class="feedback" id="fb3"></div></div>
+  </div>
+
+  <!-- ====== 子TAB 2: 非谓语动词 ====== -->
+  <div class="tab-panel" id="tab2">
+    <div class="rule"><div class="label">核心概念</div><div class="txt">动词不充当谓语时的三种形态：<b>to do</b>（不定式）、<b>doing</b>（动名词/现在分词）、<b>done</b>（过去分词）</div></div>
+
+    <div class="mnemonic"><div class="label">记忆口诀</div><div class="verse"><span class="hl">to do 表将来和目的</span>，<span class="hl">doing 表习惯和进行</span><br><span class="hl">done 表被动和完成</span>，三种形态别混用</div></div>
+
+    <div class="sub-h">to do vs doing 核心对比</div>
+    <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">stop to do</div><div class="sent">He stopped to smoke.</div><div class="why">停下（手头的事）去抽烟 → 还没抽</div></div><div class="cmp-col right"><div class="tag-s">stop doing</div><div class="sent">He stopped smoking.</div><div class="why">停止抽烟 → 不抽了</div></div></div>
+    <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">remember to do</div><div class="sent">Remember to lock the door.</div><div class="why">记得要去锁门 → 还没锁</div></div><div class="cmp-col right"><div class="tag-s">remember doing</div><div class="sent">I remember locking the door.</div><div class="why">记得锁过门 → 已锁</div></div></div>
+    <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">forget to do</div><div class="sent">Don't forget to call me.</div><div class="why">别忘了打电话 → 还没打</div></div><div class="cmp-col right"><div class="tag-s">forget doing</div><div class="sent">I'll never forget meeting her.</div><div class="why">忘不了见过她 → 已发生</div></div></div>
+
+    <div class="diff"><div class="label">思维差异</div><p>中文"记得做"和"记得做过"靠上下文区分，英语靠 to do / doing 一刀切。<b>记住：to do 指向未来还没做，doing 指向过去已发生。</b></p></div>
+
+    <div class="sub-h">动名词 doing 作主语/宾语</div>
+    <div class="example-row">Swimming is good for your health.（作主语）</div>
+    <div class="example-row">I enjoy reading books.（作宾语）</div>
+
+    <div class="sub-h">过去分词 done（表被动/完成）</div>
+    <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">现在分词 doing（主动/进行）</div><div class="sent">the boy reading a book</div><div class="why">男孩主动在读</div></div><div class="cmp-col right"><div class="tag-s">过去分词 done（被动/完成）</div><div class="sent">the book written by him</div><div class="why">书是被写的</div></div></div>
+
+    <div class="ask"><div class="label">思考追问</div><div class="q">这句话怎么填？"I want ____ (buy) a new phone." → to buy 还是 buying？</div><button class="reveal-btn" onclick="toggleReveal(this)">显示思路</button><div class="reveal"><div class="step"><b>分析：</b>want 后面接什么？</div><div class="step"><b>规则：</b>want to do sth（想要做某事）—— 表"将来想做的事"</div><div class="step"><b>推导：</b>买手机还没买，表将来 → to buy</div><div class="step">答案：I want <b>to buy</b> a new phone.</div></div></div>
+
+    <div class="trap"><div class="icon">⚠</div><div class="body"><h5>陷阱：接 to do 还是 doing 的动词</h5><p><b>接 to do：</b>want, hope, decide, plan, agree, refuse, promise<br><b>接 doing：</b>enjoy, finish, keep, mind, practice, avoid, consider<br><b>接两者（意思不同）：</b>stop, remember, forget, try（try to do=尽力做 / try doing=试着做）</p></div></div>
+
+    <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">He stopped ____ to me, but I didn't hear him.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. talking</button><button class="opt" onclick="quizPick(this,true)">B. to talk</button><button class="opt" onclick="quizPick(this,false)">C. talk</button></div><div class="feedback" id="fb4"></div></div>
+    <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">The window ____ by the boy yesterday needs repairing.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. breaking</button><button class="opt" onclick="quizPick(this,true)">B. broken</button><button class="opt" onclick="quizPick(this,false)">C. to break</button></div><div class="feedback" id="fb5"></div></div>
+  </div>
+
+  <!-- ====== 子TAB 3: 语态 ====== -->
+  <div class="tab-panel" id="tab3">
+    <div class="rule"><div class="label">核心公式</div><div class="txt">被动语态 = <span class="formula">be + done（过去分词）</span>　be 随时态变化，done 不变</div></div>
+
+    <div class="mnemonic"><div class="label">记忆口诀</div><div class="verse">被动就是<span class="hl">宾语变主语</span>，be 加<span class="hl">过去分词</span>不能丢<br>时态变化<span class="hl">be 来变</span>，分词永远是 done</div></div>
+
+    <div class="sub-h">主动 → 被动 三步转换法</div>
+    <div class="block"><div class="rule" style="margin:0 0 10px"><div class="label">原句（主动）</div><div class="txt">Tom <b>broke</b> the window yesterday.</div></div><div class="note-sm">Step1：找宾语 → the window → 提到主语位置</div><div class="note-sm">Step2：动词变 be + done → was broken（过去时→was）</div><div class="note-sm">Step3：原主语用 by 引出 → by Tom</div><div class="example-row" style="margin-top:8px">结果：The window <b>was broken</b> by Tom yesterday.</div></div>
+
+    <div class="sub-h">各时态被动语态结构</div>
+    <div class="grid2"><div class="mini-card"><h5>一般现在时</h5><div class="mc-ex">am/is/are + done</div><div class="mc-ex">English is spoken here.</div></div><div class="mini-card"><h5>一般过去时</h5><div class="mc-ex">was/were + done</div><div class="mc-ex">The bridge was built in 1990.</div></div><div class="mini-card"><h5>一般将来时</h5><div class="mc-ex">will be + done</div><div class="mc-ex">The work will be done tomorrow.</div></div><div class="mini-card"><h5>现在完成时</h5><div class="mc-ex">have/has been + done</div><div class="mc-ex">The work has been done.</div></div><div class="mini-card"><h5>现在进行时</h5><div class="mc-ex">am/is/are being + done</div><div class="mc-ex">The house is being painted.</div></div><div class="mini-card"><h5>含情态动词</h5><div class="mc-ex">情态 + be + done</div><div class="mc-ex">It must be done at once.</div></div></div>
+
+    <div class="diff"><div class="label">什么时候用被动？</div><p>① <b>不知道/不必说谁做的</b>：The window was broken.（不知道谁打破的）<br>② <b>强调承受者</b>：The bridge was built in 1990.（重点是桥不是人）<br>③ <b>客观说明</b>：English is spoken in many countries.</p></div>
+
+    <div class="trap"><div class="icon">⚠</div><div class="body"><h5>陷阱：不及物动词没有被动</h5><p>happen, take place, occur, belong to, last, cost 等不及物动词<b>不能</b>变被动。<br>❌ The accident was happened. ✅ The accident <b>happened</b>.</p></div></div>
+
+    <div class="ask"><div class="label">思考追问</div><div class="q">改成被动句："People speak English in Canada." → ____</div><button class="reveal-btn" onclick="toggleReveal(this)">显示思路</button><div class="reveal"><div class="step"><b>Step1 找宾语：</b>English → 提到主语</div><div class="step"><b>Step2 动词变被动：</b>speak → is spoken（一般现在时，English 单数）</div><div class="step"><b>Step3 by 引出原主语：</b>by people（可省略）</div><div class="step">答案：<b>English is spoken (by people) in Canada.</b></div></div></div>
+
+    <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">The bridge ____ in 1990.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. built</button><button class="opt" onclick="quizPick(this,true)">B. was built</button><button class="opt" onclick="quizPick(this,false)">C. is building</button></div><div class="feedback" id="fb6"></div></div>
+    <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">A new hospital ____ in our town next year.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. will build</button><button class="opt" onclick="quizPick(this,true)">B. will be built</button><button class="opt" onclick="quizPick(this,false)">C. was built</button></div><div class="feedback" id="fb7"></div></div>
+  </div>
+
+  <!-- ====== 子TAB 4: 词法基础 ====== -->
+  <div class="tab-panel" id="tab4">
+    <div class="rule"><div class="label">词法六大件</div><div class="txt">名词 → 冠词 → 代词 → 形容词/副词 → 介词 → 连词</div></div>
+
+    <div class="sub-h">① 名词单复数</div>
+    <div class="mnemonic"><div class="label">口诀</div><div class="verse">一般加 s，<span class="hl">s/x/sh/ch</span> 加 es<br><span class="hl">辅音+y</span> 变 y 为 i 加 es，<span class="hl">f/fe</span> 变 v 加 es<br>不规则：man→men, foot→feet, child→children, tooth→teeth</div></div>
+
+    <div class="sub-h">② 冠词 a / an / the</div>
+    <div class="grid3"><div class="mini-card"><h5>a（辅音音素前）</h5><div class="mc-ex">a book, a university</div><div class="mc-nt">看发音不看字母</div></div><div class="mini-card"><h5>an（元音音素前）</h5><div class="mc-ex">an apple, an hour</div><div class="mc-nt">hour 不发音 h</div></div><div class="mini-card"><h5>the（特指）</h5><div class="mc-ex">the sun, the red car</div><div class="mc-nt">双方都知道的</div></div></div>
+    <div class="trap"><div class="icon">⚠</div><div class="body"><h5>陷阱：看音素不看字母</h5><p>an <b>hour</b>（h 不发音，元音开头）｜a <b>university</b>（u 发 /j/，辅音开头）</p></div></div>
+
+    <div class="sub-h">③ 代词</div>
+    <div class="grid2"><div class="mini-card"><h5>人称代词主格/宾格</h5><div class="mc-ex">I/me, he/him, she/her, we/us</div><div class="mc-nt">主语用主格，宾语用宾格</div></div><div class="mini-card"><h5>物主代词</h5><div class="mc-ex">my/mine, your/yours, his/his</div><div class="mc-nt">my book（形容词性）/ The book is mine（名词性）</div></div></div>
+
+    <div class="sub-h">④ 形容词/副词比较级</div>
+    <div class="mnemonic"><div class="label">口诀</div><div class="verse">短词加 <span class="hl">-er / -est</span>，长词前加 <span class="hl">more / most</span><br>good→better→best，bad→worse→worst<br>比较级用 <span class="hl">than</span>，最高级加 <span class="hl">the</span></div></div>
+    <div class="example-row">She is taller than me. → She is the tallest in our class.</div>
+
+    <div class="sub-h">⑤ 介词搭配（场景联想法）</div>
+    <div class="block"><div class="grid2"><div class="mini-card"><h5>in = 沉浸/范围内</h5><div class="mc-ex">interested in, in 2020, in the morning</div></div><div class="mini-card"><h5>at = 指向一个点</h5><div class="mc-ex">good at, arrive at, at 8 o'clock</div></div><div class="mini-card"><h5>on = 接触表面</h5><div class="mc-ex">depend on, on the table, on Monday</div></div><div class="mini-card"><h5>for = 为了/持续</h5><div class="mc-ex">for 3 years, wait for, thank you for</div></div></div></div>
+
+    <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">常见错误</div><div class="sent">interested at / arrive to / good on / depend in</div></div><div class="cmp-col right"><div class="tag-s">正确</div><div class="sent">interested in / arrive at / good at / depend on</div></div></div>
+
+    <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">She is good ____ math and interested ____ music.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. at / in</button><button class="opt" onclick="quizPick(this,false)">B. in / at</button><button class="opt" onclick="quizPick(this,false)">C. on / at</button></div><div class="feedback" id="fb8"></div></div>
+    <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">This is ____ apple and that is ____ useful book.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. an / a</button><button class="opt" onclick="quizPick(this,false)">B. a / a</button><button class="opt" onclick="quizPick(this,false)">C. an / an</button></div><div class="feedback" id="fb9"></div></div>
+  </div>
+
+  <!-- ====== 子TAB 5: 句子种类 ====== -->
+  <div class="tab-panel" id="tab5">
+    <div class="rule"><div class="label">四种句子</div><div class="txt">陈述句 / 疑问句 / 祈使句 / 感叹句</div></div>
+
+    <div class="sub-h">① 陈述句（肯定/否定）</div>
+    <div class="example-row">He likes apples. → He doesn't like apples.</div>
+    <div class="note-sm">否定借助 don't / doesn't / didn't</div>
+
+    <div class="sub-h">② 疑问句（四种）</div>
+    <div class="grid2"><div class="mini-card"><h5>一般疑问（用 yes/no 答）</h5><div class="mc-ex">Do you like tea? Yes, I do.</div></div><div class="mini-card"><h5>特殊疑问（wh-词开头）</h5><div class="mc-ex">Where do you live?</div></div><div class="mini-card"><h5>选择疑问（or 连接）</h5><div class="mc-ex">Tea or coffee?</div></div><div class="mini-card"><h5>反意疑问（前肯后否）</h5><div class="mc-ex">He is tall, isn't he?</div></div></div>
+
+    <div class="mnemonic"><div class="label">反意疑问口诀</div><div class="verse"><span class="hl">前肯后否，前否后肯</span>，时态人称要一致<br>He is a student, <span class="hl">isn't he</span>?<br>You don't like it, <span class="hl">do you</span>?</div></div>
+
+    <div class="trap"><div class="icon">⚠</div><div class="body"><h5>反意疑问句六大特殊情况</h5><p>
+      <b>① Let's... → shall we?</b>　Let's go, <span style="color:var(--coral)">shall we</span>?<br>
+      <b>② Let us / 祈使句 → will you?</b>　Open the door, <span style="color:var(--coral)">will you</span>?<br>
+      <b>③ I am → aren't I?</b>（唯一特殊变形）　I am late, <span style="color:var(--coral)">aren't I</span>?<br>
+      <b>④ 含 never/hardly/no 等否定词 → 后面用肯定</b>　He never comes late, <span style="color:var(--coral)">does he</span>?<br>
+      <b>⑤ everyone/nobody 等不定代词 → 用 they</b>　Nobody knows, <span style="color:var(--coral)">do they</span>?<br>
+      <b>⑥ 主从复合句 → 跟主句走</b>　He said she was tall, <span style="color:var(--coral)">didn't he</span>?
+    </p></div></div>
+
+    <div class="sub-h">③ 祈使句（命令/请求）</div>
+    <div class="example-row">Open the door.（肯定） → Don't open the door.（否定）</div>
+    <div class="note-sm">祈使句以动词原形开头，否定加 Don't</div>
+
+    <div class="sub-h">④ 感叹句 ★（常考）</div>
+    <div class="mnemonic"><div class="label">感叹句口诀</div><div class="verse"><span class="hl">What 修饰名词</span>，<span class="hl">How 修饰形容词/副词</span><br>What a/an + 形容词 + 名词（单数）！<br>What + 形容词 + 名词（复数/不可数）！<br>How + 形容词/副词 + 主谓！</div></div>
+    <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">错误判断</div><div class="sent">How beautiful girl she is!</div><div class="why">girl 是名词，应用 What</div></div><div class="cmp-col right"><div class="tag-s">正确</div><div class="sent">What a beautiful girl she is!</div><div class="why">What 修饰名词 girl</div></div></div>
+
+    <div class="ask"><div class="label">思考追问 · 判断用 What 还是 How</div><div class="q">"____ clever the boy is!" → 填什么？</div><button class="reveal-btn" onclick="toggleReveal(this)">显示思路</button><div class="reveal"><div class="step"><b>分析：</b>clever 是形容词还是名词？</div><div class="step"><b>规则：</b>形容词/副词 → How；名词 → What</div><div class="step"><b>推导：</b>clever 是形容词 → 用 How</div><div class="step">答案：<b>How</b> clever the boy is!</div></div></div>
+
+    <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">____ delicious food it is!</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. What</button><button class="opt" onclick="quizPick(this,false)">B. How</button><button class="opt" onclick="quizPick(this,false)">C. What a</button></div><div class="feedback" id="fb10"></div></div>
+    <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">He can swim, ____?</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. don't he</button><button class="opt" onclick="quizPick(this,true)">B. can't he</button><button class="opt" onclick="quizPick(this,false)">C. doesn't he</button></div><div class="feedback" id="fb11"></div></div>
+  </div>
+
+  <!-- ====== 子TAB 6: 主谓一致 ====== -->
+  <div class="tab-panel" id="tab6">
+    <div class="rule"><div class="label">核心原则</div><div class="txt">主语是什么人称、什么单复数，谓语动词就跟着变 → <b>主谓一致</b></div></div>
+
+    <div class="mnemonic"><div class="label">口诀</div><div class="verse">主语单数动词加 s，主语复数动词不加<br>写句先走<span class="hl">三步检查链</span>：找主语→判单复数→定动词</div></div>
+
+    <div class="sub-h">① 三单现在式（最高频错误）</div>
+    <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">错误</div><div class="sent">My sister like reading.</div><div class="why">sister 三单，动词没加 s</div></div><div class="cmp-col right"><div class="tag-s">正确</div><div class="sent">My sister likes reading.</div><div class="why">三单 → likes</div></div></div>
+
+    <div class="diff"><div class="label">为什么容易漏？</div><p>中文"她喜欢""他们喜欢"动词完全一样，没有"三单"概念。英语要求第三人称单数主语，现在时动词必须变形。这是<b>中文思维最大的迁移陷阱之一</b>。</p></div>
+
+    <div class="sub-h">② 就近原则（there be）</div>
+    <div class="rule"><div class="label">规则</div><div class="txt">There be 句型中，be 动词跟它<b>后面最近的名词</b>走</div></div>
+    <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">错误</div><div class="sent">There are a book and two pens.</div><div class="why">最近的 a book 是单数</div></div><div class="cmp-col right"><div class="tag-s">正确</div><div class="sent">There is a book and two pens.</div><div class="why">就近 → is</div></div></div>
+
+    <div class="sub-h">③ 就远原则</div>
+    <div class="example-row">He, as well as his friends, <b>likes</b> music.</div>
+    <div class="note-sm">as well as / with / together with → 谓语跟前面的主语（He）走，不看后面的 friends</div>
+
+    <div class="sub-h">④ 集合名词</div>
+    <div class="grid2"><div class="mini-card"><h5>family, team, class</h5><div class="mc-ex">看整体→单数；看成员→复数</div></div><div class="mini-card"><h5>people, police</h5><div class="mc-ex">永远复数</div></div></div>
+
+    <div class="sub-h">⑤ 不定代词</div>
+    <div class="rule"><div class="label">规则</div><div class="txt">everyone, someone, nobody, everything, something 等 → 一律<b>单数</b></div></div>
+    <div class="example-row">Everyone <b>is</b> here.（不是 are）</div>
+    <div class="example-row">Nobody <b>knows</b> the answer.</div>
+
+    <div class="ask"><div class="label">思考追问</div><div class="q">The news ____ very exciting. → 选 is 还是 are？</div><button class="reveal-btn" onclick="toggleReveal(this)">显示思路</button><div class="reveal"><div class="step"><b>分析：</b>news 看起来有 s，是复数吗？</div><div class="step"><b>规则：</b>news 是不可数名词，永远单数</div><div class="step"><b>类似：</b>physics, maths, politics 也单数</div><div class="step">答案：<b>is</b></div></div></div>
+
+    <div class="trap"><div class="icon">⚠</div><div class="body"><h5>陷阱：看似复数实单数</h5><p><b>news, physics, maths, politics</b> 虽以 s 结尾，但都是单数 → 用 is / has / does</p></div></div>
+
+    <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">Neither he nor I ____ a student.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. is</button><button class="opt" onclick="quizPick(this,true)">B. am</button><button class="opt" onclick="quizPick(this,false)">C. are</button></div><div class="feedback" id="fb12"></div></div>
+    <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">Everyone in the class ____ the answer.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. know</button><button class="opt" onclick="quizPick(this,true)">B. knows</button><button class="opt" onclick="quizPick(this,false)">C. knowing</button></div><div class="feedback" id="fb13"></div></div>
+  </div>
+
+  <!-- ====== 子TAB 7: 特殊句式 ====== -->
+  <div class="tab-panel" id="tab7">
+    <div class="rule"><div class="label">四种特殊句式</div><div class="txt">There be 句型 / 倒装句 / 强调句 / 直接间接引语转换</div></div>
+
+    <div class="sub-h">① There be 句型</div>
+    <div class="mnemonic"><div class="label">口诀</div><div class="verse">There be 表<span class="hl">"存在"</span>，主语在 be 后面<br>时态变 be（is/are/was/were/will be），<span class="hl">就近原则</span>要记住</div></div>
+    <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">常见错误</div><div class="sent">There has a book on the desk.</div><div class="why">中文"有"直译，英语不用 has</div></div><div class="cmp-col right"><div class="tag-s">正确</div><div class="sent">There is a book on the desk.</div><div class="why">表"存在"用 there be</div></div></div>
+
+    <div class="diff"><div class="label">思维差异</div><p>中文"桌子上有本书"用"有"，学生容易翻译成 has。但 has 表示"拥有"，there be 表示"存在"——<b>某处存在某物，一律用 there be</b>。</p></div>
+
+    <div class="sub-h">② 倒装句</div>
+    <div class="rule"><div class="label">规则</div><div class="txt">否定词放句首 → 部分倒装（助动词/情态动词/be 提前）</div></div>
+    <div class="example-row">Never <b>have I seen</b> such a beautiful place.</div>
+    <div class="example-row">Not only <b>does he sing</b>, but he also dances.</div>
+    <div class="note-sm">正常语序：I have never seen / He not only sings</div>
+
+    <div class="sub-h">③ 强调句</div>
+    <div class="mnemonic"><div class="label">口诀</div><div class="verse">It is + <span class="hl">被强调部分</span> + that + <span class="hl">其余部分</span><br>强调谁就放中间，that 后面接其余</div></div>
+    <div class="example-row">原句：I met Tom <b>yesterday</b>.</div>
+    <div class="example-row">强调时间：It was <b>yesterday</b> that I met Tom.</div>
+    <div class="example-row">强调人：It was <b>Tom</b> that I met yesterday.</div>
+
+    <div class="ask"><div class="label">思考追问</div><div class="q">强调句去掉 It is...that 后，句子还通顺吗？试试：It was Tom that I met yesterday. → 去掉框架后是 ____</div><button class="reveal-btn" onclick="toggleReveal(this)">显示思路</button><div class="reveal"><div class="step">去掉 It was 和 that → "Tom I met yesterday"</div><div class="step">调整语序 → "I met Tom yesterday" → 原句完整！</div><div class="step"><b>判断法：</b>去掉 It is...that 后句子仍通顺 = 强调句；不通顺 = 不是</div></div></div>
+
+    <div class="sub-h">④ 直接引语 → 间接引语</div>
+    <div class="mnemonic"><div class="label">转换口诀</div><div class="verse">人称要变（I→he, my→his），<span class="hl">时态退一格</span><br>一般现在→一般过去，现在进行→过去进行<br>时间地点也要变：now→then, today→that day, here→there</div></div>
+    <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">直接引语</div><div class="sent">He said, "I am busy now."</div><div class="why">原话</div></div><div class="cmp-col right"><div class="tag-s">间接引语</div><div class="sent">He said (that) he was busy then.</div><div class="why">I→he, am→was, now→then</div></div></div>
+
+    <div class="sub-h">间接引语 · 三大变化完整对照表</div>
+    <div class="block">
+      <div class="grid2">
+        <div class="mini-card"><h5>① 人称变化</h5><div class="mc-ex">I → he / she</div><div class="mc-ex">we → they</div><div class="mc-ex">my → his / her</div><div class="mc-ex">our → their</div><div class="mc-nt">跟着说话人变</div></div>
+        <div class="mini-card"><h5>② 时态退一格</h5><div class="mc-ex">am/is/are → was/were</div><div class="mc-ex">do/does → did</div><div class="mc-ex">have/has → had</div><div class="mc-ex">will → would</div><div class="mc-ex">can → could</div><div class="mc-nt">客观真理不退格</div></div>
+        <div class="mini-card"><h5>③ 时间变化</h5><div class="mc-ex">now → then</div><div class="mc-ex">today → that day</div><div class="mc-ex">tomorrow → the next day</div><div class="mc-ex">yesterday → the day before</div><div class="mc-ex">this week → that week</div></div>
+        <div class="mini-card"><h5>④ 地点/指示变化</h5><div class="mc-ex">here → there</div><div class="mc-ex">this → that</div><div class="mc-ex">these → those</div><div class="mc-nt">就近变远</div></div>
+      </div>
+    </div>
+
+    <div class="trap"><div class="icon">⚠</div><div class="body"><h5>陷阱：疑问句转间接引语</h5><p>一般疑问用 if/whether，特殊疑问保留 wh-词，<b>都要变陈述语序</b>（去掉 do/does/did）。<br>He asked, "Where do you live?" → He asked where I <b>lived</b>.（不是 did I live）</p></div></div>
+
+    <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">There ____ some milk in the glass.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. is</button><button class="opt" onclick="quizPick(this,false)">B. are</button><button class="opt" onclick="quizPick(this,false)">C. has</button></div><div class="feedback" id="fb14"></div></div>
+    <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">He said, "I will come tomorrow." → 间接引语：He said he ____ the next day.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. would come</button><button class="opt" onclick="quizPick(this,false)">B. will come</button><button class="opt" onclick="quizPick(this,false)">C. came</button></div><div class="feedback" id="fb15"></div></div>
+  </div>
+
+</section>
+
+</div><!-- /topPanel1 -->
+
+
+<!-- ███████████████████████████████████████████████████████████████ -->
+<!-- ██████████  顶层 Tab 2：工具速查  ███████████████████████████████ -->
+<!-- ███████████████████████████████████████████████████████████████ -->
+<div class="top-panel" id="topPanel2">
+
+<section>
+  <div class="sec-title"><span class="num">★</span>动词变形规则 · 三大变化总结</div>
+  <div class="sec-desc">时态、被动语态、完成时全部依赖动词变形。三单变化、过去式、过去分词是英语语法的"地基中的地基"。</div>
+
+  <div class="mnemonic"><div class="label">总口诀</div><div class="verse">三单看<span class="hl">主语人称</span>（he/she/it 加 s）<br>过去式看<span class="hl">"昨天发生"</span>（加 ed 或不规则）<br>过去分词看<span class="hl">"完成/被动"</span>（have/has/be + done）</div></div>
+
+  <!-- 三单变化规则 -->
+  <div class="sub-h">一、第三人称单数变化规则（一般现在时）</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>① 一般加 -s</h5><div class="mc-ex">play → plays</div><div class="mc-ex">work → works</div><div class="mc-ex">like → likes</div><div class="mc-nt">最常见，大多数动词</div></div>
+    <div class="mini-card"><h5>② s/x/sh/ch/o 后加 -es</h5><div class="mc-ex">watch → watches</div><div class="mc-ex">go → goes</div><div class="mc-ex">wash → washes</div><div class="mc-ex">do → does</div><div class="mc-nt">发音 /iz/ 或 /z/</div></div>
+    <div class="mini-card"><h5>③ 辅音+y → 改 y 为 i 加 -es</h5><div class="mc-ex">study → studies</div><div class="mc-ex">carry → carries</div><div class="mc-ex">fly → flies</div><div class="mc-nt">元音+y 直接加 s：play→plays</div></div>
+    <div class="mini-card"><h5>④ 特殊变形</h5><div class="mc-ex">have → has</div><div class="mc-ex">be → is</div><div class="mc-ex">say → says</div><div class="mc-nt">死记</div></div>
+  </div>
+
+  <!-- 过去式/过去分词规则变化 -->
+  <div class="sub-h">二、过去式 & 过去分词 · 规则变化</div>
+  <div class="mnemonic"><div class="label">规则动词变化口诀</div><div class="verse">一般直接 <span class="hl">加 -ed</span>，e 结尾 <span class="hl">只加 -d</span><br>辅音 y <span class="hl">变 i 加 -ed</span>，重读闭音节 <span class="hl">双写加 -ed</span></div></div>
+  <div class="grid2">
+    <div class="mini-card"><h5>① 一般加 -ed</h5><div class="mc-ex">work → worked → worked</div><div class="mc-ex">play → played → played</div><div class="mc-ex">watch → watched → watched</div></div>
+    <div class="mini-card"><h5>② e 结尾只加 -d</h5><div class="mc-ex">live → lived → lived</div><div class="mc-ex">like → liked → liked</div><div class="mc-ex">use → used → used</div></div>
+    <div class="mini-card"><h5>③ 辅音+y 改 i 加 -ed</h5><div class="mc-ex">study → studied → studied</div><div class="mc-ex">carry → carried → carried</div><div class="mc-ex">cry → cried → cried</div></div>
+    <div class="mini-card"><h5>④ 重读闭音节双写末尾辅音 +ed</h5><div class="mc-ex">stop → stopped → stopped</div><div class="mc-ex">plan → planned → planned</div><div class="mc-ex">prefer → preferred → preferred</div><div class="mc-ex">drop → dropped → dropped</div><div class="mc-nt">元音+辅音结尾且重读 → 双写</div></div>
+  </div>
+
+  <div class="trap"><div class="icon">⚠</div><div class="body"><h5>双写规则判断法</h5><p>动词末尾是 <b>"一个元音字母 + 一个辅音字母"</b>，且该音节<b>重读</b> → 双写末尾辅音再加 ed/ing。<br>stop→stopped（重读） | open→opened（不重读，不双写）<br>travel→travelled（英式双写）/ traveled（美式不双写）</p></div></div>
+
+  <!-- 不规则动词四型分类 -->
+  <div class="sub-h">三、不规则动词 · 四型分类速记表</div>
+  <div class="mnemonic"><div class="label">四型记忆口诀</div><div class="verse"><span class="hl">AAA 型</span>：三式全同（cost-cost-cost）<br><span class="hl">ABA 型</span>：首尾相同（come-came-come）<br><span class="hl">ABB 型</span>：后两式同（bring-brought-brought）<br><span class="hl">ABC 型</span>：三式全不同（go-went-gone）</div></div>
+
+  <div class="grid2">
+    <div class="mini-card"><h5>① AAA 型（原形=过去式=过去分词）</h5><div class="mc-ex">cost → cost → cost（花费）</div><div class="mc-ex">put → put → put（放）</div><div class="mc-ex">hit → hit → hit（打）</div><div class="mc-ex">hurt → hurt → hurt（伤害）</div><div class="mc-ex">let → let → let（让）</div><div class="mc-ex">read → read → read（读，发音不同）</div><div class="mc-ex">set → set → set（设置）</div><div class="mc-ex">shut → shut → shut（关）</div><div class="mc-ex">cut → cut → cut（切）</div></div>
+    <div class="mini-card"><h5>② ABA 型（原形=过去分词，过去式不同）</h5><div class="mc-ex">come → came → come（来）</div><div class="mc-ex">become → became → become（成为）</div><div class="mc-ex">run → ran → run（跑）</div></div>
+    <div class="mini-card"><h5>③ ABB 型（过去式=过去分词）</h5><div class="mc-ex">bring → brought → brought（带来）</div><div class="mc-ex">buy → bought → bought（买）</div><div class="mc-ex">think → thought → thought（想）</div><div class="mc-ex">fight → fought → fought（战斗）</div><div class="mc-ex">catch → caught → caught（抓）</div><div class="mc-ex">teach → taught → taught（教）</div><div class="mc-ex">feel → felt → felt（感觉）</div><div class="mc-ex">keep → kept → kept（保持）</div><div class="mc-ex">sleep → slept → slept（睡）</div><div class="mc-ex">sweep → swept → swept（扫）</div><div class="mc-ex">build → built → built（建）</div><div class="mc-ex">lend → lent → lent（借出）</div><div class="mc-ex">send → sent → sent（送）</div><div class="mc-ex">spend → spent → spent（花）</div><div class="mc-ex">sit → sat → sat（坐）</div><div class="mc-ex">win → won → won（赢）</div><div class="mc-ex">hold → held → held（握）</div><div class="mc-ex">find → found → found（找到）</div><div class="mc-ex">get → got → got（得到）</div><div class="mc-ex">have → had → had（有）</div><div class="mc-ex">make → made → made（做）</div><div class="mc-ex">hear → heard → heard（听）</div><div class="mc-ex">say → said → said（说）</div><div class="mc-ex">pay → paid → paid（付）</div><div class="mc-ex">lay → laid → laid（放）</div><div class="mc-ex">lose → lost → lost（丢）</div><div class="mc-ex">sell → sold → sold（卖）</div><div class="mc-ex">tell → told → told（告诉）</div><div class="mc-ex">stand → stood → stood（站）</div><div class="mc-ex">understand → understood → understood（理解）</div></div>
+    <div class="mini-card"><h5>④ ABC 型（三式全不同）★最多最难</h5><div class="mc-ex">do → did → done（做）</div><div class="mc-ex">go → went → gone（去）</div><div class="mc-ex">see → saw → seen（看）</div><div class="mc-ex">give → gave → given（给）</div><div class="mc-ex">take → took → taken（拿）</div><div class="mc-ex">eat → ate → eaten（吃）</div><div class="mc-ex">drink → drank → drunk（喝）</div><div class="mc-ex">sing → sang → sung（唱）</div><div class="mc-ex">ring → rang → rung（响）</div><div class="mc-ex">swim → swam → swum（游泳）</div><div class="mc-ex">begin → began → begun（开始）</div><div class="mc-ex">write → wrote → written（写）</div><div class="mc-ex">drive → drove → driven（驾驶）</div><div class="mc-ex">ride → rode → ridden（骑）</div><div class="mc-ex">rise → rose → risen（升起）</div><div class="mc-ex">break → broke → broken（打破）</div><div class="mc-ex">speak → spoke → spoken（说）</div><div class="mc-ex">steal → stole → stolen（偷）</div><div class="mc-ex">choose → chose → chosen（选择）</div><div class="mc-ex">freeze → froze → frozen（冻）</div><div class="mc-ex">wake → woke → woken（醒）</div><div class="mc-ex">wear → wore → worn（穿）</div><div class="mc-ex">bear → bore → born（出生）</div><div class="mc-ex">tear → tore → torn（撕）</div><div class="mc-ex">draw → drew → drawn（画）</div><div class="mc-ex">fly → flew → flown（飞）</div><div class="mc-ex">blow → blew → blown（吹）</div><div class="mc-ex">grow → grew → grown（长）</div><div class="mc-ex">throw → threw → thrown（扔）</div><div class="mc-ex">know → knew → known（知道）</div><div class="mc-ex">show → showed → shown（展示）</div><div class="mc-ex">forget → forgot → forgotten（忘记）</div><div class="mc-ex">be → was/were → been（是）</div></div>
+  </div>
+
+  <div class="diff"><div class="label">高效记忆建议</div><p>不要逐个背！按<b>四型分类</b>背——同一型的变化规律一样，一起记更快。<br>① 先背 AAA 型（最简单，9 个词）→ ② 再背 ABA 型（3 个词）→ ③ 然后 ABB 型（最多的，找规律：ought/aught/ept/ilt/old）→ ④ 最后 ABC 型（最难，但也最有规律：i-a-u 变化，如 sing-sang-sung, drink-drank-drunk, swim-swam-swum）</p></div>
+</section>
+
+<!-- ===== 可数/不可数名词速查 ===== -->
+<section>
+  <div class="sec-title"><span class="num">★</span>可数 / 不可数名词 · 速查表</div>
+  <div class="sec-desc">主谓一致、there be 句型都依赖名词可数性判断。下面是高频不可数名词分类速查。</div>
+
+  <div class="mnemonic"><div class="label">判断口诀</div><div class="verse"><span class="hl">可数名词</span>能数（a book, two books）<br><span class="hl">不可数名词</span>不能直接数（用 a piece of / a glass of 量）<br>不可数名词 → <span class="hl">用 is / 单数动词</span></div></div>
+
+  <div class="grid2">
+    <div class="mini-card"><h5>① 液体类</h5><div class="mc-ex">water, milk, tea, coffee, juice, oil, soup</div><div class="mc-nt">注意：soup 不可数，但 a bowl of soup</div></div>
+    <div class="mini-card"><h5>② 物质/材料类</h5><div class="mc-ex">bread, meat, rice, paper, wood, glass, gold, iron</div><div class="mc-nt">a piece of bread / a piece of paper</div></div>
+    <div class="mini-card"><h5>③ 抽象概念类</h5><div class="mc-ex">time, money, news, information, advice, knowledge, work</div><div class="mc-nt">a piece of advice / a piece of news</div></div>
+    <div class="mini-card"><h5>④ 学科类</h5><div class="mc-ex">math, physics, politics, English, Chinese, history, geography</div><div class="mc-nt">注意：以 s 结尾但单数</div></div>
+  </div>
+
+  <div class="trap"><div class="icon">⚠</div><div class="body"><h5>陷阱：看似复数实单数（必背）</h5><p><b>news</b>（新闻）→ is<br><b>physics, maths, politics</b>（学科）→ is<br><b>The United States</b>（美国，视为单数）→ is<br>以上全部用 is / has / does</p></div></div>
+
+  <div class="trap" style="background:var(--amber-bg);border-color:var(--amber)"><div class="icon">⚠</div><div class="body"><h5 style="color:var(--amber)">陷阱：看似不可数实可数</h5><p><b>vegetable, fruit</b> → 可数（有复数：vegetables, fruits）<br>但 fruit 表示"水果总量"时不可数<br><b>hair</b> → 整体不可数，但"一根头发"可数 a hair<br><b>chicken</b> → 活鸡可数，鸡肉不可数</p></div></div>
+</section>
+
+<!-- ===== 进阶拓展：构词法 + 虚拟语气 ===== -->
+<section>
+  <div class="sec-title"><span class="num">★</span>进阶拓展 · 构词法 + 虚拟语气入门</div>
+  <div class="sec-desc">这两块初中基本不教。提前了解，减轻适应压力。</div>
+
+  <div class="sub-h">一、词性转换 / 构词法基础</div>
+  <div class="mnemonic"><div class="label">构词法口诀</div><div class="verse"><span class="hl">加后缀变词性</span>：名→形→副，一串变到底<br>名词加 -y → 形容词（sun→sunny）<br>形容词加 -ly → 副词（quick→quickly）<br>动词加 -tion/-ment → 名词（act→action）</div></div>
+
+  <div class="grid2">
+    <div class="mini-card"><h5>动词 → 名词</h5><div class="mc-ex">act → action</div><div class="mc-ex">decide → decision</div><div class="mc-ex">invent → invention</div><div class="mc-ex">educate → education</div><div class="mc-ex">develop → development</div><div class="mc-ex">agree → agreement</div></div>
+    <div class="mini-card"><h5>名词 → 形容词</h5><div class="mc-ex">sun → sunny</div><div class="mc-ex">cloud → cloudy</div><div class="mc-ex">health → healthy</div><div class="mc-ex">danger → dangerous</div><div class="mc-ex">nature → natural</div></div>
+    <div class="mini-card"><h5>形容词 → 副词</h5><div class="mc-ex">quick → quickly</div><div class="mc-ex">happy → happily</div><div class="mc-ex">careful → carefully</div><div class="mc-ex">true → truly</div><div class="mc-nt">注意：true→truly（去 e）</div></div>
+    <div class="mini-card"><h5>形容词 → 名词</h5><div class="mc-ex">happy → happiness</div><div class="mc-ex">sad → sadness</div><div class="mc-ex">kind → kindness</div><div class="mc-ex">dark → darkness</div></div>
+  </div>
+
+  <div class="diff"><div class="label">为什么必须会？</div><p>阅读理解和完形填空中，同一个词会以不同词性出现。比如题目给 <b>decide</b>（动词），文章里是 <b>decision</b>（名词），填空要填 <b>decisive</b>（形容词）。不会词性转换 = 看不懂文章。</p></div>
+
+  <div class="sub-h">二、虚拟语气入门（进阶内容）</div>
+  <div class="rule"><div class="label">核心概念</div><div class="txt">虚拟语气 = 说的不是事实，而是<b>假设/愿望/建议</b>。和陈述语气（说事实）完全不同。</div></div>
+
+  <div class="mnemonic"><div class="label">虚拟语气三步判断</div><div class="verse"><span class="hl">Step1</span>：这是事实还是假设？<br><span class="hl">Step2</span>：假设 → 用虚拟语气<br><span class="hl">Step3</span>：看假设的时间（现在/过去/将来）→ 动词变形</div></div>
+
+  <div class="block">
+    <div class="rule" style="margin:0 0 10px"><div class="label">① 与现在事实相反</div><div class="txt">If I <b>were</b> you, I would study harder.（如果我是你 → 我不是你）<br>结构：If + 过去时(were)，主句 + would/could/should + do</div></div>
+    <div class="rule" style="margin:0 0 10px"><div class="label">② 与过去事实相反</div><div class="txt">If I had studied harder, I would have passed.（如果我当初更努力 → 我当初没努力）<br>结构：If + had done，主句 + would have done</div></div>
+    <div class="rule" style="margin:0"><div class="label">③ 与将来事实相反</div><div class="txt">If it were to rain tomorrow, I would stay home.（万一明天下雨 → 不太可能）<br>结构：If + were to do / should do，主句 + would do</div></div>
+  </div>
+
+  <div class="trap"><div class="icon">⚠</div><div class="body"><h5>最大坑：虚拟语气里 was → were</h5><p>虚拟语气中，无论主语是什么，be 动词一律用 <b>were</b>（不用 was）。<br>❌ If I <span style="color:var(--red);text-decoration:line-through">was</span> rich... → ✅ If I <b>were</b> rich...<br>❌ If she <span style="color:var(--red);text-decoration:line-through">was</span> here... → ✅ If she <b>were</b> here...</p></div></div>
+
+  <div class="diff"><div class="label">wish 后的虚拟</div><p>I wish I <b>were</b> taller.（我希望我更高 → 现在没那么高）<br>I wish I <b>had studied</b> harder.（真希望当初更努力 → 过去没努力）<br><b>wish + 过去时</b> = 对现在的愿望<br><b>wish + had done</b> = 对过去的后悔</p></div>
+
+  <div class="tip-bar" style="margin-top:8px">★ 现在不用背虚拟语气的全部结构，只要知道"虚拟语气 = 说的不是事实"这个概念，开学后就不会懵</div>
+</section>
+
+</div><!-- /topPanel2 -->
+
+
+<!-- ███████████████████████████████████████████████████████████████ -->
+<!-- ██████████  顶层 Tab 3：综合自测30题  ███████████████████████████ -->
+<!-- ███████████████████████████████████████████████████████████████ -->
+<div class="top-panel" id="topPanel3">
+
+<section>
+  <div class="sec-title"><span class="num">★</span>跨模块综合自测 · 30 题挑战</div>
+  <div class="sec-desc">混合出题，覆盖八大模块。模拟考试场景——做完再对答案，别边做边看解析。点选项后立刻有解析。</div>
+
+  <div class="tip-bar" style="margin-bottom:20px">⏱ 建议限时 15 分钟 · 做完检查错题对应哪个模块，回到该 Tab 重学</div>
+
+  <!-- Q1 -->
+  <div class="quiz"><div class="q-h">第 1 题 · 时态</div><div class="q-text">My father ____ to Shanghai yesterday. He ____ back yet.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. went / didn't come</button><button class="opt" onclick="quizPick(this,true)">B. went / hasn't come</button><button class="opt" onclick="quizPick(this,false)">C. has gone / didn't come</button></div><div class="feedback" id="fq0"></div></div>
+
+  <!-- Q2 -->
+  <div class="quiz"><div class="q-h">第 2 题 · 时态</div><div class="q-text">By the time I got to the station, the train ____.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. left</button><button class="opt" onclick="quizPick(this,true)">B. had left</button><button class="opt" onclick="quizPick(this,false)">C. has left</button></div><div class="feedback" id="fq1"></div></div>
+
+  <!-- Q3 -->
+  <div class="quiz"><div class="q-h">第 3 题 · 时态</div><div class="q-text">Look! The children ____ games in the park.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. play</button><button class="opt" onclick="quizPick(this,true)">B. are playing</button><button class="opt" onclick="quizPick(this,false)">C. have played</button></div><div class="feedback" id="fq2"></div></div>
+
+  <!-- Q4 -->
+  <div class="quiz"><div class="q-h">第 4 题 · 时态</div><div class="q-text">I ____ in this city for ten years.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. lived</button><button class="opt" onclick="quizPick(this,true)">B. have lived</button><button class="opt" onclick="quizPick(this,false)">C. had lived</button></div><div class="feedback" id="fq3"></div></div>
+
+  <!-- Q5 -->
+  <div class="quiz"><div class="q-h">第 5 题 · 定语从句</div><div class="q-text">The man ____ is talking to our teacher is my father.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. who</button><button class="opt" onclick="quizPick(this,false)">B. which</button><button class="opt" onclick="quizPick(this,false)">C. whom</button></div><div class="feedback" id="fq4"></div></div>
+
+  <!-- Q6 -->
+  <div class="quiz"><div class="q-h">第 6 题 · 定语从句</div><div class="q-text">This is the book ____ I bought yesterday.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. that</button><button class="opt" onclick="quizPick(this,false)">B. who</button><button class="opt" onclick="quizPick(this,false)">C. when</button></div><div class="feedback" id="fq5"></div></div>
+
+  <!-- Q7 -->
+  <div class="quiz"><div class="q-h">第 7 题 · 定语从句</div><div class="q-text">I'll never forget the day ____ I first met you.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. which</button><button class="opt" onclick="quizPick(this,true)">B. when</button><button class="opt" onclick="quizPick(this,false)">C. who</button></div><div class="feedback" id="fq6"></div></div>
+
+  <!-- Q8 -->
+  <div class="quiz"><div class="q-h">第 8 题 · 宾语从句</div><div class="q-text">Could you tell me ____?</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. where does he live</button><button class="opt" onclick="quizPick(this,true)">B. where he lives</button><button class="opt" onclick="quizPick(this,false)">C. where he does live</button></div><div class="feedback" id="fq7"></div></div>
+
+  <!-- Q9 -->
+  <div class="quiz"><div class="q-h">第 9 题 · 宾语从句</div><div class="q-text">He asked me ____ I had finished my homework.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. that</button><button class="opt" onclick="quizPick(this,true)">B. if</button><button class="opt" onclick="quizPick(this,false)">C. what</button></div><div class="feedback" id="fq8"></div></div>
+
+  <!-- Q10 -->
+  <div class="quiz"><div class="q-h">第 10 题 · 状语从句</div><div class="q-text">I will call you as soon as I ____ Beijing.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. arrive</button><button class="opt" onclick="quizPick(this,false)">B. will arrive</button><button class="opt" onclick="quizPick(this,false)">C. arrived</button></div><div class="feedback" id="fq9"></div></div>
+
+  <!-- Q11 -->
+  <div class="quiz"><div class="q-h">第 11 题 · 非谓语</div><div class="q-text">He stopped ____ to me, but I didn't hear him.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. talking</button><button class="opt" onclick="quizPick(this,true)">B. to talk</button><button class="opt" onclick="quizPick(this,false)">C. talk</button></div><div class="feedback" id="fq10"></div></div>
+
+  <!-- Q12 -->
+  <div class="quiz"><div class="q-h">第 12 题 · 非谓语</div><div class="q-text">Remember ____ the door when you leave.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. to lock</button><button class="opt" onclick="quizPick(this,false)">B. locking</button><button class="opt" onclick="quizPick(this,false)">C. locked</button></div><div class="feedback" id="fq11"></div></div>
+
+  <!-- Q13 -->
+  <div class="quiz"><div class="q-h">第 13 题 · 非谓语</div><div class="q-text">The window ____ yesterday needs repairing.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. breaking</button><button class="opt" onclick="quizPick(this,true)">B. broken</button><button class="opt" onclick="quizPick(this,false)">C. to break</button></div><div class="feedback" id="fq12"></div></div>
+
+  <!-- Q14 -->
+  <div class="quiz"><div class="q-h">第 14 题 · 被动语态</div><div class="q-text">The bridge ____ in 1990.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. built</button><button class="opt" onclick="quizPick(this,true)">B. was built</button><button class="opt" onclick="quizPick(this,false)">C. is building</button></div><div class="feedback" id="fq13"></div></div>
+
+  <!-- Q15 -->
+  <div class="quiz"><div class="q-h">第 15 题 · 被动语态</div><div class="q-text">English ____ in many countries around the world.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. speaks</button><button class="opt" onclick="quizPick(this,true)">B. is spoken</button><button class="opt" onclick="quizPick(this,false)">C. is speaking</button></div><div class="feedback" id="fq14"></div></div>
+
+  <!-- Q16 -->
+  <div class="quiz"><div class="q-h">第 16 题 · 被动语态</div><div class="q-text">The accident ____ last night.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. happened</button><button class="opt" onclick="quizPick(this,false)">B. was happened</button><button class="opt" onclick="quizPick(this,false)">C. is happened</button></div><div class="feedback" id="fq15"></div></div>
+
+  <!-- Q17 -->
+  <div class="quiz"><div class="q-h">第 17 题 · 主谓一致</div><div class="q-text">Everyone in our class ____ the answer.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. know</button><button class="opt" onclick="quizPick(this,true)">B. knows</button><button class="opt" onclick="quizPick(this,false)">C. knowing</button></div><div class="feedback" id="fq16"></div></div>
+
+  <!-- Q18 -->
+  <div class="quiz"><div class="q-h">第 18 题 · 主谓一致</div><div class="q-text">Neither he nor I ____ a student.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. is</button><button class="opt" onclick="quizPick(this,true)">B. am</button><button class="opt" onclick="quizPick(this,false)">C. are</button></div><div class="feedback" id="fq17"></div></div>
+
+  <!-- Q19 -->
+  <div class="quiz"><div class="q-h">第 19 题 · 主谓一致</div><div class="q-text">The news ____ very exciting.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. is</button><button class="opt" onclick="quizPick(this,false)">B. are</button><button class="opt" onclick="quizPick(this,false)">C. were</button></div><div class="feedback" id="fq18"></div></div>
+
+  <!-- Q20 -->
+  <div class="quiz"><div class="q-h">第 20 题 · 主谓一致</div><div class="q-text">There ____ a book and two pens on the desk.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. is</button><button class="opt" onclick="quizPick(this,false)">B. are</button><button class="opt" onclick="quizPick(this,false)">C. has</button></div><div class="feedback" id="fq19"></div></div>
+
+  <!-- Q21 -->
+  <div class="quiz"><div class="q-h">第 21 题 · 词法</div><div class="q-text">She is good ____ math and interested ____ music.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. at / in</button><button class="opt" onclick="quizPick(this,false)">B. in / at</button><button class="opt" onclick="quizPick(this,false)">C. on / at</button></div><div class="feedback" id="fq20"></div></div>
+
+  <!-- Q22 -->
+  <div class="quiz"><div class="q-h">第 22 题 · 词法</div><div class="q-text">This is ____ useful book. You should read it.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. a</button><button class="opt" onclick="quizPick(this,false)">B. an</button><button class="opt" onclick="quizPick(this,false)">C. the</button></div><div class="feedback" id="fq21"></div></div>
+
+  <!-- Q23 -->
+  <div class="quiz"><div class="q-h">第 23 题 · 词法</div><div class="q-text">He is taller than ____ in our class.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. any student</button><button class="opt" onclick="quizPick(this,true)">B. any other student</button><button class="opt" onclick="quizPick(this,false)">C. other student</button></div><div class="feedback" id="fq22"></div></div>
+
+  <!-- Q24 -->
+  <div class="quiz"><div class="q-h">第 24 题 · 句子种类</div><div class="q-text">____ delicious food it is!</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. What</button><button class="opt" onclick="quizPick(this,false)">B. How</button><button class="opt" onclick="quizPick(this,false)">C. What a</button></div><div class="feedback" id="fq23"></div></div>
+
+  <!-- Q25 -->
+  <div class="quiz"><div class="q-h">第 25 题 · 反意疑问</div><div class="q-text">Let's go for a walk, ____?</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. will we</button><button class="opt" onclick="quizPick(this,true)">B. shall we</button><button class="opt" onclick="quizPick(this,false)">C. don't we</button></div><div class="feedback" id="fq24"></div></div>
+
+  <!-- Q26 -->
+  <div class="quiz"><div class="q-h">第 26 题 · 反意疑问</div><div class="q-text">He never comes late, ____?</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. doesn't he</button><button class="opt" onclick="quizPick(this,true)">B. does he</button><button class="opt" onclick="quizPick(this,false)">C. isn't he</button></div><div class="feedback" id="fq25"></div></div>
+
+  <!-- Q27 -->
+  <div class="quiz"><div class="q-h">第 27 题 · 特殊句式</div><div class="q-text">There ____ some milk in the glass.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. is</button><button class="opt" onclick="quizPick(this,false)">B. are</button><button class="opt" onclick="quizPick(this,false)">C. has</button></div><div class="feedback" id="fq26"></div></div>
+
+  <!-- Q28 -->
+  <div class="quiz"><div class="q-h">第 28 题 · 间接引语</div><div class="q-text">He said, "I will come tomorrow." → He said he ____ the next day.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. would come</button><button class="opt" onclick="quizPick(this,false)">B. will come</button><button class="opt" onclick="quizPick(this,false)">C. came</button></div><div class="feedback" id="fq27"></div></div>
+
+  <!-- Q29 -->
+  <div class="quiz"><div class="q-h">第 29 题 · 间接引语</div><div class="q-text">She asked me, "Where do you live?" → She asked me where ____.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. did I live</button><button class="opt" onclick="quizPick(this,true)">B. I lived</button><button class="opt" onclick="quizPick(this,false)">C. do I live</button></div><div class="feedback" id="fq28"></div></div>
+
+  <!-- Q30 -->
+  <div class="quiz"><div class="q-h">第 30 题 · 综合运用</div><div class="q-text">The book ____ by him last year is very popular now.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. writing</button><button class="opt" onclick="quizPick(this,true)">B. written</button><button class="opt" onclick="quizPick(this,false)">C. wrote</button></div><div class="feedback" id="fq29"></div></div>
+
+  <div class="tip-bar" style="margin-top:20px">★ 做完了吗？数一下错了几个 → 错的题目对应哪个模块 → 回到「八大支柱详解」重学那个 Tab → 造 3 个自己的句子验证</div>
+
+</section>
+
+</div><!-- /topPanel3 -->
+
+
+<!-- ███████████████████████████████████████████████████████████████ -->
+<!-- ██████████  顶层 Tab 4：补充强化（12板块）  ████████████████████ -->
+<!-- ███████████████████████████████████████████████████████████████ -->
+<div class="top-panel" id="topPanel4">
+
+<!-- ===== 1. 情态动词完整系统 ===== -->
+<section>
+  <div class="sec-title"><span class="num">1</span>情态动词 · 完整系统</div>
+  <div class="sec-desc">情态动词表达说话人的态度——能力、许可、可能、必须、建议。它没有人称和数的变化（can 不加 can-s），后接动词原形。</div>
+
+  <div class="mnemonic"><div class="label">情态动词四大特点</div><div class="verse"><span class="hl">① 不变形</span>（can 不会变 cans）<br><span class="hl">② 后接原形</span>（can do，不是 can to do）<br><span class="hl">③ 无分词</span>（没有 canning）<br><span class="hl">④ 疑问否定自身变</span>（Can you? / cannot / can't）</div></div>
+
+  <div class="sub-h">按功能分类</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>能力（can / could）</h5><div class="mc-ex">She can swim.</div><div class="mc-ex">He could run fast at 5.</div><div class="mc-nt">could 也可表委婉请求</div></div>
+    <div class="mini-card"><h5>许可（may / can）</h5><div class="mc-ex">May I come in?</div><div class="mc-ex">You can go now.</div><div class="mc-nt">may 更正式</div></div>
+    <div class="mini-card"><h5>必须/必要（must / have to）</h5><div class="mc-ex">You must stop.（主观必须）</div><div class="mc-ex">I have to wear a uniform.（客观要求）</div><div class="mc-nt">must 主观 / have to 客观</div></div>
+    <div class="mini-card"><h5>建议/义务（should / ought to）</h5><div class="mc-ex">You should rest.</div><div class="mc-ex">You ought to apologize.</div><div class="mc-nt">should 更常用</div></div>
+    <div class="mini-card"><h5>可能性（may / might / could）</h5><div class="mc-ex">He may be at home.</div><div class="mc-ex">It might rain.</div><div class="mc-nt">might 可能性更低</div></div>
+    <div class="mini-card"><h5>需要（need / dare）</h5><div class="mc-ex">You needn't worry.</div><div class="mc-ex">Dare he jump?</div><div class="mc-nt">可作情态或实义动词</div></div>
+  </div>
+
+  <div class="sub-h">must be vs can't be（推测）</div>
+  <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">肯定推测：must be / must have done</div><div class="sent">He must be a teacher.（他一定是老师）</div><div class="why">有把握的肯定判断</div></div><div class="cmp-col right"><div class="tag-s">否定推测：can't be / can't have done</div><div class="sent">He can't be a teacher.（他不可能是一位老师）</div><div class="why">mustn't = 禁止，不是"不可能"</div></div></div>
+
+  <div class="trap"><div class="icon">⚠</div><div class="body"><h5>最大坑：mustn't ≠ can't</h5><p><b>mustn't</b> = 禁止（You mustn't smoke = 你不能抽烟）<br><b>can't</b> = 不可能（He can't be a thief = 他不可能是小偷）<br>中文"不能"可表示两种意思，英语必须分开！</p></div></div>
+
+  <div class="sub-h">should have done（虚拟完成）</div>
+  <div class="block">
+    <div class="rule" style="margin:0 0 10px"><div class="label">should have done = 本该做却没做</div><div class="txt">You should have told me earlier.（你本该早点告诉我）→ 其实没告诉</div></div>
+    <div class="rule" style="margin:0 0 10px"><div class="label">shouldn't have done = 本不该做却做了</div><div class="txt">You shouldn't have eaten so much.（你本不该吃那么多）→ 其实吃了</div></div>
+    <div class="rule" style="margin:0"><div class="label">could have done = 本可以做却没做</div><div class="txt">I could have helped you.（我本可以帮你）→ 其实没帮</div></div>
+  </div>
+
+  <div class="mnemonic"><div class="label">have to vs must 口诀</div><div class="verse"><span class="hl">must</span> = 内心觉得"必须"（I must study hard）<br><span class="hl">have to</span> = 外界要求"不得不"（I have to wear uniform）<br>must 只有现在时；have to 可变各种时态</div></div>
+
+  <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">He ____ be tired. He has been working for 10 hours.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. can't</button><button class="opt" onclick="quizPick(this,true)">B. must</button><button class="opt" onclick="quizPick(this,false)">C. shouldn't</button></div><div class="feedback" id="fq30"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">You ____ have told me! I was worried about you.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. can't</button><button class="opt" onclick="quizPick(this,true)">B. should</button><button class="opt" onclick="quizPick(this,false)">C. must</button></div><div class="feedback" id="fq31"></div></div>
+</section>
+
+<!-- ===== 2. 比较等级深化 ===== -->
+<section>
+  <div class="sec-title"><span class="num">2</span>比较等级 · 深化</div>
+  <div class="sec-desc">基础 er/est 已在词法 Tab 讲过，这里深化四大高级结构。</div>
+
+  <div class="sub-h">① as...as（和...一样）</div>
+  <div class="rule"><div class="label">结构</div><div class="txt">as + 形容词/副词原级 + as<br>否定：not as/so...as（不如...）</div></div>
+  <div class="example-row">She is <b>as tall as</b> her mother.</div>
+  <div class="example-row">He runs <b>as fast as</b> a rabbit.</div>
+  <div class="example-row">This book is <b>not as interesting as</b> that one.</div>
+
+  <div class="sub-h">② the more...the more...（越...越...）</div>
+  <div class="mnemonic"><div class="label">口诀</div><div class="verse"><span class="hl">The + 比较级, the + 比较级</span> = 越...越...<br>两个比较级要<span class="hl">对称</span></div></div>
+  <div class="example-row"><b>The harder</b> you work, <b>the more</b> you get.（越努力，收获越多）</div>
+  <div class="example-row"><b>The more</b> you read, <b>the better</b> you write.</div>
+
+  <div class="sub-h">③ 比较级 + and + 比较级（越来越...）</div>
+  <div class="example-row">The weather is getting <b>colder and colder</b>.</div>
+  <div class="example-row">She is <b>more and more beautiful</b>.</div>
+
+  <div class="sub-h">④ 修饰比较级</div>
+  <div class="trap"><div class="icon">⚠</div><div class="body"><h5>能修饰比较级的词</h5><p><b>much, a lot, even, far, a little, a bit, still</b> + 比较级<br>❌ very better → ✅ <b>much better</b><br>❌ very taller → ✅ <b>even taller</b><br>注意：<b>very 不能修饰比较级</b>！这是高频错误。</p></div></div>
+
+  <div class="sub-h">不规则变化完整表</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>good / well</h5><div class="mc-ex">better → best</div></div>
+    <div class="mini-card"><h5>bad / badly</h5><div class="mc-ex">worse → worst</div></div>
+    <div class="mini-card"><h5>many / much</h5><div class="mc-ex">more → most</div></div>
+    <div class="mini-card"><h5>little（少）</h5><div class="mc-ex">less → least</div></div>
+    <div class="mini-card"><h5>far（远）</h5><div class="mc-ex">farther/further → farthest/furthest</div><div class="mc-nt">farther=更远 further=更进一步</div></div>
+    <div class="mini-card"><h5>old（老）</h5><div class="mc-ex">older/elder → oldest/eldest</div><div class="mc-nt">elder=年长的（家人间）</div></div>
+  </div>
+
+  <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">This box is ____ heavier than that one.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. very</button><button class="opt" onclick="quizPick(this,true)">B. much</button><button class="opt" onclick="quizPick(this,false)">C. more</button></div><div class="feedback" id="fq32"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">____ you practice, ____ you will be.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. More / good</button><button class="opt" onclick="quizPick(this,true)">B. The more / the better</button><button class="opt" onclick="quizPick(this,false)">C. The most / the best</button></div><div class="feedback" id="fq33"></div></div>
+</section>
+
+<!-- ===== 3. 易混词辨析 ===== -->
+<section>
+  <div class="sec-title"><span class="num">3</span>易混词辨析 · 高频考点</div>
+  <div class="sec-desc">这些词中文意思相近，但用法完全不同。考试最爱在这里设陷阱。</div>
+
+  <div class="grid2">
+    <div class="mini-card"><h5>borrow vs lend</h5><div class="mc-ex"><b>borrow</b> sth <b>from</b> sb（借入）</div><div class="mc-ex"><b>lend</b> sth <b>to</b> sb（借出）</div><div class="mc-nt">方向不同：borrow=拿来 lend=给去</div></div>
+    <div class="mini-card"><h5>bring vs take</h5><div class="mc-ex"><b>bring</b> = 带来（朝说话人方向）</div><div class="mc-ex"><b>take</b> = 带走（远离说话人）</div><div class="mc-nt">Bring it here. / Take it away.</div></div>
+    <div class="mini-card"><h5>say vs speak vs tell vs talk</h5><div class="mc-ex"><b>say</b> + 内容（say "hello"）</div><div class="mc-ex"><b>speak</b> + 语言（speak English）</div><div class="mc-ex"><b>tell</b> + sb + 内容（tell me a story）</div><div class="mc-ex"><b>talk</b> = 交谈（talk with sb）</div></div>
+    <div class="mini-card"><h5>listen vs hear</h5><div class="mc-ex"><b>listen</b>（to）= 主动听</div><div class="mc-ex"><b>hear</b> = 听到（结果）</div><div class="mc-nt">I listened but heard nothing.</div></div>
+    <div class="mini-card"><h5>look vs see vs watch</h5><div class="mc-ex"><b>look</b>（at）= 主动看</div><div class="mc-ex"><b>see</b> = 看见（结果）</div><div class="mc-ex"><b>watch</b> = 观看（动态过程）</div></div>
+    <div class="mini-card"><h5>a few vs a little vs few vs little</h5><div class="mc-ex"><b>a few</b> = 一些（可数，肯定）</div><div class="mc-ex"><b>few</b> = 很少（可数，否定）</div><div class="mc-ex"><b>a little</b> = 一些（不可数，肯定）</div><div class="mc-ex"><b>little</b> = 很少（不可数，否定）</div></div>
+    <div class="mini-card"><h5>another vs other vs the other vs others</h5><div class="mc-ex"><b>another</b> = 另一个（三者以上）</div><div class="mc-ex"><b>the other</b> = 另一个（两者中）</div><div class="mc-ex"><b>other</b> + 名词 = 其他的</div><div class="mc-ex"><b>others</b> = 其他人/物（代词）</div></div>
+    <div class="mini-card"><h5>sometime vs sometimes</h5><div class="mc-ex"><b>sometime</b> = 某时（未来某时）</div><div class="mc-ex"><b>sometimes</b> = 有时（频率）</div><div class="mc-ex"><b>some time</b> = 一段时间</div><div class="mc-ex"><b>some times</b> = 几次</div></div>
+    <div class="mini-card"><h5>alone vs lonely</h5><div class="mc-ex"><b>alone</b> = 独自（客观状态）</div><div class="mc-ex"><b>lonely</b> = 孤独（主观感受）</div><div class="mc-nt">He lives alone but doesn't feel lonely.</div></div>
+  </div>
+
+  <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">Can you ____ me your pen? I forgot mine.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. borrow</button><button class="opt" onclick="quizPick(this,true)">B. lend</button><button class="opt" onclick="quizPick(this,false)">C. take</button></div><div class="feedback" id="fq34"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">I have ____ friends here, so I don't feel lonely.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. a few</button><button class="opt" onclick="quizPick(this,false)">B. few</button><button class="opt" onclick="quizPick(this,false)">C. a little</button></div><div class="feedback" id="fq35"></div></div>
+</section>
+
+<!-- ===== 4. 常考固定搭配 ===== -->
+<section>
+  <div class="sec-title"><span class="num">4</span>常考固定搭配 · 动词+doing 系列</div>
+  <div class="sec-desc">这些搭配是完形填空和单项选择的高频考点，很多学生因为不知道"后面接 to do 还是 doing"而丢分。</div>
+
+  <div class="trap"><div class="icon">⚠</div><div class="body"><h5>最易混：be used to doing vs used to do</h5><p>
+    <b>be used to doing</b> = 习惯于做某事（现在习惯）<br>
+    I am used to <b>getting up</b> early.（我习惯了早起）<br><br>
+    <b>used to do</b> = 过去常常做（现在不做了）<br>
+    I used to <b>get up</b> early.（我过去常早起，现在不起了）<br><br>
+    <b>be used to do</b> = 被用来做（被动语态！）<br>
+    Wood is used to <b>make</b> paper.（木材被用来造纸）
+  </p></div></div>
+
+  <div class="mnemonic"><div class="label">to 是介词还是不定式？</div><div class="verse">look forward <span class="hl">to doing</span>（期待做）<br>be used <span class="hl">to doing</span>（习惯于）<br>devote oneself <span class="hl">to doing</span>（致力于）<br>这里的 to 是<span class="hl">介词</span>，后面接 doing！</div></div>
+
+  <div class="sub-h">后面接 doing 的动词/短语</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>enjoy doing</h5><div class="mc-ex">I enjoy reading.</div></div>
+    <div class="mini-card"><h5>finish doing</h5><div class="mc-ex">Finish doing homework.</div></div>
+    <div class="mini-card"><h5>keep doing</h5><div class="mc-ex">Keep trying!</div></div>
+    <div class="mini-card"><h5>practice doing</h5><div class="mc-ex">Practice speaking English.</div></div>
+    <div class="mini-card"><h5>mind doing</h5><div class="mc-ex">Do you mind opening the window?</div></div>
+    <div class="mini-card"><h5>avoid doing</h5><div class="mc-ex">Avoid making mistakes.</div></div>
+    <div class="mini-card"><h5>can't help doing</h5><div class="mc-ex">I can't help laughing.</div></div>
+    <div class="mini-card"><h5>feel like doing</h5><div class="mc-ex">I feel like sleeping.</div></div>
+    <div class="mini-card"><h5>have difficulty (in) doing</h5><div class="mc-ex">I have difficulty understanding.</div></div>
+    <div class="mini-card"><h5>be busy (in) doing</h5><div class="mc-ex">She is busy cooking.</div></div>
+    <div class="mini-card"><h5>spend time (in) doing</h5><div class="mc-ex">I spent 2 hours reading.</div></div>
+    <div class="mini-card"><h5>It's no use doing</h5><div class="mc-ex">It's no use crying.</div></div>
+  </div>
+
+  <div class="diff"><div class="label">为什么中国学生容易错？</div><p>中文没有"to do / doing"的区分，"喜欢读书"和"想要读书"看起来结构一样。但英语里 enjoy 后必须 doing，want 后必须 to do——<b>没有规律可循，只能背</b>。</p></div>
+
+  <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">I am looking forward to ____ from you soon.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. hear</button><button class="opt" onclick="quizPick(this,true)">B. hearing</button><button class="opt" onclick="quizPick(this,false)">C. heard</button></div><div class="feedback" id="fq36"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">I used to ____ basketball, but now I am used to ____ football.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. play / playing</button><button class="opt" onclick="quizPick(this,false)">B. playing / play</button><button class="opt" onclick="quizPick(this,false)">C. play / play</button></div><div class="feedback" id="fq37"></div></div>
+</section>
+
+<!-- ===== 5. It 的用法 ===== -->
+<section>
+  <div class="sec-title"><span class="num">5</span>It 的用法</div>
+  <div class="sec-desc">it 是英语里最"多功能"的词——形式主语、形式宾语、指代天气时间距离、强调句型。</div>
+
+  <div class="sub-h">① 形式主语（真正主语在后）</div>
+  <div class="rule"><div class="label">结构</div><div class="txt">It is + 形容词/名词 + (for/of sb) + to do / that从句</div></div>
+  <div class="example-row"><b>It is</b> important <b>to learn</b> English well.（学英语很重要）</div>
+  <div class="example-row"><b>It takes</b> me two hours <b>to finish</b> my homework.（花了我两小时）</div>
+  <div class="example-row"><b>It is</b> nice <b>that</b> you can come.（你能来真好）</div>
+
+  <div class="trap"><div class="icon">⚠</div><div class="body"><h5>for sb vs of sb</h5><p>
+    <b>It's + adj + for sb + to do</b> → 形容事情（重要的/困难的/必要的）<br>
+    It's important <b>for</b> you <b>to study</b>.（学习对你很重要）<br><br>
+    <b>It's + adj + of sb + to do</b> → 形容人品质（善良的/聪明的/愚蠢的）<br>
+    It's kind <b>of</b> you <b>to help</b> me.（你帮我真是太好了）
+  </p></div></div>
+
+  <div class="sub-h">② 形式宾语</div>
+  <div class="rule"><div class="label">结构</div><div class="txt">主语 + 动词 + it + 形容词 + to do</div></div>
+  <div class="example-row">I find <b>it</b> hard to learn English.（我发现学英语很难）</div>
+  <div class="example-row">I think <b>it</b> important to read more.（我认为多读很重要）</div>
+  <div class="note-sm">真正宾语是 to learn English，it 占位置</div>
+
+  <div class="sub-h">③ 指代天气/时间/距离/温度</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>天气</h5><div class="mc-ex">It is raining.</div><div class="mc-ex">It's cold today.</div></div>
+    <div class="mini-card"><h5>时间</h5><div class="mc-ex">It's 8 o'clock.</div><div class="mc-ex">It's Monday.</div></div>
+    <div class="mini-card"><h5>距离</h5><div class="mc-ex">It's far from here.</div><div class="mc-ex">It's 5 miles to the station.</div></div>
+    <div class="mini-card"><h5>温度</h5><div class="mc-ex">It's 30 degrees today.</div></div>
+  </div>
+
+  <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">I find ____ difficult to understand him.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. that</button><button class="opt" onclick="quizPick(this,true)">B. it</button><button class="opt" onclick="quizPick(this,false)">C. this</button></div><div class="feedback" id="fq38"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">____ is kind of you to help me with my English.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. It</button><button class="opt" onclick="quizPick(this,false)">B. That</button><button class="opt" onclick="quizPick(this,false)">C. This</button></div><div class="feedback" id="fq39"></div></div>
+</section>
+
+<!-- ===== 6. 连词深化 ===== -->
+<section>
+  <div class="sec-title"><span class="num">6</span>连词 · 深化</div>
+  <div class="sec-desc">连词决定句子之间的逻辑关系。中国学生最容易在"虽然...但是"和"因为...所以"上出错。</div>
+
+  <div class="trap"><div class="icon">⚠</div><div class="body"><h5>中文思维最大陷阱：although 不配 but</h5><p>
+    中文：虽然...但是...（两个连词成对出现）<br>
+    英语：<b>Although</b> he is poor, he is happy.<br>
+    ❌ <b>Although</b> he is poor, <span style="color:var(--red);text-decoration:line-through">but</span> he is happy.<br>
+    英语一个句子只能有一个连词！although 和 but 不能同时出现。<br><br>
+    同理：<b>because</b> 和 <b>so</b> 也不能同时用。<br>
+    ❌ <b>Because</b> it rained, <span style="color:var(--red);text-decoration:line-through">so</span> I stayed home.<br>
+    ✅ <b>Because</b> it rained, I stayed home. / It rained, <b>so</b> I stayed home.
+  </p></div></div>
+
+  <div class="sub-h">because vs because of</div>
+  <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">because</div><div class="sent">I was late because it rained.</div><div class="why">+ 句子（主谓宾）</div></div><div class="cmp-col right"><div class="tag-s">because of</div><div class="sent">I was late because of the rain.</div><div class="why">+ 名词/代词/doing</div></div></div>
+
+  <div class="sub-h">并列连词组（either...or 等）</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>both...and</h5><div class="mc-ex">Both Tom and Jerry like cheese.</div><div class="mc-nt">两者都 → 复数谓语</div></div>
+    <div class="mini-card"><h5>either...or</h5><div class="mc-ex">Either you or he is right.</div><div class="mc-nt">就近原则</div></div>
+    <div class="mini-card"><h5>neither...nor</h5><div class="mc-ex">Neither he nor I am wrong.</div><div class="mc-nt">就近原则</div></div>
+    <div class="mini-card"><h5>not only...but also</h5><div class="mc-ex">Not only you but also he likes it.</div><div class="mc-nt">就近原则</div></div>
+  </div>
+
+  <div class="sub-h">so...that vs such...that</div>
+  <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">so + 形容词/副词 + that</div><div class="sent">He is so tall that he can touch the ceiling.</div><div class="why">so 修饰形容词/副词</div></div><div class="cmp-col right"><div class="tag-s">such + (a/an) + 形容词 + 名词 + that</div><div class="sent">He is such a tall boy that he can touch it.</div><div class="why">such 修饰名词</div></div></div>
+
+  <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">____ he was tired, he kept working.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. Although</button><button class="opt" onclick="quizPick(this,false)">B. Although / but</button><button class="opt" onclick="quizPick(this,false)">C. But</button></div><div class="feedback" id="fq40"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">He is ____ a good student that everyone likes him.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. so</button><button class="opt" onclick="quizPick(this,true)">B. such</button><button class="opt" onclick="quizPick(this,false)">C. too</button></div><div class="feedback" id="fq41"></div></div>
+</section>
+
+<!-- ===== 7. 名词所有格 ===== -->
+<section>
+  <div class="sec-title"><span class="num">7</span>名词所有格</div>
+  <div class="sec-desc">表示"谁的"——有三种形式，各有适用场景。</div>
+
+  <div class="mnemonic"><div class="label">三种所有格口诀</div><div class="verse"><span class="hl">'s 所有格</span> → 人/动物/时间/国家（Tom's, today's）<br><span class="hl">of 所有格</span> → 无生命的东西（the leg of the table）<br><span class="hl">双重所有格</span> → a/an/this/that + 名词 + of + 名词性物主代词/'s</div></div>
+
+  <div class="grid2">
+    <div class="mini-card"><h5>① 's 所有格</h5><div class="mc-ex">Tom's book</div><div class="mc-ex">children's toys</div><div class="mc-ex">today's newspaper</div><div class="mc-ex">China's capital</div><div class="mc-nt">以 s 结尾复数只加 '：the students' books</div></div>
+    <div class="mini-card"><h5>② of 所有格</h5><div class="mc-ex">the leg of the table</div><div class="mc-ex">the capital of China</div><div class="mc-ex">the title of the book</div><div class="mc-nt">无生命事物用 of</div></div>
+    <div class="mini-card"><h5>③ 双重所有格</h5><div class="mc-ex">a friend of <b>mine</b></div><div class="mc-ex">two books of <b>his</b></div><div class="mc-ex">this car of <b>John's</b></div><div class="mc-nt">a/an/this + 名词 + of + 名词性物主代词</div></div>
+    <div class="mini-card"><h5>④ 共有 vs 分别</h5><div class="mc-ex">Tom and Mary's room（共有，一间）</div><div class="mc-ex">Tom's and Mary's rooms（分别，两间）</div><div class="mc-nt">最后一个人加 's = 共有</div></div>
+  </div>
+
+  <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">This is a friend of ____.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. my</button><button class="opt" onclick="quizPick(this,true)">B. mine</button><button class="opt" onclick="quizPick(this,false)">C. me</button></div><div class="feedback" id="fq42"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">Tom and Jack ____ a big room. (they share it)</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. Tom's and Jack's</button><button class="opt" onclick="quizPick(this,true)">B. Tom and Jack's</button><button class="opt" onclick="quizPick(this,false)">C. Tom and Jack</button></div><div class="feedback" id="fq43"></div></div>
+</section>
+
+<!-- ===== 8. 数词系统 ===== -->
+<section>
+  <div class="sec-title"><span class="num">8</span>数词系统</div>
+  <div class="sec-desc">基数词表数量，序数词表顺序。重点是"概数表达"和"日期表达"。</div>
+
+  <div class="sub-h">① 基数词 → 序数词变化规则</div>
+  <div class="mnemonic"><div class="label">序数词口诀</div><div class="verse">一二三特殊记（one→first, two→second, three→third）<br>八减 t（eight→eighth），九去 e（nine→ninth）<br>f 来把 ve 替（five→fifth, twelve→twelfth）<br>ty 变 tie（twenty→twentieth）<br>其余都加 th（four→fourth, ten→tenth）</div></div>
+
+  <div class="sub-h">② 概数表达（高频考点）</div>
+  <div class="trap"><div class="icon">⚠</div><div class="body"><h5>有具体数字 vs 无具体数字</h5><p>
+    <b>有具体数字 → 不加 s，不加 of</b><br>
+    two hundred students（200学生）<br>
+    three thousand people（3000人）<br><br>
+    <b>无具体数字 → 加 s + of</b><br>
+    <b>hundreds of</b> students（数百学生）<br>
+    <b>thousands of</b> people（数千人）<br>
+    <b>millions of</b> dollars（数百万美元）
+  </p></div></div>
+
+  <div class="sub-h">③ 日期/时间表达</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>日期</h5><div class="mc-ex">July 4th, 1990 = July the fourth</div><div class="mc-ex">on October 1st</div><div class="mc-nt">用 on</div></div>
+    <div class="mini-card"><h5>时间</h5><div class="mc-ex">3:15 = three fifteen / a quarter past three</div><div class="mc-ex">3:45 = three forty-five / a quarter to four</div><div class="mc-nt">用 at</div></div>
+    <div class="mini-card"><h5>世纪/年代</h5><div class="mc-ex">in the 1990s = 在20世纪90年代</div><div class="mc-ex">in his twenties = 在他二十多岁时</div></div>
+    <div class="mini-card"><h5>编号</h5><div class="mc-ex">Room 305 = Room three o five</div><div class="mc-ex">Page 20 = Page twenty</div></div>
+  </div>
+
+  <div class="sub-h">④ 倍数表达</div>
+  <div class="example-row">A is <b>twice as big as</b> B.（A是B的两倍大）</div>
+  <div class="example-row">A is <b>three times the size of</b> B.（A是B的三倍大）</div>
+
+  <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">There are ____ people in the park on weekends.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. two hundred of</button><button class="opt" onclick="quizPick(this,true)">B. hundreds of</button><button class="opt" onclick="quizPick(this,false)">C. two hundreds</button></div><div class="feedback" id="fq44"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">May is the ____ month of the year.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. five</button><button class="opt" onclick="quizPick(this,true)">B. fifth</button><button class="opt" onclick="quizPick(this,false)">C. fiveth</button></div><div class="feedback" id="fq45"></div></div>
+</section>
+
+<!-- ===== 9. so/neither 倒装 ===== -->
+<section>
+  <div class="sec-title"><span class="num">9</span>So / Neither 倒装句</div>
+  <div class="sec-desc">表示"也"或"也不"——用倒装结构，是口语和写作的高频句型。</div>
+
+  <div class="mnemonic"><div class="label">口诀</div><div class="verse"><span class="hl">So + 助/情/be + 主语</span> = 也...（肯定）<br><span class="hl">Neither + 助/情/be + 主语</span> = 也不...（否定）<br>时态和动词类型要跟前面一致</div></div>
+
+  <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">肯定倒装</div><div class="sent">He likes English. <b>So do I.</b></div><div class="why">我也喜欢 → So + do + I</div></div><div class="cmp-col right"><div class="tag-s">否定倒装</div><div class="sent">He doesn't like math. <b>Neither do I.</b></div><div class="why">我也不喜欢 → Neither + do + I</div></div></div>
+
+  <div class="example-row">She can swim. <b>So can I.</b>（我也会）</div>
+  <div class="example-row">He is a teacher. <b>So am I.</b>（我也是）</div>
+  <div class="example-row">They went home. <b>So did we.</b>（我们也回了）</div>
+  <div class="example-row">I won't go. <b>Neither will he.</b>（他也不会去）</div>
+
+  <div class="trap"><div class="icon">⚠</div><div class="body"><h5>So do I vs So I do</h5><p>
+    <b>So do I</b> = 我也是（别人说一件，我也一样）<br>
+    — He likes English. — <b>So do I.</b><br><br>
+    <b>So I do</b> = 确实如此（赞同别人说的，主语不变）<br>
+    — He works hard. — <b>So he does.</b>（他确实很努力）<br>
+    区别：倒装=也；不倒装=确实如此
+  </p></div></div>
+
+  <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">He has finished his homework. ____.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. So have I</button><button class="opt" onclick="quizPick(this,false)">B. So I have</button><button class="opt" onclick="quizPick(this,false)">C. So do I</button></div><div class="feedback" id="fq46"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">I don't like this movie. ____.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. So do I</button><button class="opt" onclick="quizPick(this,true)">B. Neither do I</button><button class="opt" onclick="quizPick(this,false)">C. Neither I do</button></div><div class="feedback" id="fq47"></div></div>
+</section>
+
+<!-- ===== 10. 疑问词完整系统 ===== -->
+<section>
+  <div class="sec-title"><span class="num">10</span>疑问词 · 完整系统</div>
+  <div class="sec-desc">特殊疑问句用什么词开头，取决于你问什么。很多学生分不清 how many 和 how much、what 和 which。</div>
+
+  <div class="grid2">
+    <div class="mini-card"><h5>what（什么）</h5><div class="mc-ex">What is your name?</div><div class="mc-ex">What do you want?</div></div>
+    <div class="mini-card"><h5>who / whom / whose</h5><div class="mc-ex">Who is that?（主语）</div><div class="mc-ex">Whom did you meet?（宾语）</div><div class="mc-ex">Whose book is this?（谁的）</div></div>
+    <div class="mini-card"><h5>where / when / why</h5><div class="mc-ex">Where do you live?</div><div class="mc-ex">When did you come?</div><div class="mc-ex">Why are you late?</div></div>
+    <div class="mini-card"><h5>which（哪个/哪些）</h5><div class="mc-ex">Which color do you like, red or blue?</div><div class="mc-nt">有选择范围时用 which</div></div>
+  </div>
+
+  <div class="sub-h">what vs which</div>
+  <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">what = 开放选择</div><div class="sent">What do you want to drink?（不限定范围）</div></div><div class="cmp-col right"><div class="tag-s">which = 限定选择</div><div class="sent">Which do you want, tea or coffee?（二选一）</div></div></div>
+
+  <div class="sub-h">how + 形容词/副词</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>how old（多大年纪）</h5><div class="mc-ex">How old are you?</div></div>
+    <div class="mini-card"><h5>how many（多少——可数）</h5><div class="mc-ex">How many books do you have?</div></div>
+    <div class="mini-card"><h5>how much（多少——不可数/价格）</h5><div class="mc-ex">How much water is there?</div><div class="mc-ex">How much is it?</div></div>
+    <div class="mini-card"><h5>how long（多长——时长）</h5><div class="mc-ex">How long have you been here?（3 years）</div><div class="mc-nt">回答用 for+时段 / since+时点</div></div>
+    <div class="mini-card"><h5>how often（多久一次——频率）</h5><div class="mc-ex">How often do you exercise?（Every day）</div></div>
+    <div class="mini-card"><h5>how soon（多久以后）</h5><div class="mc-ex">How soon will he come back?（In 2 hours）</div></div>
+    <div class="mini-card"><h5>how far（多远——距离）</h5><div class="mc-ex">How far is it from here?（5 km）</div></div>
+    <div class="mini-card"><h5>how tall / how heavy</h5><div class="mc-ex">How tall are you?（170 cm）</div></div>
+  </div>
+
+  <div class="trap"><div class="icon">⚠</div><div class="body"><h5>how long vs how soon vs how often</h5><p>
+    <b>how long</b> = 持续多久 → 回答 for 3 years<br>
+    <b>how soon</b> = 多久以后 → 回答 in 2 hours<br>
+    <b>how often</b> = 多久一次 → 回答 twice a week
+  </p></div></div>
+
+  <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">— ____ does it take to get to the station? — About 20 minutes.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. How long</button><button class="opt" onclick="quizPick(this,false)">B. How often</button><button class="opt" onclick="quizPick(this,false)">C. How soon</button></div><div class="feedback" id="fq48"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">— ____ is the shirt? — 50 yuan.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. How many</button><button class="opt" onclick="quizPick(this,true)">B. How much</button><button class="opt" onclick="quizPick(this,false)">C. How long</button></div><div class="feedback" id="fq49"></div></div>
+</section>
+
+<!-- ===== 11. 代词深化 ===== -->
+<section>
+  <div class="sec-title"><span class="num">11</span>代词 · 深化</div>
+  <div class="sec-desc">反身代词、some/any 辨析、both/all/neither/none——这些是单项选择的高频考点。</div>
+
+  <div class="sub-h">① 反身代词</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>单数</h5><div class="mc-ex">myself / yourself</div><div class="mc-ex">himself / herself / itself</div></div>
+    <div class="mini-card"><h5>复数</h5><div class="mc-ex">ourselves / yourselves</div><div class="mc-ex">themselves</div></div>
+  </div>
+  <div class="example-row">I can do it <b>myself</b>.（我自己能做）</div>
+  <div class="example-row">Help <b>yourselves</b> to some fish.（请自便吃鱼）</div>
+  <div class="example-row">She taught <b>herself</b> English.（她自学英语）</div>
+  <div class="mnemonic"><div class="label">反身代词口诀</div><div class="verse">反身代词表<span class="hl">"自己"</span>，主语宾语<span class="hl">同一人</span><br>teach oneself = 自学；enjoy oneself = 玩得开心<br>by oneself = 独自；help oneself to = 自便吃</div></div>
+
+  <div class="sub-h">② some vs any</div>
+  <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">some</div><div class="sent">I have <b>some</b> money.</div><div class="why">肯定句</div></div><div class="cmp-col right"><div class="tag-s">any</div><div class="sent">I don't have <b>any</b> money.</div><div class="why">否定句/疑问句</div></div></div>
+  <div class="trap"><div class="icon">⚠</div><div class="body"><h5>some 可用于疑问句</h5><p>表<span class="hl">请求/邀请</span>时用 some（希望对方说 yes）：<br>Would you like <b>some</b> coffee?（你想喝点咖啡吗？）</p></div></div>
+
+  <div class="sub-h">③ both / all / neither / none / either</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>both = 两者都</h5><div class="mc-ex">Both of them are students.</div><div class="mc-nt">谓语用复数</div></div>
+    <div class="mini-card"><h5>all = 三者以上都</h5><div class="mc-ex">All of them are here.</div><div class="mc-nt">谓语用复数</div></div>
+    <div class="mini-card"><h5>neither = 两者都不</h5><div class="mc-ex">Neither of them is right.</div><div class="mc-nt">谓语用单数</div></div>
+    <div class="mini-card"><h5>none = 三者以上都不</h5><div class="mc-ex">None of them is/are here.</div><div class="mc-nt">单复数均可</div></div>
+    <div class="mini-card"><h5>either = 两者中任一</h5><div class="mc-ex">Either of the two is OK.</div><div class="mc-nt">谓语用单数</div></div>
+    <div class="mini-card"><h5>another / other / the other</h5><div class="mc-ex">another = 另一个（不定）</div><div class="mc-ex">the other = 另一个（特定）</div><div class="mc-ex">others = 其他的（不定）</div><div class="mc-ex">the others = 其余全部</div></div>
+  </div>
+
+  <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">The little girl can dress ____ now.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. her</button><button class="opt" onclick="quizPick(this,true)">B. herself</button><button class="opt" onclick="quizPick(this,false)">C. hers</button></div><div class="feedback" id="fq50"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">Would you like ____ more rice?</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. some</button><button class="opt" onclick="quizPick(this,false)">B. any</button><button class="opt" onclick="quizPick(this,false)">C. no</button></div><div class="feedback" id="fq51"></div></div>
+</section>
+
+<!-- ===== 12. 常用写作句型模板 ===== -->
+<section>
+  <div class="sec-title"><span class="num">12</span>常用写作句型模板</div>
+  <div class="sec-desc">写作时可以直接套用的句型骨架，背熟后写作速度和质量都会大幅提升。</div>
+
+  <div class="grid2">
+    <div class="mini-card"><h5>① It is + adj + for sb + to do</h5><div class="mc-ex">It is important for us to learn English.</div><div class="mc-nt">形容词描述事情</div></div>
+    <div class="mini-card"><h5>② It is + adj + of sb + to do</h5><div class="mc-ex">It is kind of you to help me.</div><div class="mc-nt">形容词描述人品质</div></div>
+    <div class="mini-card"><h5>③ It takes sb + time + to do</h5><div class="mc-ex">It takes me 2 hours to do homework.</div><div class="mc-nt">花费时间做某事</div></div>
+    <div class="mini-card"><h5>④ sb spend time/money on sth</h5><div class="mc-ex">I spent 50 yuan on this book.</div><div class="mc-ex">sb spend time/money (in) doing</div><div class="mc-ex">I spent 2 hours reading.</div></div>
+    <div class="mini-card"><h5>⑤ The + 比较级, the + 比较级</h5><div class="mc-ex">The more you read, the more you know.</div><div class="mc-nt">越...越...</div></div>
+    <div class="mini-card"><h5>⑥ too...to / so...that / enough to</h5><div class="mc-ex">He is too tired to walk.（太累走不动）</div><div class="mc-ex">He is so tired that he can't walk.</div><div class="mc-ex">He is not strong enough to lift it.</div><div class="mc-nt">三者可互换！</div></div>
+    <div class="mini-card"><h5>⑦ not...until（直到...才）</h5><div class="mc-ex">I didn't go to bed until I finished my work.</div><div class="mc-nt">主句否定，从句肯定</div></div>
+    <div class="mini-card"><h5>⑧ It's time for sb to do</h5><div class="mc-ex">It's time for us to go home.</div><div class="mc-nt">该做某事了</div></div>
+  </div>
+
+  <div class="mnemonic"><div class="label">too...to / so...that / enough to 句型转换</div><div class="verse">He is <span class="hl">too</span> short <span class="hl">to</span> reach it.<br>= He is <span class="hl">so</span> short <span class="hl">that</span> he can't reach it.<br>= He is <span class="hl">not tall enough to</span> reach it.<br>三个句型表达同一个意思！</div></div>
+
+  <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">It took him 3 hours ____ the work.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. to finish</button><button class="opt" onclick="quizPick(this,false)">B. finishing</button><button class="opt" onclick="quizPick(this,false)">C. finish</button></div><div class="feedback" id="fq52"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">He is ____ young ____ go to school.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. too / to</button><button class="opt" onclick="quizPick(this,false)">B. so / that</button><button class="opt" onclick="quizPick(this,false)">C. too / that</button></div><div class="feedback" id="fq53"></div></div>
+</section>
+
+<div class="tip-bar" style="margin-top:20px">★ 12 个板块全部学完后，回到「📝 综合自测」做 30 题验证，查漏补缺</div>
+
+</div><!-- /topPanel4 -->
+
+<!-- ███████████████████████████████████████████████████████████████ -->
+<!-- ██████████  顶层 Tab 5：攻坚进阶（7 板块 + 18 题）  ██████████████ -->
+<!-- ███████████████████████████████████████████████████████████████ -->
+<div class="top-panel" id="topPanel5">
+
+<div class="page-h" style="margin:24px 0 8px">🚀 攻坚进阶 · 七大高频考点</div>
+<div class="sec-desc" style="margin-bottom:24px">这里聚焦"考试最常考、最易丢分、之前讲得不够深"的七大方向：句子成分与五大句型（语法地基）、冠词深化、介词系统、形副排序、语法信号词（提分利器）、短语动词、小测难度分级。学完这一 Tab，你的语法体系将真正"闭环"。</div>
+
+<!-- ===== 1. 句子成分与五大基本句型 ===== -->
+<section>
+  <div class="sec-title"><span class="num">1</span>句子成分与五大基本句型 · 语法地基</div>
+  <div class="sec-desc">这是所有语法的"地基"——看不懂长难句、写不对句子，90% 是因为分不清句子成分和句型。先把这 7 个成分和 5 种句型刻进脑子。</div>
+
+  <div class="sub-h">七大句子成分</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>主语 Subject</h5><div class="mc-ex"><u>She</u> is a teacher.</div><div class="mc-ex"><u>Reading</u> is fun.（动名词）</div><div class="mc-nt">动作发出者/被描述对象</div></div>
+    <div class="mini-card"><h5>谓语 Verb</h5><div class="mc-ex">She <u>is</u> a teacher.</div><div class="mc-ex">He <u>reads</u> books.</div><div class="mc-nt">实义动词/系动词</div></div>
+    <div class="mini-card"><h5>宾语 Object</h5><div class="mc-ex">I love <u>you</u>.</div><div class="mc-ex">She reads <u>books</u>.</div><div class="mc-nt">动作承受者</div></div>
+    <div class="mini-card"><h5>表语 Predicative</h5><div class="mc-ex">He is <u>a teacher</u>.</div><div class="mc-ex">The soup tastes <u>good</u>.</div><div class="mc-nt">系动词后，说明主语</div></div>
+    <div class="mini-card"><h5>定语 Attributive</h5><div class="mc-ex">A <u>beautiful</u> girl.</div><div class="mc-ex">The book <u>on the desk</u>.</div><div class="mc-nt">修饰名词/代词</div></div>
+    <div class="mini-card"><h5>状语 Adverbial</h5><div class="mc-ex">He runs <u>fast</u>.</div><div class="mc-ex"><u>Yesterday</u> I saw him.</div><div class="mc-nt">时间/地点/方式/原因</div></div>
+    <div class="mini-card"><h5>补语 Complement</h5><div class="mc-ex">We call him <u>Tom</u>.（宾补）</div><div class="mc-ex"><u>Tom</u> was called...（主补）</div><div class="mc-nt">补充说明主/宾语</div></div>
+  </div>
+
+  <div class="sub-h">五大基本句型（必背）</div>
+  <div class="block">
+    <div class="rule" style="margin:0 0 10px"><div class="label">① SV 主 + 谓（不及物动词，无宾语）</div><div class="txt">The sun <b>rises</b>. / Birds <b>fly</b>. / Time <b>flies</b>.</div></div>
+    <div class="rule" style="margin:0 0 10px"><div class="label">② SVO 主 + 谓 + 宾（单宾及物）</div><div class="txt">I <b>love</b> English. / She <b>reads</b> books.</div></div>
+    <div class="rule" style="margin:0 0 10px"><div class="label">③ SVP 主 + 系 + 表（系动词后接表语）</div><div class="txt">He <b>is</b> a teacher. / The soup <b>tastes</b> good.</div></div>
+    <div class="rule" style="margin:0 0 10px"><div class="label">④ SVOO 主 + 谓 + 双宾（间宾 IO + 直宾 DO）</div><div class="txt">Mother <b>gave me a gift</b>. = Mother gave <u>a gift to me</u>.</div></div>
+    <div class="rule" style="margin:0"><div class="label">⑤ SVOC 主 + 谓 + 宾 + 宾补（补充说明宾语）</div><div class="txt">We <b>call him Tom</b>. / I <b>found the book interesting</b>.</div></div>
+  </div>
+
+  <div class="mnemonic"><div class="label">系动词速记口诀</div><div class="verse"><span class="hl">be</span>（am/is/are）+ <span class="hl">五感</span>（look/feel/taste/smell/sound）<br>+ <span class="hl">变化</span>（become/get/turn/grow）+ <span class="hl">似乎</span>（seem/appear）<br>系动词后接<span class="hl">表语</span>（形容词/名词），不接副词！</div></div>
+
+  <div class="trap"><div class="icon">⚠</div><div class="body"><h5>最大坑：副词误用为表语</h5><p>❌ The soup tastes <s>well</s>. → ✅ The soup tastes <b>good</b>.<br>❌ She looks <s>beautifully</s>. → ✅ She looks <b>beautiful</b>.<br>系动词后用<b>形容词（表语）</b>，不用副词！五感动词 look/feel/taste/smell/sound 后全是形容词。</p></div></div>
+
+  <div class="mnemonic"><div class="label">双宾动词 & 宾补动词区分</div><div class="verse"><span class="hl">双宾动词</span>（可改 to/for）：give/tell/show/send/bring/lend/pass/teach<br><span class="hl">宾补动词</span>（补充宾语）：make/call/name/keep/find/think<br>判断：能改"宾语 + be + 补语"的是<b>宾补</b>（him be Tom ✓ → call him Tom）</div></div>
+
+  <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">The music sounds ____. We all like it.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. beautifully</button><button class="opt" onclick="quizPick(this,true)">B. beautiful</button><button class="opt" onclick="quizPick(this,false)">C. beauty</button></div><div class="feedback" id="fq54"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">My mother gave ____ a beautiful card on my birthday.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. me</button><button class="opt" onclick="quizPick(this,false)">B. to me</button><button class="opt" onclick="quizPick(this,false)">C. I</button></div><div class="feedback" id="fq55"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ③</div><div class="q-text">"We call him Little Tiger." 属于哪种句型？</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. SVO</button><button class="opt" onclick="quizPick(this,false)">B. SVOO</button><button class="opt" onclick="quizPick(this,true)">C. SVOC</button></div><div class="feedback" id="fq56"></div></div>
+</section>
+
+<!-- ===== 2. 冠词深化系统 ===== -->
+<section>
+  <div class="sec-title"><span class="num">2</span>冠词深化系统 · a / an / the / 零冠词</div>
+  <div class="sec-desc">冠词只有三个词，却是考试失分重灾区。关键不是"加不加 the"，而是"为什么加/为什么不加"。按声音（不是字母）判断 a 还是 an。</div>
+
+  <div class="sub-h">① 不定冠词 a / an（泛指、首次提及、类指）</div>
+  <div class="rule"><div class="label">核心规则</div><div class="txt"><b>a + 辅音音素开头</b>；<b>an + 元音音素开头</b><br>注意：看<span class="hl">声音</span>不是字母！</div></div>
+  <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">❌ 容易错</div><div class="sent">an useful book</div><div class="sent">a hour</div><div class="sent">a honest boy</div><div class="why">字母 u/h 开头但发音不同</div></div><div class="cmp-col right"><div class="tag-s">✅ 正确</div><div class="sent"><b>a</b> useful book（/j/ 辅音）</div><div class="sent"><b>an</b> hour（h 不发音）</div><div class="sent"><b>an</b> honest boy（h 不发音）</div><div class="why">university /juː/ → a</div></div></div>
+
+  <div class="sub-h">② 定冠词 the（特指、独一无二、序数最高级）</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>特指（双方都知道）</h5><div class="mc-ex">Pass me <b>the</b> book.（哪本，都知道）</div></div>
+    <div class="mini-card"><h5>第二次提及</h5><div class="mc-ex">I bought a book. <b>The</b> book is good.</div></div>
+    <div class="mini-card"><h5>独一无二</h5><div class="mc-ex"><b>the</b> sun / moon / earth / sky</div></div>
+    <div class="mini-card"><h5>序数词 & 最高级前</h5><div class="mc-ex"><b>the</b> first / <b>the</b> best / <b>the</b> tallest</div></div>
+    <div class="mini-card"><h5>the + 形容词 = 一类人</h5><div class="mc-ex"><b>the rich</b>（富人）/ <b>the poor</b> / <b>the old</b></div></div>
+    <div class="mini-card"><h5>the + 姓氏复数 = 一家人</h5><div class="mc-ex"><b>the Smiths</b>（史密斯一家）</div></div>
+    <div class="mini-card"><h5>乐器前</h5><div class="mc-ex">play <b>the</b> piano / guitar / violin</div></div>
+    <div class="mini-card"><h5>方位 & 江河海洋</h5><div class="mc-ex">in <b>the</b> east / <b>the</b> Yangtze River</div></div>
+  </div>
+
+  <div class="sub-h">③ 零冠词（不加，常考"不加"的情况）</div>
+  <div class="mnemonic"><div class="label">零冠词六大口诀</div><div class="verse"><span class="hl">① 复数/不可数泛指</span>：Apples are fruit. / Water is important.<br><span class="hl">② 三餐</span>：have breakfast/lunch/dinner<br><span class="hl">③ 球类运动</span>：play basketball/football/tennis<br><span class="hl">④ 学科 & 语言</span>：study English/math/Chinese（注：the Chinese language 才加 the）<br><span class="hl">⑤ 节假日 & 专有名词</span>：Christmas / China / Beijing<br><span class="hl">⑥ 交通方式 by</span>：by bus/car/bike（但 on the bus）</div></div>
+
+  <div class="sub-h">易错对比（一词之差，意思全变）</div>
+  <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">不加冠词</div><div class="sent">go to <b>school</b>（上学）</div><div class="sent">in <b>hospital</b>（住院）</div><div class="sent">at <b>table</b>（在吃饭）</div><div class="sent">in <b>front of</b>（外部前面）</div></div><div class="cmp-col right"><div class="tag-s">加 the</div><div class="sent">go to <b>the school</b>（去学校办事）</div><div class="sent">in <b>the hospital</b>（在医院里）</div><div class="sent">at <b>the table</b>（坐在桌旁）</div><div class="sent">in <b>the front of</b>（内部前面）</div></div></div>
+
+  <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">I had ____ orange and ____ banana for ____ breakfast this morning.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. an; a; /</button><button class="opt" onclick="quizPick(this,false)">B. an; a; the</button><button class="opt" onclick="quizPick(this,false)">C. a; an; /</button></div><div class="feedback" id="fq57"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">____ sun rises in ____ east and sets in ____ west.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. The; /; /</button><button class="opt" onclick="quizPick(this,true)">B. The; the; the</button><button class="opt" onclick="quizPick(this,false)">C. A; the; the</button></div><div class="feedback" id="fq58"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ③</div><div class="q-text">My little sister is learning to play ____ piano, and I like playing ____ chess.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. /; /</button><button class="opt" onclick="quizPick(this,false)">B. the; the</button><button class="opt" onclick="quizPick(this,true)">C. the; /</button></div><div class="feedback" id="fq59"></div></div>
+</section>
+
+<!-- ===== 3. 介词系统辨析 ===== -->
+<section>
+  <div class="sec-title"><span class="num">3</span>介词系统辨析 · in / on / at 全打通</div>
+  <div class="sec-desc">介词没有逻辑可言，靠搭配记忆。但时间和地点的 in/on/at 有清晰规律，方位介词有画面感，掌握后能少丢一半介词分。</div>
+
+  <div class="sub-h">① 时间：in / on / at（由大到小）</div>
+  <div class="block">
+    <div class="rule" style="margin:0 0 10px"><div class="label">at + 具体时刻</div><div class="txt">at 8 o'clock / at noon / at night / at midnight</div></div>
+    <div class="rule" style="margin:0 0 10px"><div class="label">on + 具体某天 / 某天的某时</div><div class="txt">on Monday / on July 1st / on a cold morning / on Sunday afternoon</div></div>
+    <div class="rule" style="margin:0"><div class="label">in + 月 / 年 / 季节 / 上下午</div><div class="txt">in May / in 2020 / in spring / in the morning（但 on a morning）</div></div>
+  </div>
+  <div class="mnemonic"><div class="label">时间口诀</div><div class="verse">大用 <span class="hl">in</span>（年月季节上下午）<br>日用 <span class="hl">on</span>（星期日期某天上午）<br>点用 <span class="hl">at</span>（时刻正午午夜）</div></div>
+
+  <div class="sub-h">② 地点：in / on / at</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>at + 小地点/具体点</h5><div class="mc-ex">at the door / at home / at the bus stop</div></div>
+    <div class="mini-card"><h5>in + 大地方/内部</h5><div class="mc-ex">in China / in the room / in the box</div></div>
+    <div class="mini-card"><h5>on + 表面/接触</h5><div class="mc-ex">on the desk / on the wall / on the floor</div></div>
+  </div>
+
+  <div class="sub-h">③ 方位介词（画面记忆）</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>over / above</h5><div class="mc-ex">over = 正上方（不接触）</div><div class="mc-ex">above = 上方（不一定正上）</div></div>
+    <div class="mini-card"><h5>under / below</h5><div class="mc-ex">under = 正下方</div><div class="mc-ex">below = 下方</div></div>
+    <div class="mini-card"><h5>between / among</h5><div class="mc-ex">between = 两者之间</div><div class="mc-ex">among = 三者或以上之间</div></div>
+    <div class="mini-card"><h5>across / through</h5><div class="mc-ex">across = 表面穿过（过街/过桥）</div><div class="mc-ex">through = 内部穿过（森林/隧道）</div></div>
+    <div class="mini-card"><h5>along / around</h5><div class="mc-ex">along = 沿着</div><div class="mc-ex">around = 环绕/在周围</div></div>
+    <div class="mini-card"><h5>into / out of</h5><div class="mc-ex">into = 进入</div><div class="mc-ex">out of = 出来</div></div>
+  </div>
+
+  <div class="sub-h">④ 高频搭配陷阱</div>
+  <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">易混 A</div><div class="sent">be good <b>at</b>（擅长）</div><div class="sent">be good <b>for</b>（对...有益）</div></div><div class="cmp-col right"><div class="tag-s">易混 B</div><div class="sent">be angry <b>with</b> sb（生某人气）</div><div class="sent">be angry <b>at</b> sth（因某事生气）</div></div></div>
+  <div class="cmp"><div class="cmp-col wrong"><div class="tag-s">made 系列</div><div class="sent">be made <b>of</b>（看得出材料：桌子→木）</div><div class="sent">be made <b>from</b>（看不出：酒→葡萄）</div></div><div class="cmp-col right"><div class="tag-s">way 系列</div><div class="sent">in the way（挡路）</div><div class="sent">on the way（在路上）/ by the way（顺便）</div></div></div>
+
+  <div class="mnemonic"><div class="label">for vs since（现在完成时黄金搭档）</div><div class="verse"><span class="hl">for + 时间段</span>（for 3 years）<br><span class="hl">since + 时间点</span>（since 2020 / since he came）<br>两者都配<b>现在完成时</b>！</div></div>
+
+  <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">The meeting will start ____ 9:00 ____ Monday morning.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. at; in</button><button class="opt" onclick="quizPick(this,true)">B. at; on</button><button class="opt" onclick="quizPick(this,false)">C. on; at</button></div><div class="feedback" id="fq60"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">Walk ____ the bridge, and you'll see the bank ____ your right.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. across; on</button><button class="opt" onclick="quizPick(this,false)">B. through; in</button><button class="opt" onclick="quizPick(this,false)">C. along; at</button></div><div class="feedback" id="fq61"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ③</div><div class="q-text">This desk is made ____ wood, and paper is made ____ wood too.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. of; of</button><button class="opt" onclick="quizPick(this,true)">B. of; from</button><button class="opt" onclick="quizPick(this,false)">C. from; of</button></div><div class="feedback" id="fq62"></div></div>
+</section>
+
+<!-- ===== 4. 形容词副词排序与位置 ===== -->
+<section>
+  <div class="sec-title"><span class="num">4</span>形容词副词排序与位置</div>
+  <div class="sec-desc">多个形容词修饰一个名词时，顺序有固定规则；副词在句中的位置也因类型而异。这两点看似细节，却是写作和单选的高频扣分点。</div>
+
+  <div class="sub-h">① 多个形容词排序（OPSHACOM 口诀）</div>
+  <div class="mnemonic"><div class="label">OPSHACOM 口诀</div><div class="verse"><span class="hl">O</span>pinion 看法（beautiful/nice/ugly）<br><span class="hl">S</span>ize 大小（big/small/tall）<br><span class="hl">H</span>ape 形状（round/square）<br><span class="hl">A</span>ge 年龄新旧（old/new/young）<br><span class="hl">C</span>olor 颜色（red/blue）<br><span class="hl">O</span>rigin 产地国籍（Chinese/American）<br><span class="hl">M</span>aterial 材料（wooden/silk/plastic）<br>中文记忆：<span class="hl">限描大形年色产材</span></div></div>
+  <div class="example-row">a <b>beautiful small round old red Chinese wooden</b> table</div>
+  <div class="example-row">a <b>nice big new black Japanese</b> car</div>
+  <div class="example-row">She has a <b>lovely little white</b> dog.</div>
+
+  <div class="sub-h">② 副词位置规则</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>频率副词 always/usually/often</h5><div class="mc-ex">be/情态/助动词<b>后</b>，实义动词<b>前</b></div><div class="mc-ex">She is <b>always</b> late. / He <b>often</b> plays.</div></div>
+    <div class="mini-card"><h5>程度副词 very/quite/rather</h5><div class="mc-ex">修饰形/副，放<b>前面</b></div><div class="mc-ex"><b>very</b> good / <b>quite</b> slowly</div></div>
+    <div class="mini-card"><h5>方式副词 well/fast/carefully</h5><div class="mc-ex">动词后或宾语后</div><div class="mc-ex">He runs <b>fast</b>. / She speaks English <b>well</b>.</div></div>
+    <div class="mini-card"><h5>时间/地点副词</h5><div class="mc-ex">句首或句末</div><div class="mc-ex"><b>Yesterday</b> I saw him. / I saw him <b>yesterday</b>.</div></div>
+  </div>
+
+  <div class="sub-h">③ 两个特殊位置（超高频错误）</div>
+  <div class="trap"><div class="icon">⚠</div><div class="body"><h5>坑 1：enough 的位置</h5><p><b>enough</b> 修饰形容词/副词时放<b>后面</b>，修饰名词时可前可后：<br>❌ enough good → ✅ <b>good enough</b><br>❌ enough old → ✅ <b>old enough</b><br>✅ enough food / food enough（名词可前可后）</p></div></div>
+  <div class="trap"><div class="icon">⚠</div><div class="body"><h5>坑 2：形容词修饰复合不定代词要后置</h5><p>something / anything / nothing / everything + 形容词，<b>形容词放后面</b>：<br>❌ important something → ✅ <b>something important</b><br>❌ wrong anything → ✅ <b>anything wrong</b><br>❌ else anything → ✅ <b>anything else</b></p></div></div>
+
+  <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">There is ____ car parked outside our school.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. a red big Japanese</button><button class="opt" onclick="quizPick(this,true)">B. a big red Japanese</button><button class="opt" onclick="quizPick(this,false)">C. a Japanese big red</button></div><div class="feedback" id="fq63"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">Tom is ____ to join the army this year.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. enough old</button><button class="opt" onclick="quizPick(this,true)">B. old enough</button><button class="opt" onclick="quizPick(this,false)">C. very enough old</button></div><div class="feedback" id="fq64"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ③</div><div class="q-text">There is ____ with my computer. I need to have it fixed.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. wrong something</button><button class="opt" onclick="quizPick(this,true)">B. something wrong</button><button class="opt" onclick="quizPick(this,false)">C. anything wrong</button></div><div class="feedback" id="fq65"></div></div>
+</section>
+
+<!-- ===== 5. 语法信号词速查 ===== -->
+<section>
+  <div class="sec-title"><span class="num">5</span>语法信号词速查 · 提分利器</div>
+  <div class="sec-desc">看到某些词，就知道该用什么时态/句型——这就是"信号词"。掌握了它，单选题能秒杀一半。下面是初中阶段最高频的信号词全表。</div>
+
+  <div class="sub-h">① 时态信号词（最高频）</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>一般现在时</h5><div class="mc-ex">always / usually / often / sometimes / every day / on Sundays</div></div>
+    <div class="mini-card"><h5>一般过去时</h5><div class="mc-ex">yesterday / last week / ...ago / in 1990 / just now / the other day</div></div>
+    <div class="mini-card"><h5>一般将来时</h5><div class="mc-ex">tomorrow / next week / soon / in the future / this evening</div></div>
+    <div class="mini-card"><h5>现在进行时</h5><div class="mc-ex"><b>now / Look! / Listen!</b> / at this moment / these days</div></div>
+    <div class="mini-card"><h5>过去进行时</h5><div class="mc-ex">at 8 yesterday / at that time / when / while</div></div>
+    <div class="mini-card"><h5>现在完成时 ★</h5><div class="mc-ex"><b>already / yet / just / ever / never / before / recently / so far</b><br><b>since + 点 / for + 段</b> / in the past few years</div></div>
+    <div class="mini-card"><h5>过去完成时</h5><div class="mc-ex"><b>by the time...</b> / by the end of last... / before + 过去时间</div></div>
+    <div class="mini-card"><h5>主将从现</h5><div class="mc-ex">when / as soon as / if / unless / before / after + 现在时</div></div>
+  </div>
+
+  <div class="mnemonic"><div class="label">现在完成时信号词口诀</div><div class="verse">已经 already 还没 yet，刚刚 just 曾经 ever<br>从不 never 以前 before，最近 recently 到现在 so far<br>since 配点 for 配段，过去几年 in the past</div></div>
+
+  <div class="sub-h">② 语态/句型信号词</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>被动语态信号</h5><div class="mc-ex"><b>by + 动作发出者</b> → 被动<br>be + done 形式 → 被动</div></div>
+    <div class="mini-card"><h5>倒装信号</h5><div class="mc-ex">So + 助动词 + 主语（也这样）<br>Neither + 助动词 + 主语（也不）</div></div>
+    <div class="mini-card"><h5>感叹句信号</h5><div class="mc-ex"><b>What (a/an)</b> + 形 + 名！<br><b>How</b> + 形/副！</div></div>
+    <div class="mini-card"><h5>不定式信号</h5><div class="mc-ex">want / hope / decide / agree / refuse + <b>to do</b></div></div>
+  </div>
+
+  <div class="trap"><div class="icon">⚠</div><div class="body"><h5>易混：just vs just now</h5><p><b>just</b> = 刚刚（配<b>现在完成时</b>）→ He has just left.<br><b>just now</b> = 刚才（配<b>一般过去时</b>）→ He left just now.<br>一字之差，时态完全不同！</p></div></div>
+
+  <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">Look! The children ____ happily in the garden.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. play</button><button class="opt" onclick="quizPick(this,true)">B. are playing</button><button class="opt" onclick="quizPick(this,false)">C. played</button></div><div class="feedback" id="fq66"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">I ____ my keys. I can't open the door now.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. lost</button><button class="opt" onclick="quizPick(this,true)">B. have lost</button><button class="opt" onclick="quizPick(this,false)">C. lose</button></div><div class="feedback" id="fq67"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ③</div><div class="q-text">By the time he ____ at the station, the train ____.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. arrived; had left</button><button class="opt" onclick="quizPick(this,false)">B. arrives; left</button><button class="opt" onclick="quizPick(this,false)">C. arrived; left</button></div><div class="feedback" id="fq68"></div></div>
+</section>
+
+<!-- ===== 6. 短语动词汇总 ===== -->
+<section>
+  <div class="sec-title"><span class="num">6</span>短语动词汇总 · 六大系列</div>
+  <div class="sec-desc">短语动词 = 动词 + 介词/副词，意思往往"1+1≠2"。初中常考六大家族，记住这些，完形和单选都不慌。</div>
+
+  <div class="grid2">
+    <div class="mini-card"><h5>👀 look 系列</h5><div class="mc-ex">look after 照顾</div><div class="mc-ex">look at 看</div><div class="mc-ex">look for 寻找</div><div class="mc-ex">look up 查阅/抬头</div><div class="mc-ex">look out 小心！</div><div class="mc-ex">look like 看起来像</div><div class="mc-ex">look forward to 期待（+doing）</div></div>
+    <div class="mini-card"><h5>🏃 get 系列</h5><div class="mc-ex">get up 起床</div><div class="mc-ex">get on 上车/相处</div><div class="mc-ex">get off 下车</div><div class="mc-ex">get to 到达</div><div class="mc-ex">get back 回来/取回</div><div class="mc-ex">get along with 与...相处</div><div class="mc-ex">get ready for 准备</div></div>
+    <div class="mini-card"><h5>✋ take 系列</h5><div class="mc-ex">take off 起飞/脱下</div><div class="mc-ex">take care of 照顾</div><div class="mc-ex">take part in 参加</div><div class="mc-ex">take place 发生/举行</div><div class="mc-ex">take out 拿出</div><div class="mc-ex">take away 带走</div><div class="mc-ex">take down 记下</div></div>
+    <div class="mini-card"><h5>🔨 make 系列</h5><div class="mc-ex">make up 编造/组成</div><div class="mc-ex">make sure 确保</div><div class="mc-ex">make friends 交朋友</div><div class="mc-ex">make a decision 决定</div><div class="mc-ex">make money 赚钱</div><div class="mc-ex">make progress 进步</div><div class="mc-ex">make sense 有意义</div></div>
+    <div class="mini-card"><h5>🔄 turn 系列</h5><div class="mc-ex">turn on 打开</div><div class="mc-ex">turn off 关闭</div><div class="mc-ex">turn up 调大/出现</div><div class="mc-ex">turn down 调小/拒绝</div><div class="mc-ex">turn over 翻转</div><div class="mc-ex">turn into 变成</div></div>
+    <div class="mini-card"><h5>📦 put / give 系列</h5><div class="mc-ex">put on 穿上/上演</div><div class="mc-ex">put off 推迟</div><div class="mc-ex">put up 张贴/举起</div><div class="mc-ex">put away 收好</div><div class="mc-ex">give up 放弃</div><div class="mc-ex">give in 屈服</div><div class="mc-ex">give back 归还</div></div>
+  </div>
+
+  <div class="trap"><div class="icon">⚠</div><div class="body"><h5>易混：turn on/off vs turn up/down</h5><p><b>turn on/off</b> = 打开/关闭（开关）<br><b>turn up/down</b> = 调大/调小（音量、温度）<br>❌ turn up the TV（开电视）→ ✅ <b>turn on</b> the TV<br>✅ turn <b>up</b> the TV（把音量调大）</p></div></div>
+
+  <div class="mnemonic"><div class="label">look forward to 特别提醒</div><div class="verse">这里 <span class="hl">to 是介词</span>，后面接 doing！<br>I look forward to <b>hearing</b> from you.（不是 hear）<br>类似：be used to / pay attention to / prefer...to...</div></div>
+
+  <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">Please ____ the TV. I want to watch the news.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. turn on</button><button class="opt" onclick="quizPick(this,false)">B. turn off</button><button class="opt" onclick="quizPick(this,false)">C. turn down</button></div><div class="feedback" id="fq69"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">Don't ____ trying. You'll succeed someday.</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. give up</button><button class="opt" onclick="quizPick(this,false)">B. give in</button><button class="opt" onclick="quizPick(this,false)">C. give back</button></div><div class="feedback" id="fq70"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ③</div><div class="q-text">Great changes have ____ in our city in the past few years.</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. taken off</button><button class="opt" onclick="quizPick(this,true)">B. taken place</button><button class="opt" onclick="quizPick(this,false)">C. taken care of</button></div><div class="feedback" id="fq71"></div></div>
+</section>
+
+<!-- ===== 7. 小测题难度分级与复习策略 ===== -->
+<section>
+  <div class="sec-title"><span class="num">7</span>小测题难度分级 · 复习策略</div>
+  <div class="sec-desc">全手册共约 88 道小测题。按难度分三级，建议按"基础 → 进阶 → 冲刺"顺序刷题，错了就回到对应板块重看规则。</div>
+
+  <div class="sub-h">三级难度说明</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>🟢 基础题（直接套规则）</h5><div class="mc-nt">特征：信号词明显，套用单一规则即可</div><div class="mc-ex">例：Look! → 现在进行时</div><div class="mc-ex">例：an hour（h 不发音）</div><div class="mc-nt">目标：正确率 95%+，错题回看口诀</div></div>
+    <div class="mini-card"><h5>🟡 进阶题（需判断语境）</h5><div class="mc-nt">特征：需对比时态/辨析近义词/考虑语序</div><div class="mc-ex">例：just（完成时）vs just now（过去时）</div><div class="mc-ex">例：across vs through</div><div class="mc-nt">目标：正确率 80%+，错题记入错题本</div></div>
+    <div class="mini-card"><h5>🔴 冲刺题（综合/陷阱）</h5><div class="mc-nt">特征：多规则综合 + 常见陷阱</div><div class="mc-ex">例：enough 位置 + 复合不定代词后置</div><div class="mc-ex">例：so/neither 倒装 + 时态呼应</div><div class="mc-nt">目标：正确率 70%+，重点突破</div></div>
+    <div class="mini-card"><h5>📌 做题建议</h5><div class="mc-ex">① 先按板块顺序刷（巩固单一考点）</div><div class="mc-ex">② 再去「📝 综合自测」做 30 题混合卷</div><div class="mc-ex">③ 错题标注原因（规则没记牢/陷阱没识别）</div><div class="mc-ex">④ 二刷只做错题，直到全对</div></div>
+  </div>
+
+  <div class="sub-h">各板块难度分布速查</div>
+  <div class="block">
+    <div class="rule" style="margin:0 0 10px"><div class="label">八大支柱详解（fb0-fb15 + fq0-fq29）</div><div class="txt">基础为主：时态信号词、被动语态 be done、主谓一致就近/就远。进阶：宾语从句语序、反意疑问特殊、间接引语时态退一格。</div></div>
+    <div class="rule" style="margin:0 0 10px"><div class="label">补充强化（fq30-fq53）</div><div class="txt">进阶为主：情态推测 must/can't、should have done 虚拟、as...as、the more the more、固定搭配 be used to doing、双重所有格、so/neither 倒装。</div></div>
+    <div class="rule" style="margin:0"><div class="label">攻坚进阶（fq54-fq71，本 Tab）</div><div class="txt">基础+进阶混合：五大句型辨析（SVOC 最易错）、冠词 a/an 声音判断、介词 across/through、OPSHACOM 排序、enough 位置、复合不定代词后置、just vs just now、短语动词六系列。</div></div>
+  </div>
+
+  <div class="mnemonic"><div class="label">错题三刷法</div><div class="verse"><span class="hl">一刷</span>：按板块顺序做，错题打 ⭐ 标记<br><span class="hl">二刷</span>：只做 ⭐ 题，再错打 ⭐⭐<br><span class="hl">三刷</span>：只做 ⭐⭐ 题，直到全对<br>每题必问：<b>为什么选这个？为什么不选其他？</b></div></div>
+
+  <div class="tip-bar" style="margin-top:20px">★ 全部学完后，回到「📝 综合自测」做 30 题混合卷验证。正确率 85%+ 即可放心进入下一阶段学习。</div>
+</section>
+
+</div><!-- /topPanel5 -->
+
+<!-- ███████████████████████████████████████████████████████████████ -->
+<!-- ██████████  顶层 Tab 6：单词记忆与语法闭环（6 板块 + 18 题）  █████ -->
+<!-- ███████████████████████████████████████████████████████████████ -->
+<div class="top-panel" id="topPanel6">
+
+<div class="page-h" style="margin:24px 0 8px">🧠 单词记忆与语法闭环</div>
+<div class="sec-desc" style="margin-bottom:24px">前面学了语法规则，但没有单词，规则就是空架子。这个 Tab 教你「词根词缀法 + 猜词法 + 语境法」三招记单词，并用 50 个初中高频词造句——<b>每个例句都暗藏一个前面讲过的语法点</b>，记单词的同时复习语法，形成完整闭环。</div>
+
+<!-- ===== 1. 三大记忆法总览 ===== -->
+<section>
+  <div class="sec-title"><span class="num">1</span>三大记忆法 · 不再死记硬背</div>
+  <div class="sec-desc">死记 = 记了忘，忘了记。真正高效的方法是给单词"找根、找伴、找场景"。下面三种方法配合使用，效率提升 3 倍。</div>
+
+  <div class="grid2">
+    <div class="mini-card"><h5>🌱 词根词缀法（最强）</h5><div class="mc-ex">一个词根 = 一串单词</div><div class="mc-ex">port（搬运）→ import 进口 / export 出口 / transport 运输</div><div class="mc-nt">记住 1 个词根，秒记 5-10 个词</div></div>
+    <div class="mini-card"><h5>🔗 联想法（最有趣）</h5><div class="mc-ex">pest（害虫）→ "拍死它"</div><div class="mc-ex">family → Father And Mother I Love You</div><div class="mc-nt">用谐音/拆字编故事</div></div>
+    <div class="mini-card"><h5>📖 语境法（最牢）</h5><div class="mc-ex">把单词放进<b>句子</b>里记</div><div class="mc-ex">记 "careful" → 记 "Be careful when you cross the street."</div><div class="mc-nt">有场景，才记得住、用得出</div></div>
+    <div class="mini-card"><h5>🔁 艾宾浩斯复习法</h5><div class="mc-ex">第 1 天 → 第 2 天 → 第 4 天 → 第 7 天 → 第 15 天</div><div class="mc-nt">在"快要忘记时"复习，记忆最牢</div></div>
+  </div>
+
+  <div class="mnemonic"><div class="label">记单词黄金公式</div><div class="verse"><span class="hl">词根</span>（核心意思）+ <span class="hl">词缀</span>（修饰方向）+ <span class="hl">例句</span>（语法场景）<br>= 记一个 = 记一串 + 复习一个语法点</div></div>
+</section>
+
+<!-- ===== 2. 高频词根表 ===== -->
+<section>
+  <div class="sec-title"><span class="num">2</span>初中高频词根表 · 记一顶十</div>
+  <div class="sec-desc">下面 15 个词根覆盖初中阶段数百个单词。记住词根意思，遇到生词也能猜个八九不离十。</div>
+
+  <div class="grid2">
+    <div class="mini-card"><h5>act 行动</h5><div class="mc-ex">act 行动 / action 行为 / active 活跃的 / actor 演员 / activity 活动</div></div>
+    <div class="mini-card"><h5>port 搬运</h5><div class="mc-ex">import 进口 / export 出口 / transport 运输 / report 报告 / portable 便携的</div></div>
+    <div class="mini-card"><h5>spect 看</h5><div class="mc-ex">inspect 检查 / respect 尊重 / suspect 怀疑</div></div>
+    <div class="mini-card"><h5>vis/vid 看</h5><div class="mc-ex">visit 参观 / vision 视力 / television 电视 / video 视频</div></div>
+    <div class="mini-card"><h5>dict 说</h5><div class="mc-ex">dictionary 词典 / predict 预言 / dictation 听写</div></div>
+    <div class="mini-card"><h5>scrib/script 写</h5><div class="mc-ex">write 写 / describe 描述 / script 脚本</div></div>
+    <div class="mini-card"><h5>ject 投掷</h5><div class="mc-ex">project 项目 / reject 拒绝 / subject 主题</div></div>
+    <div class="mini-card"><h5>struct 建造</h5><div class="mc-ex">structure 结构 / construct 建造 / instruct 指导</div></div>
+    <div class="mini-card"><h5>form 形状</h5><div class="mc-ex">form 形成 / information 信息 / reform 改革 / uniform 制服</div></div>
+    <div class="mini-card"><h5>port 港口（同上延伸）</h5><div class="mc-ex">airport 机场 / passport 护照 / passport 港口证件</div></div>
+    <div class="mini-card"><h5>ject 抛</h5><div class="mc-ex">eject 喷射 / inject 注射</div></div>
+    <div class="mini-card"><h5>tain 拿住</h5><div class="mc-ex">contain 包含 / maintain 维持 / obtain 获得</div></div>
+    <div class="mini-card"><h5>duce/duct 引导</h5><div class="mc-ex">produce 生产 / introduce 介绍 / education 教育 / reduce 减少</div></div>
+    <div class="mini-card"><h5>mit/miss 送</h5><div class="mc-ex">submit 提交 / permit 允许 / admission 入场</div></div>
+    <div class="mini-card"><h5>ply/ply 折叠</h5><div class="mc-ex">reply 回答 / apply 申请 / supply 供应</div></div>
+  </div>
+</section>
+
+<!-- ===== 3. 前缀后缀速查 ===== -->
+<section>
+  <div class="sec-title"><span class="num">3</span>前缀后缀速查 · 拆词猜义</div>
+  <div class="sec-desc">前缀改变<b>意思</b>，后缀改变<b>词性</b>。记住这张表，遇到生词先"拆"——把前后缀去掉看词根，意思就浮出来了。</div>
+
+  <div class="sub-h">① 常见前缀（改变意思）</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>un- 不/相反</h5><div class="mc-ex">happy → <b>un</b>happy 不快乐</div><div class="mc-ex">usual → <b>un</b>usual 不寻常</div></div>
+    <div class="mini-card"><h5>dis- 不/否定</h5><div class="mc-ex">like → <b>dis</b>like 讨厌</div><div class="mc-ex">agree → <b>dis</b>agree 不同意</div></div>
+    <div class="mini-card"><h5>re- 再/重新</h5><div class="mc-ex">build → <b>re</b>build 重建</div><div class="mc-ex">write → <b>re</b>write 重写</div></div>
+    <div class="mini-card"><h5>pre- 在前</h5><div class="mc-ex"><b>pre</b>view 预习</div><div class="mc-ex"><b>pre</b>pare 准备</div></div>
+    <div class="mini-card"><h5>over- 过度</h5><div class="mc-ex"><b>over</b>work 过度工作</div><div class="mc-ex"><b>over</b>eat 吃太多</div></div>
+    <div class="mini-card"><h5>mis- 错</h5><div class="mc-ex"><b>mis</b>take 错误</div><div class="mc-ex"><b>mis</b>understand 误解</div></div>
+  </div>
+
+  <div class="sub-h">② 常见后缀（改变词性）</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>-er/-or 人/工具</h5><div class="mc-ex">teach → teach<b>er</b> 老师</div><div class="mc-ex">visit → visit<b>or</b> 访客</div></div>
+    <div class="mini-card"><h5>-tion/-sion 名词</h5><div class="mc-ex">educate → educa<b>tion</b> 教育</div><div class="mc-ex">decide → deci<b>sion</b> 决定</div></div>
+    <div class="mini-card"><h5>-ful 充满</h5><div class="mc-ex">care → care<b>ful</b> 小心的</div><div class="mc-ex">use → use<b>ful</b> 有用的</div></div>
+    <div class="mini-card"><h5>-less 无</h5><div class="mc-ex">care → care<b>less</b> 粗心的</div><div class="mc-ex">use → use<b>less</b> 无用的</div></div>
+    <div class="mini-card"><h5>-ly 副词/形容词</h5><div class="mc-ex">quick → quick<b>ly</b> 快地</div><div class="mc-ex">friend → friend<b>ly</b> 友好的</div></div>
+    <div class="mini-card"><h5>-y 形容词</h5><div class="mc-ex">sun → sun<b>ny</b> 晴朗的</div><div class="mc-ex">rain → rain<b>y</b> 下雨的</div></div>
+    <div class="mini-card"><h5>-able/-ible 能...的</h5><div class="mc-ex">read → read<b>able</b> 可读的</div><div class="mc-ex">eat → eat<b>able</b> 可吃的</div></div>
+    <div class="mini-card"><h5>-ment 名词</h5><div class="mc-ex">develop → develop<b>ment</b> 发展</div><div class="mc-ex">agree → agree<b>ment</b> 协议</div></div>
+    <div class="mini-card"><h5>-ness 名词</h5><div class="mc-ex">happy → happi<b>ness</b> 幸福</div><div class="mc-ex">ill → ill<b>ness</b> 疾病</div></div>
+    <div class="mini-card"><h5>-al 形容词</h5><div class="mc-ex">nature → natur<b>al</b> 自然的</div><div class="mc-ex">tradition → tradition<b>al</b> 传统的</div></div>
+    <div class="mini-card"><h5>-ive 形容词</h5><div class="mc-ex">act → act<b>ive</b> 活跃的</div><div class="mc-ex">create → creat<b>ive</b> 有创造力的</div></div>
+    <div class="mini-card"><h5>-ous 形容词</h5><div class="mc-ex">danger → danger<b>ous</b> 危险的</div><div class="mc-ex">fame → fam<b>ous</b> 著名的</div></div>
+  </div>
+
+  <div class="mnemonic"><div class="label">拆词三步法</div><div class="verse">第①步：去<b>前缀</b>（un/dis/re...）<br>第②步：去<b>后缀</b>（-tion/-ful/-ly...）<br>第③步：剩下的就是<b>词根</b> → 核心意思</div></div>
+
+  <div class="example-row">unhappiness = <b>un</b>(不) + <b>happi</b>(快乐) + <b>ness</b>(名词) = 不快乐（名词）</div>
+  <div class="example-row">reusable = <b>re</b>(再) + <b>us</b>(用) + <b>able</b>(能) = 能再次使用的</div>
+</section>
+
+<!-- ===== 4. 猜词五招 ===== -->
+<section>
+  <div class="sec-title"><span class="num">4</span>猜词五招 · 阅读生词不慌</div>
+  <div class="sec-desc">考试阅读一定会遇到不认识的词。猜词不是瞎猜，有 5 种系统方法。掌握后，阅读理解正确率能提一大截。</div>
+
+  <div class="grid2">
+    <div class="mini-card"><h5>① 词根词缀法</h5><div class="mc-ex">看到 disagreement = dis + agree + ment = 不同意（名词）</div><div class="mc-nt">最可靠，优先用</div></div>
+    <div class="mini-card"><h5>② 上下文定义</h5><div class="mc-ex">A <b>volunteer</b>, a person who works without pay, helped us.</div><div class="mc-nt">逗号间的同位语常给定义</div></div>
+    <div class="mini-card"><h5>③ 转折/对比</h5><div class="mc-ex">He is <b>hardworking</b>, <u>but</u> his brother is <b>lazy</b>.</div><div class="mc-nt">but/however 前后反义</div></div>
+    <div class="mini-card"><h5>④ 并列同义</h5><div class="mc-ex">She is <b>kind</b> and <b>generous</b>.</div><div class="mc-nt">and 前后近义</div></div>
+    <div class="mini-card"><h5>⑤ 因果推理</h5><div class="mc-ex">He <b>overslept</b>, <u>so</u> he was late.</div><div class="mc-nt">so/because 给因果线索</div></div>
+    <div class="mini-card"><h5>⑥ 词性判断</h5><div class="mc-ex">-ly 多副词，-tion 多名词，-ful 多形容词</div><div class="mc-nt">先判断词性，再缩小范围</div></div>
+  </div>
+
+  <div class="trap"><div class="icon">⚠</div><div class="body"><h5>注意：词根也会"骗人"</h5><p>有些词看似有词根，其实意思不同：<br><b>inform</b>（通知）≠ in + form（在表格里）<br><b>discover</b>（发现）= dis + cover（揭开盖子）✓<br>词根法是<b>辅助</b>，最终要靠语境确认。</p></div></div>
+
+  <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">根据构词法，"unfriendly" 的意思是？</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. 友好的</button><button class="opt" onclick="quizPick(this,true)">B. 不友好的</button><button class="opt" onclick="quizPick(this,false)">C. 朋友</button></div><div class="feedback" id="fq72"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">"He is very careful, but his brother is ____." 根据对比猜词：</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. careless</button><button class="opt" onclick="quizPick(this,false)">B. careful</button><button class="opt" onclick="quizPick(this,false)">C. carefully</button></div><div class="feedback" id="fq73"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ③</div><div class="q-text">"reusable" 的意思是？</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. 不能用的</button><button class="opt" onclick="quizPick(this,true)">B. 可再次使用的</button><button class="opt" onclick="quizPick(this,false)">C. 使用过的</button></div><div class="feedback" id="fq74"></div></div>
+</section>
+
+<!-- ===== 5. 50 个初中高频词 · 语法融合例句 ===== -->
+<section>
+  <div class="sec-title"><span class="num">5</span>50 个初中高频词 · 语法融合例句</div>
+  <div class="sec-desc">下面 50 个词按词根/词缀分组，每个词配一个例句——<b>例句里藏着前面讲过的语法点</b>（时态/从句/被动/虚拟/倒装...）。记单词 = 记语法，一箭双雕。看例句时先找语法点，再记单词。</div>
+
+  <div class="sub-h">第①组：act 行动（5 词）</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>1. act /ækt/ 行动；表演</h5><div class="mc-ex"><b>Look! The actor is acting on the stage.</b></div><div class="mc-nt">语法点：<b>现在进行时</b>（Look! 信号词）+ actor = act + or（人）</div></div>
+    <div class="mini-card"><h5>2. action /ˈækʃn/ 行动（名词）</h5><div class="mc-ex"><b>Actions speak louder than words.</b></div><div class="mc-nt">语法点：<b>比较级</b> louder than + action = act + ion（名词）</div></div>
+    <div class="mini-card"><h5>3. active /ˈæktɪv/ 活跃的</h5><div class="mc-ex"><b>She is one of the most active students who have joined the club.</b></div><div class="mc-nt">语法点：<b>定语从句</b> who... + 最高级 the most active + active = act + ive</div></div>
+    <div class="mini-card"><h5>4. activity /ækˈtɪvəti/ 活动</h5><div class="mc-ex"><b>Many activities have been held since last month.</b></div><div class="mc-nt">语法点：<b>现在完成时被动</b> have been held + since 信号词</div></div>
+    <div class="mini-card"><h5>5. actor /ˈæktə(r)/ 演员</h5><div class="mc-ex"><b>The actor who won the prize said he would make more movies.</b></div><div class="mc-nt">语法点：<b>宾语从句</b> he would...（时态退一格）+ 定语从句 who won</div></div>
+  </div>
+
+  <div class="sub-h">第②组：port 搬运（5 词）</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>6. import /ɪmˈpɔːt/ 进口</h5><div class="mc-ex"><b>The wine imported from France is very expensive.</b></div><div class="mc-nt">语法点：<b>过去分词作后置定语</b> imported from（表被动完成）</div></div>
+    <div class="mini-card"><h5>7. export /ɪkˈspɔːt/ 出口</h5><div class="mc-ex"><b>China exports a large number of goods every year.</b></div><div class="mc-nt">语法点：<b>一般现在时</b>（every year 信号词）+ a large number of</div></div>
+    <div class="mini-card"><h5>8. transport /trænˈspɔːt/ 运输</h5><div class="mc-ex"><b>The goods will be transported by train tomorrow.</b></div><div class="mc-nt">语法点：<b>一般将来时被动</b> will be transported + by（被动信号）</div></div>
+    <div class="mini-card"><h5>9. report /rɪˈpɔːt/ 报告</h5><div class="mc-ex"><b>It was reported that the fire had been put out.</b></div><div class="mc-nt">语法点：<b>It 被动句型</b> It was reported that + 过去完成时被动</div></div>
+    <div class="mini-card"><h5>10. portable /ˈpɔːtəbl/ 便携的</h5><div class="mc-ex"><b>This portable computer is light enough for me to carry.</b></div><div class="mc-nt">语法点：<b>enough 后置</b> light enough + too...to 变体 enough to</div></div>
+  </div>
+
+  <div class="sub-h">第③组：vis/vid 看（5 词）</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>11. visit /ˈvɪzɪt/ 参观</h5><div class="mc-ex"><b>When I visited the museum, I saw an old friend.</b></div><div class="mc-nt">语法点：<b>状语从句</b> When I visited（过去时）</div></div>
+    <div class="mini-card"><h5>12. vision /ˈvɪʒn/ 视力；愿景</h5><div class="mc-ex"><b>He has poor vision, so he must wear glasses.</b></div><div class="mc-nt">语法点：<b>因果状语从句</b> so + must 表必须</div></div>
+    <div class="mini-card"><h5>13. television /ˈtelɪvɪʒn/ 电视</h5><div class="mc-ex"><b>The television which was bought yesterday doesn't work.</b></div><div class="mc-nt">语法点：<b>定语从句</b> which was bought（被动）+ doesn't work</div></div>
+    <div class="mini-card"><h5>14. video /ˈvɪdiəʊ/ 视频</h5><div class="mc-ex"><b>Have you watched the video that I sent you?</b></div><div class="mc-nt">语法点：<b>现在完成时</b> Have you watched + 定语从句 that I sent</div></div>
+    <div class="mini-card"><h5>15. evidence /ˈevɪdəns/ 证据</h5><div class="mc-ex"><b>There is enough evidence to prove he is innocent.</b></div><div class="mc-nt">语法点：<b>There be 句型</b> + enough 后置 + 不定式 to prove</div></div>
+  </div>
+
+  <div class="sub-h">第④组：un- 不（5 词）</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>16. unhappy /ʌnˈhæpi/ 不快乐</h5><div class="mc-ex"><b>She was unhappy because she had failed the exam.</b></div><div class="mc-nt">语法点：<b>过去完成时</b> had failed（过去的过去）+ because 因果从句</div></div>
+    <div class="mini-card"><h5>17. unusual /ʌnˈjuːʒuəl/ 不寻常</h5><div class="mc-ex"><b>It is unusual for him to be late, isn't it?</b></div><div class="mc-nt">语法点：<b>It 句型</b> It is adj for sb to do + <b>反意疑问句</b> isn't it?</div></div>
+    <div class="mini-card"><h5>18. unable /ʌnˈeɪbl/ 不能</h5><div class="mc-ex"><b>He was unable to walk because his leg had been hurt.</b></div><div class="mc-nt">语法点：<b>过去完成时被动</b> had been hurt + unable = un + able</div></div>
+    <div class="mini-card"><h5>19. unfair /ʌnˈfeə(r)/ 不公平</h5><div class="mc-ex"><b>It is unfair that some students have more time than others.</b></div><div class="mc-nt">语法点：<b>主语从句</b> It is adj that... + 比较级 more...than</div></div>
+    <div class="mini-card"><h5>20. unknown /ʌnˈnəʊn/ 未知的</h5><div class="mc-ex"><b>The stranger came from an unknown place.</b></div><div class="mc-nt">语法点：<b>形容词作定语</b> unknown place + unknown = un + known（过去分词）</div></div>
+  </div>
+
+  <div class="sub-h">第⑤组：-ful 充满 / -less 无（6 词）</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>21. careful /ˈkeəfl/ 小心的</h5><div class="mc-ex"><b>Be careful when you cross the street!</b></div><div class="mc-nt">语法点：<b>祈使句</b> Be careful! + 时间状语从句 when</div></div>
+    <div class="mini-card"><h5>22. careless /ˈkeələs/ 粗心的</h5><div class="mc-ex"><b>He is so careless that he often makes mistakes.</b></div><div class="mc-nt">语法点：<b>so...that 结果状语从句</b> + often 频率副词</div></div>
+    <div class="mini-card"><h5>23. useful /ˈjuːsfl/ 有用的</h5><div class="mc-ex"><b>This is the most useful book that I have ever read.</b></div><div class="mc-nt">语法点：<b>最高级</b> the most useful + 现在完成时 + ever 信号词</div></div>
+    <div class="mini-card"><h5>24. useless /ˈjuːsləs/ 无用的</h5><div class="mc-ex"><b>If you don't practice, the skill will become useless.</b></div><div class="mc-nt">语法点：<b>主将从现</b> If 从句用现在时 + become 系动词</div></div>
+    <div class="mini-card"><h5>25. helpful /ˈhelpfl/ 有帮助的</h5><div class="mc-ex"><b>It is helpful of you to help me with my English.</b></div><div class="mc-nt">语法点：<b>It 句型</b> It is adj of sb to do（品质）</div></div>
+    <div class="mini-card"><h5>26. hopeless /ˈhəʊpləs/ 无望的</h5><div class="mc-ex"><b>He felt hopeless after he had been refused three times.</b></div><div class="mc-nt">语法点：<b>过去完成时被动</b> had been refused + after 时间状语</div></div>
+  </div>
+
+  <div class="sub-h">第⑥组：re- 再（5 词）</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>27. return /rɪˈtɜːn/ 返回；归还</h5><div class="mc-ex"><b>I will return the book to the library as soon as I finish it.</b></div><div class="mc-nt">语法点：<b>主将从现</b> as soon as + finish + return = re + turn</div></div>
+    <div class="mini-card"><h5>28. rebuild /ˌriːˈbɪld/ 重建</h5><div class="mc-ex"><b>The old bridge which was rebuilt last year is very strong now.</b></div><div class="mc-nt">语法点：<b>定语从句</b> which was rebuilt（被动）+ last year 过去时</div></div>
+    <div class="mini-card"><h5>29. rewrite /ˌriːˈraɪt/ 重写</h5><div class="mc-ex"><b>The teacher asked us to rewrite the composition.</b></div><div class="mc-nt">语法点：<b>ask sb to do</b> 不定式 + rewrite = re + write</div></div>
+    <div class="mini-card"><h5>30. reuse /ˌriːˈjuːz/ 再使用</h5><div class="mc-ex"><b>We should reuse things to protect the environment.</b></div><div class="mc-nt">语法点：<b>情态动词</b> should + 不定式 to protect 表目的</div></div>
+    <div class="mini-card"><h5>31. review /rɪˈvjuː/ 复习；评论</h5><div class="mc-ex"><b>Review what you have learned before the exam.</b></div><div class="mc-nt">语法点：<b>宾语从句</b> what you have learned（现在完成时）</div></div>
+  </div>
+
+  <div class="sub-h">第⑦组：-tion/-sion 名词（5 词）</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>32. information /ˌɪnfəˈmeɪʃn/ 信息</h5><div class="mc-ex"><b>Can you tell me where I can find the information?</b></div><div class="mc-nt">语法点：<b>宾语从句</b> where I can（陈述语序）+ 不可数名词</div></div>
+    <div class="mini-card"><h5>33. education /ˌedʒuˈkeɪʃn/ 教育</h5><div class="mc-ex"><b>Education is so important that everyone should receive it.</b></div><div class="mc-nt">语法点：<b>so...that 结果状语从句</b> + 情态动词 should</div></div>
+    <div class="mini-card"><h5>34. decision /dɪˈsɪʒn/ 决定</h5><div class="mc-ex"><b>The decision that was made yesterday surprised everyone.</b></div><div class="mc-nt">语法点：<b>定语从句</b> that was made（被动）+ surprised everyone</div></div>
+    <div class="mini-card"><h5>35. invention /ɪnˈvenʃn/ 发明</h5><div class="mc-ex"><b>The telephone, which was invented by Bell, is a great invention.</b></div><div class="mc-nt">语法点：<b>非限制性定语从句</b> which...（逗号隔开）+ 被动</div></div>
+    <div class="mini-card"><h5>36. attention /əˈtenʃn/ 注意</h5><div class="mc-ex"><b>Please pay attention to what the teacher is saying.</b></div><div class="mc-nt">语法点：<b>pay attention to + doing</b>（to 是介词）+ 现在进行时</div></div>
+  </div>
+
+  <div class="sub-h">第⑧组：-ly 副词/形容词（5 词）</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>37. quickly /ˈkwɪkli/ 快地</h5><div class="mc-ex"><b>He ran quickly to catch the bus that had just left.</b></div><div class="mc-nt">语法点：<b>方式副词</b> quickly + 定语从句 that had just left（过去完成时）</div></div>
+    <div class="mini-card"><h5>38. carefully /ˈkeəfəli/ 小心地</h5><div class="mc-ex"><b>She listens carefully so that she won't miss anything.</b></div><div class="mc-nt">语法点：<b>目的状语从句</b> so that + won't = will not</div></div>
+    <div class="mini-card"><h5>39. happily /ˈhæpɪli/ 快乐地</h5><div class="mc-ex"><b>The children were playing happily when it began to rain.</b></div><div class="mc-nt">语法点：<b>过去进行时</b> were playing + when 突发动作</div></div>
+    <div class="mini-card"><h5>40. friendly /ˈfrendli/ 友好的</h5><div class="mc-ex"><b>The people here are so friendly that I feel at home.</b></div><div class="mc-nt">语法点：<b>so...that 结果状语从句</b> + feel at home 固定搭配</div></div>
+    <div class="mini-card"><h5>41. easily /ˈiːzəli/ 容易地</h5><div class="mc-ex"><b>If you practice more, you will do it easily.</b></div><div class="mc-nt">语法点：<b>主将从现</b> If 从句 + 比较级 more</div></div>
+  </div>
+
+  <div class="sub-h">第⑨组：-er/-or 人（5 词）</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>42. teacher /ˈtiːtʃə(r)/ 老师</h5><div class="mc-ex"><b>The teacher who teaches us English is very kind.</b></div><div class="mc-nt">语法点：<b>定语从句</b> who teaches + teacher = teach + er</div></div>
+    <div class="mini-card"><h5>43. worker /ˈwɜːkə(r)/ 工人</h5><div class="mc-ex"><b>The workers have been working for 8 hours.</b></div><div class="mc-nt">语法点：<b>现在完成进行时</b> have been working（延续到现在）</div></div>
+    <div class="mini-card"><h5>44. driver /ˈdraɪvə(r)/ 司机</h5><div class="mc-ex"><b>The driver was hurt in the accident that happened yesterday.</b></div><div class="mc-nt">语法点：<b>定语从句</b> that happened + 被动 was hurt</div></div>
+    <div class="mini-card"><h5>45. visitor /ˈvɪzɪtə(r)/ 访客</h5><div class="mc-ex"><b>Many visitors who came to China were amazed by the Great Wall.</b></div><div class="mc-nt">语法点：<b>定语从句</b> who came + 被动 were amazed</div></div>
+    <div class="mini-card"><h5>46. inventor /ɪnˈventə(r)/ 发明家</h5><div class="mc-ex"><b>Bell, the inventor of the telephone, changed the world.</b></div><div class="mc-nt">语法点：<b>同位语</b> the inventor of...（解释 Bell）</div></div>
+  </div>
+
+  <div class="sub-h">第⑩组：综合高频词（4 词）</div>
+  <div class="grid2">
+    <div class="mini-card"><h5>47. beautiful /ˈbjuːtɪfl/ 美丽的</h5><div class="mc-ex"><b>What a beautiful day it is!</b></div><div class="mc-nt">语法点：<b>感叹句</b> What (a) + adj + n！+ beautiful = beauty + ful</div></div>
+    <div class="mini-card"><h5>48. dangerous /ˈdeɪndʒərəs/ 危险的</h5><div class="mc-ex"><b>It is dangerous to swim in the river alone.</b></div><div class="mc-nt">语法点：<b>It 句型</b> It is adj to do + dangerous = danger + ous</div></div>
+    <div class="mini-card"><h5>49. successful /səkˈsesfl/ 成功的</h5><div class="mc-ex"><b>He is so successful that everyone admires him.</b></div><div class="mc-nt">语法点：<b>so...that 结果状语从句</b> + successful = success + ful</div></div>
+    <div class="mini-card"><h5>50. development /dɪˈveləpmənt/ 发展</h5><div class="mc-ex"><b>Great changes have taken place since the development began.</b></div><div class="mc-nt">语法点：<b>现在完成时</b> have taken place + since 信号词 + development = develop + ment</div></div>
+  </div>
+
+  <div class="mnemonic"><div class="label">使用建议</div><div class="verse">① 每天记 10 个，5 天记完 50 词<br>② 记单词时<b>先看例句找语法点</b>，再记词义<br>③ 试着用每个词<b>自己造一个新句</b>，必须包含一个语法点<br>④ 一周后回来复习，盖住中文猜词义</div></div>
+
+  <div class="quiz"><div class="q-h">即时小测 ①</div><div class="q-text">"The ____ who teaches us English is very kind." 填入表示"老师"的词：</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. teacher</button><button class="opt" onclick="quizPick(this,false)">B. teach</button><button class="opt" onclick="quizPick(this,false)">C. teaching</button></div><div class="feedback" id="fq75"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ②</div><div class="q-text">"unhappiness" 的词根是？</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. un</button><button class="opt" onclick="quizPick(this,true)">B. happi</button><button class="opt" onclick="quizPick(this,false)">C. ness</button></div><div class="feedback" id="fq76"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ③</div><div class="q-text">"He is so careless ____ he often makes mistakes." 填连词：</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. but</button><button class="opt" onclick="quizPick(this,true)">B. that</button><button class="opt" onclick="quizPick(this,false)">C. and</button></div><div class="feedback" id="fq77"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ④</div><div class="q-text">"What ____ beautiful day it is!" 填冠词：</div><div class="opts"><button class="opt" onclick="quizPick(this,true)">A. a</button><button class="opt" onclick="quizPick(this,false)">B. an</button><button class="opt" onclick="quizPick(this,false)">C. the</button></div><div class="feedback" id="fq78"></div></div>
+  <div class="quiz"><div class="q-h">即时小测 ⑤</div><div class="q-text">"The work ____ by the workers yesterday." 用被动语态：</div><div class="opts"><button class="opt" onclick="quizPick(this,false)">A. did</button><button class="opt" onclick="quizPick(this,true)">B. was done</button><button class="opt" onclick="quizPick(this,false)">C. is done</button></div><div class="feedback" id="fq79"></div></div>
+</section>
+
+<!-- ===== 6. 单词-语法闭环图 ===== -->
+<section>
+  <div class="sec-title"><span class="num">6</span>单词-语法闭环 · 学习路线</div>
+  <div class="sec-desc">单词和语法不是两件事，而是"血肉"关系：单词是血肉，语法是骨架，缺一不可。下面的闭环告诉你怎么把它们拧成一股绳。</div>
+
+  <div class="block">
+    <div class="rule" style="margin:0 0 10px"><div class="label">闭环四步</div><div class="txt">① 学单词 → 找词根词缀（板块2-3）<br>② 造句 → 用一个语法点（板块5的50词）<br>③ 读句子 → 找语法点 + 猜生词（板块4）<br>④ 写作 → 用学过的词+语法造新句</div></div>
+  </div>
+
+  <div class="mnemonic"><div class="label">闭环口诀</div><div class="verse">词根记词义，<span class="hl">例句记语法</span><br>读到生词拆一拆，写到句子想规则<br>单词语法手拉手，<span class="hl">记得牢来用得活</span></div></div>
+
+  <div class="tip-bar" style="margin-top:20px">★ 每天用 5 个新词 + 5 个语法点造句，坚持 10 天，你的英语水平会有质的飞跃。回到「📝 综合自测」检验学习成果。</div>
+</section>
+
+</div><!-- /topPanel6 -->
+
+</div><!-- /container -->
+
+<footer>初中英语语法速通手册 · 7 大顶层 Tab（总览速览 / 八大支柱详解 / 工具速查 / 综合自测 / 补充强化 / 攻坚进阶 / 单词记忆）· 约 96 道小测 · 50 个高频词融合语法例句 · 单词语法闭环学习</footer>
+
+<script>
+/* 顶层 Tab 切换 */
+function switchTopTab(i,e){
+  document.querySelectorAll('.top-tab').forEach(function(b,idx){b.classList.toggle('active',idx===i)});
+  document.querySelectorAll('.top-panel').forEach(function(p,idx){p.classList.toggle('active',idx===i)});
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* 子 Tab 切换 */
+function switchTab(i,e){
+  document.querySelectorAll('.tab-btn').forEach(function(b,idx){b.classList.toggle('active',idx===i)});
+  document.querySelectorAll('.tab-panel').forEach(function(p,idx){p.classList.toggle('active',idx===i)});
+}
+
+/* 从总览卡片跳转到详解 Tab */
+function goTab(i){
+  // 先切换顶层 Tab 到 "八大支柱详解"
+  switchTopTab(1);
+  // 再切换子 Tab 到对应模块
+  setTimeout(function(){
+    switchTab(i);
+    document.getElementById('detail').scrollIntoView({behavior:'smooth',block:'start'});
+  },100);
+}
+
+/* 追问显示/收起 */
+function toggleReveal(btn){
+  var r=btn.nextElementSibling;
+  r.classList.toggle('show');
+  btn.textContent=r.classList.contains('show')?'收起思路':'显示思路';
+}
+
+/* 小测选择 */
+function quizPick(btn,correct){
+  var quiz=btn.closest('.quiz');
+  var fb=quiz.querySelector('.feedback');
+  quiz.querySelectorAll('.opt').forEach(function(o){
+    o.classList.remove('correct','wrong-pick');
+    if(o.getAttribute('onclick').includes('true'))o.classList.add('correct');
+  });
+  if(correct){
+    btn.classList.add('correct');
+    fb.className='feedback ok show';
+    fb.innerHTML='✓ 正确！'+quizReason(quiz,true);
+  }else{
+    btn.classList.add('wrong-pick');
+    fb.className='feedback no show';
+    fb.innerHTML='✗ 再想想。'+quizReason(quiz,false);
+  }
+}
+
+/* 小测解析 */
+function quizReason(quiz,correct){
+  var map={
+    'fb0':'Look!是现在进行时标志词，动作此刻正在进行 → is sleeping',
+    'fb1':'"现在打不开门"=对现在的影响，用现在完成时 → have lost',
+    'fb2':'先行词 book 是物 → that/which',
+    'fb3':'"是否来"是一般疑问句转换 → if/whether',
+    'fb4':'stop to talk=停下来去交谈（还没谈），符合语境',
+    'fb5':'window 是被打破的→过去分词 broken 表被动',
+    'fb6':'1990 是过去时间→was built',
+    'fb7':'next year 将来→will be built',
+    'fb8':'good at（指向点）+ interested in（沉浸）',
+    'fb9':'apple 元音开头→an；useful /j/开头→a',
+    'fb10':'food 不可数名词→What（不加a）',
+    'fb11':'前肯后否，can→can\'t he',
+    'fb12':'neither...nor 就近原则，I→am',
+    'fb13':'everyone 不定代词→单数 knows',
+    'fb14':'milk 不可数→is；has 表拥有不用',
+    'fb15':'时态退一格 will→would；tomorrow→the next day',
+    'fq0':'yesterday→一般过去 went；yet→现在完成 hasn\'t come',
+    'fq1':'by the time + 过去时→主句用过去完成 had left（过去的过去）',
+    'fq2':'Look!→现在进行时 → are playing',
+    'fq3':'for 10 years→现在完成 → have lived（现在还住）',
+    'fq4':'先行词 man 是人，作主语→who',
+    'fq5':'先行词 book 是物→that/which',
+    'fq6':'先行词 day 是时间→when',
+    'fq7':'宾语从句陈述语序→where he lives（不加 does）',
+    'fq8':'"是否"一般疑问句→if/whether',
+    'fq9':'主将从现：as soon as 从句用现在时→arrive',
+    'fq10':'stop to talk=停下来去交谈（还没谈）→to talk',
+    'fq11':'记得去做（还没做）→to lock',
+    'fq12':'window 被打破→过去分词 broken 表被动',
+    'fq13':'1990 过去时间→was built',
+    'fq14':'English 被说→is spoken（一般现在被动）',
+    'fq15':'happen 不及物动词，无被动→happened',
+    'fq16':'everyone 不定代词→单数 → knows',
+    'fq17':'neither...nor 就近原则，靠近 I→am',
+    'fq18':'news 看似复数实单数→is',
+    'fq19':'there be 就近原则→a book→is',
+    'fq20':'good at（指向点）+ interested in（沉浸）',
+    'fq21':'useful /j/ 辅音开头→a（不是 an）',
+    'fq22':'比较级要排除自身→any other student',
+    'fq23':'food 不可数名词→What（不加 a）',
+    'fq24':'Let\'s...→shall we？（固定搭配）',
+    'fq25':'含 never 否定词→后面用肯定 does he',
+    'fq26':'milk 不可数→is；has 表拥有不用',
+    'fq27':'间接引语时态退一格 will→would；tomorrow→the next day',
+    'fq28':'特殊疑问转间接引语→陈述语序 I lived（去掉 do）',
+    'fq29':'book 被写→过去分词 written 表被动完成',
+    'fq30':'工作10小时→肯定推测 must be（can\'t be=不可能）',
+    'fq31':'本该告诉我却没说→should have done（虚拟完成）',
+    'fq32':'very 不能修饰比较级！用 much/even/a lot',
+    'fq33':'The+比较级, the+比较级=越...越...',
+    'fq34':'lend sth to sb=借出（给别人）；borrow=借入',
+    'fq35':'friends 可数 + 肯定→a few；few=很少（否定）',
+    'fq36':'look forward to 中 to 是介词→doing（hearing）',
+    'fq37':'used to do=过去常做；be used to doing=习惯于',
+    'fq38':'find it + adj + to do：it 是形式宾语',
+    'fq39':'kind 形容人品质→It\'s kind of sb to do',
+    'fq40':'although 不配 but！英语一个句子只能一个连词',
+    'fq41':'such + a/an + 形容词 + 名词 + that',
+    'fq42':'双重所有格：a/an + 名词 + of + 名词性物主代词',
+    'fq43':'共有→只在最后一人加 \'s；分别有→各自加 \'s',
+    'fq44':'无具体数字→hundreds of（加 s + of）',
+    'fq45':'第五个月→序数词 fifth（five→fifth，ve 变 f）',
+    'fq46':'has finished→have；So have I=我也完成了',
+    'fq47':'否定句→Neither + 助动词 + 主语',
+    'fq48':'take 多久→how long；how often 问频率',
+    'fq49':'问价格→how much（不可数/价格）',
+    'fq50':'dress oneself=自己穿衣服（反身代词）',
+    'fq51':'请求/邀请时用 some（希望对方说 yes）',
+    'fq52':'It takes sb time to do→to finish',
+    'fq53':'too + 形容词 + to do=太...而不能',
+    'fq72':'un- 表示"不" + friendly 友好的 = 不友好的',
+    'fq73':'but 表对比，前面 careful，后面应是反义 careless（care + less 无）',
+    'fq74':'re- 再 + use 用 + -able 能 = 可再次使用的',
+    'fq75':'后缀 -er 表示"人"，teach + er = teacher 老师',
+    'fq76':'拆词：un + happi + ness，去掉前缀 un 和后缀 ness，词根是 happi',
+    'fq77':'so...that... 结果状语从句，固定搭配',
+    'fq78':'What a + 形容词 + 单数可数名词！beautiful /juː/ 辅音开头用 a',
+    'fq79':'yesterday 过去时间 → 一般过去时被动 was done（by the workers）',
+    'fq54':'sounds 是系动词，后接形容词表语 beautiful（不是副词 beautifully）',
+    'fq55':'gave + 双宾 IO+DO，间宾 me 放前（gave me a card = gave a card to me）',
+    'fq56':'call him Tom：Tom 补充说明宾语 him → 宾补 → SVOC 句型',
+    'fq57':'orange 元音开头→an；banana 辅音→a；三餐 breakfast 零冠词',
+    'fq58':'sun 独一无二→the；方位 east/west→the（the + 方位）',
+    'fq59':'乐器 piano→the；棋类 chess→零冠词',
+    'fq60':'9:00 时刻→at；Monday morning 具体某天某时→on',
+    'fq61':'过桥表面穿过→across；右边方位→on your right',
+    'fq62':'桌子看得出木→made of；纸看不出木→made from',
+    'fq63':'OPSHACOM：大小→颜色→产地，big→red→Japanese',
+    'fq64':'enough 修饰形容词后置→old enough（不是 enough old）',
+    'fq65':'复合不定代词 something + 形容词后置→something wrong',
+    'fq66':'Look! 是现在进行时信号 → are playing',
+    'fq67':'现在打不开门 = 对现在的影响 → 现在完成 have lost',
+    'fq68':'by the time + 过去时 → 主句过去完成 had left（过去的过去）',
+    'fq69':'想看电视 → 打开 turn on（turn off 是关）',
+    'fq70':'别放弃 → give up（give in 是屈服）',
+    'fq71':'发生 = take place（无被动）；take off 是起飞/脱下'
+  };
+  for(var k in map){if(quiz.querySelector('#'+k))return '<br><b>解析：</b>'+map[k];}
+  return '';
+}
+</script>
+</body>
+</html>
