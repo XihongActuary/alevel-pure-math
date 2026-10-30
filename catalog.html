@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A-Level / IGCSE 预习站 · 总目录（中英双语）· Catalogue</title>
+<style>
+  :root{
+    --bg:#f4f7fb; --card:#ffffff; --main:#1f4e79; --main-light:#eef4fb;
+    --accent:#2563eb; --line:#dfe6ee; --ink:#334155; --sub:#64748b;
+    --m:#2563eb; --p:#0f766e; --c:#15803d; --cs:#b45309; --e:#b91c1c;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;
+    line-height:1.6;}
+  .wrap{max-width:880px;margin:0 auto;padding:0 18px 60px;}
+
+  /* header */
+  header{padding:34px 0 8px;}
+  .kicker{font-size:13px;letter-spacing:.12em;color:var(--sub);text-transform:uppercase;}
+  h1{font-size:29px;margin:8px 0 6px;color:var(--main);line-height:1.25;font-weight:800;}
+  .sub{font-size:15px;color:var(--sub);margin:0 0 16px;}
+  .sub b{color:var(--main);}
+
+  /* lang toggle */
+  .lbar{display:flex;justify-content:flex-end;margin:6px 0 2px;}
+  .lbtn{border:1px solid var(--line);background:#fff;color:var(--ink);font-size:13px;
+    padding:5px 14px;cursor:pointer;border-radius:8px;}
+  .lbtn+.lbtn{margin-left:8px;}
+  .lbtn:hover{border-color:var(--accent);color:var(--accent);}
+  .lbtn.on{background:var(--main);border-color:var(--main);color:#fff;font-weight:600;}
+
+  /* stat strip */
+  .stat{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 4px;}
+  .stat .s{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:10px 16px;font-size:13px;color:var(--ink);}
+  .stat .s b{font-size:19px;color:var(--main);font-weight:800;}
+
+  /* group */
+  .group{margin:34px 0 6px;}
+  .ghead{display:flex;align-items:baseline;gap:12px;padding-bottom:8px;border-bottom:2px solid var(--line);}
+  .gbar{width:7px;height:24px;border-radius:3px;flex:0 0 auto;align-self:center;}
+  .gname{font-size:20px;font-weight:800;color:var(--main);}
+  .gen{font-size:13px;color:var(--sub);}
+  .gcount{margin-left:auto;font-size:13px;color:var(--sub);white-space:nowrap;}
+  .gcount b{color:var(--main);font-size:15px;}
+
+  .items{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:12px;margin-top:14px;}
+  .item{display:block;background:var(--card);border:1px solid var(--line);
+    border-left:4px solid var(--g,var(--accent));border-radius:10px;padding:13px 15px;
+    text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s,border-color .15s;}
+  .item:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(31,78,121,.10);border-color:var(--accent);}
+  .it-name{font-size:16px;font-weight:700;color:var(--main);display:block;line-height:1.4;}
+  .it-name .code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13px;color:var(--sub);font-weight:600;}
+  .it-desc{font-size:13.5px;color:#475569;display:block;margin-top:5px;line-height:1.55;}
+  .it-n{display:inline-block;margin-top:9px;font-size:12px;color:#fff;background:var(--g,var(--accent));
+    padding:2px 10px;border-radius:999px;font-weight:600;}
+
+  /* route */
+  .route{background:var(--main-light);border:1px solid var(--line);border-radius:14px;
+    padding:18px 20px;margin-top:38px;}
+  .route h2{margin:0 0 8px;font-size:17px;color:var(--main);}
+  .route ol{margin:0;padding-left:20px;}
+  .route li{margin:5px 0;font-size:14.5px;color:var(--ink);}
+
+  footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);
+    font-size:13px;color:var(--sub);}
+
+  @media (max-width:600px){
+    h1{font-size:24px;}
+    .items{grid-template-columns:1fr;}
+    .gcount{font-size:12px;}
+  }
+  @media print{ .lbar{display:none;} .item{break-inside:avoid;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="lbar">
+    <button class="lbtn on" id="zhBtn" onclick="setLang('zh')">中文</button>
+    <button class="lbtn" id="enBtn" onclick="setLang('en')">English</button>
+  </div>
+
+  <header>
+    <div class="kicker">Site map · A-Level / IGCSE 自学预习站</div>
+    <h1><span class="zh-only">全站总目录</span><span class="en-only">Full Catalogue</span></h1>
+    <p class="sub">
+      <span class="zh-only">一页看全 <b>13 个页面</b>，按 <b>数学 / 物理 / 化学 / 计算机 / 英语</b> 五科分组；每科先看「预习站」学知识点，再看「真题包」练考题。点任意卡片直达。</span>
+      <span class="en-only">All <b>13 pages</b> at a glance, grouped by <b>Maths / Physics / Chemistry / Computer Science / English</b>. Open a "study site" to learn, then an "exam pack" to practise.</span>
+    </p>
+    <div class="stat">
+      <span class="s"><b>13</b> <span class="zh-only">个页面</span><span class="en-only">pages</span></span>
+      <span class="s"><b>580</b> <span class="zh-only">个知识点站</span><span class="en-only">knowledge stops</span></span>
+      <span class="s"><b>8</b> <span class="zh-only">套模拟卷 · 64 题</span><span class="en-only">mock papers · 64 Q</span></span>
+      <span class="s"><b>2</b> <span class="zh-only">种语言一键切换</span><span class="en-only">languages</span></span>
+    </div>
+  </header>
+
+  <!-- ============ 数学 ============ -->
+  <section class="group" style="--g:var(--m);">
+    <div class="ghead">
+      <span class="gbar" style="background:var(--m);"></span>
+      <span class="gname"><span class="zh-only">数学</span><span class="en-only">Mathematics</span></span>
+      <span class="gen"><span class="zh-only">纯数学 + 进阶 + 应用，共 209 站</span><span class="en-only">pure + further + applied</span></span>
+      <span class="gcount"><b>209</b> <span class="zh-only">站</span><span class="en-only">stops</span></span>
+    </div>
+    <div class="items">
+      <a class="item" href="index.html">
+        <span class="it-name"><span class="zh-only">纯数学 Pure Maths</span><span class="en-only">Pure Mathematics</span> <span class="code">9709 P1+P3</span></span>
+        <span class="it-desc"><span class="zh-only">函数、微积分、三角、数列、对数等 10 个单元（全站首页）</span><span class="en-only">functions, calculus, trigonometry — 10 units (home page)</span></span>
+        <span class="it-n">70 站</span>
+      </a>
+      <a class="item" href="alevel-further-maths.html">
+        <span class="it-name"><span class="zh-only">进阶数学</span><span class="en-only">Further Maths</span> <span class="code">9231</span></span>
+        <span class="it-desc"><span class="zh-only">矩阵、复数、微分方程、双曲函数、极坐标、归纳法</span><span class="en-only">matrices, complex numbers, differential equations</span></span>
+        <span class="it-n">68 站</span>
+      </a>
+      <a class="item" href="alevel-mechanics.html">
+        <span class="it-name"><span class="zh-only">力学</span><span class="en-only">Mechanics</span> <span class="code">9709 M</span></span>
+        <span class="it-desc"><span class="zh-only">运动学（suvat）、牛顿定律、动量、功与能</span><span class="en-only">kinematics, Newton's laws, momentum, energy</span></span>
+        <span class="it-n">34 站</span>
+      </a>
+      <a class="item" href="alevel-statistics.html">
+        <span class="it-name"><span class="zh-only">概率统计</span><span class="en-only">Statistics</span> <span class="code">9709 S</span></span>
+        <span class="it-desc"><span class="zh-only">概率、排列组合、随机变量、二项分布、正态分布</span><span class="en-only">probability, permutations, binomial &amp; normal</span></span>
+        <span class="it-n">37 站</span>
+      </a>
+      <a class="item" href="maths-exam-pack.html">
+        <span class="it-name"><span class="zh-only">数学 · 真题包</span><span class="en-only">Maths Exam Pack</span></span>
+        <span class="it-desc"><span class="zh-only">6 张卷大纲 + 2 套模拟真题（含答案）</span><span class="en-only">6-paper syllabus + 2 mock papers with answers</span></span>
+        <span class="it-n">2 套卷</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ 物理 ============ -->
+  <section class="group" style="--g:var(--p);">
+    <div class="ghead">
+      <span class="gbar" style="background:var(--p);"></span>
+      <span class="gname"><span class="zh-only">物理</span><span class="en-only">Physics</span></span>
+      <span class="gen"><span class="zh-only">AS + A2 十二单元，含实验</span><span class="en-only">AS + A2, incl. practicals</span></span>
+      <span class="gcount"><b>84</b> <span class="zh-only">站</span><span class="en-only">stops</span></span>
+    </div>
+    <div class="items">
+      <a class="item" href="alevel-physics.html">
+        <span class="it-name"><span class="zh-only">物理</span><span class="en-only">Physics</span> <span class="code">9702</span></span>
+        <span class="it-desc"><span class="zh-only">AS 六单元（力学/波/电学…）+ A2 六单元（量子/场…）+ 实验技能</span><span class="en-only">AS 6 units + A2 6 units + practical skills</span></span>
+        <span class="it-n">84 站</span>
+      </a>
+      <a class="item" href="physics-exam-pack.html">
+        <span class="it-name"><span class="zh-only">物理 · 真题包</span><span class="en-only">Physics Exam Pack</span></span>
+        <span class="it-desc"><span class="zh-only">5 张卷大纲 + 2 套模拟真题（含答案）</span><span class="en-only">5-paper syllabus + 2 mock papers with answers</span></span>
+        <span class="it-n">2 套卷</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ 化学 ============ -->
+  <section class="group" style="--g:var(--c);">
+    <div class="ghead">
+      <span class="gbar" style="background:var(--c);"></span>
+      <span class="gname"><span class="zh-only">化学</span><span class="en-only">Chemistry</span></span>
+      <span class="gen"><span class="zh-only">物理 / 无机 / 有机 / 光谱，十八单元</span><span class="en-only">physical / inorganic / organic / analysis</span></span>
+      <span class="gcount"><b>108</b> <span class="zh-only">站</span><span class="en-only">stops</span></span>
+    </div>
+    <div class="items">
+      <a class="item" href="alevel-chemistry.html">
+        <span class="it-name"><span class="zh-only">化学</span><span class="en-only">Chemistry</span> <span class="code">9701</span></span>
+        <span class="it-desc"><span class="zh-only">物理化学 / 无机 / 有机 / 光谱分析 18 个单元</span><span class="en-only">18 units across physical, inorganic, organic &amp; spectroscopy</span></span>
+        <span class="it-n">108 站</span>
+      </a>
+      <a class="item" href="chemistry-exam-pack.html">
+        <span class="it-name"><span class="zh-only">化学 · 真题包</span><span class="en-only">Chemistry Exam Pack</span></span>
+        <span class="it-desc"><span class="zh-only">5 张卷大纲 + 2 套模拟真题（含答案）</span><span class="en-only">5-paper syllabus + 2 mock papers with answers</span></span>
+        <span class="it-n">2 套卷</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ 计算机 ============ -->
+  <section class="group" style="--g:var(--cs);">
+    <div class="ghead">
+      <span class="gbar" style="background:var(--cs);"></span>
+      <span class="gname"><span class="zh-only">计算机科学</span><span class="en-only">Computer Science</span></span>
+      <span class="gen"><span class="zh-only">IGCSE 入门 → A-Level 进阶</span><span class="en-only">IGCSE → A-Level</span></span>
+      <span class="gcount"><b>179</b> <span class="zh-only">站</span><span class="en-only">stops</span></span>
+    </div>
+    <div class="items">
+      <a class="item" href="igcse-computer-science.html">
+        <span class="it-name"><span class="zh-only">计算机 IGCSE</span><span class="en-only">Computer Science IGCSE</span> <span class="code">0478</span></span>
+        <span class="it-desc"><span class="zh-only">入门：数据表示、硬件、互联网 + 算法、编程、数据库、逻辑</span><span class="en-only">entry: data, hardware, internet + algorithms, programming</span></span>
+        <span class="it-n">70 站</span>
+      </a>
+      <a class="item" href="alevel-computer-science.html">
+        <span class="it-name"><span class="zh-only">计算机 A-Level</span><span class="en-only">Computer Science A-Level</span> <span class="code">9618</span></span>
+        <span class="it-desc"><span class="zh-only">进阶：浮点、OOP、递归、数据结构、AI（四卷）</span><span class="en-only">advanced: floating point, OOP, recursion, data structures, AI</span></span>
+        <span class="it-n">109 站</span>
+      </a>
+      <a class="item" href="computer-science-exam-pack.html">
+        <span class="it-name"><span class="zh-only">计算机 · 真题包</span><span class="en-only">CS Exam Pack</span></span>
+        <span class="it-desc"><span class="zh-only">0478 大纲（2 张卷）+ 2 套模拟真题（含答案）</span><span class="en-only">0478 syllabus + 2 mock papers with answers</span></span>
+        <span class="it-n">2 套卷</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ 英语 ============ -->
+  <section class="group" style="--g:var(--e);">
+    <div class="ghead">
+      <span class="gbar" style="background:var(--e);"></span>
+      <span class="gname"><span class="zh-only">英语</span><span class="en-only">English</span></span>
+      <span class="gen"><span class="zh-only">雅思学习路径</span><span class="en-only">IELTS study path</span></span>
+    </div>
+    <div class="items">
+      <a class="item" href="ielts-guide.html">
+        <span class="it-name"><span class="zh-only">雅思学习</span><span class="en-only">IELTS Guide</span></span>
+        <span class="it-desc"><span class="zh-only">四单项结构、分阶段计划、免费资源清单</span><span class="en-only">4 sections, phased plan, free resources</span></span>
+        <span class="it-n"><span class="zh-only">学习路径</span><span class="en-only">path</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 学习路线 -->
+  <div class="route">
+    <h2><span class="zh-only">建议学习顺序</span><span class="en-only">Suggested route</span></h2>
+    <ol>
+      <li><span class="zh-only"><b>先打底</b>：纯数学 → 力学 → 统计（数学是理化的工具）</span><span class="en-only"><b>Foundations</b>: Pure Maths → Mechanics → Statistics</span></li>
+      <li><span class="zh-only"><b>再铺理</b>：物理（先 AS 后 A2）、化学（物理化学 → 无机 → 有机）</span><span class="en-only"><b>Then sciences</b>: Physics (AS then A2), Chemistry</span></li>
+      <li><span class="zh-only"><b>计算机</b>：IGCSE 0478 入门 → A-Level 9618 进阶</span><span class="en-only"><b>CS</b>: IGCSE 0478 → A-Level 9618</span></li>
+      <li><span class="zh-only"><b>考前冲刺</b>：看各科速查表 → 真题包模拟卷限时练 → 下真卷</span><span class="en-only"><b>Revision</b>: cheat sheets → timed mock papers → real past papers</span></li>
+      <li><span class="zh-only"><b>英语贯穿全程</b>：雅思学习路径与免费资源随时可看</span><span class="en-only"><b>English throughout</b>: the IELTS guide is always available</span></li>
+    </ol>
+  </div>
+
+  <footer>
+    <span class="zh-only">全站单文件自包含、零外部依赖，手机 / 平板 / 电脑都能打开；中文讲解为主，一键切换英文（选择会被记住）。</span>
+    <span class="en-only">All pages are self-contained single files with zero dependencies; Chinese-first with an English toggle (remembered).</span>
+  </footer>
+
+</div>
+
+<script>
+  function setLang(l){
+    document.documentElement.setAttribute('data-lang', l);
+    var zh = document.querySelectorAll('.zh-only'), en = document.querySelectorAll('.en-only');
+    for (var i=0;i<zh.length;i++) zh[i].style.display = (l==='zh')?'':'none';
+    for (var j=0;j<en.length;j++) en[j].style.display = (l==='en')?'':'none';
+    document.getElementById('zhBtn').className = 'lbtn' + (l==='zh'?' on':'');
+    document.getElementById('enBtn').className = 'lbtn' + (l==='en'?' on':'');
+    try{ localStorage.setItem('cat_lang', l); }catch(e){}
+  }
+  (function(){
+    var l='zh'; try{ l=localStorage.getItem('cat_lang')||'zh'; }catch(e){}
+    setLang(l);
+  })();
+</script>
+</body>
+</html>
