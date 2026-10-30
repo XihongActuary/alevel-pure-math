@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>理科工程方向 · 升学成长计划（高一 → 大学申请）· Growth Plan</title>
+<style>
+  :root{
+    --bg:#f4f7fb; --card:#ffffff; --main:#1f4e79; --main-light:#eef4fb;
+    --accent:#2563eb; --line:#dfe6ee; --ink:#334155; --sub:#64748b;
+    --hk:#c0392b; --uk:#1d4ed8; --au:#b45309; --cn:#15803d; --ca:#b91c1c;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;
+    line-height:1.7;}
+  .wrap{max-width:900px;margin:0 auto;padding:0 18px 60px;}
+
+  /* 全站统一顶部导航条（与 alevel-pure-math 一致） */
+  .snav{background:#ffffff;border-bottom:1px solid var(--line);padding:9px 20px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13px;}
+  .snav a{color:var(--main);text-decoration:none;padding:4px 11px;border-radius:7px;border:1px solid var(--line);background:var(--bg);white-space:nowrap;}
+  .snav a:hover{background:var(--main-light);border-color:var(--accent);color:var(--accent);}
+  .snav .cur{margin-left:auto;color:var(--sub);white-space:nowrap;}
+  @media (max-width:640px){.snav .cur{display:none;}}
+
+  /* header */
+  header{padding:30px 0 4px;}
+  .kicker{font-size:13px;letter-spacing:.12em;color:var(--sub);text-transform:uppercase;}
+  h1{font-size:28px;margin:8px 0 8px;color:var(--main);line-height:1.25;font-weight:800;}
+  .sub{font-size:15px;color:var(--sub);margin:0 0 16px;}
+  .sub b{color:var(--main);}
+
+  /* 顶部锚点导航 */
+  .anav{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 6px;}
+  .anav a{font-size:13.5px;color:var(--main);text-decoration:none;background:var(--card);
+    border:1px solid var(--line);padding:6px 14px;border-radius:999px;white-space:nowrap;}
+  .anav a:hover{border-color:var(--accent);color:var(--accent);background:var(--main-light);}
+
+  /* 关键假设框 */
+  .assume{background:#fff8e6;border:1px solid #f0d48a;border-left:4px solid #b45309;
+    border-radius:10px;padding:14px 16px;margin:16px 0;font-size:14px;}
+  .assume b{color:#92400e;}
+
+  /* 区块 */
+  section{margin:34px 0 6px;}
+  .sec-h{display:flex;align-items:baseline;gap:10px;padding-bottom:8px;border-bottom:2px solid var(--line);}
+  .sec-h .num{font-size:20px;font-weight:800;color:var(--main);}
+  .sec-h .en{font-size:13px;color:var(--sub);}
+  h2{font-size:21px;font-weight:800;color:var(--main);margin:0;}
+
+  /* 卡片 grid */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin-top:14px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 16px;}
+  .card h3{font-size:16px;font-weight:700;color:var(--main);margin:0 0 6px;}
+  .card p{font-size:13.5px;color:#475569;margin:4px 0;line-height:1.6;}
+  .card .tag{display:inline-block;font-size:11.5px;font-weight:600;padding:2px 9px;border-radius:999px;
+    color:#fff;margin-right:6px;}
+
+  /* 表格 */
+  .tw{overflow-x:auto;margin:14px 0;background:var(--card);border:1px solid var(--line);border-radius:12px;}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;}
+  th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+  th{background:var(--main-light);color:var(--main);font-weight:700;white-space:nowrap;}
+  tr:last-child td{border-bottom:none;}
+  td b{color:var(--main);}
+
+  /* 时间轴 */
+  .tl{margin:14px 0;position:relative;padding-left:22px;}
+  .tl::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line);}
+  .tl-item{position:relative;margin:0 0 18px;}
+  .tl-item::before{content:"";position:absolute;left:-20px;top:8px;width:10px;height:10px;border-radius:50%;
+    background:var(--accent);border:2px solid #fff;box-shadow:0 0 0 1px var(--line);}
+  .tl-item .y{font-weight:800;color:var(--main);font-size:16px;}
+  .tl-item .d{font-size:13px;color:var(--sub);margin-bottom:4px;}
+  .tl-item .body{font-size:13.5px;color:#475569;line-height:1.7;}
+  .tl-item .body li{margin:3px 0;}
+  .tl-item .body b{color:var(--main);}
+
+  /* 目的地卡 */
+  .dest{border-left:4px solid var(--dc,var(--accent));}
+  .dest .tag{background:var(--dc,var(--accent));}
+  .dest table{font-size:13px;}
+
+  /* 行动清单 */
+  .todo{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+    border-radius:12px;padding:15px 18px;margin:12px 0;}
+  .todo h4{margin:0 0 8px;color:var(--main);font-size:15px;}
+  .todo li{font-size:14px;margin:5px 0;line-height:1.7;}
+  .todo .when{font-size:11.5px;color:#fff;background:var(--accent);border-radius:999px;padding:1px 9px;font-weight:600;margin-right:6px;}
+
+  footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--sub);}
+
+  @media (max-width:600px){ h1{font-size:23px;} .grid{grid-template-columns:1fr;} }
+  @media print{ .snav,.anav{display:none;} .card,.todo{break-inside:avoid;} }
+</style>
+</head>
+<body>
+
+<!-- ===== 全站统一顶部导航条 ===== -->
+<div class="snav">
+  <a href="catalog.html">&#8592; 总目录</a>
+  <a href="index.html">数学</a>
+  <a href="alevel-physics.html">物理</a>
+  <a href="alevel-chemistry.html">化学</a>
+  <a href="igcse-computer-science.html">计算机</a>
+  <a href="alevel-computer-science.html">A-Level 计算机</a>
+  <a href="ielts-guide.html">雅思</a>
+  <a href="junior-grammar.html">语法手册</a>
+  <span class="cur">当前：理科工程升学成长计划</span>
+</div>
+
+<div class="wrap">
+
+<header>
+  <div class="kicker">Growth Plan · 国际高中理科工程方向</div>
+  <h1>理科工程方向 · 升学成长计划</h1>
+  <p class="sub">
+    高一 → 大学申请 · <b>四门 A-Level</b>（数学 / 物理 / 计算机 / 化学）· <b>五个目的地</b>（香港 / 英国 / 澳洲 / 内地 / 加拿大）。
+    这份计划把「十年路线」里与企业资源相关的动作，落成一份<b>能照着月历执行</b>的升学清单——每学期学什么、考什么、报什么、做什么，都写到了点。
+  </p>
+  <div class="anav">
+    <a href="#pos">① 定位与总路线</a>
+    <a href="#subjects">② 四门考试策略</a>
+    <a href="#timeline">③ 分年级时间轴</a>
+    <a href="#dest">④ 五目的地要点</a>
+    <a href="#bg">⑤ 背景提升清单</a>
+    <a href="#todo">⑥ 行动清单</a>
+  </div>
+</header>
+
+<!-- ===================== ① 定位 ===================== -->
+<section id="pos">
+  <div class="sec-h"><span class="num">①</span><h2>定位与总路线</h2><span class="en">Positioning &amp; route</span></div>
+
+  <div class="assume">
+    <b>先对表（重要）：</b>以国际学校常见的<b> 4 年制（IGCSE 两年 + A-Level 两年）</b>为基准做时间轴——
+    高一 / 高二学 IGCSE 并大考，高三学 <b>AS</b>（第一年），高四学 <b>A2</b>（第二年）、6 月大考、8 月出分、9 月起申请、次年秋入学。
+    若孩子所在学校是 3 年制（高一即 AS 年），把整张表<b>整体前移一年</b>即可，节点月份不变。
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>方向 · 理科工程</h3>
+      <p>对标<b>智能汽车 / 自动驾驶 / AI 工程</b>这一类「数理 + 计算机」交叉的硬核方向。工程对口的 A-Level 组合是「<b>数学 + 物理</b>」双核心，再配计算机、化学。</p>
+    </div>
+    <div class="card">
+      <h3>四门考试</h3>
+      <p><b>数学</b>（9709）· <b>物理</b>（9702）· <b>计算机</b>（9618）· <b>化学</b>（9701）。数学物理是工程标配，计算机体现 AI/算法能力，化学覆盖材料/电池方向。</p>
+    </div>
+    <div class="card">
+      <h3>五个目的地</h3>
+      <p><b>香港 · 英国 · 澳洲 · 中国内地（接受 A-Level）· 加拿大</b>，都认 A-Level 成绩，一次准备、多地同申，对冲风险。</p>
+    </div>
+    <div class="card">
+      <h3>一句话路线</h3>
+      <p><b>高一</b>广撒网打基础 → <b>高二</b> IGCSE 拿高分、定方向 → <b>高三</b> AS 冲 A + 竞赛科研 + 首考雅思 → <b>高四</b> A2 冲 A* + 多地申请。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ② 四门考试 ===================== -->
+<section id="subjects">
+  <div class="sec-h"><span class="num">②</span><h2>四门考试策略</h2><span class="en">Four A-Level subjects</span></div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>数学 9709 <span style="font-size:12px;color:var(--sub)">（核心，工程必选）</span></h3>
+      <p><b>考什么：</b>纯数 1（P1，75 分）+ 纯数 3（P3，75 分）+ 应用两卷（力学 M 50 分 + 概率统计 S1 50 分，或 S1+S2）。</p>
+      <p><b>工程关键：</b>微积分、向量、力学——这三块是大学工程的命根子，务必学扎实。</p>
+      <p><b>本站资源：</b>纯数学 + 进阶数学（9231）+ 力学 + 统计 + 数学真题包。</p>
+      <p><b>目标：</b>A*（工程顶尖校几乎都看数学 A*）。</p>
+    </div>
+    <div class="card">
+      <h3>物理 9702 <span style="font-size:12px;color:var(--sub)">（核心，工程必选）</span></h3>
+      <p><b>考什么：</b>5 张卷——P1 选择（40）、P2 AS 结构（60）、P3 实验（40）、P4 A2 结构（100）、P5 规划分析（30）。</p>
+      <p><b>工程关键：</b>力学、电学、场——工程所有分支的地基；实验卷 P3/P5 是拉分项。</p>
+      <p><b>本站资源：</b>物理站（AS+A2 十二单元，含实验）+ 物理真题包。</p>
+      <p><b>目标：</b>A* 或 A。</p>
+    </div>
+    <div class="card">
+      <h3>计算机 9618 <span style="font-size:12px;color:var(--sub)">（AI/算法能力背书）</span></h3>
+      <p><b>考什么：</b>4 张卷——P1 理论（75）、P2 编程（75）、P3 进阶理论（75）、P4 上机写代码（75）。</p>
+      <p><b>工程关键：</b>算法、数据结构、OOP、AI——直接对应自动驾驶/机器人软件栈。</p>
+      <p><b>本站资源：</b>IGCSE 0478（入门）+ A-Level 9618（进阶）+ 计算机真题包。</p>
+      <p><b>目标：</b>A 或 A*；上机 P4 用 Python 练熟。</p>
+    </div>
+    <div class="card">
+      <h3>化学 9701 <span style="font-size:12px;color:var(--sub)">（材料/电池方向）</span></h3>
+      <p><b>考什么：</b>5 张卷，结构同物理——物理化学 / 无机 / 有机 / 光谱四大块。</p>
+      <p><b>工程关键：</b>电化学（电池、燃料电池）、材料——新能源车方向很有用。</p>
+      <p><b>本站资源：</b>化学站（18 单元 108 站）+ 化学真题包。</p>
+      <p><b>目标：</b>A（作为第三/四门，稳住 A 即可，不必死磕 A*）。</p>
+    </div>
+  </div>
+
+  <div class="assume">
+    <b>选科建议：</b>工程方向「<b>数学 + 物理</b>」雷打不动；第三门建议<b>计算机</b>（AI 方向）或<b>化学</b>（材料/电池方向），第四门备选。若目标英国 G5/香港港三大，四门 A-Level 里确保 <b>数学 A* + 物理 A*（或 A）+ 另外两门 A</b> 的组合最稳。
+  </div>
+</section>
+
+<!-- ===================== ③ 时间轴 ===================== -->
+<section id="timeline">
+  <div class="sec-h"><span class="num">③</span><h2>分年级可操作时间轴</h2><span class="en">Year-by-year timeline</span></div>
+
+  <div class="tl">
+    <div class="tl-item">
+      <div class="y">高一 · IGCSE 第一年（广撒网，养手感）</div>
+      <div class="d">关键词：打基础 · 不偏科 · 把兴趣玩出来</div>
+      <div class="body"><ul>
+        <li><b>学业：</b>IGCSE 全科跟上，重点压数学、物理、CS、化学四门；每天 30 分钟刷本站「预习站」，先看说人话再做题。</li>
+        <li><b>考试：</b>无外部大考；认真对待每次校内小测，把错题攒成本子。</li>
+        <li><b>背景：</b>纯玩出兴趣——PhET 物理仿真、CircuitVerse 搭逻辑门、Scratch/CS Unplugged；<b>11 月</b>试水 AMC 8/10 找感觉。</li>
+        <li><b>英语：</b>不急着考雅思，先养成读英文科普、听 TED 的习惯；词汇 2000+。</li>
+        <li><b>暑期：</b>跟母亲进一次公司测试场「少年观察员」，看真车、真雷达、真数据。</li>
+      </ul></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="y">高二 · IGCSE 大考年（定方向）</div>
+      <div class="d">关键词：IGCSE 冲 A/A* · 锁定 A-Level 选科</div>
+      <div class="body"><ul>
+        <li><b>学业：</b>IGCSE 全面冲刺，四门核心科目保 A*，其余保 A。</li>
+        <li><b>考试：</b><b>5–6 月 IGCSE 大考</b>；8 月出分。</li>
+        <li><b>方向：</b>出分后正式锁定「数学 + 物理 + 计算机（或化学）」组合；数学强就加进阶数学。</li>
+        <li><b>背景：</b><b>暑期进公司测试场实习</b>（ADAS 路测数据标注起步），攒一段「有实感」的工程经历。</li>
+        <li><b>英语：</b><b>暑期首考雅思</b>，目标 6.0–6.5，摸清弱项。</li>
+      </ul></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="y">高三 · AS 年（冲 A + 攒背景，全年最忙）</div>
+      <div class="d">关键词：AS 四门冲 A · 竞赛科研 · 雅思达标</div>
+      <div class="body"><ul>
+        <li><b>学业：</b>AS 四门（数学 P1、物理、CS、化学）全面学，站内「速查表 + 真题包模拟卷」限时练。</li>
+        <li><b>考试：</b><b>5–6 月 AS 大考</b>，8 月出分（英国申请时 AS 成绩是重要参考）。</li>
+        <li><b>竞赛（按月份）：</b>10–11 月 AMC 12 / BPhO / UKMT；1 月 UKChO（化学）；2 月 USACO / 加拿大 CCC（计算机）；3–4 月 Physics Bowl。</li>
+        <li><b>科研/项目：</b>启动一个「工程向」个人项目或 EPQ——如「车联网校车安全监护系统」（孩子主导算法，母亲法务部支持报专利）。</li>
+        <li><b>英语：</b>雅思刷到 <b>6.5–7.0（单项 6.0+）</b>，最迟高三暑假前锁定。</li>
+      </ul></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="y">高四 · A2 年 + 申请季（定胜负）</div>
+      <div class="d">关键词：A2 冲 A* · 多地同申 · 等 offer</div>
+      <div class="body"><ul>
+        <li><b>学业：</b>A2 四门冲刺，数学/物理冲 A*，其余稳 A。</li>
+        <li><b>考试：</b><b>5–6 月 A2 大考</b>，<b>8 月出最终成绩</b>。</li>
+        <li><b>申请（关键月）：</b><b>9 月</b> UCAS 开放、澳洲提前批；<b>10 月中</b> 牛剑+医学截止（不申牛剑可忽略）；<b>11 月–1 月</b> 香港 Non-JUPAS、加拿大 OUAC（1 月中截止）、内地中外合作。</li>
+        <li><b>文书：</b>个人陈述（PS）用「竞赛 + 测试场实习 + 专利项目」串成一条工程主线。</li>
+        <li><b>结果：</b>次年 1–5 月陆续收 offer，按 A-Level 条件录取（conditional）确认。</li>
+      </ul></div>
+    </div>
+  </div>
+
+  <div class="assume">
+    <b>一句话节奏：</b>高一玩出门道 → 高二 IGCSE 拿高分定方向 → 高三 AS 冲 A + 竞赛科研雅思三线并进 → 高四 A2 冲 A* + 九月起多地同申。竞赛、科研、雅思都集中在<b>高三</b>，务必提前把英语底子打在高一高二。
+  </div>
+</section>
+
+<!-- ===================== ④ 五目的地 ===================== -->
+<section id="dest">
+  <div class="sec-h"><span class="num">④</span><h2>五个目的地 · 申请要点</h2><span class="en">Five destinations</span></div>
+  <p style="font-size:13.5px;color:var(--sub);margin:10px 0 2px;">下列等级为<b>工程类专业典型参考值</b>（A*AA 表示三科中一门 A* 两门 A），每年微调，申请季务必以各校官网当年为准。</p>
+
+  <div class="grid">
+    <div class="card dest" style="--dc:var(--hk);">
+      <h3>香港 <span class="tag">Non-JUPAS</span></h3>
+      <p><b>认可：</b>完全认可 A-Level，国际生走 <b>Non-JUPAS</b> 单独通道。</p>
+      <p><b>典型要求：</b>港大工程 A*AA（数学/物理 A*）；港科大 A*AA/AAA；港中文 AAA。</p>
+      <p><b>申请：</b>各校独立系统，港大 10 月–1 月滚动、港科大 11 月–1 月。</p>
+      <p><b>注意：</b>面试常见；英语看雅思或 IGCSE 英语成绩；离内地近、留港/回内地都方便。</p>
+    </div>
+    <div class="card dest" style="--dc:var(--uk);">
+      <h3>英国 <span class="tag">UCAS</span></h3>
+      <p><b>认可：</b>A-Level 是英国本土主渠道，衔接最顺。</p>
+      <p><b>典型要求：</b>帝国理工 / UCL 工程 A*AA（数学 A*）；罗素集团（曼大/谢菲/布里斯托）AAB–AAA。</p>
+      <p><b>申请：</b>UCAS 统一平台，9 月初开放，<b>1 月中截止</b>（牛剑 + 医学 <b>10 月 15</b>）。</p>
+      <p><b>注意：</b>一次最多申 5 所；一篇 PS；用预估分申、8 月实考分兑现条件。</p>
+    </div>
+    <div class="card dest" style="--dc:var(--au);">
+      <h3>澳洲 <span class="tag">2/7 月入学</span></h3>
+      <p><b>认可：</b>接受 A-Level，按等级换算（通常 3 门 A-Level 计分）。</p>
+      <p><b>典型要求：</b>悉尼 / 墨大 / UNSW 工程 AAA–AAB。</p>
+      <p><b>申请：</b>8–10 月提前批，主轮 12 月–次年；多数只看成绩、无需 PS。</p>
+      <p><b>注意：</b>2 月 / 7 月两次开学；移民与工作政策友好，是「保底 + 留外」的好选项。</p>
+    </div>
+    <div class="card dest" style="--dc:var(--cn);">
+      <h3>中国内地 <span class="tag">接受 A-Level</span></h3>
+      <p><b>认可：</b>中外合作大学（西交利物浦 / 宁波诺丁汉 / 上纽大 / 昆山杜克 / 港中深 / 北师港浸会）+ 部分顶尖高校国际生通道。</p>
+      <p><b>典型要求：</b>西浦 / 宁诺 AAB–AAA；港中深 A*AA。</p>
+      <p><b>申请：</b>各校独立，12 月–次年滚动；港中深有面试。</p>
+      <p><b>注意：</b>适合「离家近 + 拿国际名校学位」；全英文授课、可衔接海外读研。</p>
+    </div>
+    <div class="card dest" style="--dc:var(--ca);">
+      <h3>加拿大 <span class="tag">OUAC</span></h3>
+      <p><b>认可：</b>接受 A-Level，通常看 2–3 门 A-Level + IGCSE 背景。</p>
+      <p><b>典型要求：</b>多伦多大学工程 A*AA–AAB（数学 + 物理/化学）；麦吉尔 / UBC 工程 AAA–AAB。</p>
+      <p><b>申请：</b>安省 OUAC <b>1 月中截止</b>（早批 11 月）；其他省各自系统。</p>
+      <p><b>注意：</b>看重课内成绩连续性；部分省要额外文书/面试；毕业工签政策宽松。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ⑤ 背景提升 ===================== -->
+<section id="bg">
+  <div class="sec-h"><span class="num">⑤</span><h2>背景提升清单</h2><span class="en">Profile building</span></div>
+
+  <h3 style="font-size:15px;color:var(--main);margin:14px 0 4px;">① 竞赛（按科目 × 时间）</h3>
+  <div class="tw"><table>
+    <tr><th>科目</th><th>竞赛</th><th>大致时间</th><th>说明</th></tr>
+    <tr><td><b>数学</b></td><td>AMC 10/12 → AIME</td><td>11 月 → 次年 2 月</td><td>美系主流，进阶 AIME 是硬通货；英系 UKMT SMC（11 月）→ BMO（12 月）</td></tr>
+    <tr><td><b>物理</b></td><td>BPhO Round 1</td><td>11 月</td><td>英国物理奥赛，工程方向最有含金量之一</td></tr>
+    <tr><td><b>物理</b></td><td>Physics Bowl</td><td>3–4 月</td><td>美国物理碗，题量大、拼熟练度</td></tr>
+    <tr><td><b>计算机</b></td><td>USACO</td><td>12 月–3 月（4 场）</td><td>美国信息学奥赛，逐级晋升（青铜→银→金→铂金）</td></tr>
+    <tr><td><b>计算机</b></td><td>加拿大 CCC</td><td>2 月</td><td>加拿大计算机竞赛，与申请加拿大方向呼应</td></tr>
+    <tr><td><b>化学</b></td><td>UKChO</td><td>1 月</td><td>英国化学奥赛，材料/电池方向加分</td></tr>
+  </table></div>
+
+  <h3 style="font-size:15px;color:var(--main);margin:18px 0 4px;">② 科研与项目</h3>
+  <div class="grid">
+    <div class="card">
+      <h3>EPQ</h3>
+      <p>Extended Project Qualification，独立研究项目，写报告 + 答辩。英联邦大学普遍认，是 PS 里「会做研究」的证据。</p>
+    </div>
+    <div class="card">
+      <h3>工程个人项目</h3>
+      <p>做一个有成果的工程作品——如「车联网校车安全监护系统」（算法主导 + 报专利）、传感器智能硬件、自动驾驶仿真。</p>
+    </div>
+    <div class="card">
+      <h3>CREST Award</h3>
+      <p>英国认可的科学项目认证（银奖/金奖），门槛比竞赛低、比纯兴趣高，适合高一高二起步。</p>
+    </div>
+  </div>
+
+  <h3 style="font-size:15px;color:var(--main);margin:18px 0 4px;">③ 企业资源协同（把「家底」变成升学素材）</h3>
+  <div class="tw"><table>
+    <tr><th>资源</th><th>怎么用</th><th>对应升学价值</th></tr>
+    <tr><td>测试场</td><td>暑期进测试场，从 ADAS 路测数据标注干起，逐步接触真实算法</td><td>PS / 面试的「真实工程经历」</td></tr>
+    <tr><td>法务部</td><td>支持孩子主导的工程专利申报（如校车安全系统）</td><td>「有知识产权成果」的硬证据</td></tr>
+    <tr><td>技术团队</td><td>开《车规级 AI 开发》迷你课程，一对一导师</td><td>提前掌握车规级开发栈</td></tr>
+    <tr><td>行业资源</td><td>CES 亚洲展「少年观察员」、技术高管晚餐、行业峰会通行证</td><td>视野 + 导师人脉</td></tr>
+    <tr><td>创新活动</td><td>家庭黑客马拉松、未来交通创客营</td><td>项目作品 + 团队协作经历</td></tr>
+  </table></div>
+</section>
+
+<!-- ===================== ⑥ 行动清单 ===================== -->
+<section id="todo">
+  <div class="sec-h"><span class="num">⑥</span><h2>立即启动 · 行动清单</h2><span class="en">Action checklist</span></div>
+
+  <div class="todo">
+    <h4>本周（先动起来）</h4>
+    <ul>
+      <li><span class="when">本周</span>带孩子解密公司最新智驾系统（用 AR 眼镜可视化「感知 → 决策」全过程），建立「这就是我以后要做的事」的画面感。</li>
+      <li><span class="when">本周</span>打开本站<a href="catalog.html">总目录</a>，和孩子约定「每天 30 分钟预习」，先玩物理 PhET、计算机 CircuitVerse 建手感。</li>
+    </ul>
+  </div>
+
+  <div class="todo">
+    <h4>本月（趁报名窗口）</h4>
+    <ul>
+      <li><span class="when">本月</span>协调技术团队开《车规级 AI 开发》迷你课程。</li>
+      <li><span class="when">本月</span>报名 11 月竞赛：AMC 10/12（数学）、BPhO（物理）——早报名早锁定。</li>
+    </ul>
+  </div>
+
+  <div class="todo">
+    <h4>本季（搭框架）</h4>
+    <ul>
+      <li><span class="when">本季</span>在重庆仙桃数据谷策划「未来交通创客营」（员工子女 + 产业链伙伴子女一起）。</li>
+      <li><span class="when">本季</span>建立「青少年科技导师库」，从公司技术骨干里定 2–3 位长期导师。</li>
+    </ul>
+  </div>
+
+  <div class="todo">
+    <h4>本学期（定方向）</h4>
+    <ul>
+      <li><span class="when">本学期</span>和孩子一起定死 A-Level 四门组合与三年大时间表（可套用本页③时间轴）。</li>
+      <li><span class="when">本学期</span>做一次雅思摸底，规划英语提升节奏。</li>
+    </ul>
+  </div>
+
+  <div class="assume">
+    <b>母亲专属（来自原计划，立即启动）：</b>本周解密智驾系统 → 本月开《车规级 AI 开发》迷你课 → 本季策划未来交通创客营。这三步把「企业家的资源」先转成「孩子眼前能摸到的工程」，再顺着本页时间轴一路沉淀成申请时的竞赛、专利、实习、项目——这才是可落地的「协同成长」。
+  </div>
+</section>
+
+<footer>
+  本计划以 CAIE A-Level（数学 9709 / 物理 9702 / 计算机 9618 / 化学 9701）为基准，各目的地等级要求为工程类典型参考值，申请季请以各校当年官网为准。全站学科内容（预习站 + 速查表 + 真题包）在<a href="catalog.html">总目录</a>，学起来直接点。
+</footer>
+
+</div>
+</body>
+</html>
