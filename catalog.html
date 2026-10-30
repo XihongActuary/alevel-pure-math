@@ -73,6 +73,13 @@
     .gcount{font-size:12px;}
   }
   @media print{ .lbar{display:none;} .item{break-inside:avoid;} }
+
+  /* 升学规划横幅 */
+  .planbanner{display:block;margin:22px 0 4px;background:linear-gradient(120deg,#1f4e79,#2563eb);
+    color:#fff;text-decoration:none;border-radius:14px;padding:18px 22px;}
+  .planbanner .pb-t{display:block;font-size:18px;font-weight:800;}
+  .planbanner .pb-d{display:block;font-size:13.5px;opacity:.92;margin-top:4px;}
+  .planbanner:hover{box-shadow:0 8px 22px rgba(37,99,235,.30);}
 </style>
 </head>
 <body>
@@ -87,16 +94,22 @@
     <div class="kicker">Site map · A-Level / IGCSE 自学预习站</div>
     <h1><span class="zh-only">全站总目录</span><span class="en-only">Full Catalogue</span></h1>
     <p class="sub">
-      <span class="zh-only">一页看全 <b>14 个页面</b>，按 <b>数学 / 物理 / 化学 / 计算机 / 英语</b> 五科分组；每科先看「预习站」学知识点，再看「真题包」练考题。点任意卡片直达。</span>
+      <span class="zh-only">一页看全 <b>15 个页面</b>，按 <b>数学 / 物理 / 化学 / 计算机 / 英语</b> 五科分组；每科先看「预习站」学知识点，再看「真题包」练考题。点任意卡片直达。</span>
       <span class="en-only">All <b>13 pages</b> at a glance, grouped by <b>Maths / Physics / Chemistry / Computer Science / English</b>. Open a "study site" to learn, then an "exam pack" to practise.</span>
     </p>
     <div class="stat">
-      <span class="s"><b>14</b> <span class="zh-only">个内容页</span><span class="en-only">content pages</span></span>
+      <span class="s"><b>15</b> <span class="zh-only">个内容页</span><span class="en-only">content pages</span></span>
       <span class="s"><b>580</b> <span class="zh-only">个知识点站</span><span class="en-only">knowledge stops</span></span>
       <span class="s"><b>8</b> <span class="zh-only">套模拟卷 · 64 题</span><span class="en-only">mock papers · 64 Q</span></span>
       <span class="s"><b>2</b> <span class="zh-only">种语言一键切换</span><span class="en-only">languages</span></span>
     </div>
   </header>
+
+  <!-- 升学规划横幅 -->
+  <a class="planbanner" href="growth-plan.html">
+    <span class="pb-t">理科工程方向 · 升学成长计划</span>
+    <span class="pb-d"><span class="zh-only">高一 → 大学申请：四门 A-Level + 五目的地，可操作到月 →</span><span class="en-only">Year 1 → application: four A-Levels + five destinations, month-by-month →</span></span>
+  </a>
 
   <!-- ============ 数学 ============ -->
   <section class="group" style="--g:var(--m);">
